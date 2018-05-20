@@ -72,7 +72,33 @@
         </view>
     </view>
     <!-- 动态 -->
-    <view class="dynamic" wx-if="{{currentOption==='dynamic'}}">动态</view>
+    <view class="dynamics" wx-if="{{currentOption==='dynamic'}}">
+        <view class="dynamic">
+            <view class="dynamic-header">
+                <text class="dynamic-title font-sm">《啦啦啦啦》</text>
+                <text class="dynamic-time font-sm">2018-5-4</text>
+            </view>
+            <view class="dynamic-content">
+                <view class="dynamic-imgs">
+                    <image src="../../images/user-home-page/dynamic1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
+                    <image src="../../images/user-home-page/dynamic1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
+                </view>
+                <view class="dynamic-tag">
+                    <text class="tag font-sm"># 油画</text>
+                    <text class="tag font-sm"># 童趣</text>
+                </view>
+            </view>
+            <view class="dynamic-footer">
+                <image class="icon-sm" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <text class="icon-text font-lg">24</text>
+                <image class="icon-sm" src="../../images/icon/msg.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <text class="icon-text font-lg" >24</text>
+                <image class="icon-sm" src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <image class="icon-sm" src="../../images/icon/error.png" mode="scaleToFill" binderror="" bindload=""></image>
+            </view>
+
+        </view>
+    </view>
     <!-- 简介 -->
     <view class="intro" wx-if="{{currentOption==='intro'}}">
         <view class="tags">

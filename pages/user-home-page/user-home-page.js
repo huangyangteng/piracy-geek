@@ -1,7 +1,7 @@
 Page({
     data:{
         // `点击切换 作品 动态 简介 work dynamic intro
-        currentOption:'work'
+        currentOption:'dynamic'
     },
     // `点击切换option
     changeOption(e){

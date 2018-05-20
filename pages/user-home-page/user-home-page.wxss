@@ -1,6 +1,35 @@
 page{
     
 }
+/* ！公共样式 */
+/* 标签*/
+.tag{
+    color: #12c4ff;
+}
+/* 图标 */
+.icon{
+    width: 46rpx;
+    height: 40rpx; 
+    margin-right: 10rpx;
+}
+.icon-sm{
+    width: 35rpx;
+    height: 30rpx;
+     margin-right: 10rpx;
+}
+.icon-text{
+    margin-right: 30rpx;
+}
+.font-sm{
+    font-size: 18rpx;
+}
+.font-md{
+    font-size: 20rpx;
+}
+.font-lg{
+    font-size: 22rpx;
+}
+
 /* 用户信息 */
 .user-info-wrapper{
     height: 300rpx;
@@ -182,4 +211,26 @@ page{
     margin-right: 40rpx;
     font-size: 24rpx;
     vertical-align: 10rpx;
+}
+/* `动态 */
+.dynamic{
+    margin: 15rpx 30rpx;
+}
+.dynamic-header{
+    display: flex;
+    margin:20rpx 30rpx;
+    justify-content: space-between;
+}
+.dynamic-imgs{
+    /* margin: 20rpx 30rpx; */
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.dynamic-imgs>image{
+    width: 335rpx;
+    height: 336rpx;
+}
+.dynamic-footer>image:last-child{
+    float: right;
 }
