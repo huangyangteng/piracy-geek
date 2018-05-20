@@ -140,3 +140,46 @@ page{
     line-height: 30rpx;
     font-size: 20rpx;
 }
+
+/* `作品 */
+.art-photo>image{
+    width: 100%;
+    height: 250rpx;
+}
+.art-share>image{
+    width: 46rpx;
+    height: 40rpx;
+}
+/* 总体说明 */
+.total{
+    margin: 15rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20rpx;
+}
+/*  喜欢和分享*/
+.art-work{
+    margin: 20rpx 0;
+}
+.art-like{
+    margin:0 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.art-title{
+    display: flex;
+    flex-direction: column;
+}
+.art-title>text:first-child{
+    font-size: 24rpx;
+}
+.art-title>text:last-child{
+    font-size: 20rpx;
+}
+
+.like-num{
+    margin-left: 10rpx;
+    margin-right: 40rpx;
+    font-size: 24rpx;
+    vertical-align: 10rpx;
+}

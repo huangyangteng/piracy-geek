@@ -31,7 +31,46 @@
 </view>
 <view class="user-content"> 
     <!-- 作品 -->
-    <view class="work" wx-if="{{currentOption==='work'}}">作品</view>
+    <view class="work" wx-if="{{currentOption==='work'}}">
+        <view class="total">
+            <text>展出中 10</text>
+            <text>全部藏品 999+</text>
+        </view>
+        <view class="artwork">
+            <view class="art-photo">
+                <image src="../../images/user-home-page/work1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
+            </view>
+            <view class="art-like">
+                <view class="art-title">
+                    <text>星空</text>
+                    <text>这里是简短的描述</text>
+                </view>
+                <view class="art-share">
+                    <image src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                    <text class="like-num">20</text>
+                    <image src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
+                </view>
+            </view>
+            
+        </view>
+        <view class="artWork">
+            <view class="art-photo">
+                <image src="../../images/user-home-page/work1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
+            </view>
+            <view class="art-like">
+                <view class="art-title">
+                    <text>星空</text>
+                    <text>这里是简短的描述</text>
+                </view>
+                <view class="art-share">
+                    <image src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                    <text class="like-num">20</text>
+                    <image src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
+                </view>
+            </view>
+            
+        </view>
+    </view>
     <!-- 动态 -->
     <view class="dynamic" wx-if="{{currentOption==='dynamic'}}">动态</view>
     <!-- 简介 -->
