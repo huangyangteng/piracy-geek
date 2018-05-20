@@ -1,0 +1,55 @@
+<view class="user-info-wrapper">
+    <view class="bg-blur">
+        <view class="cover"></view>
+    </view>
+    <view class="content">
+        <view class="user-info">
+            <view class="avatar">
+                <image src="../../images/user-home-page/touxiang.jpeg" mode="scaleToFill" binderror="" bindload=""></image>
+            </view>
+            <view class="user-name">我有明珠一颗</view>
+            <view class="address">
+                <text>四川省 绵阳市</text>
+                <image class="" src="" mode="scaleToFill" binderror="" bindload=""></image>
+            </view>
+            <view class="focus">
+                <text>2453关注</text>
+                <text class="divider-line">|</text>
+                <text>21万关注</text>
+            </view>
+            <!-- <view class="with-focus"> -->
+                <button plain="true" class="with-focus">关注</button>
+            <!-- </view> -->
+        </view>
+    </view>
+    
+</view>
+<view class="user-options"> 
+    <text class="option" data-option="work" bindtap="changeOption">作品</text>
+    <text class="option" data-option="dynamic" bindtap="changeOption">动态</text>
+    <text class="option" data-option="intro" bindtap="changeOption">简介</text>
+</view>
+<view class="user-content"> 
+    <!-- 作品 -->
+    <view class="work" wx-if="{{currentOption==='work'}}">作品</view>
+    <!-- 动态 -->
+    <view class="dynamic" wx-if="{{currentOption==='dynamic'}}">动态</view>
+    <!-- 简介 -->
+    <view class="intro" wx-if="{{currentOption==='intro'}}">
+        <view class="tags">
+            <view class="item-title">他的标签</view>
+            <view class="tag-all">
+                <text class="tag"># 自由作家</text>
+                <text class="tag"># 艺术</text>
+                <text class="tag"># 自由作家</text>
+            </view>
+        </view>
+        <view class="person-intro">
+            <view class="item-title">他的简介</view>
+            <view class="intro-content">
+                 齐白石，我国二十世纪杰出画家、书法家、篆刻家。原名齐璜，纯芝，小名阿芝，字渭青、号白石、白石翁、老白、又号寄萍、老萍、借山翁、三百石印富翁、寄萍老人等。。湖南湘潭人。齐白石家境贫困，世代务农，仅在12岁前随外祖父读过一段私塾。13岁起学木匠、那时雕花，差不多千篇一律，他突破陈规，造出许多新的花样。人称芝木匠。兼习画。亦习诗文，书法、篆刻，初为画工，为乡里人画衣冠像。六十岁后定居北京，以卖画、刻印为职业。生平推崇徐渭、朱耷、石涛、吴昌硕等前辈诸家，重视创新，不断变化，创造了独特不群的风貌。所画作品，都洋溢着对生活的热爱。其篆刻朴茂有力，书法刚劲沉着，诗文、画论也有独到之处。任中国文学艺术界联合会主席团委员，美术家协会主席。1953年中央文化部授予“人民艺术家”称号。
+                齐白石是各方面造诣都很高的现代绘画大师。他的人品、绘画、诗句、书法、篆刻，无不出类拔翠。他的艺术创作极其丰富。他的风格对现代乃至当代中国画创作产生了极为巨大的影响。
+            </view>
+        </view>
+    </view>
+</view>
