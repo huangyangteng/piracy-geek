@@ -1,34 +1,6 @@
-page{
-    
-}
+
 /* ！公共样式 */
-/* 标签*/
-.tag{
-    color: #12c4ff;
-}
-/* 图标 */
-.icon{
-    width: 46rpx;
-    height: 40rpx; 
-    margin-right: 10rpx;
-}
-.icon-sm{
-    width: 35rpx;
-    height: 30rpx;
-     margin-right: 10rpx;
-}
-.icon-text{
-    margin-right: 30rpx;
-}
-.font-sm{
-    font-size: 18rpx;
-}
-.font-md{
-    font-size: 20rpx;
-}
-.font-lg{
-    font-size: 22rpx;
-}
+@import "../css/common.wxss";
 
 /* 用户信息 */
 .user-info-wrapper{
@@ -36,8 +8,6 @@ page{
     color: white;
     /* 重置line-height */
     line-height: 20rpx;
-    
-    /* background: url('http://p8zh0ix6u.bkt.clouddn.com/touxiang.jpeg') 100% 100% no-repeat ; */
 }
 /* 背景模糊 */
 .bg-blur{
@@ -56,8 +26,8 @@ page{
     top: 0;bottom: 0;right: 0;left: 0;
     background-color: rgba(0,0,0,0.2);
 }
-/* 内容 */
-.content{
+/* 用户头信息 */
+.user-info{
     position: absolute;
     top: 15rpx;
     right: 0;left: 0;
@@ -75,7 +45,6 @@ page{
 /* 用户名 */
 .user-name{
     margin: 15rpx;
-    font-size: 24rpx;
     text-align: center;
 }
 .avatar>image{
@@ -84,7 +53,6 @@ page{
 }
 /* 地址 */
 .address{
-    font-size: 18rpx;
     text-align: center;
 }
 .address>image{
@@ -95,7 +63,6 @@ page{
 /* 关注 */
 .focus{
     margin: 18rpx;
-    font-size: 18rpx;
     text-align: center;
 }
 .divider-line{
@@ -139,35 +106,25 @@ page{
     flex: 1;
 }
 /* 切换的内容 */
-.user-content{
-    
-}
+
 /* `简介 */
 .tags,.person-intro{
     margin:32rpx 34rpx;
 }
 /* 他的标签 */
-.tags{
-    border-bottom: 0.5px solid #f5f5f5;
-}
+
 .item-title{
-    /* margin: 50rpx 0; */
     font-size: 28rpx;
 }
 .tag-all{
     margin:50rpx 0;
-    font-size: 22rpx;
-    color: #12c4ff;
 }
-.tag{
-    margin: 30rpx;
-    margin-left: 0;
-}
+
 /* 他的简介 */
 .intro-content{
     margin-top: 25rpx;
     line-height: 30rpx;
-    font-size: 20rpx;
+    
 }
 
 /* `作品 */
@@ -175,16 +132,9 @@ page{
     width: 100%;
     height: 250rpx;
 }
-.art-share>image{
-    width: 46rpx;
-    height: 40rpx;
-}
 /* 总体说明 */
 .total{
     margin: 15rpx 30rpx;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20rpx;
 }
 /*  喜欢和分享*/
 .art-work{
@@ -198,12 +148,6 @@ page{
 .art-title{
     display: flex;
     flex-direction: column;
-}
-.art-title>text:first-child{
-    font-size: 24rpx;
-}
-.art-title>text:last-child{
-    font-size: 20rpx;
 }
 
 .like-num{

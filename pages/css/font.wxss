@@ -1,0 +1,13 @@
+/* 小 中  大 */
+.font-sm{
+    font-size: 18rpx;
+}
+.font-md{
+    font-size: 20rpx;
+}
+.font-lg{
+    font-size: 22rpx;
+}
+.font-big{
+    font-size: 24rpx;
+}
