@@ -59,6 +59,8 @@
     position: absolute;
     width: 20rpx;
     height: 16rpx;
+    margin-left: 5rpx;
+    margin-top: 1rpx;
 }
 /* 关注 */
 .focus{
@@ -106,7 +108,11 @@
     flex: 1;
 }
 /* 切换的内容 */
-
+/* .work .dynamics intro */
+/* @see 在模拟器中显示 真机中不显示 */
+.work,.dynamics{
+    margin-bottom: 60rpx;
+}
 /* `简介 */
 .tags,.person-intro{
     margin:32rpx 34rpx;

@@ -16,7 +16,7 @@
             <!-- 地址 -->
             <view class="address font-sm">
                 <text>{{user.address}}</text>
-                <image class="icon-sm" src="../../images/icon/address.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <image  src="../../images/icon/address.png" mode="scaleToFill" binderror="" bindload=""></image>
             </view>
             <!-- 关注 -->
             <view class="focus font-sm">
@@ -50,7 +50,7 @@
                     <text class="font-md">{{item.description}}</text>
                 </view>
                 <view class="art-share">
-                    <image class="icon" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                    <image class="icon" id="{{index}}" src="{{item.liked?likedImg:unlikedImg}}" mode="scaleToFill"  bindtap="likeAdd" data-type="work" ></image>
                     <text class="like-num">{{item.like}}</text>
                     <image class="icon" src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
                 </view>
@@ -82,7 +82,7 @@
                 </view>
             </view>
             <view class="dynamic-footer">
-                <image class="icon-sm" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <image class="icon-sm" id="{{index}}" src="{{item.liked?likedImg:unlikedImg}}" data-type="dynamic" bindtap="likeAdd" mode="scaleToFill" binderror="" bindload=""></image>
                 <text class="icon-text-sm font-lg">{{item.like}}</text>
                 <image class="icon-sm" src="../../images/icon/msg.png" mode="scaleToFill" binderror="" bindload=""></image>
                 <text class="icon-text-sm font-lg">{{item['comment-num']}}</text>

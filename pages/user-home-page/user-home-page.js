@@ -2,6 +2,9 @@ Page({
     data:{
         // `点击切换 作品 动态 简介 work dynamic intro
         currentOption:'work',
+        // ` 未选喜欢和已选喜欢的图标地址
+        likedImg:'../../images/icon/liked.png',
+        unlikedImg:'../../images/icon/like.png',
         // ` 个人信息
         user:{
             name:"我有明珠一颗",
@@ -20,6 +23,7 @@ Page({
                 name:'星空1',
                 description:'这是一段描述',
                 like:'20',
+                liked:false,//是否喜欢
                 img:'http://p8zh0ix6u.bkt.clouddn.com/work4.jpg',
                 id:'0'
             },
@@ -27,6 +31,7 @@ Page({
                 name:'星空2',
                 description:'这是一段描述',
                 like:'90',
+                liked: true,
                 img:'http://p8zh0ix6u.bkt.clouddn.com/work1.jpg',
                 id:'1'
             },
@@ -34,6 +39,7 @@ Page({
                 name:'星空3',
                 description:'这是一段描述',
                 like:'90',
+                liked: true,
                 img:'http://p8zh0ix6u.bkt.clouddn.com/work6.jpg',
                 id:'2'
             }
@@ -41,7 +47,7 @@ Page({
         // `动态
         dynamics:[
             {
-                title:'《蜡笔小心》',
+                title:'《蜡笔小新》',
                 time:'2018-5-3',
                 images:[
                     'http://p8zh0ix6u.bkt.clouddn.com/touxiang.jpeg',
@@ -49,6 +55,7 @@ Page({
                 ],
                 tags:["漫画","贵","大师"],
                 like:'27',
+                liked: true,
                 comments:[
 
                 ],
@@ -66,6 +73,7 @@ Page({
                 ],
                 tags:["油画","贵","大师"],
                 like:'87',
+                liked: true,
                 comments:[
 
                 ],
@@ -86,6 +94,39 @@ Page({
         this.setData({
             isFocusOn:!this.data.isFocusOn
         })
+    },
+    // `点击喜欢增加
+    likeAdd(e){//作品
+        // 作品和动态的喜欢区分开
+        let index = e.currentTarget.id;
+        if(e.target.dataset.type==='work'){
+            let works = this.data.works;//数组文件
+            let work = this.data.works[index];//当前操作的对象
+            // 如果有liked属性 喜欢的数量-- 更换图标
+            if (work.liked) {
+                work.like = work.like - 1;
+            } else {
+                work.like = parseInt(work.like) + 1;
+            }
+            work.liked = !work.liked;
+            this.setData({
+                works,
+            })
+        }else{//动态
+            let dynamics = this.data.dynamics;//数组文件
+            let dynamic = this.data.dynamics[index];//当前操作的对象
+            // 如果有liked属性 喜欢的数量-- 更换图标
+            if (dynamic.liked) {
+                dynamic.like = dynamic.like - 1;
+            } else {
+                dynamic.like = parseInt(dynamic.like) + 1;
+            }
+            dynamic.liked = !dynamic.liked;
+            this.setData({
+                dynamics,
+            })
+        }
+        
     },
     onLoad:function(options){
         // 生命周期函数--监听页面加载

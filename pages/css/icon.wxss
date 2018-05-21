@@ -1,13 +1,16 @@
 .icon{
     width: 46rpx;
     height: 40rpx; 
-    margin-right: 10rpx;
+    border-right: 10rpx solid transparent;
+    border-top: 10rpx solid transparent;
+    border-left: 10rpx solid transparent;
 }
 
 .icon-sm{
     width: 35rpx;
     height: 30rpx;
-    margin-right: 10rpx;
+    border-right: 10rpx solid transparent;
+    border-top: 10rpx solid transparent;
 }
 
 .icon-text{
