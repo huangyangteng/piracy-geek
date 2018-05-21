@@ -1,7 +1,7 @@
 <!-- 头部  展示个人信息 -->
 <view class="user-info-wrapper">
     <!-- 背景模糊 -->
-    <view class="bg-blur">
+    <view class="bg-blur" style="background-image:url({{user.avatar}});">
         <!-- 黑色遮罩 -->
         <view class="cover"></view>
     </view>
@@ -9,21 +9,22 @@
     <view class="user-info">
             <!-- 头像 -->
             <view class="avatar">
-                <image src="../../images/user-home-page/touxiang.jpeg" mode="scaleToFill" binderror="" bindload=""></image>
+                <image src="{{user.avatar}}" mode="scaleToFill" binderror="" bindload=""></image>
             </view>
             <!-- 用户名 -->
-            <view class="user-name font-big">我有明珠一颗</view>
+            <view class="user-name font-big">{{user.name}}</view>
             <!-- 地址 -->
             <view class="address font-sm">
-                <text>四川省 绵阳市</text>
+                <text>{{user.address}}</text>
                 <image class="icon-sm" src="../../images/icon/address.png" mode="scaleToFill" binderror="" bindload=""></image>
             </view>
+            <!-- 关注 -->
             <view class="focus font-sm">
-                <text>2453关注</text>
+                <text>{{user['focus-on']}}</text>
                 <text class="divider-line">|</text>
-                <text>21万关注</text>
+                <text>{{user['be-focus-on']}}</text>
             </view>
-            <button plain="true" class="with-focus">关注</button>
+            <button bindtap="changeFoucs" plain="true" class="with-focus">{{isFocusOn?'已关注':'关注'}}</button>
     </view>
 </view>
 <!-- 操作 -->
@@ -35,71 +36,78 @@
 <!-- 作品 -->
 <view class="work" wx-if="{{currentOption==='work'}}">
     <view class="flex font-md total">
-        <text>展出中 10</text>
+        <text>展出中 {{works.length}}</text>
         <text>全部藏品 999+</text>
     </view>
-    <view class="art-work">
-        <view class="art-photo">
-            <image src="../../images/user-home-page/work1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
-        </view>
-        <view class="art-like">
-            <view class="art-title">
-                <text class="font-big">星空</text>
-                <text class="font-md">这里是简短的描述</text>
+    <block wx:for="{{works}}" wx:key="item.id">
+        <view class="art-work">
+            <view class="art-photo">
+                <image src="{{item.img}}" mode="scaleToFill" binderror="" bindload=""></image>
             </view>
-            <view class="art-share">
-                <image class="icon" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
-                <text class="like-num">20</text>
-                <image class="icon" src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
+            <view class="art-like">
+                <view class="art-title">
+                    <text class="font-big">{{item.name}}</text>
+                    <text class="font-md">{{item.description}}</text>
+                </view>
+                <view class="art-share">
+                    <image class="icon" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                    <text class="like-num">{{item.like}}</text>
+                    <image class="icon" src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
+                </view>
             </view>
-        </view>
         
-    </view>
+        </view>
+    </block>
+    
    
 </view>
 <!-- 动态 -->
 <view class="dynamics" wx-if="{{currentOption==='dynamic'}}">
-    <view class="dynamic">
-        <view class="dynamic-header">
-            <text class="dynamic-title font-sm">《啦啦啦啦》</text>
-            <text class="dynamic-time font-sm">2018-5-4</text>
-        </view>
-        <view class="dynamic-content">
-            <view class="dynamic-imgs">
-                <image src="../../images/user-home-page/dynamic1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
-                <image src="../../images/user-home-page/dynamic1.jpg" mode="scaleToFill" binderror="" bindload=""></image>
+    <block wx:for="{{dynamics}}" wx:key="{{item.id}}">
+        <view class="dynamic">
+            <view class="dynamic-header">
+                <text class="dynamic-title font-sm">{{item.title}}</text>
+                <text class="dynamic-time font-sm">{{item.time}}</text>
             </view>
-            <view class="dynamic-tag">
-                <text class="tag font-sm"># 油画</text>
-                <text class="tag font-sm"># 童趣</text>
+            <view class="dynamic-content">
+                <view class="dynamic-imgs" >
+                    <block wx:for="{{item.images}}" wx:for-item="image" wx:key="*this">
+                        <image src="{{image}}" mode="scaleToFill" binderror="" bindload=""></image>
+                    </block>
+                </view>
+                <view class="dynamic-tag">
+                    <block wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">
+                        <text class="tag font-sm"># {{tag}}</text>
+                    </block>
+                </view>
             </view>
+            <view class="dynamic-footer">
+                <image class="icon-sm" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <text class="icon-text-sm font-lg">{{item.like}}</text>
+                <image class="icon-sm" src="../../images/icon/msg.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <text class="icon-text-sm font-lg">{{item['comment-num']}}</text>
+                <image class="icon-sm" src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
+                <image class="icon-sm" src="../../images/icon/error.png" mode="scaleToFill" binderror="" bindload=""></image>
+            </view>
+        
         </view>
-        <view class="dynamic-footer">
-            <image class="icon-sm" src="../../images/icon/like.png" mode="scaleToFill" binderror="" bindload=""></image>
-            <text class="icon-text font-lg">24</text>
-            <image class="icon-sm" src="../../images/icon/msg.png" mode="scaleToFill" binderror="" bindload=""></image>
-            <text class="icon-text font-lg" >24</text>
-            <image class="icon-sm" src="../../images/icon/share.png" mode="scaleToFill" binderror="" bindload=""></image>
-            <image class="icon-sm" src="../../images/icon/error.png" mode="scaleToFill" binderror="" bindload=""></image>
-        </view>
-
-    </view>
+    </block>
+    
 </view>
 <!-- 简介 -->
 <view class="intro" wx-if="{{currentOption==='intro'}}">
     <view class="tags bottom-line">
         <view class="item-title">他的标签</view>
         <view class="tag-all font-lg">
-            <text class="tag"># 自由作家</text>
-            <text class="tag"># 艺术</text>
-            <text class="tag"># 自由作家</text>
+            <block wx:for="{{user.tags}}" wx:key="*this">
+                <text class="tag"># {{item}}</text>
+            </block>
         </view>
     </view>
     <view class="person-intro">
         <view class="item-title">他的简介</view>
         <view class="intro-content font-md">
-                齐白石，我国二十世纪杰出画家、书法家、篆刻家。原名齐璜，纯芝，小名阿芝，字渭青、号白石、白石翁、老白、又号寄萍、老萍、借山翁、三百石印富翁、寄萍老人等。。湖南湘潭人。齐白石家境贫困，世代务农，仅在12岁前随外祖父读过一段私塾。13岁起学木匠、那时雕花，差不多千篇一律，他突破陈规，造出许多新的花样。人称芝木匠。兼习画。亦习诗文，书法、篆刻，初为画工，为乡里人画衣冠像。六十岁后定居北京，以卖画、刻印为职业。生平推崇徐渭、朱耷、石涛、吴昌硕等前辈诸家，重视创新，不断变化，创造了独特不群的风貌。所画作品，都洋溢着对生活的热爱。其篆刻朴茂有力，书法刚劲沉着，诗文、画论也有独到之处。任中国文学艺术界联合会主席团委员，美术家协会主席。1953年中央文化部授予“人民艺术家”称号。
-            齐白石是各方面造诣都很高的现代绘画大师。他的人品、绘画、诗句、书法、篆刻，无不出类拔翠。他的艺术创作极其丰富。他的风格对现代乃至当代中国画创作产生了极为巨大的影响。
+                {{user.detail}}
         </view>
     </view>
 </view>
