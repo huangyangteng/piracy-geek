@@ -26,3 +26,4 @@
 5. css实现png图标改变颜色功能http://www.zhangxinxu.com/wordpress/2016/06/png-icon-change-color-by-css/
 6. css实现任意图标颜色的更改 http://www.cnblogs.com/coco1s/p/8080211.html
 7. 如何扩大点击区域 http://www.atjiang.com/css-extending-clickable-area/
+8. 一个人看到了作品点了收藏，作品表里是不是会有一个字段关联到那个人???

@@ -4,11 +4,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    objs:[
-      {name:'我有明珠一颗',age:'18'},
-      { name: '我有明珠一个', age: '18' },
-      { name: '我有明珠一斤', age: '18' }
+    // `切换已有作品和目标作品 existing target
+    currentOption:'existing',
+    // ` 未拥有   显示的藏品数据
+    collectionOnDisplay:[
+      {
+        name: '星空1',
+        description: '这是一段描述',
+        author:'作者1号',
+        collector:'收藏者1号',
+        like: '20',
+        liked: false,//是否喜欢
+        img: 'http://p8zh0ix6u.bkt.clouddn.com/work4.jpg',
+        id: '0'
+      },
+      {
+        name: '星空2',
+        description: '这是一段描述',
+        like: '90',
+        author: '作者2号',
+        collector: '收藏者2号',
+        liked: true,
+        img: 'http://p8zh0ix6u.bkt.clouddn.com/work1.jpg',
+        id: '1'
+      },
+      {
+        name: '星空3',
+        description: '这是一段描述',
+        like: '90',
+        author: '作者3号',
+        collector: '收藏者3号',
+        liked: true,
+        img: 'http://p8zh0ix6u.bkt.clouddn.com/work6.jpg',
+        id: '2'
+      }
+
     ]
+
+  },
+  // ` 切换已有作品和目标作品
+  changeCollection(e){
+    this.setData({
+      currentOption: e.target.dataset.type
+    })
   },
 
   /**
@@ -24,15 +62,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    //修改原数据
-      this.data.objs.forEach(item => {
-          item.firstStr = item.name.charAt(0);
-          item.lastStr = item.name.charAt(item.name.length - 1);
-
-      });
-      this.setData({
-          objs: this.data.objs
-      })
+    
   },
 
   /**
