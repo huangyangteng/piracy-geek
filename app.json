@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/user-home-page/user-home-page",
     "pages/index/index",
+    "pages/collection/collection",
+    "pages/user-home-page/user-home-page",
+    
     "pages/logs/logs"
    
   ],
@@ -10,5 +12,22 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user-home-page/user-home-page",
+        "text": "个人主页"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏"
+      }
+    ]
   }
+  
 }

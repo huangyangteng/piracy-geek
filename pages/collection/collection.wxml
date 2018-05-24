@@ -1,0 +1,5 @@
+<block wx:for="{{objs}}" wx:key="{{index}}">
+    <text>{{item.firstStr}}</text>
+    <text>**</text>
+    <text>{{item.lastStr}}</text>
+</block>
