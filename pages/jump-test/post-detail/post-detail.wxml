@@ -1,0 +1,9 @@
+<view>
+    这是详情页
+</view>
+<view>
+    这个作品的名字是{{work.name}}
+</view>
+<view>
+    这个作品的id是{{work.id}}
+</view>

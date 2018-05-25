@@ -29,3 +29,4 @@
 6. css实现任意图标颜色的更改 http://www.cnblogs.com/coco1s/p/8080211.html
 7. 如何扩大点击区域 http://www.atjiang.com/css-extending-clickable-area/
 8. 一个人看到了作品点了收藏，作品表里是不是会有一个字段关联到那个人???
+9. 实现点击不同的作品跳转到相应的页面。利用wx.navigateTo

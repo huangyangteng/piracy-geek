@@ -1,0 +1,6 @@
+
+
+<block wx:for="{{works}}" wx:key="{{index}}" >
+    <view catchtap="onTap" data-postId="{{item.id}}">{{item.name}}点击查看详情</view>
+    <view >id:{{item.id}}</view>
+</block>
