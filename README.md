@@ -5,6 +5,8 @@
     + image
         - icon 图标
         - user-home-page 主页图片，改为使用七牛云外链 
+    + data
+        - work.js 作品
     + pages
         - css-----------------------------通用css
             - common  通用
