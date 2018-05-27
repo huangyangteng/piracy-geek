@@ -13,7 +13,14 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+// 数组中的对象的属性进行比较
+// 使用： arr.sotr(untils.compare(property))
+const compare = property => {
+  return (obj1, obj2) =>
+    obj1[property] - obj2[property];
+}
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  compare:compare
 }

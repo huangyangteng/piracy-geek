@@ -1,8 +1,40 @@
 // 数据来源于data下面的假数据
 let workData=require('../../data/work');
+let utils=require('../../utils/util');
 // console.log(workData)
+console.log(utils)
+let arr = [
+    {
+        name: '小明',
+        age: 80,
+    },
+    {
+        name: '小红',
+        age: 19,
+    },
+    {
+        name: '小红的麻麻',
+        age: 300,
+    }
+];
+console.log(arr)
+console.log(arr.sort(utils.compare('age')))
 Page({
     data:{
+        testArr:[
+            {
+                name: '小明',
+                age: 12,
+            },
+            {
+                name: '小红',
+                age: 19,
+            },
+            {
+                name: '小红的麻麻',
+                age: 30,
+            }
+        ]
        
     },
     onTap(e){
