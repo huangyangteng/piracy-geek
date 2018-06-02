@@ -1,0 +1,6 @@
+.default{
+    width: 370rpx;
+}
+.full{
+    width: 750rpx;
+}

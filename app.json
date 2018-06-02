@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/load-img/load-img",
     "pages/jump-test/jump-test",
     "pages/jump-test/post-detail/post-detail",
     

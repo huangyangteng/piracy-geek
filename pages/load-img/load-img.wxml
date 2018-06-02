@@ -1,0 +1,3 @@
+<block wx:for="{{imgs}}" wx:key="{{item.id}}">
+    <image class="{{item.isFull===true?'full':'default'}}" src="{{item.path}}" bindload="imgLoad" id="{{index}}"></image>
+</block>
