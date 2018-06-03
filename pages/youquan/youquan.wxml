@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">向下拉，然后点 ‘喜欢’</text>
+  </view>
+</view>
+<!--pages/youquan/youquan.wxml-->
+<view class='container'>
+  <view class='box'>
+    <view class='like' bindtap='clicklike' open-type="getUserInfo">喜欢
+      <image class='like_img' src='/img/xihuan.png'></image>
+    </view>
+    <view class='imgs'>
+      <view class='img-box'>
+        <image wx:for="{{work.likeImgs}}" wx:key="menus" src='{{item.img}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
