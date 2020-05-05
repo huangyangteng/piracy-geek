@@ -1,7 +1,0 @@
-/* 下划线 */
-.bottom-line{
-    border-bottom: 0.5px solid #f5f5f5;
-}
-.top-line{
-    border-top: 0.5px solid #f5f5f5;
-}
