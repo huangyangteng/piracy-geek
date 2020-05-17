@@ -1,6 +1,6 @@
 <template>
     <section class="read-outline">
-        <section class="outline-wrapper" v-show="status.outlineIsShow">
+        <section class="outline-wrapper">
             <div
                 :id="item.top"
                 :key="item.name"
@@ -32,8 +32,9 @@ export default {
                 return { 'outline-h1': true }
             }
         },
-        jumpToTitle() {},
-        toggleOutline() {}
+        jumpToTitle(item) {
+            document.querySelector('.article-wrapper').scrollTop = item.top
+        }
     }
 }
 </script>

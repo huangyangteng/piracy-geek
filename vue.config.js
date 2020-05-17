@@ -19,11 +19,11 @@ module.exports = {
     },
     chainWebpack: config => {
         // ----性能分析插件
-        if (process.env.NODE_ENV === 'production') {
-            config
-                .plugin('webpack-bundle-analyzer')
-                .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
-            config.devtool = 'source-map'
-        }
+        // if (process.env.NODE_ENV === 'production') {
+        //     config
+        //         .plugin('webpack-bundle-analyzer')
+        //         .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
+        //     config.devtool = 'source-map'
+        // }
     }
 }

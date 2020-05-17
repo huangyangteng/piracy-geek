@@ -26,12 +26,7 @@ export default {
         async handlerArticle(src, top) {
             this.showLoading()
             src = src.replace('./', '')
-            let reqUrl = ''
-            if (window.location.origin == 'http://111.229.14.189') {
-                reqUrl = window.location.origin + '/' + src
-            } else {
-                reqUrl = window.location.origin + '/api/' + src
-            }
+            let reqUrl = window.location.origin + '/api/' + src
 
             let res = await axios.get(reqUrl)
 
