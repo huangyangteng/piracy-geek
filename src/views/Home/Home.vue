@@ -65,6 +65,7 @@ export default {
             'updateColumn',
             'updateArticleId'
         ]),
+        ...mapMutations('lastRead', ['setReadPosition']),
         async updateAll(column, article) {
             await this.getAllColumn()
             this.updateColumn(this.getColumnById(column))
@@ -78,11 +79,23 @@ export default {
             }
         },
         getColumnById(columnId) {
-            console.log(this.columnList)
             return this.columnList.filter(item => item.id == columnId)[0]
+        },
+        saveReadPosition() {
+            // 记录上次阅读的位置 article:top
+            let top = document.querySelector('.article-wrapper').scrollTop
+            let article = this.$route.params.article
+            this.setReadPosition({ article, top })
         }
     },
-    async mounted() {}
+    beforeRouteUpdate(to, from, next) {
+        this.saveReadPosition()
+        next()
+    },
+    beforeRouteLeave(to, from, next) {
+        this.saveReadPosition()
+        next()
+    }
 }
 </script>
 <style lang="scss" scoped>

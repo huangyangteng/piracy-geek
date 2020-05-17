@@ -1,5 +1,10 @@
 <template>
-    <section class="article-wrapper" v-html="articleContent"></section>
+    <section
+        v-loading="loading"
+        class="article-wrapper"
+        v-html="articleContent"
+        ref="articalWrapper"
+    ></section>
 </template>
 <script>
 import { mapState, mapGetters } from 'vuex'
@@ -9,7 +14,8 @@ import axios from 'axios'
 export default {
     data() {
         return {
-            articleContent: ''
+            articleContent: '',
+            loading: false
         }
     },
     computed: {
@@ -17,17 +23,28 @@ export default {
         ...mapGetters('column', ['curContents'])
     },
     methods: {
-        async handlerArticle(src) {
+        async handlerArticle(src, top) {
+            this.showLoading()
             src = src.replace('./', '')
-            let reqUrl = window.location.origin + '/api/' + src
+            let reqUrl = ''
+            if (window.location.origin == 'http://111.229.14.189') {
+                reqUrl = window.location.origin + '/' + src
+            } else {
+                reqUrl = window.location.origin + '/api/' + src
+            }
+
             let res = await axios.get(reqUrl)
+
             if (res.status !== 200) {
                 return
             }
             this.articleContent = this.filterWaterMark(res.data)
+
+            this.hideLoading()
             this.$nextTick(() => {
                 this.generateOutline()
                 this.polyfillPage()
+                document.querySelector('.article-wrapper').scrollTop = top
             })
         },
         filterWaterMark(content) {
@@ -58,15 +75,34 @@ export default {
             }
             this.$store.commit('column/setOutline', treeArray)
         },
-        polyfillPage() {}
+        polyfillPage() {
+            let nav = document.querySelector('._50pDbNcP_0')
+            if (nav) {
+                document
+                    .querySelector('._50pDbNcP_0')
+                    .previousElementSibling.remove()
+            }
+        },
+        showLoading() {
+            this.loading = true
+        },
+        hideLoading() {
+            this.loading = false
+        }
     },
     watch: {
         curArticleId: {
             immediate: true,
             handler(id) {
                 let src = getAriticleSrcById(this.curContents, id)
+                let top = this.$store.getters['lastRead/getLastReadPosition'](
+                    id
+                )
+
                 if (!src) return
-                this.handlerArticle(src)
+                this.$nextTick(() => {
+                    this.handlerArticle(src, top)
+                })
             }
         }
     }
