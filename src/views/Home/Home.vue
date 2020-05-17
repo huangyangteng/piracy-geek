@@ -10,6 +10,7 @@
             @click="notFullScreen"
             class="el-icon-magic-stick exit-full"
         ></i>
+        <PicturePreview></PicturePreview>
     </section>
 </template>
 <script>
@@ -17,12 +18,14 @@ import { COLUMN_API } from '../../api/column'
 import ReadAside from './Aside/ReadAside'
 import ReadToolBar from './Content/ReadToolBar'
 import ArticleContent from './Content/ArticleContent'
+import PicturePreview from './Modal/PicturePreview'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
     components: {
         ReadAside,
         ReadToolBar,
-        ArticleContent
+        ArticleContent,
+        PicturePreview
     },
     data() {
         return {

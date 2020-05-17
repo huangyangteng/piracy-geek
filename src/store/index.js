@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import vuexStore from 'vuex-persistedstate'
 import column from './modules/column'
 import lastRead from './modules/last-read'
+import component from './modules/component'
 
 Vue.use(Vuex)
 
@@ -12,7 +13,8 @@ export default new Vuex.Store({
     actions: {},
     modules: {
         lastRead,
-        column
+        column,
+        component
     },
     plugins: [vuexStore({ key: 'gk-read' })]
 })
