@@ -1,0 +1,33 @@
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width: 2px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+    box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 166, 1);
+    background: #fa8919;
+    box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+}
+
+
+*::selection{
+    background-color: #fff2e6;
+}
+
+
+html,body,.app{
+    height: 100%;
+    font-family: Avenir, Tahoma, Arial, PingFang SC, Lantinghei SC,
+        Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif,
+        WenQuanYi Micro Hei, Helvetica, sans-serif;
+
+}
