@@ -15,7 +15,7 @@ const state = {
 
     status: {
         navIsShow: true,
-        outlineIsShow: true
+        toolbarIsShow: true
     }
 }
 
@@ -25,10 +25,22 @@ const getters = {
     curColumnTitle: state => state.curColumn.title,
     curContents: state => state.curColumn.contents,
     // 显示状态
-    isFold: state => !state.status.navIsShow
+    isFold: state => !state.status.navIsShow,
+    isFullScreen: state => {
+        return !state.status.navIsShow && !state.status.toolbarIsShow
+    }
 }
 
-const actions = {}
+const actions = {
+    fullScreen({ commit }) {
+        commit('toggleNavIsShow', false)
+        commit('toggleToolBar', false)
+    },
+    notFullScreen({ commit }) {
+        commit('toggleNavIsShow', true)
+        commit('toggleToolBar', true)
+    }
+}
 
 const mutations = {
     setColumnList(state, list) {
@@ -42,6 +54,9 @@ const mutations = {
     },
     toggleNavIsShow(state, truth) {
         state.status.navIsShow = truth
+    },
+    toggleToolBar(state, truth) {
+        state.status.toolbarIsShow = truth
     },
     setOutline(state, list) {
         state.outlineList = list

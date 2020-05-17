@@ -2,9 +2,14 @@
     <section class="read-wrapper">
         <ReadAside class="read-aside"></ReadAside>
         <section class="read-content">
-            <ReadToolBar></ReadToolBar>
+            <ReadToolBar v-show="status.toolbarIsShow"></ReadToolBar>
             <ArticleContent></ArticleContent>
         </section>
+        <i
+            v-show="isFullScreen"
+            @click="notFullScreen"
+            class="el-icon-magic-stick exit-full"
+        ></i>
     </section>
 </template>
 <script>
@@ -12,7 +17,7 @@ import { COLUMN_API } from '../../api/column'
 import ReadAside from './Aside/ReadAside'
 import ReadToolBar from './Content/ReadToolBar'
 import ArticleContent from './Content/ArticleContent'
-import { mapState, mapGetters, mapMutations } from 'vuex'
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
     components: {
         ReadAside,
@@ -26,8 +31,9 @@ export default {
     },
     computed: {
         ...mapState('lastRead', ['lastColumnId']),
-        ...mapState('column', ['columnList']),
-        ...mapGetters('lastRead', ['lastArticleId'])
+        ...mapState('column', ['columnList', 'status']),
+        ...mapGetters('lastRead', ['lastArticleId']),
+        ...mapGetters('column', ['isFullScreen'])
     },
     watch: {
         $route: {
@@ -50,6 +56,7 @@ export default {
         }
     },
     methods: {
+        ...mapActions('column', ['notFullScreen']),
         ...mapMutations('column', [
             'setColumnList',
             'updateColumn',
@@ -92,5 +99,11 @@ export default {
 }
 .read-content {
     flex: 1;
+}
+.exit-full {
+    position: fixed;
+    top: 40px;
+    right: 100px;
+    cursor: pointer;
 }
 </style>

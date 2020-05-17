@@ -3,7 +3,8 @@
         <header class="read-aside-header">
             <i
                 @click="toggleOutlineOrMenu"
-                class="el-icon-s-fold show-outline"
+                class="show-outline"
+                :class="iconType"
             ></i>
             <span>{{ showText }}</span>
             <b></b>
@@ -54,6 +55,17 @@ export default {
         ...mapGetters('column', ['curContents', 'isFold']),
         showText() {
             return this.showMenu ? '目录' : '大纲'
+        },
+        iconType() {
+            if (this.showMenu) {
+                return {
+                    'el-icon-s-fold': true
+                }
+            } else {
+                return {
+                    'el-icon-guide': true
+                }
+            }
         }
     },
     methods: {

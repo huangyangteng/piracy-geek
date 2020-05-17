@@ -10,3 +10,7 @@ export function getAriticleSrcById(contentsList, id) {
     let cur = listAll.find(item => item.id == id)
     return cur.src
 }
+
+export function getColumnById(columnList, id) {
+    return columnList.filter(item => item.id == id)[0]
+}

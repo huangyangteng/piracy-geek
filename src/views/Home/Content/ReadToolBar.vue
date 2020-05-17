@@ -1,15 +1,20 @@
 <template>
     <section class="read-tool-bar">
-        <i @click="toggleFold" v-show="!isFold" class="el-icon-s-fold"></i>
-        <i @click="toggleFold" v-show="isFold" class="el-icon-s-unfold"></i>
+        <i
+            @click="toggleFold"
+            v-show="!isFold"
+            class="el-icon-s-fold fold-icon"
+        ></i>
+        <i
+            @click="toggleFold"
+            v-show="isFold"
+            class="el-icon-s-unfold fold-icon"
+        ></i>
         <span class="jk-title">{{ curColumnTitle }}</span>
         <aside>
             <el-dropdown trigger="click" @command="changeColumn">
                 <el-tooltip content="选课" placement="top">
-                    <i
-                        class="el-icon-reading cursor-pointer"
-                        style="font-size: 16px"
-                    ></i>
+                    <i class="el-icon-reading" style="font-size: 16px"></i>
                 </el-tooltip>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item
@@ -25,14 +30,14 @@
             <el-tooltip content="全屏阅读" placement="top">
                 <i
                     @click="fullScreen"
-                    class="el-icon-full-screen cursor-pointer"
+                    class="el-icon-full-screen"
                     style="margin-left: 10px;"
                 ></i>
             </el-tooltip>
             <el-tooltip content="提示" placement="top">
                 <i
                     @click="watchTip"
-                    class="el-icon-s-opportunity cursor-pointer"
+                    class="el-icon-s-opportunity icon-tip"
                     style="margin-right: 10px;margin-left: 10px;"
                 ></i>
             </el-tooltip>
@@ -40,7 +45,8 @@
     </section>
 </template>
 <script>
-import { mapGetters, mapMutations, mapState } from 'vuex'
+import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
+import { getColumnById } from '../../../tools/column-tools'
 export default {
     data() {
         return {}
@@ -51,12 +57,21 @@ export default {
     },
     methods: {
         ...mapMutations('column', ['toggleNavIsShow']),
+        ...mapActions('column', ['fullScreen']),
         toggleFold() {
             this.toggleNavIsShow(this.isFold)
         },
-        fullScreen() {},
-        watchTip() {},
-        changeColumn() {}
+        watchTip() {
+            this.$router.push({ name: 'tip' })
+        },
+        changeColumn(column) {
+            let columnInfo = getColumnById(this.columnList, column)
+            let defaultArticle = columnInfo.contents[0].subList[0].id
+            this.$router.push({
+                name: 'read',
+                params: { column, article: defaultArticle }
+            })
+        }
     }
 }
 </script>
@@ -72,13 +87,24 @@ export default {
         cursor: pointer;
         margin-right: 25px;
         font-size: 30px;
-        color: #333;
+        color: #666;
         font-weight: 200;
     }
     > aside {
         flex: 1;
         margin-right: 20px;
         text-align: right;
+        i {
+            cursor: pointer;
+        }
     }
+}
+.jk-title {
+    color: #333;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+.icon-tip {
+    color: #fa8919;
 }
 </style>
