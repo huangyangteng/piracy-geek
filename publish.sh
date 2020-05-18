@@ -1,6 +1,6 @@
 #/bin/bash
 
-
+rm -rf piracy-geek
 npm run build
 
 mv dist piracy-geek

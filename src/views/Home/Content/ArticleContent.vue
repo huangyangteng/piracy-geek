@@ -27,6 +27,10 @@ export default {
             this.showLoading()
             src = src.replace('./', '')
             let reqUrl = window.location.origin + '/api/' + src
+            if (location.hostname == 'localhost') {
+                //测试环境
+                reqUrl = window.location.origin + '/api/api/' + src
+            }
 
             let res = await axios.get(reqUrl)
 

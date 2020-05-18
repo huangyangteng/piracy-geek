@@ -33,7 +33,9 @@ export default {
             }
         },
         jumpToTitle(item) {
-            document.querySelector('.article-wrapper').scrollTop = item.top
+            let wrapper = document.querySelector('.article-wrapper')
+            let cur = document.getElementById(item.id)
+            wrapper.scrollTop = cur.offsetTop - 96
         }
     }
 }
