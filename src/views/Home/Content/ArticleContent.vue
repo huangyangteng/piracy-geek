@@ -7,7 +7,7 @@
     ></section>
 </template>
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid } from '../../../tools/index'
 import axios from 'axios'
@@ -23,6 +23,7 @@ export default {
         ...mapGetters('column', ['curContents'])
     },
     methods: {
+        ...mapMutations('lastRead', ['setLastColumn', 'setLastArticle']),
         async handlerArticle(src, top) {
             this.showLoading()
             src = src.replace('./', '')
@@ -38,7 +39,7 @@ export default {
                 return
             }
             this.articleContent = this.filterWaterMark(res.data)
-
+            this.saveHistory()
             this.hideLoading()
             this.$nextTick(() => {
                 this.generateOutline()
@@ -73,6 +74,15 @@ export default {
                 }
             }
             this.$store.commit('column/setOutline', treeArray)
+        },
+        saveHistory() {
+            if (this.$route.params.column) {
+                this.setLastColumn(this.$route.params.column)
+                this.setLastArticle({
+                    column: this.$route.params.column,
+                    article: this.$route.params.article
+                })
+            }
         },
         polyfillPage() {
             let nav = document.querySelector('._50pDbNcP_0')

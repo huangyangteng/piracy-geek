@@ -53,7 +53,8 @@ export default {
     },
     computed: {
         ...mapState('column', ['columnList']),
-        ...mapGetters('column', ['curColumnTitle', 'isFold'])
+        ...mapGetters('column', ['curColumnTitle', 'isFold']),
+        ...mapGetters('lastRead', ['getLastArticleId'])
     },
     methods: {
         ...mapMutations('column', ['toggleNavIsShow']),
@@ -66,10 +67,12 @@ export default {
         },
         changeColumn(column) {
             let columnInfo = getColumnById(this.columnList, column)
+            let lastArticle = this.getLastArticleId(column)
             let defaultArticle = columnInfo.contents[0].subList[0].id
+            let article = lastArticle ? lastArticle : defaultArticle
             this.$router.push({
                 name: 'read',
-                params: { column, article: defaultArticle }
+                params: { column, article }
             })
         }
     }

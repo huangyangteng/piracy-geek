@@ -1,12 +1,21 @@
 const state = {
-    lastColumnId: 'chongxueqianduan',
+    lastColumnId: '',
     lastArticleList: [],
     lastReadPositionList: []
 }
 
 const getters = {
-    lastArticleId() {
-        return 'sj1T7fCTN4kPErNu'
+    getLastArticleId(state) {
+        return column => {
+            let curIndex = state.lastArticleList.findIndex(
+                item => item.column == column
+            )
+            if (curIndex == -1) {
+                return null
+            } else {
+                return state.lastArticleList[curIndex].article
+            }
+        }
     },
     getLastReadPosition(state) {
         return article => {
@@ -27,6 +36,19 @@ const actions = {}
 const mutations = {
     setLastColumn(state, columnId) {
         state.lastColumnId = columnId
+    },
+    setLastArticle(state, params) {
+        let { column, article } = params
+        let curIndex = state.lastArticleList.findIndex(
+            item => item.column == column
+        )
+        let cur = { column, article }
+        if (curIndex != -1) {
+            //已存在
+            state.lastArticleList.splice(curIndex, 1, cur)
+        } else {
+            state.lastArticleList.push(cur)
+        }
     },
     setReadPosition(state, params) {
         let { article, top } = params
