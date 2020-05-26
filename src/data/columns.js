@@ -946,6 +946,7 @@ export default [
             }
         ]
     },
+    // -----计算机基础
     {
         title: '编译原理之美',
         id: 'whis7d21y7r',
@@ -1661,6 +1662,321 @@ export default [
                         id: 'btes9wpl13w',
                         title:
                             '结束语-放弃完美主义，执行力就是限时限量认真完成',
+                        src: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: '透视HTTP协议',
+        id: 'mxprfcgr030',
+        contents: [
+            {
+                id: 'pig49ddwg0u',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: 'cndvu2wd5h9',
+                        title: '开篇词｜To Be a HTTP Hero',
+                        src: './透视HTTP协议/html/开篇词ToBeaHTTPHero.html'
+                    }
+                ]
+            },
+            {
+                id: 'xf6i6awjbpj',
+                title: '破冰篇',
+                subList: [
+                    {
+                        id: 'ftsi2xsicgq',
+                        title: '01 | 时势与英雄：HTTP的前世今生',
+                        src:
+                            './透视HTTP协议/html/01时势与英雄HTTP的前世今生.html'
+                    },
+                    {
+                        id: 'tmqvd3zd44p',
+                        title: '02 | HTTP是什么？HTTP又不是什么？',
+                        src:
+                            './透视HTTP协议/html/02HTTP是什么HTTP又不是什么.html'
+                    },
+                    {
+                        id: 'ahwq95u7x3p',
+                        title: '03 | HTTP世界全览（上）：与HTTP相关的各种概念',
+                        src:
+                            './透视HTTP协议/html/03HTTP世界全览上与HTTP相关的各种概念.html'
+                    },
+                    {
+                        id: 'qz7ic0lxfgk',
+                        title: '04 | HTTP世界全览（下）：与HTTP相关的各种协议',
+                        src:
+                            './透视HTTP协议/html/04HTTP世界全览下与HTTP相关的各种协议.html'
+                    },
+                    {
+                        id: '6wbj6m5ih89',
+                        title:
+                            '05 | 常说的“四层”和“七层”到底是什么？“五层”“六层”哪去了？',
+                        src:
+                            './透视HTTP协议/html/05常说的四层和七层到底是什么五层六层哪去了.html'
+                    },
+                    {
+                        id: 'eaymrox43no',
+                        title: '06 | 域名里有哪些门道？',
+                        src: './透视HTTP协议/html/06域名里有哪些门道.html'
+                    },
+                    {
+                        id: '6mu6rxpwpoc',
+                        title: '07 | 自己动手，搭建HTTP实验环境',
+                        src:
+                            './透视HTTP协议/html/07自己动手搭建HTTP实验环境.html'
+                    }
+                ]
+            },
+            {
+                id: 'bor6o0y5i26',
+                title: '基础篇',
+                subList: [
+                    {
+                        id: 'kvaawhgbba0',
+                        title: '08 | 键入网址再按下回车，后面究竟发生了什么？',
+                        src:
+                            './透视HTTP协议/html/08键入网址再按下回车后面究竟发生了什么.html'
+                    },
+                    {
+                        id: '0v1afj2udrq',
+                        title: '09 | HTTP报文是什么样子的？',
+                        src: './透视HTTP协议/html/09HTTP报文是什么样子的.html'
+                    },
+                    {
+                        id: 'wf1lld6lf9u',
+                        title: '10 | 应该如何理解请求方法？',
+                        src: './透视HTTP协议/html/10应该如何理解请求方法.html'
+                    },
+                    {
+                        id: 'zi2k634ynhz',
+                        title: '11 | 你能写出正确的网址吗？',
+                        src: './透视HTTP协议/html/11你能写出正确的网址吗.html'
+                    },
+                    {
+                        id: '69w1a134ulz',
+                        title: '12 | 响应状态码该怎么用？',
+                        src: './透视HTTP协议/html/12响应状态码该怎么用.html'
+                    },
+                    {
+                        id: '4vwl5l41afs',
+                        title: '13 | HTTP有哪些特点？',
+                        src: './透视HTTP协议/html/13HTTP有哪些特点.html'
+                    },
+                    {
+                        id: '39pd6rii0zr',
+                        title: '14 | HTTP有哪些优点？又有哪些缺点？',
+                        src:
+                            './透视HTTP协议/html/14HTTP有哪些优点又有哪些缺点.html'
+                    }
+                ]
+            },
+            {
+                id: 'fb9bb7e3678',
+                title: '进阶篇',
+                subList: [
+                    {
+                        id: '5lzme9g1841',
+                        title: '15 | 海纳百川：HTTP的实体数据',
+                        src: './透视HTTP协议/html/15海纳百川HTTP的实体数据.html'
+                    },
+                    {
+                        id: 'tr4nyceyx2z',
+                        title: '16 | 把大象装进冰箱：HTTP传输大文件的方法',
+                        src:
+                            './透视HTTP协议/html/16把大象装进冰箱HTTP传输大文件的方法.html'
+                    },
+                    {
+                        id: 'j4ad2ikr2ao',
+                        title: '17 | 排队也要讲效率：HTTP的连接管理',
+                        src:
+                            './透视HTTP协议/html/17排队也要讲效率HTTP的连接管理.html'
+                    },
+                    {
+                        id: 'ru0jffp4mrt',
+                        title: '18 | 四通八达：HTTP的重定向和跳转',
+                        src:
+                            './透视HTTP协议/html/18四通八达HTTP的重定向和跳转.html'
+                    },
+                    {
+                        id: 'adrtb5266ez',
+                        title: '19 | 让我知道你是谁：HTTP的Cookie机制',
+                        src:
+                            './透视HTTP协议/html/19让我知道你是谁HTTP的Cookie机制.html'
+                    },
+                    {
+                        id: 'jzpqgnelm4m',
+                        title: '20 | 生鲜速递：HTTP的缓存控制',
+                        src: './透视HTTP协议/html/20生鲜速递HTTP的缓存控制.html'
+                    },
+                    {
+                        id: 't1q9rn410q7',
+                        title: '21 | 良心中间商：HTTP的代理服务',
+                        src:
+                            './透视HTTP协议/html/21良心中间商HTTP的代理服务.html'
+                    },
+                    {
+                        id: 'w2kvc573k01',
+                        title: '22 | 冷链周转：HTTP的缓存代理',
+                        src: './透视HTTP协议/html/22冷链周转HTTP的缓存代理.html'
+                    }
+                ]
+            },
+            {
+                id: '7s2wqn57pru',
+                title: '安全篇',
+                subList: [
+                    {
+                        id: '1g4fo3e5slv',
+                        title: '23 | HTTPS是什么？SSL/TLS又是什么？',
+                        src:
+                            './透视HTTP协议/html/23HTTPS是什么SSLTLS又是什么.html'
+                    },
+                    {
+                        id: 'blfp4zvlqz4',
+                        title:
+                            '24 | 固若金汤的根本（上）：对称加密与非对称加密',
+                        src:
+                            './透视HTTP协议/html/24固若金汤的根本上对称加密与非对称加密.html'
+                    },
+                    {
+                        id: 'mcd4xmjs0ne',
+                        title: '25 | 固若金汤的根本（下）：数字签名与证书',
+                        src:
+                            './透视HTTP协议/html/25固若金汤的根本下数字签名与证书.html'
+                    },
+                    {
+                        id: 'e3qhfqgjkkr',
+                        title: '26 | 信任始于握手：TLS1.2连接过程解析',
+                        src:
+                            './透视HTTP协议/html/26信任始于握手TLS1.2连接过程解析.html'
+                    },
+                    {
+                        id: '3yvb2iwpd14',
+                        title: '27 | 更好更快的握手：TLS1.3特性解析',
+                        src:
+                            './透视HTTP协议/html/27更好更快的握手TLS1.3特性解析.html'
+                    },
+                    {
+                        id: 'juddhigmtrl',
+                        title: '28 | 连接太慢该怎么办：HTTPS的优化',
+                        src:
+                            './透视HTTP协议/html/28连接太慢该怎么办HTTPS的优化.html'
+                    },
+                    {
+                        id: 'b6xho3btsxu',
+                        title: '29 | 我应该迁移到HTTPS吗？',
+                        src: './透视HTTP协议/html/29我应该迁移到HTTPS吗.html'
+                    }
+                ]
+            },
+            {
+                id: 'vs2q8fxvlui',
+                title: '飞翔篇',
+                subList: [
+                    {
+                        id: 'ttu3z2e59xj',
+                        title: '30 | 时代之风（上）：HTTP/2特性概览',
+                        src:
+                            './透视HTTP协议/html/30时代之风上HTTP2特性概览.html'
+                    },
+                    {
+                        id: 'mtnbbm39cuo',
+                        title: '31 | 时代之风（下）：HTTP/2内核剖析',
+                        src:
+                            './透视HTTP协议/html/31时代之风下HTTP2内核剖析.html'
+                    },
+                    {
+                        id: 'c96j1ihsgap',
+                        title: '32 | 未来之路：HTTP/3展望',
+                        src: './透视HTTP协议/html/32未来之路HTTP3展望.html'
+                    },
+                    {
+                        id: '5t6rzgq4cky',
+                        title: '33 | 我应该迁移到HTTP/2吗？',
+                        src: './透视HTTP协议/html/33我应该迁移到HTTP2吗.html'
+                    }
+                ]
+            },
+            {
+                id: '99fuwo533oe',
+                title: '探索篇',
+                subList: [
+                    {
+                        id: 'q5uvbe0abh6',
+                        title: '34 | Nginx：高性能的Web服务器',
+                        src: './透视HTTP协议/html/34Nginx高性能的Web服务器.html'
+                    },
+                    {
+                        id: 'qfs94zigawq',
+                        title: '35 | OpenResty：更灵活的Web服务器',
+                        src:
+                            './透视HTTP协议/html/35OpenResty更灵活的Web服务器.html'
+                    },
+                    {
+                        id: 'xarfeihmjto',
+                        title: '36 | WAF：保护我们的网络服务',
+                        src: './透视HTTP协议/html/36WAF保护我们的网络服务.html'
+                    },
+                    {
+                        id: 'gwdny8w4znw',
+                        title: '37 | CDN：加速我们的网络服务',
+                        src: './透视HTTP协议/html/37CDN加速我们的网络服务.html'
+                    },
+                    {
+                        id: 'ir3kw07tmln',
+                        title: '38 | WebSocket：沙盒里的TCP',
+                        src: './透视HTTP协议/html/38WebSocket沙盒里的TCP.html'
+                    }
+                ]
+            },
+            {
+                id: '2fwiszvo6ex',
+                title: '总结篇',
+                subList: [
+                    {
+                        id: 'hh2ho0mlwgn',
+                        title: '39 | HTTP性能优化面面观（上）',
+                        src: './透视HTTP协议/html/39HTTP性能优化面面观上.html'
+                    },
+                    {
+                        id: '5w92ybgf5nn',
+                        title: '40 | HTTP性能优化面面观（下）',
+                        src: './透视HTTP协议/html/40HTTP性能优化面面观下.html'
+                    }
+                ]
+            },
+            {
+                id: 'oqefne7dw6e',
+                title: '答疑篇',
+                subList: [
+                    {
+                        id: 'ohz74zqwd7i',
+                        title: '41 | Linux/Mac实验环境搭建与URI查询参数',
+                        src: ''
+                    },
+                    {
+                        id: 'hscutx43pml',
+                        title: '42 | DHE/ECDHE算法的原理',
+                        src: ''
+                    }
+                ]
+            },
+            {
+                id: 'uh073j17v7u',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 'yr7f983s7su',
+                        title: '结束语 | 做兴趣使然的Hero',
+                        src: './透视HTTP协议/html/结束语做兴趣使然的Hero.html'
+                    },
+                    {
+                        id: 'yd72ezgomum',
+                        title: '结课测试 | 这些HTTP协议知识，你真的掌握了吗？',
                         src: ''
                     }
                 ]
@@ -2675,6 +2991,8 @@ export default [
             }
         ]
     },
+
+    // -------软技能
     {
         title: '左耳听风',
         id: 'c32iugx4yjo',
@@ -3554,6 +3872,279 @@ export default [
         ]
     },
     {
+        title: '面试现场',
+        id: 'zh82axor9hz',
+        contents: [
+            {
+                id: 'xdy7q62sbbj',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: 'nx8axzldoey',
+                        title: '开篇词 | 面试，这样做会功到自然成',
+                        src:
+                            './面试现场/html/00开篇词面试这样做会功到自然成.html'
+                    }
+                ]
+            },
+            {
+                id: 'wye7gzo83v2',
+                title: '基础：知彼篇',
+                subList: [
+                    {
+                        id: 'jd0evck8jy1',
+                        title: '01 | 公司到底想要什么样的人？',
+                        src: './面试现场/html/01公司到底想要什么样的人.html'
+                    },
+                    {
+                        id: 'riumbln5gq4',
+                        title: '02 | 想要成功面试，先要弄懂面试过程',
+                        src:
+                            './面试现场/html/02想要成功面试先要弄懂面试过程.html'
+                    },
+                    {
+                        id: '1gfb2lonhvc',
+                        title: '03 | 面试官的面试逻辑是什么？',
+                        src: './面试现场/html/03面试官的面试逻辑是什么.html'
+                    }
+                ]
+            },
+            {
+                id: 'n7iasstizv0',
+                title: '基础：知己篇',
+                subList: [
+                    {
+                        id: 'xxk7v51u3q5',
+                        title: '04 | 现在的你，到底该不该换工作',
+                        src: './面试现场/html/04现在的你到底该不该换工作.html'
+                    },
+                    {
+                        id: 'ptkw132x9r7',
+                        title: '05 | 喜欢或擅长的工作，你该选哪一个？',
+                        src:
+                            './面试现场/html/06喜欢或擅长的工作你该选哪一个.html'
+                    },
+                    {
+                        id: 'jftt240ep9w',
+                        title: '06 | 职业规划一：你真的想好要怎么发展了吗？',
+                        src:
+                            './面试现场/html/07职业规划一你真的想好要怎么发展了吗.html'
+                    },
+                    {
+                        id: 'udb05t0ebmh',
+                        title: '07 | 职业规划二：程序员后来都去干啥了？',
+                        src:
+                            './面试现场/html/09职业规划二程序员后来都去干啥了.html'
+                    },
+                    {
+                        id: 'gqxf4qzkiln',
+                        title: '08 | 如何让你的简历更受青睐',
+                        src: './面试现场/html/10如何让你的简历更受青睐.html'
+                    },
+                    {
+                        id: '6r1par4hr1y',
+                        title: '09 | 经历没有亮点可讲？你需要做份“详历”',
+                        src:
+                            './面试现场/html/12经历没有亮点可讲你需要做份详历.html'
+                    },
+                    {
+                        id: '5s9end7adxm',
+                        title: '10 | 面试紧张怎么办？',
+                        src: './面试现场/html/13面试紧张怎么办.html'
+                    },
+                    {
+                        id: 'gt9pzx2axma',
+                        title: '11 | 面试答疑（一）：说说你面试中的一些困惑',
+                        src:
+                            './面试现场/html/14面试答疑一说说你面试中的一些困惑.html'
+                    }
+                ]
+            },
+            {
+                id: 'he8q0zeg4hl',
+                title: '问答篇',
+                subList: [
+                    {
+                        id: 'ceimwng5uj3',
+                        title: '12 |  如何做好开场：给自我介绍加“特效”',
+                        src:
+                            './面试现场/html/15如何做好开场给自我介绍加特效.html'
+                    },
+                    {
+                        id: 'ub72t2bk9q3',
+                        title: '13 | 你真能讲明白技术吗?',
+                        src: './面试现场/html/16你真能讲明白技术吗.html'
+                    },
+                    {
+                        id: 'atjxx857dyq',
+                        title: '14 | 怎样展示你在项目中的重要性？',
+                        src: './面试现场/html/18怎样展示你在项目中的重要性.html'
+                    },
+                    {
+                        id: 'snmwhp2eqaw',
+                        title: '15 | 如何认识自己的优缺点？',
+                        src: './面试现场/html/19如何认识自己的优缺点.html'
+                    },
+                    {
+                        id: '8e6m5u1ajna',
+                        title: '16 | 透过兴趣爱好，面试官可以看出什么？',
+                        src:
+                            './面试现场/html/21透过兴趣爱好面试官可以看出什么.html'
+                    },
+                    {
+                        id: 'z71hxpcebeh',
+                        title: '17 | 如何让你的回答更到位？',
+                        src: './面试现场/html/22如何让你的回答更到位.html'
+                    },
+                    {
+                        id: 'dk75zv6avb5',
+                        title: '18 | 被面试官问住了怎么办？',
+                        src: './面试现场/html/24被面试官问住了怎么办.html'
+                    },
+                    {
+                        id: '6kj9bfqvlp0',
+                        title: '19 | 应该如何向面试官提问？',
+                        src: './面试现场/html/25应该如何向面试官提问.html'
+                    },
+                    {
+                        id: 'pi0f5y2vf2h',
+                        title: '20 | 怎么谈薪水比较好？',
+                        src: './面试现场/html/26怎么谈薪水比较好.html'
+                    },
+                    {
+                        id: 'wf6ynj2xfhs',
+                        title: '21 | 面试答疑（二）：面试问答环节的一些思考',
+                        src:
+                            './面试现场/html/27面试答疑二面试问答环节的一些思考.html'
+                    }
+                ]
+            },
+            {
+                id: 'ilkzqia2oth',
+                title: '贯通篇',
+                subList: [
+                    {
+                        id: '4o25lslwrz9',
+                        title: '22 | 怎样体现你的学习能力强？',
+                        src: './面试现场/html/28怎样体现你的学习能力强.html'
+                    },
+                    {
+                        id: 'virrbo13ykl',
+                        title: '23 | 怎么体现你能把工作越做越好？',
+                        src: './面试现场/html/30怎么体现你能把工作越做越好.html'
+                    },
+                    {
+                        id: 'piegmku0t9u',
+                        title: '24 | 怎样体现你的协作能力强？',
+                        src: './面试现场/html/31怎样体现你的协作能力强.html'
+                    },
+                    {
+                        id: 'fz2kn2go5s4',
+                        title: '25 | 不是领导，怎么体现你的领导力？',
+                        src: './面试现场/html/32不是领导怎么体现你的领导力.html'
+                    },
+                    {
+                        id: 'ncr6x5t5o06',
+                        title: '26 | 你解决问题的能力有多强？',
+                        src: './面试现场/html/33你解决问题的能力有多强.html'
+                    }
+                ]
+            },
+            {
+                id: 'pvz0oomiiyg',
+                title: '综合篇',
+                subList: [
+                    {
+                        id: 'd1esv39gd0t',
+                        title: '27 | 盘点面试官和应聘者的认知差异',
+                        src:
+                            './面试现场/html/34盘点面试官和应聘者的认知差异.html'
+                    },
+                    {
+                        id: 'vf6n2o01r9q',
+                        title: '28 | 通过面试，你能了解这个团队多少？',
+                        src:
+                            './面试现场/html/35通过面试你能了解这个团队多少.html'
+                    },
+                    {
+                        id: 'ihfuhquf64a',
+                        title: '29 | 合同都签了，老板却不放你走，怎么办？',
+                        src:
+                            './面试现场/html/36合同都签了老板却不放你走怎么办.html'
+                    },
+                    {
+                        id: 'sxm3roce0no',
+                        title: '30 | 面试答疑（三）：如何更好地体现你的能力？',
+                        src:
+                            './面试现场/html/37面试答疑三如何更好地体现你的能力.html'
+                    }
+                ]
+            },
+            {
+                id: '1f11f7cy7j0',
+                title: '考官面对面',
+                subList: [
+                    {
+                        id: 'gzjtk20iso0',
+                        title: '01 | 考官面对面：程序员择业时常碰到的几个疑惑',
+                        src:
+                            './面试现场/html/05考官面对面程序员择业时常碰到的几个疑惑.html'
+                    },
+                    {
+                        id: 'qr74go4nrok',
+                        title: '02 | 考官面对面：如何有效地准备一场面试？',
+                        src:
+                            './面试现场/html/08考官面对面如何有效地准备一场面试.html'
+                    },
+                    {
+                        id: 'u0bbuurp78s',
+                        title:
+                            '03 | 考官面对面：面试注意事项及面试官常见的思维模式',
+                        src:
+                            './面试现场/html/11考官面对面面试注意事项及面试官们常见的思维模式.html'
+                    },
+                    {
+                        id: 'fuwqpns1bd0',
+                        title:
+                            '04 | 考官面对面：面试与应聘，如何站在对方的角度考虑问题？',
+                        src:
+                            './面试现场/html/17考官面对面面试与应聘如何站在对方的角度考虑问题.html'
+                    },
+                    {
+                        id: '80nujc1urbt',
+                        title: '05 | 考官面对面：我是如何面试程序员的？',
+                        src:
+                            './面试现场/html/20考官面对面我是如何面试程序员的.html'
+                    },
+                    {
+                        id: 'g9f841n6aoa',
+                        title: '06 | 考官面对面：我们是如何面试架构师的？',
+                        src:
+                            './面试现场/html/23考官面对面我们是如何面试架构师的.html'
+                    },
+                    {
+                        id: '9spzjw04krp',
+                        title: '07 | 考官面对面：面试经验谈之校招与社招',
+                        src:
+                            './面试现场/html/29考官面对面面试经验谈之校招与社招.html'
+                    }
+                ]
+            },
+            {
+                id: 'bfvu9d6sw2b',
+                title: '结束语',
+                subList: [
+                    {
+                        id: '9k4p68jdwnx',
+                        title: '结束语 | 以终为始，闭环迭代，持续提高',
+                        src:
+                            './面试现场/html/结束语以终为始闭环迭代持续提高.html'
+                    }
+                ]
+            }
+        ]
+    },
+    {
         title: '10x程序员工作法',
         id: 'ts4ebp02jx0',
         contents: [
@@ -3933,273 +4524,413 @@ export default [
         ]
     },
     {
-        title: '面试现场',
-        id: 'zh82axor9hz',
+        title: '程序员进阶攻略',
+        id: 'qwrms9zuf7v',
         contents: [
             {
-                id: 'xdy7q62sbbj',
+                id: 'b58aqkaio3o',
                 title: '开篇词',
                 subList: [
                     {
-                        id: 'nx8axzldoey',
-                        title: '开篇词 | 面试，这样做会功到自然成',
-                        src:
-                            './面试现场/html/00开篇词面试这样做会功到自然成.html'
-                    }
-                ]
-            },
-            {
-                id: 'wye7gzo83v2',
-                title: '基础：知彼篇',
-                subList: [
-                    {
-                        id: 'jd0evck8jy1',
-                        title: '01 | 公司到底想要什么样的人？',
-                        src: './面试现场/html/01公司到底想要什么样的人.html'
-                    },
-                    {
-                        id: 'riumbln5gq4',
-                        title: '02 | 想要成功面试，先要弄懂面试过程',
-                        src:
-                            './面试现场/html/02想要成功面试先要弄懂面试过程.html'
-                    },
-                    {
-                        id: '1gfb2lonhvc',
-                        title: '03 | 面试官的面试逻辑是什么？',
-                        src: './面试现场/html/03面试官的面试逻辑是什么.html'
-                    }
-                ]
-            },
-            {
-                id: 'n7iasstizv0',
-                title: '基础：知己篇',
-                subList: [
-                    {
-                        id: 'xxk7v51u3q5',
-                        title: '04 | 现在的你，到底该不该换工作',
-                        src: './面试现场/html/04现在的你到底该不该换工作.html'
-                    },
-                    {
-                        id: 'ptkw132x9r7',
-                        title: '05 | 喜欢或擅长的工作，你该选哪一个？',
-                        src:
-                            './面试现场/html/06喜欢或擅长的工作你该选哪一个.html'
-                    },
-                    {
-                        id: 'jftt240ep9w',
-                        title: '06 | 职业规划一：你真的想好要怎么发展了吗？',
-                        src:
-                            './面试现场/html/07职业规划一你真的想好要怎么发展了吗.html'
-                    },
-                    {
-                        id: 'udb05t0ebmh',
-                        title: '07 | 职业规划二：程序员后来都去干啥了？',
-                        src:
-                            './面试现场/html/09职业规划二程序员后来都去干啥了.html'
-                    },
-                    {
-                        id: 'gqxf4qzkiln',
-                        title: '08 | 如何让你的简历更受青睐',
-                        src: './面试现场/html/10如何让你的简历更受青睐.html'
-                    },
-                    {
-                        id: '6r1par4hr1y',
-                        title: '09 | 经历没有亮点可讲？你需要做份“详历”',
-                        src:
-                            './面试现场/html/12经历没有亮点可讲你需要做份详历.html'
-                    },
-                    {
-                        id: '5s9end7adxm',
-                        title: '10 | 面试紧张怎么办？',
-                        src: './面试现场/html/13面试紧张怎么办.html'
-                    },
-                    {
-                        id: 'gt9pzx2axma',
-                        title: '11 | 面试答疑（一）：说说你面试中的一些困惑',
-                        src:
-                            './面试现场/html/14面试答疑一说说你面试中的一些困惑.html'
-                    }
-                ]
-            },
-            {
-                id: 'he8q0zeg4hl',
-                title: '问答篇',
-                subList: [
-                    {
-                        id: 'ceimwng5uj3',
-                        title: '12 |  如何做好开场：给自我介绍加“特效”',
-                        src:
-                            './面试现场/html/15如何做好开场给自我介绍加特效.html'
-                    },
-                    {
-                        id: 'ub72t2bk9q3',
-                        title: '13 | 你真能讲明白技术吗?',
-                        src: './面试现场/html/16你真能讲明白技术吗.html'
-                    },
-                    {
-                        id: 'atjxx857dyq',
-                        title: '14 | 怎样展示你在项目中的重要性？',
-                        src: './面试现场/html/18怎样展示你在项目中的重要性.html'
-                    },
-                    {
-                        id: 'snmwhp2eqaw',
-                        title: '15 | 如何认识自己的优缺点？',
-                        src: './面试现场/html/19如何认识自己的优缺点.html'
-                    },
-                    {
-                        id: '8e6m5u1ajna',
-                        title: '16 | 透过兴趣爱好，面试官可以看出什么？',
-                        src:
-                            './面试现场/html/21透过兴趣爱好面试官可以看出什么.html'
-                    },
-                    {
-                        id: 'z71hxpcebeh',
-                        title: '17 | 如何让你的回答更到位？',
-                        src: './面试现场/html/22如何让你的回答更到位.html'
-                    },
-                    {
-                        id: 'dk75zv6avb5',
-                        title: '18 | 被面试官问住了怎么办？',
-                        src: './面试现场/html/24被面试官问住了怎么办.html'
-                    },
-                    {
-                        id: '6kj9bfqvlp0',
-                        title: '19 | 应该如何向面试官提问？',
-                        src: './面试现场/html/25应该如何向面试官提问.html'
-                    },
-                    {
-                        id: 'pi0f5y2vf2h',
-                        title: '20 | 怎么谈薪水比较好？',
-                        src: './面试现场/html/26怎么谈薪水比较好.html'
-                    },
-                    {
-                        id: 'wf6ynj2xfhs',
-                        title: '21 | 面试答疑（二）：面试问答环节的一些思考',
-                        src:
-                            './面试现场/html/27面试答疑二面试问答环节的一些思考.html'
-                    }
-                ]
-            },
-            {
-                id: 'ilkzqia2oth',
-                title: '贯通篇',
-                subList: [
-                    {
-                        id: '4o25lslwrz9',
-                        title: '22 | 怎样体现你的学习能力强？',
-                        src: './面试现场/html/28怎样体现你的学习能力强.html'
-                    },
-                    {
-                        id: 'virrbo13ykl',
-                        title: '23 | 怎么体现你能把工作越做越好？',
-                        src: './面试现场/html/30怎么体现你能把工作越做越好.html'
-                    },
-                    {
-                        id: 'piegmku0t9u',
-                        title: '24 | 怎样体现你的协作能力强？',
-                        src: './面试现场/html/31怎样体现你的协作能力强.html'
-                    },
-                    {
-                        id: 'fz2kn2go5s4',
-                        title: '25 | 不是领导，怎么体现你的领导力？',
-                        src: './面试现场/html/32不是领导怎么体现你的领导力.html'
-                    },
-                    {
-                        id: 'ncr6x5t5o06',
-                        title: '26 | 你解决问题的能力有多强？',
-                        src: './面试现场/html/33你解决问题的能力有多强.html'
-                    }
-                ]
-            },
-            {
-                id: 'pvz0oomiiyg',
-                title: '综合篇',
-                subList: [
-                    {
-                        id: 'd1esv39gd0t',
-                        title: '27 | 盘点面试官和应聘者的认知差异',
-                        src:
-                            './面试现场/html/34盘点面试官和应聘者的认知差异.html'
-                    },
-                    {
-                        id: 'vf6n2o01r9q',
-                        title: '28 | 通过面试，你能了解这个团队多少？',
-                        src:
-                            './面试现场/html/35通过面试你能了解这个团队多少.html'
-                    },
-                    {
-                        id: 'ihfuhquf64a',
-                        title: '29 | 合同都签了，老板却不放你走，怎么办？',
-                        src:
-                            './面试现场/html/36合同都签了老板却不放你走怎么办.html'
-                    },
-                    {
-                        id: 'sxm3roce0no',
-                        title: '30 | 面试答疑（三）：如何更好地体现你的能力？',
-                        src:
-                            './面试现场/html/37面试答疑三如何更好地体现你的能力.html'
-                    }
-                ]
-            },
-            {
-                id: '1f11f7cy7j0',
-                title: '考官面对面',
-                subList: [
-                    {
-                        id: 'gzjtk20iso0',
-                        title: '01 | 考官面对面：程序员择业时常碰到的几个疑惑',
-                        src:
-                            './面试现场/html/05考官面对面程序员择业时常碰到的几个疑惑.html'
-                    },
-                    {
-                        id: 'qr74go4nrok',
-                        title: '02 | 考官面对面：如何有效地准备一场面试？',
-                        src:
-                            './面试现场/html/08考官面对面如何有效地准备一场面试.html'
-                    },
-                    {
-                        id: 'u0bbuurp78s',
+                        id: '9bmjq4kunl4',
                         title:
-                            '03 | 考官面对面：面试注意事项及面试官常见的思维模式',
+                            '开篇词 | 程序行知：走在同样的路上，遇见自己的风景',
                         src:
-                            './面试现场/html/11考官面对面面试注意事项及面试官们常见的思维模式.html'
-                    },
-                    {
-                        id: 'fuwqpns1bd0',
-                        title:
-                            '04 | 考官面对面：面试与应聘，如何站在对方的角度考虑问题？',
-                        src:
-                            './面试现场/html/17考官面对面面试与应聘如何站在对方的角度考虑问题.html'
-                    },
-                    {
-                        id: '80nujc1urbt',
-                        title: '05 | 考官面对面：我是如何面试程序员的？',
-                        src:
-                            './面试现场/html/20考官面对面我是如何面试程序员的.html'
-                    },
-                    {
-                        id: 'g9f841n6aoa',
-                        title: '06 | 考官面对面：我们是如何面试架构师的？',
-                        src:
-                            './面试现场/html/23考官面对面我们是如何面试架构师的.html'
-                    },
-                    {
-                        id: '9spzjw04krp',
-                        title: '07 | 考官面对面：面试经验谈之校招与社招',
-                        src:
-                            './面试现场/html/29考官面对面面试经验谈之校招与社招.html'
+                            './程序员进阶攻略/html/开篇词程序行知走在同样的路上遇见自己的风景.html'
                     }
                 ]
             },
             {
-                id: 'bfvu9d6sw2b',
+                id: 'dahyv72riuw',
+                title: '征途：启程之初',
+                subList: [
+                    {
+                        id: 'gm692zdj1aa',
+                        title: '01 | 初心：为什么成为一名程序员？',
+                        src:
+                            './程序员进阶攻略/html/01初心为什么成为一名程序员.html'
+                    },
+                    {
+                        id: '3de0hc8wovx',
+                        title: '02 | 初惑：技术方向的选择',
+                        src: './程序员进阶攻略/html/02初惑技术方向的选择.html'
+                    },
+                    {
+                        id: 'ch1aj81b9rj',
+                        title: '03 | 初程：带上一份技能地图',
+                        src: './程序员进阶攻略/html/03初程带上一份技能地图.html'
+                    },
+                    {
+                        id: 'q6mxyi2qmng',
+                        title: '04 | 初感：别了校园，入了江湖',
+                        src: './程序员进阶攻略/html/04初感别了校园入了江湖.html'
+                    }
+                ]
+            },
+            {
+                id: 'mitu0wxorxg',
+                title: '修炼：程序之术',
+                subList: [
+                    {
+                        id: 'ehx50x269uy',
+                        title: '05 | 架构与实现：它们的连接与分界？',
+                        src:
+                            './程序员进阶攻略/html/05架构与实现它们的连接与分界.html'
+                    },
+                    {
+                        id: 'um402nc8ylt',
+                        title: '06 | 模式与框架：它们的关系与误区？',
+                        src:
+                            './程序员进阶攻略/html/06模式与框架它们的关系与误区.html'
+                    },
+                    {
+                        id: 'vgau2ho3vxm',
+                        title: '07 | 多维与视图：系统设计的思考维度与展现视图',
+                        src:
+                            './程序员进阶攻略/html/07多维与视图系统设计的思考维度与展现视图.html'
+                    },
+                    {
+                        id: 'giqj4mxa4vo',
+                        title: '08 | 代码与分类：工业级编程的代码分类与特征',
+                        src:
+                            './程序员进阶攻略/html/08代码与分类工业级编程的代码分类与特征.html'
+                    },
+                    {
+                        id: '3clo5uy64aw',
+                        title: '09 | 粗放与精益：编程的两种思路与方式',
+                        src:
+                            './程序员进阶攻略/html/09粗放与精益编程的两种思路与方式.html'
+                    },
+                    {
+                        id: '0ywivr85yrz',
+                        title: '10 | 炫技与克制：代码的两种味道与态度',
+                        src:
+                            './程序员进阶攻略/html/10炫技与克制代码的两种味道与态度.html'
+                    },
+                    {
+                        id: 'puo2m8htym0',
+                        title: '11 | 三阶段进化：调试，编写与运行代码',
+                        src:
+                            './程序员进阶攻略/html/11三阶段进化调试编写与运行代码.html'
+                    },
+                    {
+                        id: '8jqndzsq21o',
+                        title: '12 | Bug的空间属性：环境依赖与过敏反应',
+                        src:
+                            './程序员进阶攻略/html/12Bug的空间属性环境依赖与过敏反应.html'
+                    },
+                    {
+                        id: 'gza2wpvlvar',
+                        title: '13 | Bug的时间属性：周期特点与非规律性',
+                        src:
+                            './程序员进阶攻略/html/13Bug的时间属性周期特点与非规律性.html'
+                    },
+                    {
+                        id: 'jo9fkrj98ii',
+                        title: '14 | Bug的反复出现：重蹈覆辙与吸取教训',
+                        src:
+                            './程序员进阶攻略/html/14Bug的反复出现重蹈覆辙与吸取教训.html'
+                    }
+                ]
+            },
+            {
+                id: 'elxc56ob3qa',
+                title: '修行：由术入道',
+                subList: [
+                    {
+                        id: '0slwmm0zx0c',
+                        title: '15 | 根源：计划的愿景——仰望星空',
+                        src:
+                            './程序员进阶攻略/html/15根源计划的愿景仰望星空.html'
+                    },
+                    {
+                        id: 'k3ds05joff0',
+                        title: '16 | 方式：计划的方法——脚踏实地',
+                        src:
+                            './程序员进阶攻略/html/16方式计划的方法脚踏实地.html'
+                    },
+                    {
+                        id: 'vlgoy7y40uh',
+                        title: '17 | 检视：计划的可行——时间与承诺',
+                        src:
+                            './程序员进阶攻略/html/17检视计划的可行时间与承诺.html'
+                    },
+                    {
+                        id: '4sfg7vw3z7w',
+                        title: '18 | 评估：计划的收获——成本与收益',
+                        src:
+                            './程序员进阶攻略/html/18评估计划的收获成本与收益.html'
+                    },
+                    {
+                        id: '2ut2285ajal',
+                        title: '19 | 障碍：从计划到坚持，再到坚持不下去的时候',
+                        src:
+                            './程序员进阶攻略/html/19障碍从计划到坚持再到坚持不下去的时候.html'
+                    },
+                    {
+                        id: 'h3l7wgqfv9g',
+                        title: '20 | 执行：从坚持到持续，再到形成自己的节奏',
+                        src:
+                            './程序员进阶攻略/html/20执行从坚持到持续再到形成自己的节奏.html'
+                    },
+                    {
+                        id: 'y9cb57f54t9',
+                        title: '21 | 信息：过载与有效',
+                        src: './程序员进阶攻略/html/21信息过载与有效.html'
+                    },
+                    {
+                        id: '6lv3hrxy8kf',
+                        title: '22 | 领域：知识与体系',
+                        src: './程序员进阶攻略/html/22领域知识与体系.html'
+                    },
+                    {
+                        id: 'gs5anpjylwa',
+                        title: '23 | 转化：能力与输出',
+                        src: './程序员进阶攻略/html/23转化能力与输出.html'
+                    },
+                    {
+                        id: '8llm3b3a5wq',
+                        title: '24 | 并行：工作与学习',
+                        src: './程序员进阶攻略/html/24并行工作与学习.html'
+                    },
+                    {
+                        id: 'bqt8qugrg30',
+                        title: '25 | 时间：塑造基石习惯（上）——感知与测量',
+                        src:
+                            './程序员进阶攻略/html/25时间塑造基石习惯上感知与测量.html'
+                    },
+                    {
+                        id: 'bge115tu23h',
+                        title: '26 | 时间：塑造基石习惯（下）——切割与构建',
+                        src:
+                            './程序员进阶攻略/html/26时间塑造基石习惯下切割与构建.html'
+                    },
+                    {
+                        id: 'owyh4fkuddw',
+                        title: '27 | 试试：一种“坏”习惯',
+                        src: './程序员进阶攻略/html/27试试一种坏习惯.html'
+                    },
+                    {
+                        id: 'ovfh9hhw2ai',
+                        title: '28 | 提问：从技术到人生的习惯',
+                        src:
+                            './程序员进阶攻略/html/28提问从技术到人生的习惯.html'
+                    },
+                    {
+                        id: '2gjn4l38bkn',
+                        title: '29 | 偏好：个人习惯的局限与反思',
+                        src:
+                            './程序员进阶攻略/html/29偏好个人习惯的局限与反思.html'
+                    },
+                    {
+                        id: 'h5f6gp7xnv0',
+                        title: '30 | 写作：写字如编码',
+                        src: './程序员进阶攻略/html/30写作写字如编码.html'
+                    },
+                    {
+                        id: '7rj35265dvg',
+                        title: '31 | 画图：一图胜千言',
+                        src: './程序员进阶攻略/html/31画图一图胜千言.html'
+                    },
+                    {
+                        id: 'ywwc2b68g4m',
+                        title: '32 | 演讲：表达的技术',
+                        src: './程序员进阶攻略/html/32演讲表达的技术.html'
+                    },
+                    {
+                        id: 'ojf7halps00',
+                        title: '33 | 定义：阶梯与级别',
+                        src: './程序员进阶攻略/html/33定义阶梯与级别.html'
+                    },
+                    {
+                        id: '2oxjlud7xjw',
+                        title: '34 | 晋升：评定与博弈',
+                        src: './程序员进阶攻略/html/34晋升评定与博弈.html'
+                    },
+                    {
+                        id: 'k66qsevp9cz',
+                        title: '35 | 关系：学徒与导师',
+                        src: './程序员进阶攻略/html/35关系学徒与导师.html'
+                    },
+                    {
+                        id: '0ggfh1320aw',
+                        title: '36 | 核心：安全与效率——工程技术的两个核心维度',
+                        src:
+                            './程序员进阶攻略/html/36核心安全与效率工程技术的两个核心维度.html'
+                    },
+                    {
+                        id: 's2baxangt7f',
+                        title: '37 | 过程：规模与协作——规模化的过程方法',
+                        src:
+                            './程序员进阶攻略/html/37过程规模与协作规模化的过程方法.html'
+                    },
+                    {
+                        id: 'c07eaarlqsn',
+                        title: '38 | 思维：科学与系统——两类问题的两种思维解法',
+                        src:
+                            './程序员进阶攻略/html/38思维科学与系统两类问题的两种思维解法.html'
+                    }
+                ]
+            },
+            {
+                id: 'kuvfm4segnw',
+                title: '徘徊：道中彷徨',
+                subList: [
+                    {
+                        id: 'j2jg6let48j',
+                        title: '39 | 职业倦怠：如何面对？',
+                        src: './程序员进阶攻略/html/39职业倦怠如何面对.html'
+                    },
+                    {
+                        id: 'n0da2la1jz7',
+                        title: '40 | 局部最优：如何逃离？',
+                        src: './程序员进阶攻略/html/40局部最优如何逃离.html'
+                    },
+                    {
+                        id: 'zdwyqprusyy',
+                        title: '41 | 沟通之痛：如何改变？',
+                        src: './程序员进阶攻略/html/41沟通之痛如何改变.html'
+                    },
+                    {
+                        id: 'k5x5pplsvs0',
+                        title: '42 | 技术停滞：如何更新？',
+                        src: './程序员进阶攻略/html/42技术停滞如何更新.html'
+                    },
+                    {
+                        id: 'z95a9g84g5j',
+                        title: '43 | 无法实现：困扰与反思',
+                        src: './程序员进阶攻略/html/43无法实现困扰与反思1.html'
+                    },
+                    {
+                        id: 'fccbg3bxfy4',
+                        title: '44 | 完成作品：理想与现实',
+                        src: './程序员进阶攻略/html/44完成作品理想与现实1.html'
+                    },
+                    {
+                        id: 'jb7abz70db7',
+                        title: '45 | 代码评审：寄望与哀伤',
+                        src: './程序员进阶攻略/html/45代码评审寄望与哀伤1.html'
+                    },
+                    {
+                        id: '4vpe6m87sms',
+                        title: '46 | 人到中年：失业与恐惧',
+                        src: './程序员进阶攻略/html/46人到中年失业与恐惧1.html'
+                    },
+                    {
+                        id: 'wreywuw0uhe',
+                        title: '47 | 该不该去创业公司？',
+                        src: './程序员进阶攻略/html/47该不该去创业公司.html'
+                    },
+                    {
+                        id: 'k0n5wtnl8r0',
+                        title: '48 | 该不该接外包？',
+                        src: './程序员进阶攻略/html/48该不该接外包.html'
+                    },
+                    {
+                        id: '3b1f7heunce',
+                        title: '49 | 技术干货那么多，如何选？',
+                        src: './程序员进阶攻略/html/49技术干货那么多如何选.html'
+                    },
+                    {
+                        id: 'xzw5rzzdlfh',
+                        title: '50 | 技术分歧，如何决策？',
+                        src: './程序员进阶攻略/html/50技术分歧如何决策.html'
+                    },
+                    {
+                        id: 't39rdjvqoup',
+                        title: '51 | 技术债务，有意或无意的选择？',
+                        src:
+                            './程序员进阶攻略/html/51技术债务有意或无意的选择.html'
+                    },
+                    {
+                        id: '0aaxgx423ud',
+                        title: '52 | 选择从众，还是唯一？',
+                        src: './程序员进阶攻略/html/52选择从众还是唯一.html'
+                    },
+                    {
+                        id: 'rxdoxpa3rl7',
+                        title: '53 | 选择工作，还是生活？',
+                        src: './程序员进阶攻略/html/53选择工作还是生活.html'
+                    }
+                ]
+            },
+            {
+                id: 'po8mxghkuxh',
+                title: '寻路：路在何方',
+                subList: [
+                    {
+                        id: 'hj24q3gcif8',
+                        title: '54 | 侠客行：一技压身，天下行走',
+                        src:
+                            './程序员进阶攻略/html/54侠客行一技压身天下行走.html'
+                    },
+                    {
+                        id: 'hrghf7sedu0',
+                        title: '55 | 江湖路：刀剑相接，战场升级',
+                        src:
+                            './程序员进阶攻略/html/55江湖路刀剑相接战场升级.html'
+                    },
+                    {
+                        id: '53d2v2sttpg',
+                        title: '56 | 御剑流：一击必杀，万剑归心',
+                        src:
+                            './程序员进阶攻略/html/56御剑流一击必杀万剑归心.html'
+                    },
+                    {
+                        id: '0zydmfk5h10',
+                        title: '57 | 三维度：专业、展现与连接',
+                        src:
+                            './程序员进阶攻略/html/57三维度专业、展现与连接.html'
+                    },
+                    {
+                        id: 'ip2nsawznvp',
+                        title: '58 | 三人行：前辈、平辈与后辈',
+                        src:
+                            './程序员进阶攻略/html/58三人行前辈、平辈与后辈.html'
+                    },
+                    {
+                        id: 'giqrked2g2c',
+                        title: '59 | 三角色：程序员、技术主管与架构师',
+                        src:
+                            './程序员进阶攻略/html/59三角色程序员、技术主管与架构师.html'
+                    },
+                    {
+                        id: '0j0m6fl7qwu',
+                        title: '60 | 三视角：定位、自省与多维',
+                        src:
+                            './程序员进阶攻略/html/60三视角定位、自省与多维.html'
+                    }
+                ]
+            },
+            {
+                id: 'jdw8qomukgt',
+                title: '蜕变：破茧成蝶',
+                subList: [
+                    {
+                        id: 'k7801e6qlu7',
+                        title: '61 | 工作之余，专业之外',
+                        src: './程序员进阶攻略/html/61工作之余专业之外.html'
+                    },
+                    {
+                        id: 'k45pq22rq11',
+                        title: '62 | 跨越断层，突破边界',
+                        src: ''
+                    },
+                    {
+                        id: '98t8cutqiu3',
+                        title: '63 | 成长蓝图，进化跃迁',
+                        src: ''
+                    }
+                ]
+            },
+            {
+                id: 'mcagbtqxls8',
                 title: '结束语',
                 subList: [
                     {
-                        id: '9k4p68jdwnx',
-                        title: '结束语 | 以终为始，闭环迭代，持续提高',
-                        src:
-                            './面试现场/html/结束语以终为始闭环迭代持续提高.html'
+                        id: '57pkf3cn592',
+                        title: '尾声 | 始于知，终于行',
+                        src: ''
                     }
                 ]
             }

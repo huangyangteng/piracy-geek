@@ -1,6 +1,7 @@
 <template>
     <section class="read-wrapper">
-        <ReadAside class="read-aside"></ReadAside>
+        <ReadAside :style="asideStyle" class="read-aside"></ReadAside>
+        <DragLine @on-drag="dragAside"></DragLine>
         <section class="read-content">
             <ReadToolBar v-show="status.toolbarIsShow"></ReadToolBar>
             <ArticleContent></ArticleContent>
@@ -21,6 +22,7 @@ import ReadToolBar from './Content/ReadToolBar'
 import ArticleContent from './Content/ArticleContent'
 import PicturePreview from './Modal/PicturePreview'
 import OutlineConfig from './Modal/OutlineConfig'
+import DragLine from '../../components/dragLine'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
     components: {
@@ -28,12 +30,23 @@ export default {
         ReadToolBar,
         ArticleContent,
         PicturePreview,
-        OutlineConfig
+        OutlineConfig,
+        DragLine
+    },
+    data() {
+        return {
+            asideWidth: 420
+        }
     },
     computed: {
         ...mapState('lastRead', ['lastColumnId']),
         ...mapState('column', ['columnList', 'status']),
-        ...mapGetters('column', ['isFullScreen'])
+        ...mapGetters('column', ['isFullScreen']),
+        asideStyle() {
+            return {
+                width: this.asideWidth + 'px'
+            }
+        }
     },
     watch: {
         $route: {
@@ -96,6 +109,9 @@ export default {
                     article: this.$route.params.article
                 })
             }
+        },
+        dragAside(left) {
+            this.asideWidth = left
         }
     },
     created() {

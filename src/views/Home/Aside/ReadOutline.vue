@@ -3,7 +3,7 @@
         <section class="outline-wrapper">
             <div
                 :id="item.top"
-                :key="item.name"
+                :key="item.id"
                 v-for="item in outlineList"
                 :class="outlineClassObj(item)"
                 @click="jumpToTitle(item)"
