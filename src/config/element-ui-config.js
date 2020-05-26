@@ -10,7 +10,9 @@ import {
     MenuItem,
     MenuItemGroup,
     Tooltip,
-    Loading
+    Loading,
+    Input,
+    Button
 } from 'element-ui'
 
 Vue.use(Dialog)
@@ -22,6 +24,8 @@ Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
 Vue.use(Tooltip)
+Vue.use(Input)
+Vue.use(Button)
 Vue.use(Loading.directive)
 
 Vue.prototype.$Message = Message

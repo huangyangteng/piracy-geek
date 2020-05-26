@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [...HomeConfig, TipConfig]
 
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     base: process.env.BASE_URL,
     routes
 })

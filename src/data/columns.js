@@ -3934,276 +3934,272 @@ export default [
     },
     {
         title: '面试现场',
-        id: 'cughz5t5lk7',
+        id: 'zh82axor9hz',
         contents: [
             {
-                id: 'cq2fbs440lu',
+                id: 'xdy7q62sbbj',
                 title: '开篇词',
                 subList: [
                     {
-                        id: 'm0q3fvi181w',
+                        id: 'nx8axzldoey',
                         title: '开篇词 | 面试，这样做会功到自然成',
                         src:
-                            './面试现场/html/00丨开篇词丨面试，这样做会功到自然成.html'
+                            './面试现场/html/00开篇词面试这样做会功到自然成.html'
                     }
                 ]
             },
             {
-                id: 'zcy9r4y9cxn',
+                id: 'wye7gzo83v2',
                 title: '基础：知彼篇',
                 subList: [
                     {
-                        id: 'vbk09lgjd97',
+                        id: 'jd0evck8jy1',
                         title: '01 | 公司到底想要什么样的人？',
-                        src: './面试现场/html/01丨公司到底想要什么样的人？.html'
+                        src: './面试现场/html/01公司到底想要什么样的人.html'
                     },
                     {
-                        id: '75lrfrlnyc7',
+                        id: 'riumbln5gq4',
                         title: '02 | 想要成功面试，先要弄懂面试过程',
                         src:
-                            './面试现场/html/02丨想要成功面试，先要弄懂面试过程.html'
+                            './面试现场/html/02想要成功面试先要弄懂面试过程.html'
                     },
                     {
-                        id: 'y9wt0ja3jbz',
+                        id: '1gfb2lonhvc',
                         title: '03 | 面试官的面试逻辑是什么？',
-                        src: './面试现场/html/03丨面试官的面试逻辑是什么？.html'
+                        src: './面试现场/html/03面试官的面试逻辑是什么.html'
                     }
                 ]
             },
             {
-                id: 'a8veudej4ak',
+                id: 'n7iasstizv0',
                 title: '基础：知己篇',
                 subList: [
                     {
-                        id: '9fl7etr42zn',
+                        id: 'xxk7v51u3q5',
                         title: '04 | 现在的你，到底该不该换工作',
-                        src:
-                            './面试现场/html/04丨现在的你，到底该不该换工作.html'
+                        src: './面试现场/html/04现在的你到底该不该换工作.html'
                     },
                     {
-                        id: 'pycvzvyuf59',
+                        id: 'ptkw132x9r7',
                         title: '05 | 喜欢或擅长的工作，你该选哪一个？',
                         src:
-                            './面试现场/html/05-考官面对面丨程序员择业时常碰到的几个疑惑.html'
+                            './面试现场/html/06喜欢或擅长的工作你该选哪一个.html'
                     },
                     {
-                        id: 'k0dcb2ekqa7',
+                        id: 'jftt240ep9w',
                         title: '06 | 职业规划一：你真的想好要怎么发展了吗？',
                         src:
-                            './面试现场/html/06丨喜欢或擅长的工作，你该选哪一个？.html'
+                            './面试现场/html/07职业规划一你真的想好要怎么发展了吗.html'
                     },
                     {
-                        id: '98tyg5m85m3',
+                        id: 'udb05t0ebmh',
                         title: '07 | 职业规划二：程序员后来都去干啥了？',
                         src:
-                            './面试现场/html/07丨职业规划一：你真的想好要怎么发展了吗？.html'
+                            './面试现场/html/09职业规划二程序员后来都去干啥了.html'
                     },
                     {
-                        id: 'gwyse3e3snd',
+                        id: 'gqxf4qzkiln',
                         title: '08 | 如何让你的简历更受青睐',
-                        src:
-                            './面试现场/html/08丨考官面对面：如何有效地准备一场面试？.html'
+                        src: './面试现场/html/10如何让你的简历更受青睐.html'
                     },
                     {
-                        id: '6qmqvlt04rv',
+                        id: '6r1par4hr1y',
                         title: '09 | 经历没有亮点可讲？你需要做份“详历”',
                         src:
-                            './面试现场/html/09丨职业规划二：程序员后来都去干啥了？.html'
+                            './面试现场/html/12经历没有亮点可讲你需要做份详历.html'
                     },
                     {
-                        id: '4u4zh6j9fy4',
+                        id: '5s9end7adxm',
                         title: '10 | 面试紧张怎么办？',
-                        src: './面试现场/html/10丨如何让你的简历更受青睐.html'
+                        src: './面试现场/html/13面试紧张怎么办.html'
                     },
                     {
-                        id: 'd1xk97aev78',
+                        id: 'gt9pzx2axma',
                         title: '11 | 面试答疑（一）：说说你面试中的一些困惑',
                         src:
-                            './面试现场/html/11丨考官面对面：面试注意事项及面试官们常见的思维模式.html'
+                            './面试现场/html/14面试答疑一说说你面试中的一些困惑.html'
                     }
                 ]
             },
             {
-                id: 'zyibq7acv57',
+                id: 'he8q0zeg4hl',
                 title: '问答篇',
                 subList: [
                     {
-                        id: 'cdz9he29lgl',
+                        id: 'ceimwng5uj3',
                         title: '12 |  如何做好开场：给自我介绍加“特效”',
                         src:
-                            './面试现场/html/12丨经历没有亮点可讲？你需要做份“详历”.html'
+                            './面试现场/html/15如何做好开场给自我介绍加特效.html'
                     },
                     {
-                        id: 'kcgx75g7y6e',
+                        id: 'ub72t2bk9q3',
                         title: '13 | 你真能讲明白技术吗?',
-                        src: './面试现场/html/13丨面试紧张怎么办？.html'
+                        src: './面试现场/html/16你真能讲明白技术吗.html'
                     },
                     {
-                        id: '54ye59zasow',
+                        id: 'atjxx857dyq',
                         title: '14 | 怎样展示你在项目中的重要性？',
-                        src:
-                            './面试现场/html/14丨面试答疑（一）：说说你面试中的一些困惑.html'
+                        src: './面试现场/html/18怎样展示你在项目中的重要性.html'
                     },
                     {
-                        id: 'eq2n8k4591a',
+                        id: 'snmwhp2eqaw',
                         title: '15 | 如何认识自己的优缺点？',
-                        src:
-                            './面试现场/html/15丨如何做好开场：给自我介绍加“特效”.html'
+                        src: './面试现场/html/19如何认识自己的优缺点.html'
                     },
                     {
-                        id: 'l90hhkahfxy',
+                        id: '8e6m5u1ajna',
                         title: '16 | 透过兴趣爱好，面试官可以看出什么？',
-                        src: './面试现场/html/16丨你真能讲明白技术吗.html'
+                        src:
+                            './面试现场/html/21透过兴趣爱好面试官可以看出什么.html'
                     },
                     {
-                        id: 'qdhnatxp3i9',
+                        id: 'z71hxpcebeh',
                         title: '17 | 如何让你的回答更到位？',
-                        src:
-                            './面试现场/html/17丨考官面对面：面试与应聘，如何站在对方的角度考虑问题？.html'
+                        src: './面试现场/html/22如何让你的回答更到位.html'
                     },
                     {
-                        id: 'd66dflrlbcg',
+                        id: 'dk75zv6avb5',
                         title: '18 | 被面试官问住了怎么办？',
-                        src:
-                            './面试现场/html/18丨怎样展示你在项目中的重要性？.html'
+                        src: './面试现场/html/24被面试官问住了怎么办.html'
                     },
                     {
-                        id: 'mbs0n50vsfv',
+                        id: '6kj9bfqvlp0',
                         title: '19 | 应该如何向面试官提问？',
-                        src: './面试现场/html/19丨如何认识自己的优缺点？.html'
+                        src: './面试现场/html/25应该如何向面试官提问.html'
                     },
                     {
-                        id: 'h2nvo2i1316',
+                        id: 'pi0f5y2vf2h',
                         title: '20 | 怎么谈薪水比较好？',
-                        src:
-                            './面试现场/html/20丨考官面对面：我是如何面试程序员的？.html'
+                        src: './面试现场/html/26怎么谈薪水比较好.html'
                     },
                     {
-                        id: 'nm8p7arrwqt',
+                        id: 'wf6ynj2xfhs',
                         title: '21 | 面试答疑（二）：面试问答环节的一些思考',
                         src:
-                            './面试现场/html/21丨透过兴趣爱好，面试官可以看出什么？.html'
+                            './面试现场/html/27面试答疑二面试问答环节的一些思考.html'
                     }
                 ]
             },
             {
-                id: 'yvap7qymobj',
+                id: 'ilkzqia2oth',
                 title: '贯通篇',
                 subList: [
                     {
-                        id: 'xwvb7c62er0',
+                        id: '4o25lslwrz9',
                         title: '22 | 怎样体现你的学习能力强？',
-                        src: './面试现场/html/22丨如何让你的回答更到位？.html'
+                        src: './面试现场/html/28怎样体现你的学习能力强.html'
                     },
                     {
-                        id: 'b2qlrv31c92',
+                        id: 'virrbo13ykl',
                         title: '23 | 怎么体现你能把工作越做越好？',
-                        src:
-                            './面试现场/html/23丨考官面对面：我们是如何面试架构师的？.html'
+                        src: './面试现场/html/30怎么体现你能把工作越做越好.html'
                     },
                     {
-                        id: '3m7f10ersaw',
+                        id: 'piegmku0t9u',
                         title: '24 | 怎样体现你的协作能力强？',
-                        src: './面试现场/html/24丨被面试官问住了怎么办？.html'
+                        src: './面试现场/html/31怎样体现你的协作能力强.html'
                     },
                     {
-                        id: '94nyicf7gvm',
+                        id: 'fz2kn2go5s4',
                         title: '25 | 不是领导，怎么体现你的领导力？',
-                        src: './面试现场/html/25丨应该如何向面试官提问？.html'
+                        src: './面试现场/html/32不是领导怎么体现你的领导力.html'
                     },
                     {
-                        id: '2nuwzspz0c6',
+                        id: 'ncr6x5t5o06',
                         title: '26 | 你解决问题的能力有多强？',
-                        src: './面试现场/html/26丨怎么谈薪水比较好？.html'
+                        src: './面试现场/html/33你解决问题的能力有多强.html'
                     }
                 ]
             },
             {
-                id: '68g6yq38i2j',
+                id: 'pvz0oomiiyg',
                 title: '综合篇',
                 subList: [
                     {
-                        id: 'm83u2riygv9',
+                        id: 'd1esv39gd0t',
                         title: '27 | 盘点面试官和应聘者的认知差异',
                         src:
-                            './面试现场/html/27丨面试答疑（二）：面试问答环节的一些思考.html'
+                            './面试现场/html/34盘点面试官和应聘者的认知差异.html'
                     },
                     {
-                        id: '2efxt9rexrd',
+                        id: 'vf6n2o01r9q',
                         title: '28 | 通过面试，你能了解这个团队多少？',
-                        src: './面试现场/html/28丨怎样体现你的学习能力强？.html'
+                        src:
+                            './面试现场/html/35通过面试你能了解这个团队多少.html'
                     },
                     {
-                        id: 'vpq78couwve',
+                        id: 'ihfuhquf64a',
                         title: '29 | 合同都签了，老板却不放你走，怎么办？',
                         src:
-                            './面试现场/html/29丨考官面对面：面试经验谈之校招与社招.html'
+                            './面试现场/html/36合同都签了老板却不放你走怎么办.html'
                     },
                     {
-                        id: 'xps14xg9nbh',
+                        id: 'sxm3roce0no',
                         title: '30 | 面试答疑（三）：如何更好地体现你的能力？',
                         src:
-                            './面试现场/html/30丨怎么体现你能把工作越做越好？.html'
+                            './面试现场/html/37面试答疑三如何更好地体现你的能力.html'
                     }
                 ]
             },
             {
-                id: '8h6zoqjzhyp',
+                id: '1f11f7cy7j0',
                 title: '考官面对面',
                 subList: [
                     {
-                        id: 'lc624sw4lmf',
+                        id: 'gzjtk20iso0',
                         title: '01 | 考官面对面：程序员择业时常碰到的几个疑惑',
-                        src: './面试现场/html/01丨公司到底想要什么样的人？.html'
+                        src:
+                            './面试现场/html/05考官面对面程序员择业时常碰到的几个疑惑.html'
                     },
                     {
-                        id: 'ksch9ddzprh',
+                        id: 'qr74go4nrok',
                         title: '02 | 考官面对面：如何有效地准备一场面试？',
                         src:
-                            './面试现场/html/02丨想要成功面试，先要弄懂面试过程.html'
+                            './面试现场/html/08考官面对面如何有效地准备一场面试.html'
                     },
                     {
-                        id: 'oeb1slrhufa',
+                        id: 'u0bbuurp78s',
                         title:
                             '03 | 考官面对面：面试注意事项及面试官常见的思维模式',
-                        src: './面试现场/html/03丨面试官的面试逻辑是什么？.html'
+                        src:
+                            './面试现场/html/11考官面对面面试注意事项及面试官们常见的思维模式.html'
                     },
                     {
-                        id: 'qbt1887fcuq',
+                        id: 'fuwqpns1bd0',
                         title:
                             '04 | 考官面对面：面试与应聘，如何站在对方的角度考虑问题？',
                         src:
-                            './面试现场/html/04丨现在的你，到底该不该换工作.html'
+                            './面试现场/html/17考官面对面面试与应聘如何站在对方的角度考虑问题.html'
                     },
                     {
-                        id: 'qk2r7mdknhx',
+                        id: '80nujc1urbt',
                         title: '05 | 考官面对面：我是如何面试程序员的？',
                         src:
-                            './面试现场/html/05-考官面对面丨程序员择业时常碰到的几个疑惑.html'
+                            './面试现场/html/20考官面对面我是如何面试程序员的.html'
                     },
                     {
-                        id: 'eu0g28b9t65',
+                        id: 'g9f841n6aoa',
                         title: '06 | 考官面对面：我们是如何面试架构师的？',
                         src:
-                            './面试现场/html/06丨喜欢或擅长的工作，你该选哪一个？.html'
+                            './面试现场/html/23考官面对面我们是如何面试架构师的.html'
                     },
                     {
-                        id: 'rdunyh2uzv2',
+                        id: '9spzjw04krp',
                         title: '07 | 考官面对面：面试经验谈之校招与社招',
                         src:
-                            './面试现场/html/07丨职业规划一：你真的想好要怎么发展了吗？.html'
+                            './面试现场/html/29考官面对面面试经验谈之校招与社招.html'
                     }
                 ]
             },
             {
-                id: 'cmv036gy3lw',
+                id: 'bfvu9d6sw2b',
                 title: '结束语',
                 subList: [
                     {
-                        id: 'trjv5lknrdd',
+                        id: '9k4p68jdwnx',
                         title: '结束语 | 以终为始，闭环迭代，持续提高',
                         src:
-                            './面试现场/html/结束语丨以终为始，闭环迭代，持续提高.html'
+                            './面试现场/html/结束语以终为始闭环迭代持续提高.html'
                     }
                 ]
             }

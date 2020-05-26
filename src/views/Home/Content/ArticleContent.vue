@@ -55,6 +55,7 @@ export default {
                     '<p class="x">所有最新极客时间课程请加QQ群170701297</p>',
                     ''
                 )
+                .replace(/<script.*>(.*\n)*<\/script>/gim, '')
         },
         generateOutline() {
             let wrapper = document.querySelector('.article-wrapper')

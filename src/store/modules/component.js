@@ -4,6 +4,10 @@ const state = {
         width: '30%',
         src:
             'https://static001.geekbang.org/resource/image/46/84/4664e7f29ac02da1d451f23986ff9f84.jpg'
+    },
+    outlineScroll: {
+        show: false,
+        dis: -96
     }
 }
 
@@ -14,6 +18,9 @@ const actions = {}
 const mutations = {
     updatePicturePreview(state, obj) {
         state.picturePreview = Object.assign(state.picturePreview, obj)
+    },
+    updateOutlineScroll(state, obj) {
+        state.outlineScroll = Object.assign(state.outlineScroll, obj)
     }
 }
 

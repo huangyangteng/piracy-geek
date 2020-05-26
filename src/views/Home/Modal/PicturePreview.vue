@@ -43,15 +43,16 @@ export default {
 </script>
 <style lang="scss">
 .picture-preview {
-    img {
-        max-width: 1000px;
-    }
-}
-.el-dialog {
     background: transparent;
-}
-.el-dialog--center .el-dialog__body {
-    text-align: center;
-    padding: 0;
+    .el-dialog__header {
+        padding: 0;
+    }
+    .el-dialog__body {
+        text-align: center;
+        padding: 0 !important;
+    }
+    img {
+        max-width: 1200px;
+    }
 }
 </style>
