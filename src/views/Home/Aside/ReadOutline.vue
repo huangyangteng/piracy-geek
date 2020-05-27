@@ -20,7 +20,8 @@ export default {
         return {}
     },
     computed: {
-        ...mapState('column', ['status', 'outlineList'])
+        ...mapState('column', ['status', 'outlineList']),
+        ...mapState('component', ['outlineScroll'])
     },
     methods: {
         outlineClassObj(item) {
@@ -35,7 +36,7 @@ export default {
         jumpToTitle(item) {
             let wrapper = document.querySelector('.article-wrapper')
             let cur = document.getElementById(item.id)
-            wrapper.scrollTop = cur.offsetTop - 96
+            wrapper.scrollTop = cur.offsetTop + Number(this.outlineScroll.dis)
         }
     }
 }

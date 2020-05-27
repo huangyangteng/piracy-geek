@@ -12,7 +12,6 @@
             class="el-icon-magic-stick exit-full"
         ></i>
         <PicturePreview></PicturePreview>
-        <OutlineConfig></OutlineConfig>
     </section>
 </template>
 <script>
@@ -21,7 +20,6 @@ import ReadAside from './Aside/ReadAside'
 import ReadToolBar from './Content/ReadToolBar'
 import ArticleContent from './Content/ArticleContent'
 import PicturePreview from './Modal/PicturePreview'
-import OutlineConfig from './Modal/OutlineConfig'
 import DragLine from '../../components/dragLine'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
@@ -30,7 +28,6 @@ export default {
         ReadToolBar,
         ArticleContent,
         PicturePreview,
-        OutlineConfig,
         DragLine
     },
     data() {

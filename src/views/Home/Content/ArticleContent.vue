@@ -1,12 +1,12 @@
 <template>
     <section
-        v-loading="loading"
         class="article-wrapper"
         v-html="articleContent"
         ref="articalWrapper"
     ></section>
 </template>
 <script>
+import { Loading } from 'element-ui'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid } from '../../../tools/index'
@@ -15,7 +15,8 @@ export default {
     data() {
         return {
             articleContent: '',
-            loading: false
+            loading: true,
+            loadingInstance: null
         }
     },
     computed: {
@@ -94,10 +95,19 @@ export default {
             }
         },
         showLoading() {
-            this.loading = true
+            // this.loading = true
+            let app = document.getElementById('app')
+            let wrapper = document.querySelector('.article-wrapper')
+            let target = app ? app : wrapper
+            this.loadingInstance = Loading.service({
+                target: target,
+                fullscreen: false,
+                text: '拼命加载中...'
+            })
         },
         hideLoading() {
-            this.loading = false
+            // this.loading = false
+            this.loadingInstance.close()
         }
     },
     watch: {

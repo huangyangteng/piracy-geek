@@ -7,9 +7,9 @@
                 :class="iconType"
             ></i>
             <span>{{ showText }}</span>
-            <b
-                ><i v-if="!showMenu" class="el-icon-setting outline-config"></i
-            ></b>
+            <b>
+                <OutlineConfig v-if="!showMenu"></OutlineConfig>
+            </b>
         </header>
         <transition name="fade">
             <ReadOutline v-if="!showMenu"></ReadOutline>
@@ -44,9 +44,11 @@
 <script>
 import { mapState, mapGetters } from 'vuex'
 import ReadOutline from './ReadOutline'
+import OutlineConfig from '../Modal/OutlineConfig'
 export default {
     components: {
-        ReadOutline
+        ReadOutline,
+        OutlineConfig
     },
     data() {
         return {
@@ -101,8 +103,5 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
-}
-.outline-config {
-    cursor: pointer;
 }
 </style>
