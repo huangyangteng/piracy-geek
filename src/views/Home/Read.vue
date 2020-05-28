@@ -1,7 +1,7 @@
 <template>
     <section class="read-wrapper">
         <ReadAside :style="asideStyle" class="read-aside"></ReadAside>
-        <DragLine @on-drag="dragAside"></DragLine>
+        <DragLine v-show="!isFold" @on-drag="dragAside"></DragLine>
         <section class="read-content">
             <ReadToolBar v-show="status.toolbarIsShow"></ReadToolBar>
             <ArticleContent></ArticleContent>
@@ -38,7 +38,7 @@ export default {
     computed: {
         ...mapState('lastRead', ['lastColumnId']),
         ...mapState('column', ['columnList', 'status']),
-        ...mapGetters('column', ['isFullScreen']),
+        ...mapGetters('column', ['isFullScreen', 'isFold']),
         asideStyle() {
             return {
                 width: this.asideWidth + 'px'
