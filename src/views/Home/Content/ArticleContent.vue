@@ -11,6 +11,7 @@ import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid } from '../../../tools/index'
 import axios from 'axios'
+
 export default {
     data() {
         return {
@@ -25,7 +26,7 @@ export default {
     },
     methods: {
         ...mapMutations('lastRead', ['setLastColumn', 'setLastArticle']),
-        async handlerArticle(src, top) {
+        async handlerArticle(src, top, id) {
             this.showLoading()
             src = src.replace('./', '')
             let reqUrl = window.location.origin + '/api/' + src
@@ -46,6 +47,20 @@ export default {
                 this.generateOutline()
                 this.polyfillPage()
                 document.querySelector('.article-wrapper').scrollTop = top
+                this.loadHightLight(id)
+            })
+        },
+        loadHightLight(id) {
+            let lastHightLight = this.$store.getters[
+                'lastRead/getLastHightLight'
+            ](id)
+            window.hltr.deserializeHighlights(lastHightLight)
+        },
+        saveHightLight(id) {
+            let savedHightLight = window.hltr.serializeHighlights()
+            this.$store.commit('lastRead/saveHightLight', {
+                id: id,
+                content: savedHightLight
             })
         },
         filterWaterMark(content) {
@@ -113,7 +128,10 @@ export default {
     watch: {
         curArticleId: {
             immediate: true,
-            handler(id) {
+            handler(id, oldId) {
+                if (oldId) {
+                    this.saveHightLight(oldId)
+                }
                 let src = getAriticleSrcById(this.curContents, id)
                 let top = this.$store.getters['lastRead/getLastReadPosition'](
                     id
@@ -121,11 +139,12 @@ export default {
 
                 if (!src) return
                 this.$nextTick(() => {
-                    this.handlerArticle(src, top)
+                    this.handlerArticle(src, top, id)
                 })
             }
         }
-    }
+    },
+    mounted() {}
 }
 </script>
 <style lang="scss" scoped>
@@ -134,5 +153,8 @@ export default {
     overflow-y: auto;
     box-sizing: border-box;
     height: 100%;
+}
+.img_sina_share {
+    position: absolute;
 }
 </style>

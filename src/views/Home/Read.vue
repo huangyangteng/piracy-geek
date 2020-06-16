@@ -4,7 +4,7 @@
         <DragLine v-show="!isFold" @on-drag="dragAside"></DragLine>
         <section class="read-content">
             <ReadToolBar v-show="status.toolbarIsShow"></ReadToolBar>
-            <ArticleContent></ArticleContent>
+            <ArticleContent> </ArticleContent>
         </section>
         <i
             v-show="isFullScreen"

@@ -1,7 +1,8 @@
 const state = {
     lastColumnId: '',
     lastArticleList: [],
-    lastReadPositionList: []
+    lastReadPositionList: [],
+    lastHightLight: {}
 }
 
 const getters = {
@@ -28,12 +29,20 @@ const getters = {
                 return state.lastReadPositionList[curIndex].top
             }
         }
+    },
+    getLastHightLight(state) {
+        return id => {
+            return state.lastHightLight[id]
+        }
     }
 }
 
 const actions = {}
 
 const mutations = {
+    saveHightLight(state, obj) {
+        state.lastHightLight[obj.id] = obj.content
+    },
     setLastColumn(state, columnId) {
         state.lastColumnId = columnId
     },
