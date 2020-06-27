@@ -11,7 +11,6 @@ import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid } from '../../../tools/index'
 import axios from 'axios'
-
 export default {
     data() {
         return {
@@ -40,7 +39,9 @@ export default {
             if (res.status !== 200) {
                 return
             }
-            this.articleContent = this.filterWaterMark(res.data)
+            this.articleContent =
+                '<div class="hightlight-oprate"> <div class="hight-op-item delete">取消高亮</div> <div class="hight-op-item note">笔记</div> <div class="hight-op-item copy">复制</div> </div>' +
+                this.filterWaterMark(res.data)
             this.saveHistory()
             this.hideLoading()
             this.$nextTick(() => {
@@ -144,7 +145,9 @@ export default {
             }
         }
     },
-    mounted() {}
+    mounted() {
+        console.log('watch is wrong')
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -153,8 +156,6 @@ export default {
     overflow-y: auto;
     box-sizing: border-box;
     height: 100%;
-}
-.img_sina_share {
-    position: absolute;
+    position: relative;
 }
 </style>

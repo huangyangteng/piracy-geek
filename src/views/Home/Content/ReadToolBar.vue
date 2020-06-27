@@ -95,13 +95,50 @@ export default {
         changeHltrColor(color) {
             this.activeColor = color
             this.hltr.setColor(color)
+        },
+        cancelHighlight(removeId) {
+            let hightlightDom = document.querySelectorAll('.highlighted')
+            for (let i = 0; i < hightlightDom.length; i++) {
+                let curDom = hightlightDom[i]
+                if (curDom.dataset['timestamp'] == removeId) {
+                    window.hltr.removeHighlights(curDom)
+                }
+            }
         }
     },
     mounted() {
-        this.hltr = new window.TextHighlighter(
-            document.querySelector('.read-content')
-        )
+        this.hltr = new window.TextHighlighter(document.querySelector('body'))
         window.hltr = this.hltr
+        // 添加删除功能
+        let articleWrapperDom = document.querySelector('.article-wrapper')
+        document.addEventListener('click', e => {
+            let hightLightOprateMenu = articleWrapperDom.querySelector(
+                '.hightlight-oprate'
+            )
+            if (e.target.className == 'hight-op-item delete') {
+                this.cancelHighlight(e.target.id)
+                hightLightOprateMenu.style.visibility = 'hidden'
+                return
+            }
+            if (e.target.className != 'highlighted') {
+                hightLightOprateMenu.style.visibility = 'hidden'
+                return
+            }
+            let articleWrapperWidth = articleWrapperDom.offsetWidth - 80
+            let highlightTextWidth = e.target.offsetWidth
+            if (articleWrapperWidth - highlightTextWidth <= 10) {
+                // 高亮超过一行
+                hightLightOprateMenu.style.left =
+                    highlightTextWidth / 2 - 113 + 'px'
+            } else {
+                hightLightOprateMenu.style.left = e.target.offsetLeft + 'px'
+            }
+            hightLightOprateMenu.style.top = e.target.offsetTop - 50 + 'px'
+            hightLightOprateMenu.style.visibility = 'visible'
+            // 在取消高亮按钮上设置id,用于取消高亮
+            hightLightOprateMenu.querySelector('.delete').id =
+                e.target.dataset.timestamp
+        })
     }
 }
 </script>
@@ -165,5 +202,52 @@ export default {
 }
 .highlighted {
     position: relative;
+}
+</style>
+<style lang="css">
+.hightlight-oprate {
+    visibility: visible;
+    position: absolute;
+    z-index: 10;
+    font-size: 15px;
+    font-weight: 300;
+    height: 44px;
+    background: #484848;
+    color: #fff;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: 0.5 all;
+    visibility: hidden;
+}
+.hightlight-oprate::before {
+    content: '';
+    position: absolute;
+    border-top: 6px solid #484848;
+    border-right: 8px solid rgba(0, 0, 0, 0);
+    border-left: 8px solid rgba(0, 0, 0, 0);
+    width: 0px;
+    height: 0px;
+    bottom: -6px;
+    left: 95px;
+}
+.hight-op-item {
+    cursor: pointer;
+    padding: 0 16px;
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hight-op-item:hover {
+    background: #353535;
+}
+.hight-op-item:first-child {
+    border-radius: 8px;
+}
+.hight-op-item:last-child {
+    border-radius: 8px;
 }
 </style>

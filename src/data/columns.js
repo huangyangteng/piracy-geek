@@ -703,6 +703,195 @@ export default [
         ]
     },
     {
+        title: '图解GoogleV8',
+        id: 'przrb31aplb',
+        contents: [
+            {
+                id: '7gzbheaqyw8',
+                title: '宏观视角',
+                subList: [
+                    {
+                        id: 'kd0mcdb1jq6',
+                        title:
+                            '开篇词 | 如何学习谷歌高性能 JavaScript 引擎V8？',
+                        src:
+                            './图解GoogleV8/html/开篇词如何学习谷歌高性能JavaScript引擎V8.html'
+                    },
+                    {
+                        id: '85s8s5ivm81',
+                        title: '01 | V8是如何执行一段JavaScript代码的？',
+                        src:
+                            './图解GoogleV8/html/01V8是如何执行一段JavaScript代码的.html'
+                    }
+                ]
+            },
+            {
+                id: 'cr72t7mrn5s',
+                title: 'JavaScript设计思想篇',
+                subList: [
+                    {
+                        id: 'ajwuw0azawu',
+                        title:
+                            '02 | 函数即对象：一篇文章彻底搞懂JavaScript的函数特点',
+                        src:
+                            './图解GoogleV8/html/02函数即对象一篇文章彻底搞懂JavaScript的函数特点.html'
+                    },
+                    {
+                        id: '0me21v0eb9o',
+                        title:
+                            '03 | 快属性和慢属性：V8是怎样提升对象属性访问速度的？',
+                        src:
+                            './图解GoogleV8/html/03快属性和慢属性V8采用了哪些策略提升了对象属性的访问速度.html'
+                    },
+                    {
+                        id: 'opdz7r80e14',
+                        title:
+                            '04 | 函数表达式：涉及大量概念，函数表达式到底该怎么学？',
+                        src:
+                            './图解GoogleV8/html/04函数表达式涉及大量概念函数表达式到底该怎么学.html'
+                    },
+                    {
+                        id: 'drt5ahnrfiu',
+                        title: '05｜原型链：V8是如何实现对象继承的？',
+                        src:
+                            './图解GoogleV8/html/05原型链V8是如何实现对象继承的.html'
+                    },
+                    {
+                        id: 'r2xo914x0mb',
+                        title: '06｜作用域链：V8是如何查找变量的？',
+                        src:
+                            './图解GoogleV8/html/06作用域链V8是如何查找变量的.html'
+                    },
+                    {
+                        id: 'db7xvu3n2qm',
+                        title: '07｜类型转换：V8是怎么实现1+“2”的？',
+                        src:
+                            './图解GoogleV8/html/07类型转换V8是怎么实现12的.html'
+                    },
+                    {
+                        id: 'xfbmss76riz',
+                        title: '08｜答疑：如何构建和使用V8的调试工具d8？',
+                        src:
+                            './图解GoogleV8/html/08答疑如何构建和使用V8的调试工具d8.html'
+                    }
+                ]
+            },
+            {
+                id: 't61kjy03sb3',
+                title: 'V8编译流水线',
+                subList: [
+                    {
+                        id: '12uok2hclth',
+                        title: '09 | 运行时环境：运行JavaScript代码的基石',
+                        src:
+                            './图解GoogleV8/html/09运行时环境运行JavaScript代码的基石.html'
+                    },
+                    {
+                        id: 't7wietm55bj',
+                        title:
+                            '10 | 机器代码：二进制机器码究竟是如何被CPU执行的？',
+                        src:
+                            './图解GoogleV8/html/10机器代码二进制机器码究竟是如何被CPU执行的.html'
+                    },
+                    {
+                        id: 'vw0nkprjw4l',
+                        title: '11 | 堆和栈：函数调用是如何影响到内存布局的？',
+                        src:
+                            './图解GoogleV8/html/11堆和栈函数调用是如何影响到内存布局的.html'
+                    },
+                    {
+                        id: '9xk62l381ci',
+                        title: '12 | 延迟解析：V8是如何实现闭包的？',
+                        src:
+                            './图解GoogleV8/html/12延迟解析V8是如何实现闭包的.html'
+                    },
+                    {
+                        id: '9fhqzti7yax',
+                        title: '13 | 字节码（一）：V8为什么又重新引入字节码？',
+                        src:
+                            './图解GoogleV8/html/13字节码一V8为什么又重新引入字节码.html'
+                    },
+                    {
+                        id: 'endkpunyfyr',
+                        title:
+                            '14｜字节码（二）：解释器是如何解释执行字节码的？',
+                        src:
+                            './图解GoogleV8/html/14字节码二解释器是如何解释执行字节码的.html'
+                    },
+                    {
+                        id: 'ayj7qmahv16',
+                        title: '15 | 隐藏类：如何在内存中快速查找对象属性？',
+                        src:
+                            './图解GoogleV8/html/15隐藏类如何在内存中快速查找对象属性.html'
+                    },
+                    {
+                        id: 'jkh68me4fnc',
+                        title:
+                            '16 | 答疑： V8是怎么通过内联缓存来提升函数执行效率的？',
+                        src:
+                            './图解GoogleV8/html/16答疑V8是怎么通过内联缓存来提升函数执行效率的.html'
+                    }
+                ]
+            },
+            {
+                id: 'y2i1rsg0kdn',
+                title: '事件循环和垃圾回收',
+                subList: [
+                    {
+                        id: 'cb83n130yjt',
+                        title: '17 | 消息队列：V8是怎么实现回调函数的？',
+                        src:
+                            './图解GoogleV8/html/17消息队列V8是怎么实现回调函数的.html'
+                    },
+                    {
+                        id: 'u853srid4hf',
+                        title: '18 | 异步编程（一）：V8是如何实现微任务的？',
+                        src:
+                            './图解GoogleV8/html/18异步编程一V8是如何实现微任务的.html'
+                    },
+                    {
+                        id: '1v2r7ozetva',
+                        title:
+                            '19｜异步编程（二）：V8是如何实现async/await的？',
+                        src:
+                            './图解GoogleV8/html/19异步编程二V8是如何实现asyncawait的.html'
+                    },
+                    {
+                        id: '5ougkdqea3y',
+                        title:
+                            '20 | 垃圾回收（一）：V8的两个垃圾回收器是如何工作的？',
+                        src:
+                            './图解GoogleV8/html/20垃圾回收一V8的两个垃圾回收器是如何工作的.html'
+                    },
+                    {
+                        id: 'erjx1q3ya32',
+                        title:
+                            '21 | 垃圾回收（二）：V8是如何优化垃圾回收器执行效率的？',
+                        src:
+                            './图解GoogleV8/html/21垃圾回收二V8是如何优化垃圾回收器执行效率的.html'
+                    },
+                    {
+                        id: 'bwfv9iylak9',
+                        title: '22｜答疑：几种常见内存问题的解决策略',
+                        src:
+                            './图解GoogleV8/html/22答疑几种常见内存问题的解决策略.html'
+                    }
+                ]
+            },
+            {
+                id: 'ckxbecytuey',
+                title: '结束语',
+                subList: [
+                    {
+                        id: '100r8vm684d',
+                        title: '结束语 | 我的前端学习踩坑史',
+                        src: './图解GoogleV8/html/结束语我的前端学习踩坑史.html'
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 'wanzhuanvscode',
         title: '玩转VSCODE',
         contents: [
