@@ -41,7 +41,7 @@ export default {
         ...mapGetters('column', ['isFullScreen', 'isFold']),
         asideStyle() {
             return {
-                width: this.asideWidth + 'px'
+                width: this.asideWidth + 10 + 'px'
             }
         }
     },

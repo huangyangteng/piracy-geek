@@ -11,7 +11,7 @@ export default {
         return {
             dragAside: {
                 isMoving: false,
-                left: 422,
+                left: 420,
                 lastLeft: 0
             }
         }
@@ -31,7 +31,7 @@ export default {
         drag(e) {
             if (this.dragAside.isMoving) {
                 let dis = e.clientX - this.dragAside.lastLeft
-                let left = this.dragAside.lastLeft + dis
+                let left = this.dragAside.lastLeft + dis - 10
                 if (left < 300) {
                     left = 300
                 } else if (left >= 600) {
@@ -54,7 +54,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .drag-aside {
-    width: 2px;
+    // background: red;
+    width: 1px;
     cursor: col-resize;
     position: absolute;
     height: calc(100% - 40px);

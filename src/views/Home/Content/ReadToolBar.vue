@@ -24,6 +24,13 @@
                 ></div>
             </section>
             <section class="read-tools">
+                <el-tooltip content="保存高亮信息" placement="top">
+                    <i
+                        @click="saveHighlight"
+                        class="el-icon-hot-water"
+                        style="margin-right: 10px"
+                    ></i>
+                </el-tooltip>
                 <el-dropdown trigger="click" @command="changeColumn">
                     <el-tooltip content="选课" placement="top">
                         <i class="el-icon-reading" style="font-size: 16px"></i>
@@ -43,14 +50,7 @@
                     <i
                         @click="fullScreen"
                         class="el-icon-full-screen"
-                        style="margin-left: 10px;"
-                    ></i>
-                </el-tooltip>
-                <el-tooltip content="提示" placement="top">
-                    <i
-                        @click="watchTip"
-                        class="el-icon-s-opportunity icon-tip"
-                        style="margin-right: 10px;margin-left: 10px;"
+                        style="margin-left: 10px;margin-right: 10px"
                     ></i>
                 </el-tooltip>
             </section>
@@ -79,8 +79,16 @@ export default {
         toggleFold() {
             this.toggleNavIsShow(this.isFold)
         },
-        watchTip() {
-            this.$router.push({ name: 'tip' })
+        saveHighlight() {
+            let savedHightLight = window.hltr.serializeHighlights()
+            this.$store.commit('lastRead/saveHightLight', {
+                id: this.$store.state.column.curArticleId,
+                content: savedHightLight
+            })
+            this.$Message({
+                type: 'success',
+                message: '高亮信息保存成功'
+            })
         },
         changeColumn(column) {
             let columnInfo = getColumnById(this.columnList, column)
@@ -104,41 +112,48 @@ export default {
                     window.hltr.removeHighlights(curDom)
                 }
             }
-        }
+        },
+        bindCancelHighlight() {
+            // 添加删除功能
+            let articleWrapperDom = document.querySelector('.article-wrapper')
+            document.addEventListener('click', e => {
+                let hightLightOprateMenu = articleWrapperDom.querySelector(
+                    '.hightlight-oprate'
+                )
+                if (e.target.className == 'hight-op-item delete') {
+                    this.cancelHighlight(e.target.id)
+                    hightLightOprateMenu.style.visibility = 'hidden'
+                    return
+                }
+                if (e.target.className != 'highlighted') {
+                    hightLightOprateMenu.style.visibility = 'hidden'
+                    return
+                }
+                let articleWrapperWidth = articleWrapperDom.offsetWidth - 80
+                let highlightTextWidth = e.target.offsetWidth
+                if (articleWrapperWidth - highlightTextWidth <= 10) {
+                    // 高亮超过一行
+                    hightLightOprateMenu.style.left =
+                        highlightTextWidth / 2 - 113 + 'px'
+                } else {
+                    hightLightOprateMenu.style.left = e.target.offsetLeft + 'px'
+                }
+                hightLightOprateMenu.style.top = e.target.offsetTop - 50 + 'px'
+                hightLightOprateMenu.style.visibility = 'visible'
+                // 在取消高亮按钮上设置id,用于取消高亮
+                hightLightOprateMenu.querySelector('.delete').id =
+                    e.target.dataset.timestamp
+            })
+        },
+        bindKeyboard() {}
     },
     mounted() {
-        this.hltr = new window.TextHighlighter(document.querySelector('body'))
+        this.hltr = new window.TextHighlighter(
+            document.querySelector('.article-wrapper')
+        )
         window.hltr = this.hltr
-        // 添加删除功能
-        let articleWrapperDom = document.querySelector('.article-wrapper')
-        document.addEventListener('click', e => {
-            let hightLightOprateMenu = articleWrapperDom.querySelector(
-                '.hightlight-oprate'
-            )
-            if (e.target.className == 'hight-op-item delete') {
-                this.cancelHighlight(e.target.id)
-                hightLightOprateMenu.style.visibility = 'hidden'
-                return
-            }
-            if (e.target.className != 'highlighted') {
-                hightLightOprateMenu.style.visibility = 'hidden'
-                return
-            }
-            let articleWrapperWidth = articleWrapperDom.offsetWidth - 80
-            let highlightTextWidth = e.target.offsetWidth
-            if (articleWrapperWidth - highlightTextWidth <= 10) {
-                // 高亮超过一行
-                hightLightOprateMenu.style.left =
-                    highlightTextWidth / 2 - 113 + 'px'
-            } else {
-                hightLightOprateMenu.style.left = e.target.offsetLeft + 'px'
-            }
-            hightLightOprateMenu.style.top = e.target.offsetTop - 50 + 'px'
-            hightLightOprateMenu.style.visibility = 'visible'
-            // 在取消高亮按钮上设置id,用于取消高亮
-            hightLightOprateMenu.querySelector('.delete').id =
-                e.target.dataset.timestamp
-        })
+        this.bindCancelHighlight()
+        this.bindKeyboard()
     }
 }
 </script>
