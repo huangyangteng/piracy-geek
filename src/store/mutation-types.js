@@ -1,7 +1,5 @@
-const USER = {
-    LOGIN: 'login',
-    LOGOUT: 'logout',
-    UPDATE_JWT: 'updateJWT'
+const LAST_READ = {
+    SAVE_NOTE: 'saveNote'
 }
 
-export { USER }
+export { LAST_READ }

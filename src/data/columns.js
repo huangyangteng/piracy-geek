@@ -892,6 +892,291 @@ export default [
         ]
     },
     {
+        title: '从0打造音视频直播系统',
+        id: 'zr1qcwumd6w',
+        contents: [
+            {
+                id: 'sefk2tnchfg',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: 'ozhr7r03npj',
+                        title: '开篇词 | 5G的到来将会为音视频插上飞翔的翅膀',
+                        src:
+                            './从0打造音视频直播系统/html/00开篇词5G的到来将会为音视频插上飞翔的翅膀.html'
+                    }
+                ]
+            },
+            {
+                id: '18rc4eeydgw',
+                title: 'WebRTC1对1通话',
+                subList: [
+                    {
+                        id: 'i9imca5gy1d',
+                        title: '01 | 原来通过浏览器访问摄像头这么容易',
+                        src:
+                            './从0打造音视频直播系统/html/01原来通过浏览器访问摄像头这么容易.html'
+                    },
+                    {
+                        id: '1to3imn1hz2',
+                        title: '02 | 如何通过WebRTC进行音视频设备检测呢？',
+                        src:
+                            './从0打造音视频直播系统/html/02如何通过WebRTC进行音视频设备检测呢.html'
+                    },
+                    {
+                        id: '8el9ngpb9lc',
+                        title: '03 | 如何使用浏览器给自己拍照呢？',
+                        src:
+                            './从0打造音视频直播系统/html/03如何使用浏览器给自己拍照呢.html'
+                    },
+                    {
+                        id: 'a7mbnsfer26',
+                        title: '04 | 可以把采集到的音视频数据录制下来吗？',
+                        src:
+                            './从0打造音视频直播系统/html/04可以把采集到的音视频数据录制下来吗.html'
+                    },
+                    {
+                        id: '0t39vc5igj4',
+                        title: '05 | 原来浏览器还能抓取桌面？',
+                        src:
+                            './从0打造音视频直播系统/html/05原来浏览器还能抓取桌面.html'
+                    },
+                    {
+                        id: '2s1ps2nnasn',
+                        title: '06 | WebRTC中的RTP及RTCP详解',
+                        src:
+                            './从0打造音视频直播系统/html/06WebRTC中的RTP及RTCP详解.html'
+                    },
+                    {
+                        id: '3uto9qyaafs',
+                        title: '07 | 你竟然不知道SDP？它可是WebRTC的驱动核心！',
+                        src:
+                            './从0打造音视频直播系统/html/07你竟然不知道SDP它可是WebRTC的驱动核心！.html'
+                    },
+                    {
+                        id: 'buvuqnsb0a5',
+                        title: '08 | 有话好商量，论媒体协商',
+                        src:
+                            './从0打造音视频直播系统/html/08有话好商量论媒体协商.html'
+                    },
+                    {
+                        id: 'ay5kzxckzgo',
+                        title: '09 | 让我们揭开WebRTC建立连接的神秘面纱',
+                        src:
+                            './从0打造音视频直播系统/html/09让我们揭开WebRTC建立连接的神秘面纱.html'
+                    },
+                    {
+                        id: 'y07a7s1qtmf',
+                        title: '10 | WebRTC NAT穿越原理',
+                        src:
+                            './从0打造音视频直播系统/html/10WebRTCNAT穿越原理.html'
+                    },
+                    {
+                        id: 'wdr7ig8p8wa',
+                        title: '11 | 如何通过Node.js实现一套最简单的信令系统？',
+                        src:
+                            './从0打造音视频直播系统/html/11如何通过Node.js实现一套最简单的信令系统.html'
+                    },
+                    {
+                        id: '0zzqtz1a64o',
+                        title: '12 | RTCPeerConnection：音视频实时通讯的核心',
+                        src:
+                            './从0打造音视频直播系统/html/12RTCPeerConnection音视频实时通讯的核心.html'
+                    },
+                    {
+                        id: 'qqwt4726ekm',
+                        title: '13 | 在WebRTC中如何控制传输速率呢？',
+                        src:
+                            './从0打造音视频直播系统/html/13在WebRTC中如何控制传输速率呢.html'
+                    },
+                    {
+                        id: '1o783ay0ebu',
+                        title: '14 | 如何打开/关闭音视频？',
+                        src:
+                            './从0打造音视频直播系统/html/14如何打开关闭音视频.html'
+                    },
+                    {
+                        id: 'i0v9mv10wf2',
+                        title: '15 | WebRTC中的数据统计原来这么强大（上）',
+                        src:
+                            './从0打造音视频直播系统/html/15WebRTC中的数据统计原来这么强大上.html'
+                    },
+                    {
+                        id: 'yqqpi1biker',
+                        title: '16 | WebRTC中的数据统计原来这么强大（下）',
+                        src:
+                            './从0打造音视频直播系统/html/16WebRTC中的数据统计原来这么强大下.html'
+                    },
+                    {
+                        id: 'ocp8y9njwyl',
+                        title: '17 | 如何使用Canvas绘制统计图表（上）？',
+                        src:
+                            './从0打造音视频直播系统/html/17如何使用Canvas绘制统计图表上.html'
+                    },
+                    {
+                        id: 'lge38901lpq',
+                        title: '18 | 如何使用Canvas绘制统计图表（下）？',
+                        src:
+                            './从0打造音视频直播系统/html/18如何使用Canvas绘制统计图表下.html'
+                    },
+                    {
+                        id: '7gqlvprbo68',
+                        title: '19 | WebRTC能不能进行文本聊天呢？',
+                        src:
+                            './从0打造音视频直播系统/html/19WebRTC能不能进行文本聊天呢.html'
+                    },
+                    {
+                        id: 'yqpwkph2xgw',
+                        title: '20 | 原来WebRTC还可以实时传输文件？',
+                        src:
+                            './从0打造音视频直播系统/html/20原来WebRTC还可以实时传输文件.html'
+                    },
+                    {
+                        id: '8qjzj8gdcg9',
+                        title: '21 | 如何保证数据传输的安全（上）？',
+                        src:
+                            './从0打造音视频直播系统/html/21如何保证数据传输的安全上.html'
+                    },
+                    {
+                        id: '7jdtrfeidma',
+                        title: '22 | 如何保证数据传输的安全（下）？',
+                        src:
+                            './从0打造音视频直播系统/html/22如何保证数据传输的安全下.html'
+                    },
+                    {
+                        id: 'cm8ym8q4zmk',
+                        title:
+                            '23 | 实战演练：通过WebRTC实现一个1对1音视频实时直播系统',
+                        src:
+                            './从0打造音视频直播系统/html/23实战演练通过WebRTC实现一个1对1音视频实时直播系统.html'
+                    }
+                ]
+            },
+            {
+                id: 'rd4t7iwqyfu',
+                title: 'WebRTC多人音视频实时通话',
+                subList: [
+                    {
+                        id: '6hqaup6oiy3',
+                        title: '24 | 多人音视频实时通讯是怎样的架构？',
+                        src:
+                            './从0打造音视频直播系统/html/24多人音视频实时通讯是怎样的架构.html'
+                    },
+                    {
+                        id: '3bwppy17105',
+                        title: '25 | 那些常见的流媒体服务器，你该选择谁？',
+                        src:
+                            './从0打造音视频直播系统/html/25那些常见的流媒体服务器你该选择谁.html'
+                    },
+                    {
+                        id: 'hkg78qu18oy',
+                        title: '26 | 为什么编译Medooze Server这么难？',
+                        src:
+                            './从0打造音视频直播系统/html/26为什么编译MedoozeServer这么难.html'
+                    },
+                    {
+                        id: 'gq0st31c6sy',
+                        title: '27 | 让我们一起探索Medooze的具体实现吧（上）',
+                        src:
+                            './从0打造音视频直播系统/html/27让我们一起探索Medooze的具体实现吧上.html'
+                    },
+                    {
+                        id: 'ged07kikmtn',
+                        title: '28 | 让我们一起探索Medooze的具体实现吧（下）',
+                        src:
+                            './从0打造音视频直播系统/html/28让我们一起探索Medooze的具体实现吧下.html'
+                    },
+                    {
+                        id: '14wklf60a3e',
+                        title: '29 | 如何使用Medooze 实现多方视频会议？',
+                        src:
+                            './从0打造音视频直播系统/html/29如何使用Medooze实现多方视频会议.html'
+                    },
+                    {
+                        id: '0e911veawnc',
+                        title:
+                            '30 | 实战演练：通过WebRTC实现多人音视频实时互动直播系统',
+                        src:
+                            './从0打造音视频直播系统/html/30实战演练通过WebRTC实现多人音视频实时互动直播系统.html'
+                    }
+                ]
+            },
+            {
+                id: 'pbwsjhr41g7',
+                title: '支持上万人同时在线的直播系统',
+                subList: [
+                    {
+                        id: 'nmhq6t1qrot',
+                        title: '31 | 一对多直播系统RTMP/HLS，你该选哪个？',
+                        src:
+                            './从0打造音视频直播系统/html/31一对多直播系统RTMPHLS你该选哪个.html'
+                    },
+                    {
+                        id: 'c1o3kitrpqr',
+                        title: '32 | HLS：实现一对多直播系统的必备协议',
+                        src:
+                            './从0打造音视频直播系统/html/32HLS实现一对多直播系统的必备协议.html'
+                    },
+                    {
+                        id: '6nom60mtb22',
+                        title: '33 | FLV：适合录制的多媒体格式',
+                        src:
+                            './从0打造音视频直播系统/html/33FLV适合录制的多媒体格式.html'
+                    },
+                    {
+                        id: '7md5k0v7mkn',
+                        title: '34 | 如何使用Nginx搭建最简单的直播服务器？',
+                        src:
+                            './从0打造音视频直播系统/html/34如何使用Nginx搭建最简单的直播服务器.html'
+                    },
+                    {
+                        id: 'ex68syq69et',
+                        title: '35 | 如何构建云端一对多直播系统？',
+                        src:
+                            './从0打造音视频直播系统/html/35如何构建云端一对多直播系统.html'
+                    },
+                    {
+                        id: '2qlqkuq67cd',
+                        title: '36 | 如何使用 flv.js 播放 FLV 多媒体文件呢？',
+                        src:
+                            './从0打造音视频直播系统/html/36如何使用flv.js播放FLV多媒体文件呢.html'
+                    },
+                    {
+                        id: 'b9m6g9xcbxt',
+                        title: '37 | 如何使用 video.js 播放多媒体文件？',
+                        src:
+                            './从0打造音视频直播系统/html/37如何使用video.js播放多媒体文件.html'
+                    },
+                    {
+                        id: 'nwh3n1irq9u',
+                        title:
+                            '38 | 实战推演：带你实现一个支持万人同时在线的直播系统',
+                        src:
+                            './从0打造音视频直播系统/html/38实战推演带你实现一个支持万人同时在线的直播系统.html'
+                    }
+                ]
+            },
+            {
+                id: 'n29c8fbritm',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 'oi7kbg4nolp',
+                        title: '结束语 | 路漫漫其修远兮，吾将上下而求索',
+                        src:
+                            './从0打造音视频直播系统/html/结束语路漫漫其修远兮吾将上下而求索.html'
+                    },
+                    {
+                        id: 'ndzc88sowwh',
+                        title:
+                            '结课测试 | 这些音视频直播系统的知识你都掌握了吗？',
+                        src: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 'wanzhuanvscode',
         title: '玩转VSCODE',
         contents: [

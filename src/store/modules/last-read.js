@@ -1,8 +1,10 @@
+import { LAST_READ } from '../mutation-types'
 const state = {
     lastColumnId: '',
     lastArticleList: [],
     lastReadPositionList: [],
-    lastHightLight: {}
+    lastHightLight: {},
+    articleNote: {}
 }
 
 const getters = {
@@ -33,6 +35,11 @@ const getters = {
     getLastHightLight(state) {
         return id => {
             return state.lastHightLight[id]
+        }
+    },
+    getCurNote(state) {
+        return id => {
+            return state.articleNote[id]
         }
     }
 }
@@ -71,6 +78,10 @@ const mutations = {
         } else {
             state.lastReadPositionList.push(cur)
         }
+    },
+    [LAST_READ.SAVE_NOTE](state, { articleId, note }) {
+        state.articleNote[articleId] = note
+        state.articleNote = Object.assign({}, state.articleNote)
     }
 }
 

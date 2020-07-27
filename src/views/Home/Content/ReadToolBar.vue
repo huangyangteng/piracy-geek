@@ -27,7 +27,7 @@
                 <el-tooltip content="保存高亮信息" placement="top">
                     <i
                         @click="saveHighlight"
-                        class="el-icon-hot-water"
+                        class="el-icon-collection"
                         style="margin-right: 10px"
                     ></i>
                 </el-tooltip>
@@ -55,15 +55,20 @@
                 </el-tooltip>
             </section>
         </aside>
+        <addNote></addNote>
     </section>
 </template>
 <script>
 import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
 import { getColumnById } from '../../../tools/column-tools'
+import addNote from './AddNote'
 export default {
+    components: {
+        addNote
+    },
     data() {
         return {
-            colorList: ['#ffff7b', '#29B6F6', '#F44336', '#fff'],
+            colorList: ['#ffff7b', '#29B6F6', '#F44336'],
             hltr: null,
             activeColor: '#ffff7b'
         }
@@ -81,6 +86,9 @@ export default {
         },
         saveHighlight() {
             let savedHightLight = window.hltr.serializeHighlights()
+            if (savedHightLight == '[]') {
+                return
+            }
             this.$store.commit('lastRead/saveHightLight', {
                 id: this.$store.state.column.curArticleId,
                 content: savedHightLight

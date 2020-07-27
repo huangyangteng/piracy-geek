@@ -76,7 +76,7 @@
     }
 
     /**
-     * Takes range object as parameter and refines it boundaries
+     * Takes range object as parameter and refines it boundaries TODO:完善选中内容，处理边界
      * @param range
      * @returns {object} refined boundaries and initial state of highlighting algorithm.
      */
@@ -95,6 +95,8 @@
             }
             endContainer = endContainer.previousSibling
         } else if (endContainer.nodeType === NODE_TYPE.TEXT_NODE) {
+            //文本节点
+            // 如果一段文字只选了一部分，把未选中的部分截取掉
             if (range.endOffset < endContainer.nodeValue.length) {
                 endContainer.splitText(range.endOffset)
             }
@@ -369,7 +371,6 @@
             getRange: function() {
                 var selection = dom(el).getSelection(),
                     range
-
                 if (selection.rangeCount > 0) {
                     range = selection.getRangeAt(0)
                 }
@@ -514,7 +515,7 @@
     }
 
     /**
-     * Highlights range.
+     * Highlights range.核心逻辑
      * Wraps text of given range object in wrapper element.
      * @param {Range} range
      * @param {HTMLElement} wrapper
@@ -873,6 +874,7 @@
      * @param {object} json - JSON object with highlights definition.
      * @returns {Array} - array of deserialized highlights.
      * @memberof TextHighlighter
+   
      */
     TextHighlighter.prototype.deserializeHighlights = function(json) {
         var hlDescriptors,

@@ -9,7 +9,7 @@
         <i
             v-show="isFullScreen"
             @click="notFullScreen"
-            class="el-icon-magic-stick exit-full"
+            class="el-icon-monitor exit-full"
         ></i>
         <PicturePreview></PicturePreview>
     </section>

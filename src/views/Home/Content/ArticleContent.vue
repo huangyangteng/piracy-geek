@@ -111,7 +111,6 @@ export default {
             }
         },
         showLoading() {
-            // this.loading = true
             let app = document.getElementById('app')
             let wrapper = document.querySelector('.article-wrapper')
             let target = app ? app : wrapper
@@ -122,7 +121,6 @@ export default {
             })
         },
         hideLoading() {
-            // this.loading = false
             this.loadingInstance.close()
         }
     },
@@ -144,9 +142,6 @@ export default {
                 })
             }
         }
-    },
-    mounted() {
-        console.log('watch is wrong')
     }
 }
 </script>
