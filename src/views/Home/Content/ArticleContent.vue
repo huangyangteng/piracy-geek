@@ -11,6 +11,8 @@ import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid } from '../../../tools/index'
 import axios from 'axios'
+const CancelToken = axios.CancelToken
+let cancel
 export default {
     data() {
         return {
@@ -26,6 +28,8 @@ export default {
     methods: {
         ...mapMutations('lastRead', ['setLastColumn', 'setLastArticle']),
         async handlerArticle(src, top, id) {
+            // 每次发送新的请求之前，需求上一次的请求
+
             this.showLoading()
             src = src.replace('./', '')
             let reqUrl = window.location.origin + '/api/' + src
@@ -33,8 +37,12 @@ export default {
                 //测试环境
                 reqUrl = window.location.origin + '/api/api/' + src
             }
-
-            let res = await axios.get(reqUrl)
+            if (typeof cancel == 'function') {
+                cancel()
+            }
+            let res = await axios.get(reqUrl, {
+                cancelToken: new CancelToken(c => (cancel = c))
+            })
 
             if (res.status !== 200) {
                 return

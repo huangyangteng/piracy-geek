@@ -1,7 +1,12 @@
 export default [
     {
         id: 'chongxueqianduan',
+        type: 'web',
         title: '重学前端',
+        cid: '100023201', //极客时间真实课程id
+        subTitle: '每天10分钟，重构你的前端知识体系',
+        authorName: '程劭非（winter)',
+        authorInfo: '前手机淘宝前端负责人',
         contents: [
             {
                 id: '000',
@@ -406,7 +411,12 @@ export default [
     },
     {
         id: 'liulanqi',
+        type: 'web',
         title: '浏览器工作原理与实践',
+        cid: '100033601', //极客时间真实课程id
+        subTitle: '透过浏览器看懂前端本质',
+        authorName: '李兵',
+        authorInfo: '前盛大创新院高级研究员',
         contents: [
             {
                 id: '00000',
@@ -705,6 +715,11 @@ export default [
     {
         title: '图解GoogleV8',
         id: 'przrb31aplb',
+        type: 'web',
+        cid: '100048001', //极客时间真实课程id
+        subTitle: '一门课搞懂 JavaScript 执行逻辑',
+        authorName: '李兵',
+        authorInfo: '前盛大创新院高级研究员',
         contents: [
             {
                 id: '7gzbheaqyw8',
@@ -894,6 +909,11 @@ export default [
     {
         title: '从0打造音视频直播系统',
         id: 'zr1qcwumd6w',
+        type: 'web',
+        cid: '100031801', //极客时间真实课程id
+        subTitle: '手把手教你打造实时互动音视频直播系统',
+        authorName: '李超',
+        authorInfo: '前新东方音视频直播技术专家，前沪江音视频架构师',
         contents: [
             {
                 id: 'sefk2tnchfg',
@@ -1178,7 +1198,12 @@ export default [
     },
     {
         id: 'wanzhuanvscode',
+        type: 'web',
         title: '玩转VSCODE',
+        cid: null, //极客时间真实课程id
+        subTitle: '玩转vscode编辑器',
+        authorName: '吕鹏',
+        authorInfo: '微软工程师',
         contents: [
             {
                 id: 'wanzhuanvscodedjj',
@@ -1424,6 +1449,11 @@ export default [
     {
         title: '编译原理之美',
         id: 'whis7d21y7r',
+        type: 'cs',
+        cid: '100034101', //极客时间真实课程id
+        subTitle: '手把手教你实现一个编译器',
+        authorName: '宫文学',
+        authorInfo: '北京物演科技CEO',
         divided: true,
         contents: [
             {
@@ -1764,6 +1794,11 @@ export default [
     {
         title: '趣谈网络协议',
         id: 'r5pnzf6jb5j',
+        type: 'cs',
+        cid: '100007101', //极客时间真实课程id
+        subTitle: '像小说一样的网络协议入门课',
+        authorName: '刘超',
+        authorInfo: '网易研究院云计算技术部首席架构师',
         contents: [
             {
                 id: 'bmtj8fhmxxj',
@@ -2145,6 +2180,11 @@ export default [
     {
         title: '透视HTTP协议',
         id: 'mxprfcgr030',
+        type: 'cs',
+        cid: '100029001', //极客时间真实课程id
+        subTitle: '深入理解HTTP协议本质与应用',
+        authorName: '罗剑锋（Chrono）',
+        authorInfo: '奇虎360技术专家，Nginx/OpenResty开源项目贡献者',
         contents: [
             {
                 id: 'pig49ddwg0u',
@@ -2460,6 +2500,11 @@ export default [
     {
         title: '数据结构与算法之美',
         id: 'fe99gzh24zw',
+        type: 'cs',
+        cid: '100017301', //极客时间真实课程id
+        subTitle: '为工程师量身打造的数据结构与算法私教课',
+        authorName: '王争',
+        authorInfo: '前Google工程师',
         contents: [
             {
                 id: 'lqpfqybk2xo',
@@ -3039,6 +3084,11 @@ export default [
     {
         title: '程序员的数学基础课',
         id: 'ermqorb2wfz',
+        type: 'cs',
+        cid: '100021201', //极客时间真实课程id
+        subTitle: '在实战中重新理解数学',
+        authorName: '黄申',
+        authorInfo: 'LinkedIn资深数据科学家',
         contents: [
             {
                 id: 'f0arctjs9lk',
@@ -3469,7 +3519,12 @@ export default [
     // -------软技能
     {
         title: '左耳听风',
+        type: 'skill',
         id: 'c32iugx4yjo',
+        cid: '100002201', //极客时间真实课程id
+        subTitle: '洞悉技术的本质，享受科技的乐趣',
+        authorName: '陈皓',
+        authorInfo: '网名“左耳朵耗子”，资深技术专家，骨灰级程序员',
         divided: true,
         contents: [
             {
@@ -4089,6 +4144,11 @@ export default [
     {
         title: '白话法律',
         id: 'm0tm2gazgkb',
+        type: 'skill',
+        cid: '100020001', //极客时间真实课程id
+        subTitle: '为程序员打造的专属法律武器',
+        authorName: '周甲德',
+        authorInfo: '京师律师事务所合伙人，资深律师',
         contents: [
             {
                 id: 'b5560awq7bl',
@@ -4347,7 +4407,12 @@ export default [
     },
     {
         title: '面试现场',
+        type: 'skill',
         id: 'zh82axor9hz',
+        cid: '100023401', //极客时间真实课程id
+        subTitle: '面试只是起点，能力才是终局',
+        authorName: '白海飞',
+        authorInfo: 'IBM软件商务系统经理',
         contents: [
             {
                 id: 'xdy7q62sbbj',
@@ -4621,6 +4686,12 @@ export default [
     {
         title: '10x程序员工作法',
         id: 'ts4ebp02jx0',
+        type: 'skill',
+        cid: '100022301', //极客时间真实课程id
+        subTitle: '掌握主动权，忙到点子上',
+        authorName: '郑晔',
+        authorInfo:
+            '火币网首席架构师，前ThoughtWorks首席咨询师 ，TGO鲲鹏会会员',
         contents: [
             {
                 id: 'ww7gx5q0pw7',
@@ -5000,6 +5071,11 @@ export default [
     {
         title: '程序员进阶攻略',
         id: 'qwrms9zuf7v',
+        type: 'skill',
+        cid: '100012101', //极客时间真实课程id
+        subTitle: '每个程序员都应该知道的成长法则',
+        authorName: '胡峰',
+        authorInfo: '京东成都研究院技术专家',
         contents: [
             {
                 id: 'b58aqkaio3o',

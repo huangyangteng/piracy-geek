@@ -45,6 +45,7 @@ export default {
     },
     methods: {
         saveNote() {
+            if (this.textarea === this.curNote) return
             this.$store.commit(`lastRead/${LAST_READ.SAVE_NOTE}`, {
                 articleId: this.curArticleId,
                 note: this.textarea
