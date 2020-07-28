@@ -1,6 +1,6 @@
 <template>
     <section>
-        <el-popover placement="left" width="400" trigger="hover">
+        <el-popover placement="left" width="400" trigger="click">
             <el-input
                 type="textarea"
                 :rows="12"

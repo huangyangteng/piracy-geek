@@ -1,5 +1,8 @@
 <template>
     <aside v-show="!isFold">
+        <section class="read-logo">
+            <a href="#/column-list">Pirated GeekTime</a>
+        </section>
         <header class="read-aside-header">
             <i
                 @click="toggleOutlineOrMenu"
@@ -88,6 +91,23 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+$--color-primary: #fa8919;
+.read-logo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 100;
+    cursor: pointer;
+    margin: 30px 0;
+    transition: 0.5s;
+    a {
+        font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+        color: #364149;
+        text-decoration: none;
+        &:hover {
+            color: $--color-primary;
+        }
+    }
+}
 .read-aside-header {
     display: flex;
     align-items: center;
@@ -99,7 +119,7 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 1s;
+    transition: opacity 0s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;

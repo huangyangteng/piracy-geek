@@ -43,8 +43,7 @@ export default {
     name: 'ColumnList',
     data() {
         return {
-            activePath: 'web',
-            pathList: PATH_LIST,
+            activePath: 'cs',
             columnList: formatColumn(COLUMN_LIST, PATH_LIST)
         }
     },
@@ -52,6 +51,12 @@ export default {
         ...mapState('lastRead', ['lastColumnId']),
         selectedColumns() {
             return this.columnList[this.activePath]
+        },
+        pathList() {
+            return PATH_LIST.map(item => {
+                item.nums = this.columnList[item.name].length
+                return item
+            })
         }
     },
     methods: {
@@ -107,7 +112,7 @@ $--color-primary: #fa8919;
         margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
-        padding: 20px;
+        padding: 40px 20px;
     }
 }
 .tab-study-path {
