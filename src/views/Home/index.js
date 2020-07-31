@@ -1,7 +1,7 @@
 export default [
     {
         path: '/',
-        redirect: '/read'
+        component: () => import('./Home.vue')
     },
     {
         path: '/read',

@@ -1,32 +1,52 @@
 <template>
-    <section class="hyt-blog">
-        <nav></nav>
-        <header>
-            MY ZONE
-        </header>
-        <section>
-            <a
-                v-for="item in prodList"
-                :key="item.href"
-                :href="item.href"
-                class="blog-prod-item"
-            >
-                <h2>{{ item.title_en }}</h2>
-                <img :src="item.img" alt="" />
-                <div style="color:#1f1f1f">{{ item.title }}</div>
-            </a>
-        </section>
-        <footer>
-            My Zone<br />
-            All Rights Reserved ©2020
-        </footer>
+    <section>
+        <transition leave-active-class="animate__animated animate__fadeOut">
+            <article class="blog-loading" v-if="loading">
+                <div
+                    :style="{ width: percent * 100 + '%' }"
+                    class="progress"
+                ></div>
+                <header
+                    class="animate__animated animate__fadeIn .animate__delay-1s"
+                >
+                    WEBSTATION — My Writing Space
+                </header>
+            </article>
+        </transition>
+        <transition enter-active-class="animate__animated animate__fadeIn">
+            <section class="hyt-blog " v-if="!loading">
+                <nav></nav>
+                <header>
+                    {{ title }}
+                </header>
+                <section>
+                    <a
+                        v-for="item in prodList"
+                        :key="item.href"
+                        :href="item.href"
+                        class="blog-prod-item"
+                    >
+                        <h2>{{ item.title_en }}</h2>
+                        <img :src="item.img" alt="" />
+                        <div style="color:#1f1f1f">{{ item.title }}</div>
+                    </a>
+                </section>
+                <footer>
+                    {{ title }}<br />
+                    All Rights Reserved ©2020
+                </footer>
+            </section>
+        </transition>
     </section>
 </template>
 <script>
-import { mapState } from 'vuex'
+import 'animate.css'
 export default {
     data() {
         return {
+            title: 'WEBSTATION',
+            loading: false,
+            percent: 0,
             prodList: [
                 {
                     title_en: 'LEARNING RESOURCES',
@@ -49,32 +69,56 @@ export default {
             ]
         }
     },
-    computed: {
-        ...mapState('lastRead', ['lastColumnId'])
+    watch: {
+        loading(truth) {
+            if (truth) {
+                setInterval(() => {
+                    if (this.percent < 1) {
+                        this.percent += 0.5
+                    } else {
+                        this.loading = false
+                    }
+                }, 1000)
+            }
+        }
     },
-    methods: {},
-    created() {
-        // let lastColumn = this.lastColumnId
-        // let lastArticle = this.$store.getters['lastRead/getLastArticleId'](
-        //     this.lastColumnId
-        // )
-        // // 如果不存在历史记录
-        // if (!lastColumn || !lastArticle) {
-        //     lastColumn = 'chongxueqianduan'
-        //     lastArticle = 'YO5vkhdcI9w2rXac'
-        // }
-        // // 如果存在历史记录，跳转到Read.vue组件
-        // this.$router.push({
-        //     name: 'read',
-        //     params: {
-        //         column: lastColumn,
-        //         article: lastArticle
-        //     }
-        // })
+    mounted() {
+        this.loading = true
     }
 }
 </script>
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+.blog-loading {
+    position: fixed;
+    background: #000;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > header {
+        color: #f7f7f5;
+        font-size: 2vw;
+    }
+    > .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 0;
+        background: #f7f7f5;
+        transition: width 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
 .hyt-blog {
     padding: 40px;
     > header {
