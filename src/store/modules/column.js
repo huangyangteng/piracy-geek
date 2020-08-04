@@ -24,6 +24,15 @@ const getters = {
     curColumnId: state => state.curColumn.id,
     curColumnTitle: state => state.curColumn.title,
     curContents: state => state.curColumn.contents,
+    curArticleTitle: (state, getters) => {
+        let tmp = getters.curContents.map(item => item.subList)
+        let list = tmp.reduce((prev, cur) => prev.concat(cur))
+        try {
+            return list.find(item => item.id == state.curArticleId).title
+        } catch (error) {
+            return ''
+        }
+    },
     // 显示状态
     isFold: state => !state.status.navIsShow,
     isFullScreen: state => {

@@ -5,6 +5,7 @@
                 type="textarea"
                 :rows="12"
                 placeholder="请输入笔记"
+                @keydown.tab.native="keyUpHandle"
                 v-model="textarea"
                 @blur="saveNote"
             >
@@ -14,7 +15,13 @@
                 style="margin-top:10px;display:block;margin-left:auto"
                 >保存</el-button
             >
-            <div class="add-note" slot="reference">+</div>
+            <div
+                class="add-note"
+                :style="{ opacity: noNote ? 0.8 : 1 }"
+                slot="reference"
+            >
+                +
+            </div>
         </el-popover>
     </section>
 </template>
@@ -33,6 +40,9 @@ export default {
         ...mapGetters('lastRead', ['getCurNote']),
         curNote() {
             return this.getCurNote(this.curArticleId)
+        },
+        noNote() {
+            return !this.curNote
         }
     },
     watch: {
@@ -54,6 +64,13 @@ export default {
                 message: '保存笔记成功',
                 type: 'success'
             })
+        },
+        keyUpHandle(e) {
+            if (e.keyCode == 9) {
+                e.preventDefault()
+                this.textarea = this.textarea += '    '
+                return false
+            }
         }
     }
 }

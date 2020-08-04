@@ -23,7 +23,11 @@ export default {
     },
     computed: {
         ...mapState('column', ['curArticleId']),
-        ...mapGetters('column', ['curContents'])
+        ...mapGetters('column', [
+            'curContents',
+            'curColumnTitle',
+            'curArticleTitle'
+        ])
     },
     methods: {
         ...mapMutations('lastRead', ['setLastColumn', 'setLastArticle']),
@@ -56,6 +60,7 @@ export default {
                 this.generateOutline()
                 this.polyfillPage()
                 document.querySelector('.article-wrapper').scrollTop = top
+                this.setTitle()
                 this.loadHightLight(id)
             })
         },
@@ -83,6 +88,7 @@ export default {
                 .replace(/<script.*>(.*\n)*<\/script>/gim, '')
         },
         generateOutline() {
+            //生成大纲视图数据
             let wrapper = document.querySelector('.article-wrapper')
             let childrens = wrapper.getElementsByTagName('*')
             let treeArray = []
@@ -100,6 +106,9 @@ export default {
                 }
             }
             this.$store.commit('column/setOutline', treeArray)
+        },
+        setTitle() {
+            document.title = this.curArticleTitle + '—' + this.curColumnTitle
         },
         saveHistory() {
             if (this.$route.params.column) {
