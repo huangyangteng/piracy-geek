@@ -94,6 +94,9 @@ export default {
             const openUrl = `${window.location.origin}/#/read/${columnId}/${articleId}`
             window.open(openUrl, '_blank')
         }
+    },
+    mounted() {
+        document.title = '专栏列表-Piracy Geektime'
     }
 }
 </script>
