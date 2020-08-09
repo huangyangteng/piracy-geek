@@ -32,7 +32,7 @@ export default {
     methods: {
         ...mapMutations('lastRead', ['setLastColumn', 'setLastArticle']),
         async handlerArticle(src, top, id) {
-            // 每次发送新的请求之前，需求上一次的请求
+            // 每次发送新的请求之前，取消上一次的请求
 
             this.showLoading()
             src = src.replace('./', '')
@@ -72,6 +72,7 @@ export default {
         },
         saveHightLight(id) {
             let savedHightLight = window.hltr.serializeHighlights()
+            if (savedHightLight.length == 0) return
             this.$store.commit('lastRead/saveHightLight', {
                 id: id,
                 content: savedHightLight
@@ -120,12 +121,15 @@ export default {
             }
         },
         polyfillPage() {
-            let nav = document.querySelector('._50pDbNcP_0')
-            if (nav) {
-                document
-                    .querySelector('._50pDbNcP_0')
-                    .previousElementSibling.remove()
+            let arr = document.querySelectorAll('._50pDbNcP_0')
+            if (arr.length == 0) return
+            let nav = null
+            if (arr.length > 1) {
+                nav = arr[arr.length - 1]
+            } else {
+                nav = arr[0]
             }
+            nav.previousElementSibling.remove()
         },
         showLoading() {
             let app = document.getElementById('app')
@@ -169,5 +173,31 @@ export default {
     box-sizing: border-box;
     height: 100%;
     position: relative;
+}
+.article-wrapper #app {
+}
+</style>
+<style lang="scss">
+._3ADRghFH_0 {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #353535;
+    line-height: 1.76;
+    white-space: normal;
+    word-break: normal;
+    font-size: 17px;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    img {
+        width: 100%;
+    }
+}
+._2c4hPkl9 > div > div {
+    margin: 30px 0;
+}
+._1qhD3bdE_0 img {
+    width: 20px;
 }
 </style>

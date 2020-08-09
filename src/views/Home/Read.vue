@@ -12,6 +12,7 @@
             class="el-icon-monitor exit-full"
         ></i>
         <PicturePreview></PicturePreview>
+        <ColumnListDraw></ColumnListDraw>
     </section>
 </template>
 <script>
@@ -21,6 +22,7 @@ import ReadToolBar from './Content/ReadToolBar'
 import ArticleContent from './Content/ArticleContent'
 import PicturePreview from './Modal/PicturePreview'
 import DragLine from '../../components/dragLine'
+import ColumnListDraw from './Modal/ColumnListDraw'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
     components: {
@@ -28,7 +30,8 @@ export default {
         ReadToolBar,
         ArticleContent,
         PicturePreview,
-        DragLine
+        DragLine,
+        ColumnListDraw
     },
     data() {
         return {

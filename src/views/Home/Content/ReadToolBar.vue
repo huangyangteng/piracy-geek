@@ -31,25 +31,26 @@
                         style="margin-right: 10px"
                     ></i>
                 </el-tooltip>
-                <el-dropdown trigger="click" @command="changeColumn">
-                    <el-tooltip content="选课" placement="top">
-                        <i class="el-icon-reading" style="font-size: 16px"></i>
-                    </el-tooltip>
-                    <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item
-                            v-for="item in columnList"
-                            :key="item.id"
-                            :command="item.id"
-                            :divided="item.divided"
-                            >{{ item.title }}</el-dropdown-item
-                        >
-                    </el-dropdown-menu>
-                </el-dropdown>
+
+                <el-tooltip content="选课" placement="top">
+                    <i
+                        @click="chooseColumn"
+                        class="el-icon-reading"
+                        style="font-size: 16px"
+                    ></i>
+                </el-tooltip>
 
                 <el-tooltip content="全屏阅读" placement="top">
                     <i
                         @click="fullScreen"
                         class="el-icon-full-screen"
+                        style="margin-left: 10px;margin-right: 10px"
+                    ></i>
+                </el-tooltip>
+                <el-tooltip content="返回主页" placement="top">
+                    <i
+                        @click="toHome"
+                        class="el-icon-s-home"
                         style="margin-left: 10px;margin-right: 10px"
                     ></i>
                 </el-tooltip>
@@ -60,7 +61,6 @@
 </template>
 <script>
 import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
-import { getColumnById } from '../../../tools/column-tools'
 import addNote from './AddNote'
 export default {
     components: {
@@ -80,7 +80,11 @@ export default {
     },
     methods: {
         ...mapMutations('column', ['toggleNavIsShow']),
+        ...mapMutations('component', ['updateColumnListDraw']),
         ...mapActions('column', ['fullScreen']),
+        toHome() {
+            this.$router.push({ name: 'columnList' })
+        },
         toggleFold() {
             this.toggleNavIsShow(this.isFold)
         },
@@ -96,16 +100,6 @@ export default {
             this.$Message({
                 type: 'success',
                 message: '高亮信息保存成功'
-            })
-        },
-        changeColumn(column) {
-            let columnInfo = getColumnById(this.columnList, column)
-            let lastArticle = this.getLastArticleId(column)
-            let defaultArticle = columnInfo.contents[0].subList[0].id
-            let article = lastArticle ? lastArticle : defaultArticle
-            this.$router.push({
-                name: 'read',
-                params: { column, article }
             })
         },
         changeHltrColor(color) {
@@ -128,6 +122,7 @@ export default {
                 let hightLightOprateMenu = articleWrapperDom.querySelector(
                     '.hightlight-oprate'
                 )
+                if (!hightLightOprateMenu) return
                 if (e.target.className == 'hight-op-item delete') {
                     this.cancelHighlight(e.target.id)
                     hightLightOprateMenu.style.visibility = 'hidden'
@@ -153,7 +148,10 @@ export default {
                     e.target.dataset.timestamp
             })
         },
-        bindKeyboard() {}
+        bindKeyboard() {},
+        chooseColumn() {
+            this.updateColumnListDraw({ show: true })
+        }
     },
     mounted() {
         this.hltr = new window.TextHighlighter(

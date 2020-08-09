@@ -90,9 +90,13 @@ export default {
         },
         toRead(columnId) {
             let articleId = this._getArticleId(columnId)
-            // 路由跳转
-            const openUrl = `${window.location.origin}/#/read/${columnId}/${articleId}`
-            window.open(openUrl, '_blank')
+            this.$router.push({
+                name: 'read',
+                params: { column: columnId, article: articleId }
+            })
+            // 路由跳转到新页面
+            // const openUrl = `${window.location.origin}/#/read/${columnId}/${articleId}`
+            // window.open(openUrl, '_blank')
         }
     },
     mounted() {

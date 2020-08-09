@@ -8,6 +8,9 @@ const state = {
     outlineScroll: {
         show: false,
         dis: -96
+    },
+    columnListDraw: {
+        show: false
     }
 }
 
@@ -21,6 +24,9 @@ const mutations = {
     },
     updateOutlineScroll(state, obj) {
         state.outlineScroll = Object.assign(state.outlineScroll, obj)
+    },
+    updateColumnListDraw(state, obj) {
+        state.columnListDraw = Object.assign(state.columnListDraw, obj)
     }
 }
 

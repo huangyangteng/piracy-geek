@@ -8,7 +8,11 @@ export function getAriticleSrcById(contentsList, id) {
         return prev.concat(next)
     })
     let cur = listAll.find(item => item.id == id)
-    return cur.src
+    if (cur) {
+        return cur.src
+    } else {
+        return listAll[0].src
+    }
 }
 
 export function getColumnById(columnList, id) {

@@ -13,10 +13,13 @@ import {
     Loading,
     Input,
     Button,
-    Popover
+    Popover,
+    Drawer,
+    Link
 } from 'element-ui'
 
 Vue.use(Dialog)
+Vue.use(Link)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
@@ -28,6 +31,7 @@ Vue.use(Tooltip)
 Vue.use(Input)
 Vue.use(Button)
 Vue.use(Popover)
+Vue.use(Drawer)
 Vue.use(Loading.directive)
 
 Vue.prototype.$Message = Message
