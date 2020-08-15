@@ -1,4 +1,4236 @@
 export default [
+    {
+        id: 'niew50p7h79',
+        type: 'backend',
+        cid: '100029501',
+        title: 'SQL必知必会',
+        subTitle: '从入门到数据实战',
+        authorName: '陈旸',
+        authorInfo: '清华大学计算机博士',
+        contents: [
+            {
+                id: 'nee49708j1y',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: '4usgibj3dd9',
+                        title: '开篇词丨SQL可能是你掌握的最有用的技能',
+                        src:
+                            './SQL必知必会/html/00开篇词SQL可能是你掌握的最有用的技能.html',
+                        audio:
+                            './SQL必知必会/audio/00开篇词SQL可能是你掌握的最有用的技能.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'hhlksh1h0gq',
+                title: '第一章：SQL语法基础篇',
+                subList: [
+                    {
+                        id: 'l4pehtqw1qm',
+                        title: '01丨了解SQL：一门半衰期很长的语言',
+                        src:
+                            './SQL必知必会/html/01了解SQL一门半衰期很长的语言.html',
+                        audio:
+                            './SQL必知必会/audio/01了解SQL一门半衰期很长的语言.mp3'
+                    },
+                    {
+                        id: 'pyft5jc266v',
+                        title: '02丨DBMS的前世今生',
+                        src: './SQL必知必会/html/02DBMS的前世今生.html',
+                        audio: './SQL必知必会/audio/02DBMS的前世今生.mp3'
+                    },
+                    {
+                        id: 'grh0c4ug0jj',
+                        title: '03丨学会用数据库的方式思考SQL是如何执行的',
+                        src:
+                            './SQL必知必会/html/03学会用数据库的方式思考SQL是如何执行的.html',
+                        audio:
+                            './SQL必知必会/audio/03学会用数据库的方式思考SQL是如何执行的.mp3'
+                    },
+                    {
+                        id: 'hx4phyg4s1n',
+                        title: '04丨使用DDL创建数据库&数据表时需要注意什么？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'd92geuoya3a',
+                        title: '05丨检索数据：你还在SELECT * 么？',
+                        src: './SQL必知必会/html/05检索数据你还在SELECT么.html',
+                        audio:
+                            './SQL必知必会/audio/05检索数据你还在SELECT么.mp3'
+                    },
+                    {
+                        id: 'q15udpwnc4p',
+                        title: '06丨数据过滤：SQL数据过滤都有哪些方法？',
+                        src:
+                            './SQL必知必会/html/06数据过滤SQL数据过滤都有哪些方法.html',
+                        audio:
+                            './SQL必知必会/audio/06数据过滤SQL数据过滤都有哪些方法.mp3'
+                    },
+                    {
+                        id: '6bzvdk08of9',
+                        title:
+                            '07丨什么是SQL函数？为什么使用SQL函数可能会带来问题？',
+                        src:
+                            './SQL必知必会/html/07什么是SQL函数为什么使用SQL函数可能会带来问题.html',
+                        audio:
+                            './SQL必知必会/audio/07什么是SQL函数为什么使用SQL函数可能会带来问题.mp3'
+                    },
+                    {
+                        id: 'z1ticsqrjn6',
+                        title:
+                            '08丨什么是SQL的聚集函数，如何利用它们汇总表的数据？',
+                        src:
+                            './SQL必知必会/html/08什么是SQL的聚集函数如何利用它们汇总表的数据.html',
+                        audio:
+                            './SQL必知必会/audio/08什么是SQL的聚集函数如何利用它们汇总表的数据.mp3'
+                    },
+                    {
+                        id: 'quiup5bscj9',
+                        title:
+                            '09丨子查询：子查询的种类都有哪些，如何提高子查询的性能？',
+                        src:
+                            './SQL必知必会/html/09子查询子查询的种类都有哪些如何提高子查询的性能.html',
+                        audio:
+                            './SQL必知必会/audio/09子查询子查询的种类都有哪些如何提高子查询的性能.mp3'
+                    },
+                    {
+                        id: 'usxuyb1z3l9',
+                        title:
+                            '10丨常用的SQL标准有哪些，在SQL92中是如何使用连接的？',
+                        src:
+                            './SQL必知必会/html/10常用的SQL标准有哪些在SQL92中是如何使用连接的.html',
+                        audio:
+                            './SQL必知必会/audio/10常用的SQL标准有哪些在SQL92中是如何使用连接的.mp3'
+                    },
+                    {
+                        id: 'hkfaqd3qozw',
+                        title:
+                            '11丨SQL99是如何使用连接的，与SQL92的区别是什么？',
+                        src:
+                            './SQL必知必会/html/11SQL99是如何使用连接的与SQL92的区别是什么.html',
+                        audio:
+                            './SQL必知必会/audio/11SQL99是如何使用连接的与SQL92的区别是什么.mp3'
+                    },
+                    {
+                        id: '9t5kc40kd7m',
+                        title: '12丨视图在SQL中的作用是什么，它是怎样工作的？',
+                        src:
+                            './SQL必知必会/html/12视图在SQL中的作用是什么它是怎样工作的.html',
+                        audio:
+                            './SQL必知必会/audio/12视图在SQL中的作用是什么它是怎样工作的.mp3'
+                    },
+                    {
+                        id: '89e6fptiu0c',
+                        title: '13丨什么是存储过程，在实际项目中用得多么？',
+                        src:
+                            './SQL必知必会/html/13什么是存储过程在实际项目中用得多么.html',
+                        audio:
+                            './SQL必知必会/audio/13什么是存储过程在实际项目中用得多么.mp3'
+                    },
+                    {
+                        id: 'v66uusriofh',
+                        title:
+                            '14丨什么是事务处理，如何使用COMMIT和ROLLBACK进行操作？',
+                        src:
+                            './SQL必知必会/html/14什么是事务处理如何使用COMMIT和ROLLBACK进行操作.html',
+                        audio:
+                            './SQL必知必会/audio/14什么是事务处理如何使用COMMIT和ROLLBACK进行操作.mp3'
+                    },
+                    {
+                        id: 'w5g0rxn2wqv',
+                        title:
+                            '15丨初识事务隔离：隔离的级别有哪些，它们都解决了哪些异常问题？',
+                        src:
+                            './SQL必知必会/html/15初识事务隔离隔离的级别有哪些它们都解决了哪些异常问题.html',
+                        audio:
+                            './SQL必知必会/audio/15初识事务隔离隔离的级别有哪些它们都解决了哪些异常问题.mp3'
+                    },
+                    {
+                        id: 'fyti7z1h9tu',
+                        title: '16丨游标：当我们需要逐条处理数据时，该怎么做？',
+                        src:
+                            './SQL必知必会/html/16游标当我们需要逐条处理数据时该怎么做.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'tjwwypo8b9a',
+                        title: '17丨如何使用Python操作MySQL？',
+                        src:
+                            './SQL必知必会/html/17如何使用Python操作MySQL.html',
+                        audio: ''
+                    },
+                    {
+                        id: '0uvw1uanuvl',
+                        title:
+                            '18丨SQLAlchemy：如何使用Python ORM框架来操作MySQL？',
+                        src:
+                            './SQL必知必会/html/18SQLAlchemy如何使用PythonORM框架来操作MySQL.html',
+                        audio:
+                            './SQL必知必会/audio/18SQLAlchemy如何使用PythonORM框架来操作MySQL.mp3'
+                    },
+                    {
+                        id: '7jcw5gn0m0v',
+                        title:
+                            '19丨基础篇总结：如何理解查询优化、通配符以及存储过程？',
+                        src:
+                            './SQL必知必会/html/19基础篇总结如何理解查询优化通配符以及存储过程.html',
+                        audio:
+                            './SQL必知必会/audio/19基础篇总结如何理解查询优化通配符以及存储过程.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'l1folyvb7wv',
+                title: '第二章：SQL性能优化篇',
+                subList: [
+                    {
+                        id: 'rqo1msgesyw',
+                        title:
+                            '20丨当我们思考数据库调优的时候，都有哪些维度可以选择？',
+                        src:
+                            './SQL必知必会/html/20当我们思考数据库调优的时候都有哪些维度可以选择.html',
+                        audio:
+                            './SQL必知必会/audio/20当我们思考数据库调优的时候都有哪些维度可以选择.mp3'
+                    },
+                    {
+                        id: '6wym21d47yo',
+                        title:
+                            '21丨范式设计：数据表的范式有哪些，3NF指的是什么？',
+                        src:
+                            './SQL必知必会/html/21范式设计数据表的范式有哪些3NF指的是什么.html',
+                        audio:
+                            './SQL必知必会/audio/21范式设计数据表的范式有哪些3NF指的是什么.mp3'
+                    },
+                    {
+                        id: 'gzvejdgj5qj',
+                        title:
+                            '22丨反范式设计：3NF有什么不足，为什么有时候需要反范式设计？',
+                        src:
+                            './SQL必知必会/html/22反范式设计3NF有什么不足为什么有时候需要反范式设计.html',
+                        audio:
+                            './SQL必知必会/audio/22反范式设计3NF有什么不足为什么有时候需要反范式设计.mp3'
+                    },
+                    {
+                        id: 'g8h6jv4q0p3',
+                        title: '23丨索引的概览：用还是不用索引，这是一个问题',
+                        src:
+                            './SQL必知必会/html/23索引的概览用还是不用索引这是一个问题.html',
+                        audio:
+                            './SQL必知必会/audio/23索引的概览用还是不用索引这是一个问题.mp3'
+                    },
+                    {
+                        id: 'pd6pbenonm6',
+                        title: '24丨索引的原理：我们为什么用B+树来做索引？',
+                        src:
+                            './SQL必知必会/html/24索引的原理我们为什么用B+树来做索引.html',
+                        audio:
+                            './SQL必知必会/audio/24索引的原理我们为什么用B+树来做索引.mp3'
+                    },
+                    {
+                        id: '2dkvj3pjwye',
+                        title: '25丨Hash索引的底层原理是什么？',
+                        src:
+                            './SQL必知必会/html/25Hash索引的底层原理是什么.html',
+                        audio:
+                            './SQL必知必会/audio/25Hash索引的底层原理是什么.mp3'
+                    },
+                    {
+                        id: 'wyjkex1nmnz',
+                        title:
+                            '26丨索引的使用原则：如何通过索引让SQL查询效率最大化？',
+                        src:
+                            './SQL必知必会/html/26索引的使用原则如何通过索引让SQL查询效率最大化.html',
+                        audio:
+                            './SQL必知必会/audio/26索引的使用原则如何通过索引让SQL查询效率最大化.mp3'
+                    },
+                    {
+                        id: '2jxh80kzkgk',
+                        title: '27丨从数据页的角度理解B+树查询',
+                        src:
+                            './SQL必知必会/html/27从数据页的角度理解B+树查询.html',
+                        audio:
+                            './SQL必知必会/audio/27从数据页的角度理解B+树查询.mp3'
+                    },
+                    {
+                        id: '6wxa926uiwx',
+                        title: '28丨从磁盘I/O的角度理解SQL查询的成本',
+                        src:
+                            './SQL必知必会/html/28从磁盘IO的角度理解SQL查询的成本.html',
+                        audio:
+                            './SQL必知必会/audio/28从磁盘IO的角度理解SQL查询的成本.mp3'
+                    },
+                    {
+                        id: 'mgppmwoui2h',
+                        title: '29丨为什么没有理想的索引？',
+                        src: './SQL必知必会/html/29为什么没有理想的索引.html',
+                        audio: './SQL必知必会/audio/29为什么没有理想的索引.mp3'
+                    },
+                    {
+                        id: 'mionnmt1xis',
+                        title: '30丨锁：悲观锁和乐观锁是什么？',
+                        src: './SQL必知必会/html/30锁悲观锁和乐观锁是什么.html',
+                        audio:
+                            './SQL必知必会/audio/30锁悲观锁和乐观锁是什么.mp3'
+                    },
+                    {
+                        id: 't04cl5q8yqo',
+                        title: '31丨为什么大部分RDBMS都会支持MVCC？',
+                        src:
+                            './SQL必知必会/html/31为什么大部分RDBMS都会支持MVCC.html',
+                        audio:
+                            './SQL必知必会/audio/31为什么大部分RDBMS都会支持MVCC.mp3'
+                    },
+                    {
+                        id: 'pdim24tiesc',
+                        title: '32丨查询优化器是如何工作的？',
+                        src: './SQL必知必会/html/32查询优化器是如何工作的.html',
+                        audio:
+                            './SQL必知必会/audio/32查询优化器是如何工作的.mp3'
+                    },
+                    {
+                        id: 'dlr927s2hx6',
+                        title: '33丨如何使用性能分析工具定位SQL执行慢的原因？',
+                        src:
+                            './SQL必知必会/html/33如何使用性能分析工具定位SQL执行慢的原因.html',
+                        audio:
+                            './SQL必知必会/audio/33如何使用性能分析工具定位SQL执行慢的原因.mp3'
+                    },
+                    {
+                        id: 's10816ydmgn',
+                        title: '34丨答疑篇：关于索引以及缓冲池的一些解惑',
+                        src:
+                            './SQL必知必会/html/34答疑篇关于索引以及缓冲池的一些解惑.html',
+                        audio:
+                            './SQL必知必会/audio/34答疑篇关于索引以及缓冲池的一些解惑.mp3'
+                    },
+                    {
+                        id: 'b6k73rkp6sc',
+                        title:
+                            '35丨数据库主从同步的作用是什么，如何解决数据不一致问题？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '83cetda5n92',
+                        title:
+                            '36丨数据库没有备份，没有使用Binlog的情况下，如何恢复数据？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '9700vnzjmy2',
+                        title: '37丨SQL注入：你的SQL是如何被注入的？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'stw84rrh8es',
+                title: '第三章：认识DBMS',
+                subList: [
+                    {
+                        id: 'cylcyn33i2u',
+                        title: '38丨如何在Excel中使用SQL语言？',
+                        src:
+                            './SQL必知必会/html/35如何在Excel中使用SQL语言.html',
+                        audio:
+                            './SQL必知必会/audio/35如何在Excel中使用SQL语言.mp3'
+                    },
+                    {
+                        id: '5c3hz44bl97',
+                        title: '39丨WebSQL：如何在H5中存储一个本地数据库？',
+                        src:
+                            './SQL必知必会/html/36WebSQL如何在H5中存储一个本地数据库.html',
+                        audio:
+                            './SQL必知必会/audio/36WebSQL如何在H5中存储一个本地数据库.mp3'
+                    },
+                    {
+                        id: '8hpjqbtcfwq',
+                        title: '40丨SQLite：为什么微信用SQLite存储聊天记录？',
+                        src:
+                            './SQL必知必会/html/37SQLite为什么微信用SQLite存储聊天记录.html',
+                        audio:
+                            './SQL必知必会/audio/37SQLite为什么微信用SQLite存储聊天记录.mp3'
+                    },
+                    {
+                        id: 'cn5amnhyqma',
+                        title: '41丨初识Redis：Redis为什么会这么快？',
+                        src:
+                            './SQL必知必会/html/40初识RedisRedis为什么会这么快.html',
+                        audio:
+                            './SQL必知必会/audio/38初识RedisRedis为什么会这么快.mp3'
+                    },
+                    {
+                        id: 'sprfszusw10',
+                        title: '42丨如何使用Redis来实现多用户抢票问题',
+                        src:
+                            './SQL必知必会/html/39如何使用Redis来实现多用户抢票问题.html',
+                        audio:
+                            './SQL必知必会/audio/39如何使用Redis来实现多用户抢票问题.mp3'
+                    },
+                    {
+                        id: 'lmqjgcp8hbk',
+                        title: '43丨如何使用Redis搭建玩家排行榜？',
+                        src:
+                            './SQL必知必会/html/42如何使用Redis搭建玩家排行榜.html',
+                        audio:
+                            './SQL必知必会/audio/43如何使用Redis搭建玩家排行榜.mp3'
+                    },
+                    {
+                        id: 'saurigetcl2',
+                        title: '44丨DBMS篇总结和答疑：用SQLite做词云',
+                        src:
+                            './SQL必知必会/html/44DBMS篇总结和答疑用SQLite做词云.html',
+                        audio:
+                            './SQL必知必会/audio/44DBMS篇总结和答疑用SQLite做词云.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'iz7rvvhvz1z',
+                title: '第四章：SQL项目实战',
+                subList: [
+                    {
+                        id: 'v8nmo7tursa',
+                        title: '45丨数据清洗：如何使用SQL对数据进行清洗？',
+                        src:
+                            './SQL必知必会/html/45数据清洗如何使用SQL对数据进行清洗.html',
+                        audio:
+                            './SQL必知必会/audio/45数据清洗如何使用SQL对数据进行清洗.mp3'
+                    },
+                    {
+                        id: 'cm5y045zamm',
+                        title: '46丨数据集成：如何对各种数据库进行集成和转换？',
+                        src:
+                            './SQL必知必会/html/46数据集成如何对各种数据库进行集成和转换.html',
+                        audio:
+                            './SQL必知必会/audio/46数据集成如何对各种数据库进行集成和转换.mp3'
+                    },
+                    {
+                        id: 'cjiylt2mm3u',
+                        title: '47丨如何利用SQL对零售数据进行分析？',
+                        src:
+                            './SQL必知必会/html/47如何利用SQL对零售数据进行分析.html',
+                        audio:
+                            './SQL必知必会/audio/47如何利用SQL对零售数据进行分析.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'fiyd9lqtpxm',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 'nh79x0igjv4',
+                        title: '结束语 | 互联网的下半场是数据驱动的时代',
+                        src:
+                            './SQL必知必会/html/结束语互联网的下半场是数据驱动的时代.html',
+                        audio:
+                            './SQL必知必会/audio/结束语互联网的下半场是数据驱动的时代.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'kb7brdvyajr',
+                title: '期末考试',
+                subList: [
+                    {
+                        id: 'kpd97ubhfl2',
+                        title: '期末测试丨对于SQL的有关内容，你掌握了多少呢？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'qnu3goh6npx',
+        type: 'web',
+        cid: '100031001',
+        title: 'Flutter核心技术与实战',
+        subTitle: '来自Google的高性能跨平台开发框架',
+        authorName: '陈航',
+        authorInfo: '美团点评高级技术专家',
+        contents: [
+            {
+                id: 'xuuoe4m1nue',
+                title: '课前必读',
+                subList: [
+                    {
+                        id: 'yzxah99r0b1',
+                        title:
+                            '开篇词 | 为什么每一位大前端从业者都应该学习Flutter？',
+                        src:
+                            './Flutter核心技术与实战/html/开篇词为什么每一位大前端从业者都应该学习Flutter.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/开篇词为什么每一位大前端从业者都应该学习Flutter.mp3'
+                    },
+                    {
+                        id: 'gotzuv98gq3',
+                        title: '01 | 预习篇 · 从0开始搭建Flutter工程环境',
+                        src:
+                            './Flutter核心技术与实战/html/01预习篇·从0开始搭建Flutter工程环境.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/01预习篇·从0开始搭建Flutter工程环境.mp3'
+                    },
+                    {
+                        id: 'g6os8konrm2',
+                        title: '02 | 预习篇 · Dart语言概览',
+                        src:
+                            './Flutter核心技术与实战/html/02预习篇·Dart语言概览1.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/02预习篇·Dart语言概览.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'i5vu8r7henj',
+                title: 'Flutter开发起步',
+                subList: [
+                    {
+                        id: 'fng3vpriilk',
+                        title: '03 | 深入理解跨平台方案的历史发展逻辑',
+                        src:
+                            './Flutter核心技术与实战/html/03深入理解跨平台方案的历史发展逻辑.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/03深入理解跨平台方案的历史发展逻辑.mp3'
+                    },
+                    {
+                        id: 'zuf7q4ki10l',
+                        title: '04 | Flutter区别于其他方案的关键技术是什么？',
+                        src:
+                            './Flutter核心技术与实战/html/04Flutter区别于其他方案的关键技术是什么.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/04Flutter区别于其他方案的关键技术是什么.mp3'
+                    },
+                    {
+                        id: 'xmgtd9lcrox',
+                        title:
+                            '05 | 从标准模板入手，体会Flutter代码是如何运行在原生系统上的',
+                        src:
+                            './Flutter核心技术与实战/html/05从标准模板入手体会Flutter代码是如何运行在原生系统上的.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/05从标准模板入手体会Flutter代码是如何运行在原生系统上的.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'j8k9oux1z8u',
+                title: 'Dart语言基础',
+                subList: [
+                    {
+                        id: '1hp5ivg7189',
+                        title:
+                            '06 | 基础语法与类型变量：Dart是如何表示信息的？',
+                        src:
+                            './Flutter核心技术与实战/html/06基础语法与类型变量Dart是如何表示信息的.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/06基础语法与类型变量Dart是如何表示信息的.mp3'
+                    },
+                    {
+                        id: 'pjrvd1mkt5p',
+                        title: '07 | 函数、类与运算符：Dart是如何处理信息的？',
+                        src:
+                            './Flutter核心技术与实战/html/07函数类与运算符Dart是如何处理信息的.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/07函数类与运算符Dart是如何处理信息的.mp3'
+                    },
+                    {
+                        id: '9g44k5n5vk7',
+                        title: '08 | 综合案例：掌握Dart核心特性',
+                        src:
+                            './Flutter核心技术与实战/html/08综合案例掌握Dart核心特性.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/08综合案例掌握Dart核心特性.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'rlsg1ls5km6',
+                title: 'Flutter基础',
+                subList: [
+                    {
+                        id: 'gonimtygcy4',
+                        title: '09 | Widget，构建Flutter界面的基石',
+                        src:
+                            './Flutter核心技术与实战/html/09Widget构建Flutter界面的基石.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/09Widget构建Flutter界面的基石.mp3'
+                    },
+                    {
+                        id: '0gzluf2bz7m',
+                        title: '10 | Widget中的State到底是什么？',
+                        src:
+                            './Flutter核心技术与实战/html/10Widget中的State到底是什么.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/10Widget中的State到底是什么.mp3'
+                    },
+                    {
+                        id: '7coxljz3srf',
+                        title: '11 | 提到生命周期，我们是在说什么？',
+                        src:
+                            './Flutter核心技术与实战/html/11提到生命周期我们是在说什么.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/11提到生命周期我们是在说什么1.mp3'
+                    },
+                    {
+                        id: 'ky9empr8rir',
+                        title:
+                            '12 | 经典控件（一）：文本、图片和按钮在Flutter中怎么用？',
+                        src:
+                            './Flutter核心技术与实战/html/12经典控件一文本图片和按钮在Flutter中怎么用.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/12经典控件一文本图片和按钮在Flutter中怎么用.mp3'
+                    },
+                    {
+                        id: 'xb6cxyaiuh8',
+                        title:
+                            '13 | 经典控件（二）：UITableView/ListView在Flutter中是什么？',
+                        src:
+                            './Flutter核心技术与实战/html/13经典控件二UITableViewListView在Flutter中是什么.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/13经典控件二UITableViewListView在Flutter中是什么.mp3'
+                    },
+                    {
+                        id: '8nli572b6bi',
+                        title:
+                            '14 | 经典布局：如何定义子控件在父容器中排版的位置？',
+                        src:
+                            './Flutter核心技术与实战/html/14经典布局如何定义子控件在父容器中排版的位置.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/14经典布局如何定义子控件在父容器中排版的位置.mp3'
+                    },
+                    {
+                        id: '2bdy4lcmbnd',
+                        title:
+                            '15 | 组合与自绘，我该选用何种方式自定义Widget？',
+                        src:
+                            './Flutter核心技术与实战/html/15组合与自绘我该选用何种方式自定义Widget.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/15组合与自绘我该选用何种方式自定义Widget1.mp3'
+                    },
+                    {
+                        id: 'fmb137hznw4',
+                        title:
+                            '16 | 从夜间模式说起，如何定制不同风格的App主题？',
+                        src:
+                            './Flutter核心技术与实战/html/16从夜间模式说起如何定制不同风格的App主题.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/16从夜间模式说起如何定制不同风格的App主题1.mp3'
+                    },
+                    {
+                        id: 'y1b39399wmp',
+                        title:
+                            '17 | 依赖管理（一）：图片、配置和字体在Flutter中怎么用？',
+                        src:
+                            './Flutter核心技术与实战/html/17依赖管理一图片配置和字体在Flutter中怎么用.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/17依赖管理一图片配置和字体在Flutter中怎么用.mp3'
+                    },
+                    {
+                        id: 'vjqzhnooorv',
+                        title:
+                            '18 | 依赖管理（二）：第三方组件库在Flutter中要如何管理？',
+                        src:
+                            './Flutter核心技术与实战/html/18依赖管理二第三方组件库在Flutter中要如何管理.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/18依赖管理二第三方组件库在Flutter中要如何管理.mp3'
+                    },
+                    {
+                        id: 'ewkgmgjwkau',
+                        title: '19 | 用户交互事件该如何响应？',
+                        src:
+                            './Flutter核心技术与实战/html/19用户交互事件该如何响应.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/19用户交互事件该如何响应.mp3'
+                    },
+                    {
+                        id: 'j41litrc8fk',
+                        title: '20 | 关于跨组件传递数据，你只需要记住这三招',
+                        src:
+                            './Flutter核心技术与实战/html/20关于跨组件传递数据你只需要记住这三招.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/20关于跨组件传递数据你只需要记住这三招.mp3'
+                    },
+                    {
+                        id: 'b2u5onufow8',
+                        title: '21 | 路由与导航，Flutter是这样实现页面切换的',
+                        src:
+                            './Flutter核心技术与实战/html/21路由与导航Flutter是这样实现页面切换的.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/21路由与导航Flutter是这样实现页面切换的.mp3'
+                    }
+                ]
+            },
+            {
+                id: '5pdyn1arycp',
+                title: 'Flutter进阶',
+                subList: [
+                    {
+                        id: 'twl1frvjp6i',
+                        title: '22 | 如何构造炫酷的动画效果？',
+                        src:
+                            './Flutter核心技术与实战/html/22如何构造炫酷的动画效果.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/22如何构造炫酷的动画效果.mp3'
+                    },
+                    {
+                        id: 'w8e37jzmxmf',
+                        title: '23 | 单线程模型怎么保证UI运行流畅？',
+                        src:
+                            './Flutter核心技术与实战/html/23单线程模型怎么保证UI运行流畅.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/23单线程模型怎么保证UI运行流畅.mp3'
+                    },
+                    {
+                        id: '2bxl4wxk4t7',
+                        title: '24 | HTTP网络编程与JSON解析',
+                        src:
+                            './Flutter核心技术与实战/html/24HTTP网络编程与JSON解析.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/24HTTP网络编程与JSON解析.mp3'
+                    },
+                    {
+                        id: 'jsrnxik6m8n',
+                        title: '25 | 本地存储与数据库的使用和优化',
+                        src:
+                            './Flutter核心技术与实战/html/25本地存储与数据库的使用和优化.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/25本地存储与数据库的使用和优化.mp3'
+                    },
+                    {
+                        id: 'hkq1dtkewo5',
+                        title:
+                            '26 | 如何在Dart层兼容Android/iOS平台特定实现？（一）',
+                        src:
+                            './Flutter核心技术与实战/html/26如何在Dart层兼容AndroidiOS平台特定实现一.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/26如何在Dart层兼容AndroidiOS平台特定实现一.mp3'
+                    },
+                    {
+                        id: 'gfepahsl7rn',
+                        title:
+                            '27 | 如何在Dart层兼容Android/iOS平台特定实现？（二）',
+                        src:
+                            './Flutter核心技术与实战/html/27如何在Dart层兼容AndroidiOS平台特定实现二.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/27如何在Dart层兼容AndroidiOS平台特定实现二.mp3'
+                    },
+                    {
+                        id: 'drfkdil9abk',
+                        title: '28 | 如何在原生应用中混编Flutter工程？',
+                        src:
+                            './Flutter核心技术与实战/html/28如何在原生应用中混编Flutter工程.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/28如何在原生应用中混编Flutter工程.mp3'
+                    },
+                    {
+                        id: 'lexywge937v',
+                        title: '29 | 混合开发，该用何种方案管理导航栈？',
+                        src:
+                            './Flutter核心技术与实战/html/29混合开发该用何种方案管理导航栈.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/29混合开发该用何种方案管理导航栈.mp3'
+                    },
+                    {
+                        id: 'miw7f5foqcg',
+                        title: '30 | 为什么需要做状态管理，怎么做？',
+                        src:
+                            './Flutter核心技术与实战/html/30为什么需要做状态管理怎么做.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/30为什么需要做状态管理怎么做.mp3'
+                    },
+                    {
+                        id: 'x5j4qriu4wr',
+                        title: '31 | 如何实现原生推送能力？',
+                        src:
+                            './Flutter核心技术与实战/html/31如何实现原生推送能力.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/31如何实现原生推送能力.mp3'
+                    },
+                    {
+                        id: 'ddc25ltp0s6',
+                        title: '32 | 适配国际化，除了多语言我们还需要注意什么?',
+                        src:
+                            './Flutter核心技术与实战/html/32适配国际化除了多语言我们还需要注意什么.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/32适配国际化除了多语言我们还需要注意什么.mp3'
+                    },
+                    {
+                        id: 'ezurwmj0idr',
+                        title: '33 | 如何适配不同分辨率的手机屏幕？',
+                        src:
+                            './Flutter核心技术与实战/html/33如何适配不同分辨率的手机屏幕.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/33如何适配不同分辨率的手机屏幕.mp3'
+                    },
+                    {
+                        id: 'lt7iyft9riv',
+                        title: '34 | 如何理解Flutter的编译模式？',
+                        src:
+                            './Flutter核心技术与实战/html/34如何理解Flutter的编译模式.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/34如何理解Flutter的编译模式.mp3'
+                    },
+                    {
+                        id: 'gvqpklxzrz2',
+                        title: '35 | Hot Reload是怎么做到的？',
+                        src:
+                            './Flutter核心技术与实战/html/35HotReload是怎么做到的.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/35HotReload是怎么做到的.mp3'
+                    },
+                    {
+                        id: 'opfejjstdjn',
+                        title: '36 | 如何通过工具链优化开发调试效率？',
+                        src:
+                            './Flutter核心技术与实战/html/36如何通过工具链优化开发调试效率.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/36如何通过工具链优化开发调试效率.mp3'
+                    },
+                    {
+                        id: 'lmdqc7p0hnp',
+                        title: '37 | 如何检测并优化Flutter App的整体性能表现？',
+                        src:
+                            './Flutter核心技术与实战/html/37如何检测并优化FlutterApp的整体性能表现.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/37如何检测并优化FlutterApp的整体性能表现.mp3'
+                    },
+                    {
+                        id: 'udhhd8t4g0r',
+                        title: '38 | 如何通过自动化测试提高交付质量？',
+                        src:
+                            './Flutter核心技术与实战/html/38如何通过自动化测试提高交付质量.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/38如何通过自动化测试提高交付质量.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'pylruyc2q65',
+                title: 'Flutter综合应用',
+                subList: [
+                    {
+                        id: 'k45uvksvod4',
+                        title:
+                            '39 | 线上出现问题，该如何做好异常捕获与信息采集？',
+                        src:
+                            './Flutter核心技术与实战/html/39线上出现问题该如何做好异常捕获与信息采集.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/39线上出现问题该如何做好异常捕获与信息采集.mp3'
+                    },
+                    {
+                        id: '16hj633n76p',
+                        title:
+                            '40 | 衡量Flutter App线上质量，我们需要关注这三个指标',
+                        src:
+                            './Flutter核心技术与实战/html/40衡量FlutterApp线上质量我们需要关注这三个指标1.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/40衡量FlutterApp线上质量我们需要关注这三个指标.mp3'
+                    },
+                    {
+                        id: 'fdf2q3d71wv',
+                        title:
+                            '41 | 组件化和平台化，该如何组织合理稳定的Flutter工程结构？',
+                        src:
+                            './Flutter核心技术与实战/html/41组件化和平台化该如何组织合理稳定的Flutter工程结构.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/41组件化和平台化该如何组织合理稳定的Flutter工程结构.mp3'
+                    },
+                    {
+                        id: 'dif32z83yo1',
+                        title: '42 | 如何构建高效的Flutter App打包发布环境？',
+                        src:
+                            './Flutter核心技术与实战/html/42如何构建高效的FlutterApp打包发布环境.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/42如何构建高效的FlutterApp打包发布环境.mp3'
+                    },
+                    {
+                        id: 'vmgx81dujsd',
+                        title: '43 | 如何构建自己的Flutter混合开发框架（一）？',
+                        src:
+                            './Flutter核心技术与实战/html/43如何构建自己的Flutter混合开发框架一.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/43如何构建自己的Flutter混合开发框架一.mp3'
+                    },
+                    {
+                        id: '1shcd7llyz8',
+                        title: '44 | 如何构建自己的Flutter混合开发框架（二）？',
+                        src:
+                            './Flutter核心技术与实战/html/44如何构建自己的Flutter混合开发框架二1.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/44如何构建自己的Flutter混合开发框架二.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'ussw7fn6lak',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 'he5bpo0qc6d',
+                        title: '结束语 | 勿畏难，勿轻略',
+                        src:
+                            './Flutter核心技术与实战/html/结束语勿畏难勿轻略.html',
+                        audio:
+                            './Flutter核心技术与实战/audio/结束语勿畏难勿轻略.mp3'
+                    },
+                    {
+                        id: 'ecfas5kc5pq',
+                        title:
+                            '结课测试 | 关于Flutter的这些知识，你都掌握了吗？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'q422nkzlypx',
+                title: '特别放送',
+                subList: [
+                    {
+                        id: 'wzujdwn61qh',
+                        title:
+                            '特别放送 ｜ 温故而知新，与你说说专栏的那些思考题',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: '2hb3c13cmva',
+        type: 'cs',
+        cid: '100024701',
+        title: '趣谈Linux操作系统',
+        subTitle: '像故事一样的操作系统入门课',
+        authorName: '刘超',
+        authorInfo: '网易杭州研究院云计算技术部首席架构师',
+        contents: [
+            {
+                id: 's3acll2li7f',
+                title: '入门准备篇',
+                subList: [
+                    {
+                        id: '5awsdtzzbdn',
+                        title: '开篇词 | 为什么要学习Linux操作系统？',
+                        src:
+                            './趣谈Linux操作系统/html/开篇词为什么要学习Linux操作系统.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/开篇词为什么要学习Linux操作系统.mp3'
+                    },
+                    {
+                        id: 'qu7x9uthkaf',
+                        title: '01 | 入学测验：你究竟对Linux操作系统了解多少？',
+                        src:
+                            './趣谈Linux操作系统/html/01入学测验你究竟对Linux操作系统了解多少.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/01入学测验你究竟对Linux操作系统了解多少.mp3'
+                    },
+                    {
+                        id: '8hifj9zhca2',
+                        title:
+                            '02 | 学习路径：爬过这六个陡坡，你就能对Linux了如指掌',
+                        src:
+                            './趣谈Linux操作系统/html/02学习路径爬过这六个陡坡你就能对Linux了如指掌.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/02学习路径爬过这六个陡坡你就能对Linux了如指掌.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'l1wre0evmbx',
+                title: '核心原理篇：第一部分Linux操作系统综述',
+                subList: [
+                    {
+                        id: '88xzd183mr7',
+                        title:
+                            '03 | 你可以把Linux内核当成一家软件外包公司的老板',
+                        src:
+                            './趣谈Linux操作系统/html/03你可以把Linux内核当成一家软件外包公司的老板.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/03你可以把Linux内核当成一家软件外包公司的老板.mp3'
+                    },
+                    {
+                        id: 'o01g5bm6ii1',
+                        title:
+                            '04 | 快速上手几个Linux命令：每家公司都有自己的黑话',
+                        src:
+                            './趣谈Linux操作系统/html/04快速上手几个Linux命令每家公司都有自己的黑话.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/04快速上手几个Linux命令每家公司都有自己的黑话.mp3'
+                    },
+                    {
+                        id: 'hk36hjy5bth',
+                        title:
+                            '05 | 学会几个系统调用：咱们公司能接哪些类型的项目？',
+                        src:
+                            './趣谈Linux操作系统/html/05学会几个系统调用咱们公司能接哪些类型的项目.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/05学会几个系统调用咱们公司能接哪些类型的项目.mp3'
+                    }
+                ]
+            },
+            {
+                id: '6d5cv4tf7z0',
+                title: '核心原理篇：第二部分系统初始化',
+                subList: [
+                    {
+                        id: 'fe7svy5ew2s',
+                        title:
+                            '06 | x86架构：有了开放的架构，才能打造开放的营商环境',
+                        src:
+                            './趣谈Linux操作系统/html/06x86架构有了开放的架构才能打造开放的营商环境.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/06x86架构有了开放的架构才能打造开放的营商环境.mp3'
+                    },
+                    {
+                        id: '94aqkwa4kj9',
+                        title:
+                            '07 | 从BIOS到bootloader：创业伊始，有活儿老板自己上',
+                        src:
+                            './趣谈Linux操作系统/html/07从BIOS到bootloader创业伊始有活儿老板自己上.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/07从BIOS到bootloader创业伊始有活儿老板自己上.mp3'
+                    },
+                    {
+                        id: 'f29u2z41lhn',
+                        title: '08 | 内核初始化：生意做大了就得成立公司',
+                        src:
+                            './趣谈Linux操作系统/html/08内核初始化生意做大了就得成立公司.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/08内核初始化生意做大了就得成立公司.mp3'
+                    },
+                    {
+                        id: 'a4un1buovvc',
+                        title: '09 | 系统调用：公司成立好了就要开始接项目',
+                        src:
+                            './趣谈Linux操作系统/html/09系统调用公司成立好了就要开始接项目.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/09系统调用公司成立好了就要开始接项目.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'hd9gl5kbuv1',
+                title: '核心原理篇：第三部分进程管理',
+                subList: [
+                    {
+                        id: 'snm75h4wzqb',
+                        title: '10 | 进程：公司接这么多项目，如何管？',
+                        src:
+                            './趣谈Linux操作系统/html/10进程公司接这么多项目如何管.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/10进程公司接这么多项目如何管.mp3'
+                    },
+                    {
+                        id: 'kkdsrees4m6',
+                        title: '11 | 线程：如何让复杂的项目并行执行？',
+                        src:
+                            './趣谈Linux操作系统/html/11线程如何让复杂的项目并行执行.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/11线程如何让复杂的项目并行执行.mp3'
+                    },
+                    {
+                        id: 'bpkgmj6vghh',
+                        title:
+                            '12 | 进程数据结构（上）：项目多了就需要项目管理系统',
+                        src:
+                            './趣谈Linux操作系统/html/12进程数据结构上项目多了就需要项目管理系统.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/12进程数据结构上项目多了就需要项目管理系统.mp3'
+                    },
+                    {
+                        id: 'i4jkizoo7qz',
+                        title:
+                            '13 | 进程数据结构（中）：项目多了就需要项目管理系统',
+                        src:
+                            './趣谈Linux操作系统/html/13进程数据结构中项目多了就需要项目管理系统.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/13进程数据结构中项目多了就需要项目管理系统.mp3'
+                    },
+                    {
+                        id: 'qskdh6yib69',
+                        title:
+                            '14 | 进程数据结构（下）：项目多了就需要项目管理系统',
+                        src:
+                            './趣谈Linux操作系统/html/14进程数据结构下项目多了就需要项目管理系统.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/14进程数据结构下项目多了就需要项目管理系统.mp3'
+                    },
+                    {
+                        id: '3d3wo2dlyq1',
+                        title: '15 | 调度（上）：如何制定项目管理流程？',
+                        src:
+                            './趣谈Linux操作系统/html/15调度上如何制定项目管理流程.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/15调度上如何制定项目管理流程.mp3'
+                    },
+                    {
+                        id: 'l8svhiu4drd',
+                        title: '16 | 调度（中）：主动调度是如何发生的？',
+                        src:
+                            './趣谈Linux操作系统/html/16调度中主动调度是如何发生的.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/16调度中主动调度是如何发生的.mp3'
+                    },
+                    {
+                        id: 'nazr9dvsrla',
+                        title: '17 | 调度（下）：抢占式调度是如何发生的？',
+                        src:
+                            './趣谈Linux操作系统/html/17调度下抢占式调度是如何发生的.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/17调度下抢占式调度是如何发生的.mp3'
+                    },
+                    {
+                        id: 'zli4ngb5enr',
+                        title: '18 | 进程的创建：如何发起一个新项目？',
+                        src:
+                            './趣谈Linux操作系统/html/18进程的创建如何发起一个新项目.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/18进程的创建如何发起一个新项目.mp3'
+                    },
+                    {
+                        id: '1cey0svaiki',
+                        title: '19 | 线程的创建：如何执行一个新子项目？',
+                        src:
+                            './趣谈Linux操作系统/html/19线程的创建如何执行一个新子项目.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/19线程的创建如何执行一个新子项目.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'xm0a0453cci',
+                title: '核心原理篇：第四部分内存管理',
+                subList: [
+                    {
+                        id: '1hk1tae3t8p',
+                        title:
+                            '20 | 内存管理（上）：为客户保密，规划进程内存空间布局',
+                        src:
+                            './趣谈Linux操作系统/html/20内存管理上为客户保密规划进程内存空间布局.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/20内存管理上为客户保密规划进程内存空间布局.mp3'
+                    },
+                    {
+                        id: 'jq8zisr7oo9',
+                        title:
+                            '21 | 内存管理（下）：为客户保密，项目组独享会议室封闭开发',
+                        src:
+                            './趣谈Linux操作系统/html/21内存管理下为客户保密项目组独享会议室封闭开发.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/21内存管理下为客户保密项目组独享会议室封闭开发.mp3'
+                    },
+                    {
+                        id: '4ooyqqrkktk',
+                        title: '22 | 进程空间管理：项目组还可以自行布置会议室',
+                        src:
+                            './趣谈Linux操作系统/html/22进程空间管理项目组还可以自行布置会议室.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/22进程空间管理项目组还可以自行布置会议室.mp3'
+                    },
+                    {
+                        id: '34jvxkdx1jw',
+                        title:
+                            '23 | 物理内存管理（上）：会议室管理员如何分配会议室？',
+                        src:
+                            './趣谈Linux操作系统/html/23物理内存管理上会议室管理员如何分配会议室.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/23物理内存管理上会议室管理员如何分配会议室.mp3'
+                    },
+                    {
+                        id: 'vzu218kjdk3',
+                        title:
+                            '24 | 物理内存管理（下）：会议室管理员如何分配会议室？',
+                        src:
+                            './趣谈Linux操作系统/html/24物理内存管理下会议室管理员如何分配会议室.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/24物理内存管理下会议室管理员如何分配会议室.mp3'
+                    },
+                    {
+                        id: 'vdx8x4klvuk',
+                        title: '25 | 用户态内存映射：如何找到正确的会议室？',
+                        src:
+                            './趣谈Linux操作系统/html/25用户态内存映射如何找到正确的会议室.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/25用户态内存映射如何找到正确的会议室.mp3'
+                    },
+                    {
+                        id: '7c82t93umh1',
+                        title: '26 | 内核态内存映射：如何找到正确的会议室？',
+                        src:
+                            './趣谈Linux操作系统/html/26内核态内存映射如何找到正确的会议室.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/26内核态内存映射如何找到正确的会议室.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'gbddm936uja',
+                title: '核心原理篇：第五部分文件系统',
+                subList: [
+                    {
+                        id: 'j9cit68c5e8',
+                        title:
+                            '27 | 文件系统：项目成果要归档，我们就需要档案库',
+                        src:
+                            './趣谈Linux操作系统/html/27文件系统项目成果要归档我们就需要档案库.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/27文件系统项目成果要归档我们就需要档案库.mp3'
+                    },
+                    {
+                        id: '9ed256g5afj',
+                        title:
+                            '28 | 硬盘文件系统：如何最合理地组织档案库的文档？',
+                        src:
+                            './趣谈Linux操作系统/html/28硬盘文件系统如何最合理地组织档案库的文档.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/28硬盘文件系统如何最合理地组织档案库的文档.mp3'
+                    },
+                    {
+                        id: 'y9mh45pafk2',
+                        title: '29 | 虚拟文件系统：文件多了就需要档案管理系统',
+                        src:
+                            './趣谈Linux操作系统/html/29虚拟文件系统文件多了就需要档案管理系统.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/29虚拟文件系统文件多了就需要档案管理系统.mp3'
+                    },
+                    {
+                        id: 'anrdbkrlcrg',
+                        title: '30 | 文件缓存：常用文档应该放在触手可得的地方',
+                        src:
+                            './趣谈Linux操作系统/html/30文件缓存常用文档应该放在触手可得的地方.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/30文件缓存常用文档应该放在触手可得的地方.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'ql3wov4wpig',
+                title: '核心原理篇：第六部分输入输出系统',
+                subList: [
+                    {
+                        id: 'n3azyv1gc30',
+                        title: '31 | 输入与输出：如何建立售前售后生态体系？',
+                        src:
+                            './趣谈Linux操作系统/html/31输入与输出如何建立售前售后生态体系.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/31输入与输出如何建立售前售后生态体系.mp3'
+                    },
+                    {
+                        id: '59ytyra7o9k',
+                        title: '32 | 字符设备（上）：如何建立直销模式？',
+                        src:
+                            './趣谈Linux操作系统/html/32字符设备上如何建立直销模式.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/32字符设备上如何建立直销模式.mp3'
+                    },
+                    {
+                        id: 'qf6g8pt01mu',
+                        title: '33 | 字符设备（下）：如何建立直销模式？',
+                        src:
+                            './趣谈Linux操作系统/html/33字符设备下如何建立直销模式.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/33字符设备下如何建立直销模式.mp3'
+                    },
+                    {
+                        id: 'g2adkfnjvik',
+                        title: '34 | 块设备（上）：如何建立代理商销售模式？',
+                        src:
+                            './趣谈Linux操作系统/html/34块设备上如何建立代理商销售模式.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/34块设备上如何建立代理商销售模式.mp3'
+                    },
+                    {
+                        id: '6zt1m96xzfn',
+                        title: '35 | 块设备（下）：如何建立代理商销售模式？',
+                        src:
+                            './趣谈Linux操作系统/html/35块设备下如何建立代理商销售模式.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/35块设备下如何建立代理商销售模式.mp3'
+                    }
+                ]
+            },
+            {
+                id: '46kr8f4xjfu',
+                title: '核心原理篇：第七部分进程间通信',
+                subList: [
+                    {
+                        id: 'lubbs47b05u',
+                        title:
+                            '36 | 进程间通信：遇到大项目需要项目组之间的合作才行',
+                        src:
+                            './趣谈Linux操作系统/html/36进程间通信遇到大项目需要项目组之间的合作才行.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/36进程间通信遇到大项目需要项目组之间的合作才行.mp3'
+                    },
+                    {
+                        id: 'xfjwrww493c',
+                        title:
+                            '37 | 信号（上）：项目组A完成了，如何及时通知项目组B？',
+                        src:
+                            './趣谈Linux操作系统/html/37信号上项目组A完成了如何及时通知项目组B.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/37信号上项目组A完成了如何及时通知项目组B.mp3'
+                    },
+                    {
+                        id: '62o71rf5t7p',
+                        title:
+                            '38 | 信号（下）：项目组A完成了，如何及时通知项目组B？',
+                        src:
+                            './趣谈Linux操作系统/html/38信号下项目组A完成了如何及时通知项目组B.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/38信号下项目组A完成了如何及时通知项目组B.mp3'
+                    },
+                    {
+                        id: 'glm85tv2m04',
+                        title: '39 | 管道：项目组A完成了，如何交接给项目组B？',
+                        src:
+                            './趣谈Linux操作系统/html/39管道项目组A完成了如何交接给项目组B.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/39管道项目组A完成了如何交接给项目组B.mp3'
+                    },
+                    {
+                        id: '8mkgr31ex5z',
+                        title:
+                            '40 | IPC（上）：不同项目组之间抢资源，如何协调？',
+                        src:
+                            './趣谈Linux操作系统/html/40IPC上不同项目组之间抢资源如何协调.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/40IPC上不同项目组之间抢资源如何协调.mp3'
+                    },
+                    {
+                        id: 'giygvgt08o5',
+                        title:
+                            '41 | IPC（中）：不同项目组之间抢资源，如何协调？',
+                        src:
+                            './趣谈Linux操作系统/html/41IPC中不同项目组之间抢资源如何协调.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/41IPC中不同项目组之间抢资源如何协调.mp3'
+                    },
+                    {
+                        id: 'jrpgvsupfg9',
+                        title:
+                            '42 | IPC（下）：不同项目组之间抢资源，如何协调？',
+                        src:
+                            './趣谈Linux操作系统/html/42IPC下不同项目组之间抢资源如何协调.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/42IPC下不同项目组之间抢资源如何协调.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'i2dhobgbgsc',
+                title: '核心原理篇：第八部分网络系统',
+                subList: [
+                    {
+                        id: 'odkvdwvk906',
+                        title: '43 预习 | Socket通信之网络协议基本原理',
+                        src:
+                            './趣谈Linux操作系统/html/43·预习Socket通信之网络协议基本原理.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/43·预习Socket通信之网络协议基本原理.mp3'
+                    },
+                    {
+                        id: '9utbc1hk3d1',
+                        title:
+                            '43 | Socket通信：遇上特大项目，要学会和其他公司合作',
+                        src:
+                            './趣谈Linux操作系统/html/43Socket通信遇上特大项目要学会和其他公司合作.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/43Socket通信遇上特大项目要学会和其他公司合作.mp3'
+                    },
+                    {
+                        id: 'zrvx4785ism',
+                        title:
+                            '44 | Socket内核数据结构：如何成立特大项目合作部？',
+                        src:
+                            './趣谈Linux操作系统/html/44Socket内核数据结构如何成立特大项目合作部.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/44Socket内核数据结构如何成立特大项目合作部.mp3'
+                    },
+                    {
+                        id: 'lsa5pkxhjzr',
+                        title:
+                            '45 | 发送网络包（上）：如何表达我们想让合作伙伴做什么？',
+                        src:
+                            './趣谈Linux操作系统/html/45发送网络包上如何表达我们想让合作伙伴做什么.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/45发送网络包上如何表达我们想让合作伙伴做什么.mp3'
+                    },
+                    {
+                        id: 'cbkgqaw90nl',
+                        title:
+                            '46 | 发送网络包（下）：如何表达我们想让合作伙伴做什么？',
+                        src:
+                            './趣谈Linux操作系统/html/46发送网络包下如何表达我们想让合作伙伴做什么.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/46发送网络包下如何表达我们想让合作伙伴做什么.mp3'
+                    },
+                    {
+                        id: '85ytbuwkby1',
+                        title:
+                            '47 | 接收网络包（上）：如何搞明白合作伙伴让我们做什么？',
+                        src:
+                            './趣谈Linux操作系统/html/47接收网络包上如何搞明白合作伙伴让我们做什么.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/47接收网络包上如何搞明白合作伙伴让我们做什么.mp3'
+                    },
+                    {
+                        id: 'd7qqwtudqba',
+                        title:
+                            '48 | 接收网络包（下）：如何搞明白合作伙伴让我们做什么？',
+                        src:
+                            './趣谈Linux操作系统/html/48接收网络包下如何搞明白合作伙伴让我们做什么.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/48接收网络包下如何搞明白合作伙伴让我们做什么.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'kblvladftp5',
+                title: '核心原理篇：第九部分虚拟化',
+                subList: [
+                    {
+                        id: '0p1bw4xlarc',
+                        title: '49 | 虚拟机：如何成立子公司，让公司变集团？',
+                        src:
+                            './趣谈Linux操作系统/html/49虚拟机如何成立子公司让公司变集团.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/49虚拟机如何成立子公司让公司变集团.mp3'
+                    },
+                    {
+                        id: 'jxnsr50l3gn',
+                        title:
+                            '50 | 计算虚拟化之CPU（上）：如何复用集团的人力资源？',
+                        src:
+                            './趣谈Linux操作系统/html/50计算虚拟化之CPU上如何复用集团的人力资源.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/50计算虚拟化之CPU上如何复用集团的人力资源.mp3'
+                    },
+                    {
+                        id: '9l8j1wjqtfx',
+                        title:
+                            '51 | 计算虚拟化之CPU（下）：如何复用集团的人力资源？',
+                        src:
+                            './趣谈Linux操作系统/html/51计算虚拟化之CPU下如何复用集团的人力资源.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/51计算虚拟化之CPU下如何复用集团的人力资源.mp3'
+                    },
+                    {
+                        id: 'h8bs2ab4436',
+                        title: '52 | 计算虚拟化之内存：如何建立独立的办公室？',
+                        src:
+                            './趣谈Linux操作系统/html/52计算虚拟化之内存如何建立独立的办公室.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/52计算虚拟化之内存如何建立独立的办公室.mp3'
+                    },
+                    {
+                        id: 'fma6o2sr4v3',
+                        title:
+                            '53 | 存储虚拟化（上）：如何建立自己保管的单独档案库？',
+                        src:
+                            './趣谈Linux操作系统/html/53存储虚拟化上如何建立自己保管的单独档案库.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/53存储虚拟化上如何建立自己保管的单独档案库.mp3'
+                    },
+                    {
+                        id: 'bear5i9ajd8',
+                        title:
+                            '54 | 存储虚拟化（下）：如何建立自己保管的单独档案库？',
+                        src:
+                            './趣谈Linux操作系统/html/54存储虚拟化下如何建立自己保管的单独档案库.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/54存储虚拟化下如何建立自己保管的单独档案库.mp3'
+                    },
+                    {
+                        id: 'zs3j8cjgjns',
+                        title: '55 | 网络虚拟化：如何成立独立的合作部？',
+                        src:
+                            './趣谈Linux操作系统/html/55网络虚拟化如何成立独立的合作部.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/55网络虚拟化如何成立独立的合作部.mp3'
+                    }
+                ]
+            },
+            {
+                id: '9ih01p5osb2',
+                title: '核心原理篇：第十部分容器化',
+                subList: [
+                    {
+                        id: 'rwaqthcwrb3',
+                        title: '56 | 容器：大公司为保持创新，鼓励内部创业',
+                        src:
+                            './趣谈Linux操作系统/html/56容器大公司为保持创新鼓励内部创业.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/56容器大公司为保持创新鼓励内部创业.mp3'
+                    },
+                    {
+                        id: 'daumq3e1l6a',
+                        title: '57 | Namespace技术：内部创业公司应该独立运营',
+                        src:
+                            './趣谈Linux操作系统/html/57Namespace技术内部创业公司应该独立运营.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/57Namespace技术内部创业公司应该独立运营.mp3'
+                    },
+                    {
+                        id: 'l52lijfnabq',
+                        title: '58 | cgroup技术：内部创业公司应该独立核算成本',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'z1qn1sme7jf',
+                        title: '59 | 数据中心操作系统：上市敲钟',
+                        src:
+                            './趣谈Linux操作系统/html/59数据中心操作系统上市敲钟.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/59数据中心操作系统上市敲钟.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'v1n5e80yc2e',
+                title: '实战串讲篇',
+                subList: [
+                    {
+                        id: 'yr17s85ta5g',
+                        title:
+                            '60 | 搭建操作系统实验环境（上）：授人以鱼不如授人以渔',
+                        src:
+                            './趣谈Linux操作系统/html/60搭建操作系统实验环境上授人以鱼不如授人以渔.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/60搭建操作系统实验环境上授人以鱼不如授人以渔.mp3'
+                    },
+                    {
+                        id: 'bcjjmba8go8',
+                        title:
+                            '61 | 搭建操作系统实验环境（下）：授人以鱼不如授人以渔',
+                        src:
+                            './趣谈Linux操作系统/html/61搭建操作系统实验环境下授人以鱼不如授人以渔.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/61搭建操作系统实验环境下授人以鱼不如授人以渔.mp3'
+                    },
+                    {
+                        id: 'k5zpiiph9ze',
+                        title:
+                            '62 | 知识串讲：用一个创业故事串起操作系统原理（一）',
+                        src:
+                            './趣谈Linux操作系统/html/62知识串讲用一个创业故事串起操作系统原理一.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/62知识串讲用一个创业故事串起操作系统原理一.mp3'
+                    },
+                    {
+                        id: 'vdt8o5el61t',
+                        title:
+                            '63 | 知识串讲：用一个创业故事串起操作系统原理（二）',
+                        src:
+                            './趣谈Linux操作系统/html/63知识串讲用一个创业故事串起操作系统原理二.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/63知识串讲用一个创业故事串起操作系统原理二.mp3'
+                    },
+                    {
+                        id: 'sapnpf7mbth',
+                        title:
+                            '64 | 知识串讲：用一个创业故事串起操作系统原理（三）',
+                        src:
+                            './趣谈Linux操作系统/html/64知识串讲用一个创业故事串起操作系统原理三.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/64知识串讲用一个创业故事串起操作系统原理三.mp3'
+                    },
+                    {
+                        id: 't4bovn5f545',
+                        title:
+                            '65 | 知识串讲：用一个创业故事串起操作系统原理（四）',
+                        src:
+                            './趣谈Linux操作系统/html/65知识串讲用一个创业故事串起操作系统原理四.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/65知识串讲用一个创业故事串起操作系统原理四.mp3'
+                    },
+                    {
+                        id: 'jzp48uasbc5',
+                        title:
+                            '66 | 知识串讲：用一个创业故事串起操作系统原理（五）',
+                        src:
+                            './趣谈Linux操作系统/html/66知识串讲用一个创业故事串起操作系统原理五.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/66知识串讲用一个创业故事串起操作系统原理五.mp3'
+                    },
+                    {
+                        id: 'ezh25knok8x',
+                        title: '期末测试 | 这些操作系统问题，你真的掌握了吗？',
+                        src:
+                            './趣谈Linux操作系统/html/67期末测试这些操作系统问题你真的掌握了吗.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/67期末测试这些操作系统问题你真的掌握了吗.mp3'
+                    },
+                    {
+                        id: 'zx02vzd9h2s',
+                        title: '结束语 | 永远别轻视任何技术，也永远别轻视自己',
+                        src:
+                            './趣谈Linux操作系统/html/结束语永远别轻视任何技术也永远别轻视自己.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/结束语永远别轻视任何技术也永远别轻视自己.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'r0s0ppm3quh',
+                title: '专栏加餐',
+                subList: [
+                    {
+                        id: 'ud9xgywgrpm',
+                        title:
+                            '学习攻略（一）：学好操作系统，需要掌握哪些前置知识？',
+                        src:
+                            './趣谈Linux操作系统/html/学习攻略一学好操作系统需要掌握哪些前置知识.html',
+                        audio:
+                            './趣谈Linux操作系统/audio/学习攻略一学好操作系统需要掌握哪些前置知识.mp3'
+                    },
+                    {
+                        id: 'mbto0926uqv',
+                        title: '“趣谈Linux操作系统”食用指南',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'meg0udah00g',
+                title: '结课测试',
+                subList: []
+            }
+        ]
+    },
+    {
+        id: 'bgnr51757dh',
+        type: 'cs',
+        cid: '100023701',
+        title: '软件工程之美',
+        subTitle: '重新理解软件工程',
+        authorName: '宝玉',
+        authorInfo: 'Groupon资深工程师，微软最有价值专家',
+        contents: [
+            {
+                id: 'lwamfygwyto',
+                title: '课前必读',
+                subList: [
+                    {
+                        id: '05zy21140b8',
+                        title: '开篇词 | 你为什么应该学好软件工程？',
+                        src:
+                            './软件工程之美/html/00开篇词你为什么应该学好软件工程.html',
+                        audio:
+                            './软件工程之美/audio/00开篇词你为什么应该学好软件工程.mp3'
+                    },
+                    {
+                        id: 'im8o77lpyn0',
+                        title:
+                            '特别放送 | 从软件工程的角度解读任正非的新年公开信',
+                        src:
+                            './软件工程之美/html/特别放送从软件工程的角度解读任正非的新年公开信.html',
+                        audio:
+                            './软件工程之美/audio/特别放送从软件工程的角度解读任正非的新年公开信.mp3'
+                    },
+                    {
+                        id: 'zijzs17erfk',
+                        title: '学习攻略 | 怎样学好软件工程？',
+                        src:
+                            './软件工程之美/html/学习攻略怎样学好软件工程.html',
+                        audio:
+                            './软件工程之美/audio/学习攻略怎样学好软件工程.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'pmz8q4bo2tg',
+                title: '基础理论',
+                subList: [
+                    {
+                        id: '71hii914zej',
+                        title: '01 | 到底应该怎样理解软件工程？',
+                        src:
+                            './软件工程之美/html/01到底应该怎样理解软件工程.html',
+                        audio:
+                            './软件工程之美/audio/01到底应该怎样理解软件工程.mp3'
+                    },
+                    {
+                        id: 'tazerh10l0q',
+                        title: '02 | 工程思维：把每件事都当作一个项目来推进',
+                        src:
+                            './软件工程之美/html/02工程思维把每件事都当作一个项目来推进.html',
+                        audio:
+                            './软件工程之美/audio/02工程思维把每件事都当作一个项目来推进.mp3'
+                    },
+                    {
+                        id: '6s04ofqo3ef',
+                        title:
+                            '03 | 瀑布模型：像工厂流水线一样把软件开发分层化',
+                        src:
+                            './软件工程之美/html/03瀑布模型像工厂流水线一样把软件开发分层化.html',
+                        audio:
+                            './软件工程之美/audio/03瀑布模型像工厂流水线一样把软件开发分层化.mp3'
+                    },
+                    {
+                        id: 'rcspmj679kk',
+                        title: '04 | 瀑布模型之外，还有哪些开发模型？',
+                        src:
+                            './软件工程之美/html/04瀑布模型之外还有哪些开发模型.html',
+                        audio:
+                            './软件工程之美/audio/04瀑布模型之外还有哪些开发模型.mp3'
+                    },
+                    {
+                        id: 'bw2tukt66vp',
+                        title: '05 | 敏捷开发到底是想解决什么问题？',
+                        src:
+                            './软件工程之美/html/05敏捷开发到底是想解决什么问题.html',
+                        audio:
+                            './软件工程之美/audio/05敏捷开发到底是想解决什么问题.mp3'
+                    },
+                    {
+                        id: '1umjtns5wiq',
+                        title: '06 | 大厂都在用哪些敏捷方法？（上）',
+                        src:
+                            './软件工程之美/html/06大厂都在用哪些敏捷方法上.html',
+                        audio:
+                            './软件工程之美/audio/06大厂都在用哪些敏捷方法上.mp3'
+                    },
+                    {
+                        id: 'nv3t95wwryk',
+                        title: '07 | 大厂都在用哪些敏捷方法？（下）',
+                        src:
+                            './软件工程之美/html/07大厂都在用哪些敏捷方法下.html',
+                        audio:
+                            './软件工程之美/audio/07大厂都在用哪些敏捷方法下.mp3'
+                    },
+                    {
+                        id: '4q5grjx945y',
+                        title: '08 | 怎样平衡软件质量与时间成本范围的关系？',
+                        src:
+                            './软件工程之美/html/08怎样平衡软件质量与时间成本范围的关系.html',
+                        audio:
+                            './软件工程之美/audio/08怎样平衡软件质量与时间成本范围的关系.mp3'
+                    },
+                    {
+                        id: 'fe579fcj2iu',
+                        title: '“一问一答”第1期 | 30个软件开发常见问题解决策略',
+                        src:
+                            './软件工程之美/html/一问一答第1期30个软件开发常见问题解决策略.html',
+                        audio:
+                            './软件工程之美/audio/一问一答第1期30个软件开发常见问题解决策略.mp3'
+                    }
+                ]
+            },
+            {
+                id: '82l8hann9gy',
+                title: '项目规划篇',
+                subList: [
+                    {
+                        id: 'rzkncmz3o6f',
+                        title: '09 | 为什么软件工程项目普遍不重视可行性分析？',
+                        src:
+                            './软件工程之美/html/09为什么软件工程项目普遍不重视可行性分析.html',
+                        audio:
+                            './软件工程之美/audio/09为什么软件工程项目普遍不重视可行性分析.mp3'
+                    },
+                    {
+                        id: 'shme5hn5o6w',
+                        title: '10 | 如果你想技术转管理，先来试试管好一个项目',
+                        src:
+                            './软件工程之美/html/10如果你想技术转管理先来试试管好一个项目.html',
+                        audio:
+                            './软件工程之美/audio/10如果你想技术转管理先来试试管好一个项目.mp3'
+                    },
+                    {
+                        id: '5mllt458a9l',
+                        title: '11 | 项目计划：代码未动，计划先行',
+                        src:
+                            './软件工程之美/html/11项目计划代码未动计划先行.html',
+                        audio:
+                            './软件工程之美/audio/11项目计划代码未动计划先行.mp3'
+                    },
+                    {
+                        id: 'dsdl12x25wq',
+                        title:
+                            '12 | 流程和规范：红绿灯不是约束，而是用来提高效率',
+                        src:
+                            './软件工程之美/html/12流程和规范红绿灯不是约束而是用来提高效率.html',
+                        audio:
+                            './软件工程之美/audio/12流程和规范红绿灯不是约束而是用来提高效率.mp3'
+                    },
+                    {
+                        id: 'n52l80czkdp',
+                        title: '13 | 白天开会，加班写代码的节奏怎么破？',
+                        src:
+                            './软件工程之美/html/13白天开会加班写代码的节奏怎么破.html',
+                        audio:
+                            './软件工程之美/audio/13白天开会加班写代码的节奏怎么破.mp3'
+                    },
+                    {
+                        id: 'tv2ih6f84pg',
+                        title:
+                            '14 | 项目管理工具：一切管理问题，都应思考能否通过工具解决',
+                        src:
+                            './软件工程之美/html/14项目管理工具一切管理问题都应思考能否通过工具解决.html',
+                        audio:
+                            './软件工程之美/audio/14项目管理工具一切管理问题都应思考能否通过工具解决.mp3'
+                    },
+                    {
+                        id: '341alg8u5p7',
+                        title: '15 | 风险管理：不能盲目乐观，凡事都应该有B计划',
+                        src:
+                            './软件工程之美/html/15风险管理不能盲目乐观凡事都应该有B计划.html',
+                        audio:
+                            './软件工程之美/audio/15风险管理不能盲目乐观凡事都应该有B计划.mp3'
+                    },
+                    {
+                        id: '1zpdvjloxse',
+                        title: '16 | 怎样才能写好项目文档？',
+                        src: './软件工程之美/html/16怎样才能写好项目文档.html',
+                        audio: './软件工程之美/audio/16怎样才能写好项目文档.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'vdjbding4g7',
+                title: '需求分析篇',
+                subList: [
+                    {
+                        id: 'lnmbdkfqdlt',
+                        title: '17 | 需求分析到底要分析什么？怎么分析？',
+                        src:
+                            './软件工程之美/html/17需求分析到底要分析什么怎么分析.html',
+                        audio:
+                            './软件工程之美/audio/17需求分析到底要分析什么怎么分析.mp3'
+                    },
+                    {
+                        id: 'mkk59bns6np',
+                        title: '18 | 原型设计：如何用最小的代价完成产品特性？',
+                        src:
+                            './软件工程之美/html/18原型设计如何用最小的代价完成产品特性.html',
+                        audio:
+                            './软件工程之美/audio/18原型设计如何用最小的代价完成产品特性.mp3'
+                    },
+                    {
+                        id: 'jgnr1usd4gz',
+                        title: '19 | 作为程序员，你应该有产品意识',
+                        src:
+                            './软件工程之美/html/19作为程序员你应该有产品意识.html',
+                        audio:
+                            './软件工程之美/audio/19作为程序员你应该有产品意识.mp3'
+                    },
+                    {
+                        id: '3dcesto4htz',
+                        title: '20 | 如何应对让人头疼的需求变更问题？',
+                        src:
+                            './软件工程之美/html/20如何应对让人头疼的需求变更问题.html',
+                        audio:
+                            './软件工程之美/audio/20如何应对让人头疼的需求变更问题.mp3'
+                    },
+                    {
+                        id: 'q6mjykws80e',
+                        title: '“一问一答”第2期 | 30个软件开发常见问题解决策略',
+                        src:
+                            './软件工程之美/html/一问一答第2期30个软件开发常见问题解决策略.html',
+                        audio:
+                            './软件工程之美/audio/一问一答第2期30个软件开发常见问题解决策略.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'n97urlujitt',
+                title: '系统设计篇',
+                subList: [
+                    {
+                        id: '5c2l1sy1s7q',
+                        title: '21 | 架构设计：普通程序员也能实现复杂系统？',
+                        src:
+                            './软件工程之美/html/21架构设计普通程序员也能实现复杂系统.html',
+                        audio:
+                            './软件工程之美/audio/21架构设计普通程序员也能实现复杂系统.mp3'
+                    },
+                    {
+                        id: 'iri94jr3ndi',
+                        title: '22 | 如何为项目做好技术选型？',
+                        src:
+                            './软件工程之美/html/22如何为项目做好技术选型.html',
+                        audio:
+                            './软件工程之美/audio/22如何为项目做好技术选型.mp3'
+                    },
+                    {
+                        id: 'e764es767mq',
+                        title: '23 | 架构师：不想当架构师的程序员不是好程序员',
+                        src:
+                            './软件工程之美/html/23架构师不想当架构师的程序员不是好程序员.html',
+                        audio:
+                            './软件工程之美/audio/23架构师不想当架构师的程序员不是好程序员.mp3'
+                    },
+                    {
+                        id: 'lb9n76y7hau',
+                        title:
+                            '24 | 技术债务：是继续修修补补凑合着用，还是推翻重来？',
+                        src:
+                            './软件工程之美/html/24技术债务是继续修修补补凑合着用还是推翻重来.html',
+                        audio:
+                            './软件工程之美/audio/24技术债务是继续修修补补凑合着用还是推翻重来.mp3'
+                    }
+                ]
+            },
+            {
+                id: '1gj9jknl8oy',
+                title: '开发编码篇',
+                subList: [
+                    {
+                        id: 'hv63em5ndr5',
+                        title: '25 | 有哪些方法可以提高开发效率？',
+                        src:
+                            './软件工程之美/html/25有哪些方法可以提高开发效率.html',
+                        audio:
+                            './软件工程之美/audio/25有哪些方法可以提高开发效率.mp3'
+                    },
+                    {
+                        id: 'arai6u5mpjg',
+                        title:
+                            '26 | 持续交付：如何做到随时发布新版本到生产环境？',
+                        src:
+                            './软件工程之美/html/26持续交付如何做到随时发布新版本到生产环境.html',
+                        audio:
+                            './软件工程之美/audio/26持续交付如何做到随时发布新版本到生产环境.mp3'
+                    },
+                    {
+                        id: 'o1wdq1pf4qd',
+                        title: '27 | 软件工程师的核心竞争力是什么？（上）',
+                        src:
+                            './软件工程之美/html/27软件工程师的核心竞争力是什么上.html',
+                        audio:
+                            './软件工程之美/audio/27软件工程师的核心竞争力是什么上.mp3'
+                    },
+                    {
+                        id: 'c8o94ha50pe',
+                        title: '28 | 软件工程师的核心竞争力是什么？（下）',
+                        src:
+                            './软件工程之美/html/28软件工程师的核心竞争力是什么下.html',
+                        audio:
+                            './软件工程之美/audio/28软件工程师的核心竞争力是什么下.mp3'
+                    },
+                    {
+                        id: 'z96l43b6ncy',
+                        title: '29 | 自动化测试：如何把Bug杀死在摇篮里？',
+                        src:
+                            './软件工程之美/html/29自动化测试如何把Bug杀死在摇篮里.html',
+                        audio:
+                            './软件工程之美/audio/29自动化测试如何把Bug杀死在摇篮里.mp3'
+                    },
+                    {
+                        id: 'qbmjij3u4fp',
+                        title: '30 | 用好源代码管理工具，让你的协作更高效',
+                        src:
+                            './软件工程之美/html/30用好源代码管理工具让你的协作更高效.html',
+                        audio:
+                            './软件工程之美/audio/30用好源代码管理工具让你的协作更高效.mp3'
+                    },
+                    {
+                        id: 'uq86fmy92qr',
+                        title: '“一问一答”第3期 | 18个软件开发常见问题解决策略',
+                        src:
+                            './软件工程之美/html/一问一答第3期18个软件开发常见问题解决策略.html',
+                        audio:
+                            './软件工程之美/audio/一问一答第3期18个软件开发常见问题解决策略.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'fsqq7vt5hzm',
+                title: '软件测试篇',
+                subList: [
+                    {
+                        id: 'tgyygkxpux3',
+                        title: '31 | 软件测试要为产品质量负责吗？',
+                        src:
+                            './软件工程之美/html/31软件测试要为产品质量负责吗.html',
+                        audio:
+                            './软件工程之美/audio/31软件测试要为产品质量负责吗.mp3'
+                    },
+                    {
+                        id: 'f6hnw5hyfqf',
+                        title: '32 | 软件测试：什么样的公司需要专职测试？',
+                        src:
+                            './软件工程之美/html/32软件测试什么样的公司需要专职测试.html',
+                        audio:
+                            './软件工程之美/audio/32软件测试什么样的公司需要专职测试.mp3'
+                    },
+                    {
+                        id: '7hgezbdnqc4',
+                        title:
+                            '33 | 测试工具：为什么不应该通过QQ/微信/邮件报Bug？',
+                        src:
+                            './软件工程之美/html/33测试工具为什么不应该通过QQ微信邮件报Bug.html',
+                        audio:
+                            './软件工程之美/audio/33测试工具为什么不应该通过QQ微信邮件报Bug.mp3'
+                    },
+                    {
+                        id: '6fb9ywvrk7c',
+                        title: '34 | 账号密码泄露成灾，应该怎样预防？',
+                        src:
+                            './软件工程之美/html/34账号密码泄露成灾应该怎样预防.html',
+                        audio:
+                            './软件工程之美/audio/账号密码泄露成灾应该怎样预防.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'ks4swp6awao',
+                title: '运行维护篇',
+                subList: [
+                    {
+                        id: 'hdvseus8yg5',
+                        title: '35 | 版本发布：软件上线只是新的开始',
+                        src:
+                            './软件工程之美/html/35版本发布软件上线只是新的开始.html',
+                        audio:
+                            './软件工程之美/audio/35版本发布软件上线只是新的开始.mp3'
+                    },
+                    {
+                        id: '1w710r1185a',
+                        title: '36 | DevOps工程师到底要做什么事情？',
+                        src:
+                            './软件工程之美/html/36DevOps工程师到底要做什么事情.html',
+                        audio:
+                            './软件工程之美/audio/36DevOps工程师到底要做什么事情.mp3'
+                    },
+                    {
+                        id: 'f199wfkeqbj',
+                        title: '37 | 遇到线上故障，你和高手的差距在哪里？',
+                        src:
+                            './软件工程之美/html/37遇到线上故障你和高手的差距在哪里.html',
+                        audio:
+                            './软件工程之美/audio/37遇到线上故障你和高手的差距在哪里.mp3'
+                    },
+                    {
+                        id: 'qujau0ioc2k',
+                        title:
+                            '38 | 日志管理：如何借助工具快速发现和定位产品问题 ？',
+                        src:
+                            './软件工程之美/html/38日志管理如何借助工具快速发现和定位产品问题.html',
+                        audio:
+                            './软件工程之美/audio/38日志管理如何借助工具快速发现和定位产品问题.mp3'
+                    },
+                    {
+                        id: '541rouh4orh',
+                        title: '39 | 项目总结：做好项目复盘，把经验变成能力',
+                        src:
+                            './软件工程之美/html/39项目总结做好项目复盘把经验变成能力.html',
+                        audio:
+                            './软件工程之美/audio/39项目总结做好项目复盘把经验变成能力.mp3'
+                    },
+                    {
+                        id: '7vba8nxx6yj',
+                        title: '“一问一答”第4期 | 14个软件开发常见问题解决策略',
+                        src:
+                            './软件工程之美/html/一问一答第4期14个软件开发常见问题解决策略.html',
+                        audio:
+                            './软件工程之美/audio/一问一答第4期14个软件开发常见问题解决策略.mp3'
+                    }
+                ]
+            },
+            {
+                id: '9d9m8lz3mdu',
+                title: '经典案例解析篇',
+                subList: [
+                    {
+                        id: 'j1vwzt5jawa',
+                        title: '40 | 最佳实践：小团队如何应用软件工程？',
+                        src:
+                            './软件工程之美/html/40最佳实践小团队如何应用软件工程.html',
+                        audio:
+                            './软件工程之美/audio/40最佳实践小团队如何应用软件工程.mp3'
+                    },
+                    {
+                        id: 'gsbh41g6rbb',
+                        title: '41 | 为什么程序员的业余项目大多都死了？',
+                        src:
+                            './软件工程之美/html/41为什么程序员的业余项目大多都死了.html',
+                        audio:
+                            './软件工程之美/audio/41为什么程序员的业余项目大多都死了.mp3'
+                    },
+                    {
+                        id: '9dk1uig6wth',
+                        title: '42 | 反面案例：盘点那些失败的软件项目',
+                        src:
+                            './软件工程之美/html/42反面案例盘点那些失败的软件项目.html',
+                        audio:
+                            './软件工程之美/audio/42反面案例盘点那些失败的软件项目.mp3'
+                    },
+                    {
+                        id: 'ii7zb98ijab',
+                        title:
+                            '43 | 以VS Code为例，看大型开源项目是如何应用软件工程的？',
+                        src:
+                            './软件工程之美/html/43以VSCode为例看大型开源项目是如何应用软件工程的.html',
+                        audio:
+                            './软件工程之美/audio/43以VSCode为例看大型开源项目是如何应用软件工程的.mp3'
+                    },
+                    {
+                        id: 'rw8i44ohrmw',
+                        title:
+                            '44 | 微软、谷歌、阿里巴巴等大厂是怎样应用软件工程的？',
+                        src:
+                            './软件工程之美/html/44微软谷歌阿里巴巴等大厂是怎样应用软件工程的.html',
+                        audio:
+                            './软件工程之美/audio/44微软谷歌阿里巴巴等大厂是怎样应用软件工程的.mp3'
+                    },
+                    {
+                        id: 'jcgegqrwcbf',
+                        title:
+                            '45 | 从软件工程的角度看微服务、云计算、人工智能这些新技术',
+                        src:
+                            './软件工程之美/html/45从软件工程的角度看微服务云计算人工智能这些新技术.html',
+                        audio:
+                            './软件工程之美/audio/45从软件工程的角度看微服务云计算人工智能这些新技术.mp3'
+                    },
+                    {
+                        id: 'z0ryf2qzr9f',
+                        title:
+                            '“一问一答”第5期（内含彩蛋） | 22个软件开发常见问题解决策略',
+                        src:
+                            './软件工程之美/html/一问一答第5期内含彩蛋22个软件开发常见问题解决策略.html',
+                        audio:
+                            './软件工程之美/audio/一问一答第5期内含彩蛋22个软件开发常见问题解决策略.mp3'
+                    }
+                ]
+            },
+            {
+                id: 't1r8oyiwxcy',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 'izcere328a6',
+                        title: '结束语 | 万事皆项目，软件工程无处不在',
+                        src:
+                            './软件工程之美/html/结束语万事皆项目软件工程无处不在.html',
+                        audio:
+                            './软件工程之美/audio/结束语万事皆项目软件工程无处不在.mp3'
+                    }
+                ]
+            },
+            {
+                id: '0oecl4ei8n2',
+                title: '结课测试',
+                subList: [
+                    {
+                        id: 'gwl5gn4kr54',
+                        title: '结课测试 | 这些软件工程知识，你都掌握了吗？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'er2uxy2s01f',
+        type: 'cs',
+        cid: '100026001',
+        title: '深入浅出计算机组成原理',
+        subTitle: '带你掌握计算机体系全貌',
+        authorName: '徐文浩',
+        authorInfo: 'bothub创始人',
+        contents: [
+            {
+                id: 'rpkztqjbw0j',
+                title: '入门篇',
+                subList: [
+                    {
+                        id: '48uym3qnu2c',
+                        title: '开篇词 | 为什么你需要学习计算机组成原理？',
+                        src:
+                            './深入浅出计算机组成原理/html/00开篇词为什么你需要学习计算机组成原理.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/00开篇词为什么你需要学习计算机组成原理.mp3'
+                    },
+                    {
+                        id: 'pvd1gz37lsj',
+                        title: '01 | 冯·诺依曼体系结构：计算机组成的金字塔',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'elxf8hlv8ou',
+                        title:
+                            '02 | 给你一张知识地图，计算机组成原理应该这么学',
+                        src:
+                            './深入浅出计算机组成原理/html/02给你一张知识地图计算机组成原理应该这么学.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/02给你一张知识地图计算机组成原理应该这么学.mp3'
+                    },
+                    {
+                        id: 'ia5stxmf4cu',
+                        title:
+                            '03 | 通过你的CPU主频，我们来谈谈“性能”究竟是什么？',
+                        src:
+                            './深入浅出计算机组成原理/html/03通过你的CPU主频我们来谈谈性能究竟是什么.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/03通过你的CPU主频我们来谈谈性能究竟是什么.mp3'
+                    },
+                    {
+                        id: 'di5i3r8avyk',
+                        title: '04 | 穿越功耗墙，我们该从哪些方面提升“性能”？',
+                        src:
+                            './深入浅出计算机组成原理/html/04穿越功耗墙我们该从哪些方面提升性能.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/04穿越功耗墙我们该从哪些方面提升性能.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'lhjyufd0mpe',
+                title: '原理篇：指令和运算',
+                subList: [
+                    {
+                        id: '5xzingrz2ai',
+                        title: '05 | 计算机指令：让我们试试用纸带编程',
+                        src:
+                            './深入浅出计算机组成原理/html/05计算机指令让我们试试用纸带编程.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/05计算机指令让我们试试用纸带编程.mp3'
+                    },
+                    {
+                        id: 'usatckwoe74',
+                        title: '06 | 指令跳转：原来if...else就是goto',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'bab5vqg5xzb',
+                        title: '07 | 函数调用：为什么会发生stack overflow？',
+                        src:
+                            './深入浅出计算机组成原理/html/07函数调用为什么会发生stackoverflow.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/07函数调用为什么会发生stackoverflow.mp3'
+                    },
+                    {
+                        id: '50xfjebm79l',
+                        title:
+                            '08 | ELF和静态链接：为什么程序无法同时在Linux和Windows下运行？',
+                        src:
+                            './深入浅出计算机组成原理/html/08ELF和静态链接为什么程序无法同时在Linux和Windows下运行.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/08ELF和静态链接为什么程序无法同时在Linux和Windows下运行.mp3'
+                    },
+                    {
+                        id: 'lde9bqjdju6',
+                        title: '09 | 程序装载：“640K内存”真的不够用么？',
+                        src:
+                            './深入浅出计算机组成原理/html/09程序装载640K内存真的不够用么.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/09程序装载640K内存真的不够用么.mp3'
+                    },
+                    {
+                        id: 'trzcf6cz8js',
+                        title: '10 | 动态链接：程序内部的“共享单车”',
+                        src:
+                            './深入浅出计算机组成原理/html/10动态链接程序内部的共享单车.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/10动态链接程序内部的共享单车.mp3'
+                    },
+                    {
+                        id: 'xow9x18krjh',
+                        title:
+                            '11 | 二进制编码：“手持两把锟斤拷，口中疾呼烫烫烫”？',
+                        src:
+                            './深入浅出计算机组成原理/html/11二进制编码手持两把锟斤拷口中疾呼烫烫烫.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/11二进制编码手持两把锟斤拷口中疾呼烫烫烫.mp3'
+                    },
+                    {
+                        id: '3wr6fvbgyic',
+                        title:
+                            '12 | 理解电路：从电报机到门电路，我们如何做到“千里传信”？',
+                        src:
+                            './深入浅出计算机组成原理/html/12理解电路从电报机到门电路我们如何做到千里传信.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/12理解电路从电报机到门电路我们如何做到千里传信.mp3'
+                    },
+                    {
+                        id: '5jc3234gsq0',
+                        title: '13 | 加法器：如何像搭乐高一样搭电路（上）？',
+                        src:
+                            './深入浅出计算机组成原理/html/13加法器如何像搭乐高一样搭电路上.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/13加法器如何像搭乐高一样搭电路上.mp3'
+                    },
+                    {
+                        id: 'm42oc3fje5z',
+                        title: '14 | 乘法器：如何像搭乐高一样搭电路（下）？',
+                        src:
+                            './深入浅出计算机组成原理/html/14乘法器如何像搭乐高一样搭电路下.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/14乘法器如何像搭乐高一样搭电路下.mp3'
+                    },
+                    {
+                        id: 'yca3serfxla',
+                        title:
+                            '15 | 浮点数和定点数（上）：怎么用有限的Bit表示尽可能多的信息？',
+                        src:
+                            './深入浅出计算机组成原理/html/15浮点数和定点数上怎么用有限的Bit表示尽可能多的信息.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/15浮点数和定点数上怎么用有限的Bit表示尽可能多的信息.mp3'
+                    },
+                    {
+                        id: 'hfl48dmmtg2',
+                        title:
+                            '16 | 浮点数和定点数（下）：深入理解浮点数到底有什么用？',
+                        src:
+                            './深入浅出计算机组成原理/html/16浮点数和定点数下深入理解浮点数到底有什么用.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/16浮点数和定点数下深入理解浮点数到底有什么用.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'kzylhau135h',
+                title: '原理篇：处理器',
+                subList: [
+                    {
+                        id: 'vll6731pw48',
+                        title: '17 | 建立数据通路（上）：指令+运算=CPU',
+                        src:
+                            './深入浅出计算机组成原理/html/17建立数据通路上指令+运算=CPU.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/17建立数据通路上指令+运算=CPU.mp3'
+                    },
+                    {
+                        id: '5v7tz4x7tvy',
+                        title: '18 | 建立数据通路（中）：指令+运算=CPU',
+                        src:
+                            './深入浅出计算机组成原理/html/18建立数据通路中指令+运算=CPU.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/18建立数据通路中指令+运算=CPU.mp3'
+                    },
+                    {
+                        id: 'fxjdwurysln',
+                        title: '19 | 建立数据通路（下）：指令+运算=CPU',
+                        src:
+                            './深入浅出计算机组成原理/html/19建立数据通路下指令+运算=CPU.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/19建立数据通路下指令+运算=CPU.mp3'
+                    },
+                    {
+                        id: 'n72k8zqliin',
+                        title:
+                            '20 | 面向流水线的指令设计（上）：一心多用的现代CPU',
+                        src:
+                            './深入浅出计算机组成原理/html/20面向流水线的指令设计上一心多用的现代CPU.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/20面向流水线的指令设计上一心多用的现代CPU.mp3'
+                    },
+                    {
+                        id: 'avesfl3u0ie',
+                        title:
+                            '21 | 面向流水线的指令设计（下）：奔腾4是怎么失败的？',
+                        src:
+                            './深入浅出计算机组成原理/html/21面向流水线的指令设计下奔腾4是怎么失败的.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/21面向流水线的指令设计下奔腾4是怎么失败的.mp3'
+                    },
+                    {
+                        id: 'vvauyi80obu',
+                        title: '22 | 冒险和预测（一）：hazard是“危”也是“机”',
+                        src:
+                            './深入浅出计算机组成原理/html/22冒险和预测一hazard是危也是机.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/22冒险和预测一hazard是危也是机.mp3'
+                    },
+                    {
+                        id: 'reeh6c0rix3',
+                        title: '23 | 冒险和预测（二）：流水线里的接力赛',
+                        src:
+                            './深入浅出计算机组成原理/html/23冒险和预测二流水线里的接力赛.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'la6mdltypl5',
+                        title: '24 | 冒险和预测（三）：CPU里的“线程池”',
+                        src:
+                            './深入浅出计算机组成原理/html/24冒险和预测三CPU里的线程池.html',
+                        audio: ''
+                    },
+                    {
+                        id: '8ylzxx7n3dl',
+                        title:
+                            '25 | 冒险和预测（四）：今天下雨了，明天还会下雨么？',
+                        src:
+                            './深入浅出计算机组成原理/html/25冒险和预测四今天下雨了明天还会下雨么.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'z5dhsrz8krd',
+                        title:
+                            '26 | Superscalar和VLIW：如何让CPU的吞吐率超过1？',
+                        src:
+                            './深入浅出计算机组成原理/html/26Superscalar和VLIW如何让CPU的吞吐率超过1.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'uuaj7dut6p5',
+                        title: '27 | SIMD：如何加速矩阵乘法？',
+                        src:
+                            './深入浅出计算机组成原理/html/27SIMD如何加速矩阵乘法.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/27SIMD如何加速矩阵乘法.mp3'
+                    },
+                    {
+                        id: 'vpfgwb5zzvq',
+                        title: '28 | 异常和中断：程序出错了怎么办？',
+                        src:
+                            './深入浅出计算机组成原理/html/28异常和中断程序出错了怎么办.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/28异常和中断程序出错了怎么办.mp3'
+                    },
+                    {
+                        id: '6vthlagvcx6',
+                        title: '29 | CISC和RISC：为什么手机芯片都是ARM？',
+                        src:
+                            './深入浅出计算机组成原理/html/29CISC和RISC为什么手机芯片都是ARM.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/29CISC和RISC为什么手机芯片都是ARM.mp3'
+                    },
+                    {
+                        id: 'ujqyx7jttwv',
+                        title: '30 | GPU（上）：为什么玩游戏需要使用GPU？',
+                        src:
+                            './深入浅出计算机组成原理/html/30GPU上为什么玩游戏需要使用GPU.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/30GPU上为什么玩游戏需要使用GPU.mp3'
+                    },
+                    {
+                        id: 'oyx1u3u6770',
+                        title: '31 | GPU（下）：为什么深度学习需要使用GPU？',
+                        src:
+                            './深入浅出计算机组成原理/html/31GPU下为什么深度学习需要使用GPU.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/31GPU下为什么深度学习需要使用GPU.mp3'
+                    },
+                    {
+                        id: 'ndih2jyfy0q',
+                        title: '32 | FPGA和ASIC：计算机体系结构的黄金时代',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'e6z8uft3rbu',
+                        title: '33 | 解读TPU：设计和拆解一块ASIC芯片',
+                        src:
+                            './深入浅出计算机组成原理/html/33解读TPU设计和拆解一块ASIC芯片.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/33解读TPU设计和拆解一块ASIC芯片.mp3'
+                    },
+                    {
+                        id: 'draexav2uwh',
+                        title:
+                            '34 | 理解虚拟机：你在云上拿到的计算机是什么样的？',
+                        src:
+                            './深入浅出计算机组成原理/html/34理解虚拟机你在云上拿到的计算机是什么样的.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/34理解虚拟机你在云上拿到的计算机是什么样的.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'fx84kapzcnp',
+                title: '原理篇：存储与I/O系统',
+                subList: [
+                    {
+                        id: 'wriircbckun',
+                        title:
+                            '35 | 存储器层次结构全景：数据存储的大金字塔长什么样？',
+                        src:
+                            './深入浅出计算机组成原理/html/35存储器层次结构全景数据存储的大金字塔长什么样.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/35存储器层次结构全景数据存储的大金字塔长什么样.mp3'
+                    },
+                    {
+                        id: 'r20bucyda0e',
+                        title:
+                            '36 | 局部性原理：数据库性能跟不上，加个缓存就好了？',
+                        src:
+                            './深入浅出计算机组成原理/html/36局部性原理数据库性能跟不上加个缓存就好了.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/36局部性原理数据库性能跟不上加个缓存就好了.mp3'
+                    },
+                    {
+                        id: '5wwzok9bslx',
+                        title: '37 | 高速缓存（上）：“4毫秒”究竟值多少钱？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'gwf7rn92llj',
+                        title: '38 | 高速缓存（下）：你确定你的数据更新了么？',
+                        src:
+                            './深入浅出计算机组成原理/html/38高速缓存下你确定你的数据更新了么.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/38高速缓存下你确定你的数据更新了么.mp3'
+                    },
+                    {
+                        id: '35o0sdearhk',
+                        title:
+                            '39 | MESI协议：如何让多核CPU的高速缓存保持一致？',
+                        src:
+                            './深入浅出计算机组成原理/html/39MESI协议如何让多核CPU的高速缓存保持一致.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/39MESI协议如何让多核CPU的高速缓存保持一致.mp3'
+                    },
+                    {
+                        id: 'bl1h1b95wy1',
+                        title:
+                            '40 | 理解内存（上）：虚拟内存和内存保护是什么？',
+                        src:
+                            './深入浅出计算机组成原理/html/40理解内存上虚拟内存和内存保护是什么.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/40理解内存上虚拟内存和内存保护是什么.mp3'
+                    },
+                    {
+                        id: '09bioupnpdw',
+                        title: '41 | 理解内存（下）：解析TLB和内存保护',
+                        src:
+                            './深入浅出计算机组成原理/html/41理解内存下解析TLB和内存保护.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/41理解内存下解析TLB和内存保护.mp3'
+                    },
+                    {
+                        id: 'xhlvz1l7w12',
+                        title: '42 | 总线：计算机内部的高速公路',
+                        src:
+                            './深入浅出计算机组成原理/html/42总线计算机内部的高速公路.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/42总线计算机内部的高速公路.mp3'
+                    },
+                    {
+                        id: 'h2dj5ztad4d',
+                        title:
+                            '43 | 输入输出设备：我们并不是只能用灯泡显示“0”和“1”',
+                        src:
+                            './深入浅出计算机组成原理/html/43输入输出设备我们并不是只能用灯泡显示0和1.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/43输入输出设备我们并不是只能用灯泡显示0和1.mp3'
+                    },
+                    {
+                        id: 'dch4nd0e8ov',
+                        title: '44 | 理解IO_WAIT：I/O性能到底是怎么回事儿？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'r69ezswa7jc',
+                        title: '45 | 机械硬盘：Google早期用过的“黑科技”',
+                        src:
+                            './深入浅出计算机组成原理/html/45机械硬盘Google早期用过的黑科技.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/45机械硬盘Google早期用过的黑科技.mp3'
+                    },
+                    {
+                        id: 'ix1qu3ugsts',
+                        title: '46 | SSD硬盘（上）：如何完成性能优化的KPI？',
+                        src:
+                            './深入浅出计算机组成原理/html/46SSD硬盘上如何完成性能优化的KPI.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/46SSD硬盘上如何完成性能优化的KPI.mp3'
+                    },
+                    {
+                        id: 'zv0d0mxsy3r',
+                        title: '47 | SSD硬盘（下）：如何完成性能优化的KPI？',
+                        src:
+                            './深入浅出计算机组成原理/html/47SSD硬盘下如何完成性能优化的KPI.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/47SSD硬盘下如何完成性能优化的KPI.mp3'
+                    },
+                    {
+                        id: 'ulipxwlmjnp',
+                        title: '48 | DMA：为什么Kafka这么快？',
+                        src:
+                            './深入浅出计算机组成原理/html/48DMA为什么Kafka这么快.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/48DMA为什么Kafka这么快.mp3'
+                    },
+                    {
+                        id: 'lz3ka65cqwk',
+                        title: '49 | 数据完整性（上）：硬件坏了怎么办？',
+                        src:
+                            './深入浅出计算机组成原理/html/49数据完整性上硬件坏了怎么办.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/49数据完整性上硬件坏了怎么办.mp3'
+                    },
+                    {
+                        id: 'z478lsljklm',
+                        title: '50 | 数据完整性（下）：如何还原犯罪现场？',
+                        src:
+                            './深入浅出计算机组成原理/html/50数据完整性下如何还原犯罪现场.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/50数据完整性下如何还原犯罪现场.mp3'
+                    },
+                    {
+                        id: 'avjh9ws6k2m',
+                        title:
+                            '51 | 分布式计算：如果所有人的大脑都联网会怎样？',
+                        src:
+                            './深入浅出计算机组成原理/html/51分布式计算如果所有人的大脑都联网会怎样.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/51分布式计算如果所有人的大脑都联网会怎样.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'pxynd4z3cmg',
+                title: '应用篇',
+                subList: [
+                    {
+                        id: 'zb9tnohecji',
+                        title:
+                            '52 | 设计大型DMP系统（上）：MongoDB并不是什么灵丹妙药',
+                        src:
+                            './深入浅出计算机组成原理/html/52设计大型DMP系统上MongoDB并不是什么灵丹妙药.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/52设计大型DMP系统上MongoDB并不是什么灵丹妙药.mp3'
+                    },
+                    {
+                        id: 'rwesjpooi6e',
+                        title: '53 | 设计大型DMP系统（下）：SSD拯救了所有的DBA',
+                        src:
+                            './深入浅出计算机组成原理/html/53设计大型DMP系统下SSD拯救了所有的DBA.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/53设计大型DMP系统下SSD拯救了所有的DBA.mp3'
+                    },
+                    {
+                        id: '42x26cjb91b',
+                        title:
+                            '54 | 理解Disruptor（上）：带你体会CPU高速缓存的风驰电掣',
+                        src:
+                            './深入浅出计算机组成原理/html/54理解Disruptor上带你体会CPU高速缓存的风驰电掣.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/54理解Disruptor上带你体会CPU高速缓存的风驰电掣.mp3'
+                    },
+                    {
+                        id: 'nnj7lk4jrrl',
+                        title:
+                            '55 | 理解Disruptor（下）：不需要换挡和踩刹车的CPU，有多快？',
+                        src:
+                            './深入浅出计算机组成原理/html/55理解Disruptor下不需要换挡和踩刹车的CPU有多快.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/55理解Disruptor下不需要换挡和踩刹车的CPU有多快.mp3'
+                    },
+                    {
+                        id: 'ohm8jalnjbg',
+                        title: '结束语 | 知也无涯，愿你也享受发现的乐趣',
+                        src:
+                            './深入浅出计算机组成原理/html/结束语知也无涯愿你也享受发现的乐趣.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/结束语知也无涯愿你也享受发现的乐趣.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'g1nyr364wnp',
+                title: '答疑与加餐',
+                subList: [
+                    {
+                        id: 'dxkn8mej1jt',
+                        title: '特别加餐 | 我在2019年F8大会的两日见闻录',
+                        src:
+                            './深入浅出计算机组成原理/html/特别加餐我在2019年F8大会的两日见闻录.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/特别加餐我在2019年F8大会的两日见闻录.mp3'
+                    },
+                    {
+                        id: 'rgy8frc2oqe',
+                        title:
+                            'FAQ第一期 | 学与不学，知识就在那里，不如就先学好了',
+                        src:
+                            './深入浅出计算机组成原理/html/FAQ第一期学与不学知识就在那里不如就先学好了.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/FAQ第一期学与不学知识就在那里不如就先学好了.mp3'
+                    },
+                    {
+                        id: 'm1hd10dschk',
+                        title:
+                            '用户故事 | 赵文海：怕什么真理无穷，进一寸有一寸的欢喜',
+                        src:
+                            './深入浅出计算机组成原理/html/用户故事赵文海怕什么真理无穷进一寸有一寸的欢喜.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/用户故事赵文海怕什么真理无穷进一寸有一寸的欢喜.mp3'
+                    },
+                    {
+                        id: '2enmhnd5qtb',
+                        title: 'FAQ第二期 | 世界上第一个编程语言是怎么来的？',
+                        src:
+                            './深入浅出计算机组成原理/html/FAQ第二期世界上第一个编程语言是怎么来的.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/FAQ第二期世界上第一个编程语言是怎么来的.mp3'
+                    },
+                    {
+                        id: 'oc0gml6ziwq',
+                        title: '特别加餐 | 我的一天怎么过？',
+                        src:
+                            './深入浅出计算机组成原理/html/特别加餐我的一天怎么过.html',
+                        audio:
+                            './深入浅出计算机组成原理/audio/特别加餐我的一天怎么过.mp3'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'ltdxizwqy7s',
+        type: 'backend',
+        cid: '100020801',
+        title: 'MySQL实战45讲',
+        subTitle: '从原理到实战，丁奇带你搞懂MySQL',
+        authorName: '林晓斌',
+        authorInfo: '网名丁奇，前阿里资深技术专家',
+        contents: [
+            {
+                id: 'e5gs8upndha',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: '902m9m3f14x',
+                        title: '开篇词 | 这一次，让我们一起来搞懂MySQL',
+                        src:
+                            './MySQL实战45讲/html/00开篇词这一次让我们一起来搞懂MySQL.html',
+                        audio:
+                            './MySQL实战45讲/audio/00开篇词这一次让我们一起来搞懂MySQL.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'pwgh1g7f0fb',
+                title: '基础篇',
+                subList: [
+                    {
+                        id: '9dq6wu1myeg',
+                        title: '01 | 基础架构：一条SQL查询语句是如何执行的？',
+                        src:
+                            './MySQL实战45讲/html/01基础架构一条SQL查询语句是如何执行的.html',
+                        audio:
+                            './MySQL实战45讲/audio/01基础架构一条SQL查询语句是如何执行的.mp3'
+                    },
+                    {
+                        id: '87bq6kbojxc',
+                        title: '02  | 日志系统：一条SQL更新语句是如何执行的？',
+                        src:
+                            './MySQL实战45讲/html/02日志系统一条SQL更新语句是如何执行的.html',
+                        audio:
+                            './MySQL实战45讲/audio/02日志系统一条SQL更新语句是如何执行的.mp3'
+                    },
+                    {
+                        id: '9xwiqvvoecc',
+                        title: '03 | 事务隔离：为什么你改了我还看不见？',
+                        src:
+                            './MySQL实战45讲/html/03事务隔离为什么你改了我还看不见.html',
+                        audio:
+                            './MySQL实战45讲/audio/03事务隔离为什么你改了我还看不见.mp3'
+                    },
+                    {
+                        id: 'tuj7rovl1km',
+                        title: '04 | 深入浅出索引（上）',
+                        src: './MySQL实战45讲/html/04深入浅出索引上.html',
+                        audio: './MySQL实战45讲/audio/04深入浅出索引上.mp3'
+                    },
+                    {
+                        id: 'h962u0csjai',
+                        title: '05 | 深入浅出索引（下）',
+                        src: './MySQL实战45讲/html/05深入浅出索引下.html',
+                        audio: './MySQL实战45讲/audio/05深入浅出索引下.mp3'
+                    },
+                    {
+                        id: '1vz0n5cezi7',
+                        title:
+                            '06 | 全局锁和表锁 ：给表加个字段怎么有这么多阻碍？',
+                        src:
+                            './MySQL实战45讲/html/06全局锁和表锁给表加个字段怎么有这么多阻碍.html',
+                        audio:
+                            './MySQL实战45讲/audio/06全局锁和表锁给表加个字段怎么有这么多阻碍.mp3'
+                    },
+                    {
+                        id: '3dv0h1zlj5j',
+                        title: '07 | 行锁功过：怎么减少行锁对性能的影响？',
+                        src:
+                            './MySQL实战45讲/html/07行锁功过怎么减少行锁对性能的影响.html',
+                        audio:
+                            './MySQL实战45讲/audio/07行锁功过怎么减少行锁对性能的影响.mp3'
+                    },
+                    {
+                        id: 'wgtrowa10nc',
+                        title: '08 | 事务到底是隔离的还是不隔离的？',
+                        src:
+                            './MySQL实战45讲/html/08事务到底是隔离的还是不隔离的.html',
+                        audio:
+                            './MySQL实战45讲/audio/08事务到底是隔离的还是不隔离的.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'gsspewafpqx',
+                title: '实践篇',
+                subList: [
+                    {
+                        id: '9ogkjgqv7al',
+                        title: '09 | 普通索引和唯一索引，应该怎么选择？',
+                        src:
+                            './MySQL实战45讲/html/09普通索引和唯一索引应该怎么选择.html',
+                        audio:
+                            './MySQL实战45讲/audio/09普通索引和唯一索引应该怎么选择.mp3'
+                    },
+                    {
+                        id: 'j5lqxo9k3iq',
+                        title: '10 | MySQL为什么有时候会选错索引？',
+                        src:
+                            './MySQL实战45讲/html/10MySQL为什么有时候会选错索引.html',
+                        audio:
+                            './MySQL实战45讲/audio/10MySQL为什么有时候会选错索引.mp3'
+                    },
+                    {
+                        id: '7q1z5pqj5pw',
+                        title: '11 |  怎么给字符串字段加索引？',
+                        src:
+                            './MySQL实战45讲/html/11怎么给字符串字段加索引.html',
+                        audio:
+                            './MySQL实战45讲/audio/11怎么给字符串字段加索引.mp3'
+                    },
+                    {
+                        id: 'a7s0llf6u92',
+                        title: '12 | 为什么我的MySQL会“抖”一下？',
+                        src:
+                            './MySQL实战45讲/html/12为什么我的MySQL会抖一下.html',
+                        audio:
+                            './MySQL实战45讲/audio/12为什么我的MySQL会抖一下.mp3'
+                    },
+                    {
+                        id: 'dmjw9tc7wdj',
+                        title: '13 | 为什么表数据删掉一半，表文件大小不变？',
+                        src:
+                            './MySQL实战45讲/html/13为什么表数据删掉一半表文件大小不变.html',
+                        audio:
+                            './MySQL实战45讲/audio/13为什么表数据删掉一半表文件大小不变.mp3'
+                    },
+                    {
+                        id: 'kjjn9ods6w1',
+                        title: '14 | count(*)这么慢，我该怎么办？',
+                        src:
+                            './MySQL实战45讲/html/14count这么慢我该怎么办.html',
+                        audio:
+                            './MySQL实战45讲/audio/14count这么慢我该怎么办.mp3'
+                    },
+                    {
+                        id: '7s5afibiier',
+                        title: '15 | 答疑文章（一）：日志和索引相关问题',
+                        src:
+                            './MySQL实战45讲/html/15答疑文章一日志和索引相关问题.html',
+                        audio:
+                            './MySQL实战45讲/audio/15答疑文章一日志和索引相关问题.mp3'
+                    },
+                    {
+                        id: 'eok7bq3cn60',
+                        title: '16 | “order by”是怎么工作的？',
+                        src: './MySQL实战45讲/html/16orderby是怎么工作的.html',
+                        audio: './MySQL实战45讲/audio/16orderby是怎么工作的.mp3'
+                    },
+                    {
+                        id: 'zwxljakwy7b',
+                        title: '17 | 如何正确地显示随机消息？',
+                        src:
+                            './MySQL实战45讲/html/17如何正确地显示随机消息.html',
+                        audio:
+                            './MySQL实战45讲/audio/17如何正确地显示随机消息.mp3'
+                    },
+                    {
+                        id: 'z0pknw1sqbo',
+                        title:
+                            '18 | 为什么这些SQL语句逻辑相同，性能却差异巨大？',
+                        src:
+                            './MySQL实战45讲/html/18为什么这些SQL语句逻辑相同性能却差异巨大.html',
+                        audio:
+                            './MySQL实战45讲/audio/18为什么这些SQL语句逻辑相同性能却差异巨大.mp3'
+                    },
+                    {
+                        id: 'he9nqkzfmdt',
+                        title: '19 | 为什么我只查一行的语句，也执行这么慢？',
+                        src:
+                            './MySQL实战45讲/html/19为什么我只查一行的语句也执行这么慢.html',
+                        audio:
+                            './MySQL实战45讲/audio/19为什么我只查一行的语句也执行这么慢.mp3'
+                    },
+                    {
+                        id: '77ryu16fjtw',
+                        title: '20 | 幻读是什么，幻读有什么问题？',
+                        src:
+                            './MySQL实战45讲/html/20幻读是什么幻读有什么问题.html',
+                        audio:
+                            './MySQL实战45讲/audio/20幻读是什么幻读有什么问题.mp3'
+                    },
+                    {
+                        id: 'gglmq8q5x7g',
+                        title: '21 | 为什么我只改一行的语句，锁这么多？',
+                        src:
+                            './MySQL实战45讲/html/21为什么我只改一行的语句锁这么多.html',
+                        audio:
+                            './MySQL实战45讲/audio/21为什么我只改一行的语句锁这么多.mp3'
+                    },
+                    {
+                        id: '4i13pizrzfy',
+                        title: '22 | MySQL有哪些“饮鸩止渴”提高性能的方法？',
+                        src:
+                            './MySQL实战45讲/html/22MySQL有哪些饮鸩止渴提高性能的方法.html',
+                        audio:
+                            './MySQL实战45讲/audio/22MySQL有哪些饮鸩止渴提高性能的方法.mp3'
+                    },
+                    {
+                        id: '3t1do0z62q9',
+                        title: '23 | MySQL是怎么保证数据不丢的？',
+                        src:
+                            './MySQL实战45讲/html/23MySQL是怎么保证数据不丢的.html',
+                        audio:
+                            './MySQL实战45讲/audio/23MySQL是怎么保证数据不丢的.mp3'
+                    },
+                    {
+                        id: '8nl0jsylf54',
+                        title: '24 | MySQL是怎么保证主备一致的？',
+                        src:
+                            './MySQL实战45讲/html/24MySQL是怎么保证主备一致的.html',
+                        audio:
+                            './MySQL实战45讲/audio/24MySQL是怎么保证主备一致的.mp3'
+                    },
+                    {
+                        id: 'f2ro9xm3ba6',
+                        title: '25 | MySQL是怎么保证高可用的？',
+                        src:
+                            './MySQL实战45讲/html/25MySQL是怎么保证高可用的.html',
+                        audio:
+                            './MySQL实战45讲/audio/25MySQL是怎么保证高可用的.mp3'
+                    },
+                    {
+                        id: 'tly1d18gri1',
+                        title: '26 | 备库为什么会延迟好几个小时？',
+                        src:
+                            './MySQL实战45讲/html/26备库为什么会延迟好几个小时.html',
+                        audio:
+                            './MySQL实战45讲/audio/26备库为什么会延迟好几个小时.mp3'
+                    },
+                    {
+                        id: '5uve7e6wrbn',
+                        title: '27 | 主库出问题了，从库怎么办？',
+                        src:
+                            './MySQL实战45讲/html/27主库出问题了从库怎么办.html',
+                        audio:
+                            './MySQL实战45讲/audio/27主库出问题了从库怎么办.mp3'
+                    },
+                    {
+                        id: '468tjnvje4o',
+                        title: '28 | 读写分离有哪些坑？',
+                        src: './MySQL实战45讲/html/28读写分离有哪些坑.html',
+                        audio: './MySQL实战45讲/audio/28读写分离有哪些坑.mp3'
+                    },
+                    {
+                        id: 'gbnpe1x31du',
+                        title: '29 | 如何判断一个数据库是不是出问题了？',
+                        src:
+                            './MySQL实战45讲/html/29如何判断一个数据库是不是出问题了.html',
+                        audio:
+                            './MySQL实战45讲/audio/29如何判断一个数据库是不是出问题了.mp3'
+                    },
+                    {
+                        id: 'k392586vlie',
+                        title: '30 | 答疑文章（二）：用动态的观点看加锁',
+                        src:
+                            './MySQL实战45讲/html/30答疑文章二用动态的观点看加锁.html',
+                        audio:
+                            './MySQL实战45讲/audio/30答疑文章二用动态的观点看加锁.mp3'
+                    },
+                    {
+                        id: 'tfg1on4xzqb',
+                        title: '31 | 误删数据后除了跑路，还能怎么办？',
+                        src:
+                            './MySQL实战45讲/html/31误删数据后除了跑路还能怎么办.html',
+                        audio:
+                            './MySQL实战45讲/audio/31误删数据后除了跑路还能怎么办.mp3'
+                    },
+                    {
+                        id: 'ejqitndjosy',
+                        title: '32 | 为什么还有kill不掉的语句？',
+                        src:
+                            './MySQL实战45讲/html/32为什么还有kill不掉的语句.html',
+                        audio:
+                            './MySQL实战45讲/audio/32为什么还有kill不掉的语句.mp3'
+                    },
+                    {
+                        id: '16on3kcc8cv',
+                        title: '33 | 我查这么多数据，会不会把数据库内存打爆？',
+                        src:
+                            './MySQL实战45讲/html/33我查这么多数据会不会把数据库内存打爆.html',
+                        audio:
+                            './MySQL实战45讲/audio/33我查这么多数据会不会把数据库内存打爆.mp3'
+                    },
+                    {
+                        id: 'o9hw8slobj4',
+                        title: '34 | 到底可不可以使用join？',
+                        src: './MySQL实战45讲/html/34到底可不可以使用join.html',
+                        audio:
+                            './MySQL实战45讲/audio/34到底可不可以使用join.mp3'
+                    },
+                    {
+                        id: '8h6jzwyyjyx',
+                        title: '35 | join语句怎么优化？',
+                        src: './MySQL实战45讲/html/35join语句怎么优化.html',
+                        audio: './MySQL实战45讲/audio/35join语句怎么优化.mp3'
+                    },
+                    {
+                        id: 'enwsq26cogl',
+                        title: '36 | 为什么临时表可以重名？',
+                        src: './MySQL实战45讲/html/36为什么临时表可以重名.html',
+                        audio:
+                            './MySQL实战45讲/audio/36为什么临时表可以重名.mp3'
+                    },
+                    {
+                        id: 'picqzg6gx9v',
+                        title: '37 | 什么时候会使用内部临时表？',
+                        src:
+                            './MySQL实战45讲/html/37什么时候会使用内部临时表.html',
+                        audio:
+                            './MySQL实战45讲/audio/37什么时候会使用内部临时表.mp3'
+                    },
+                    {
+                        id: '94v7m7xfzg5',
+                        title: '38 | 都说InnoDB好，那还要不要使用Memory引擎？',
+                        src:
+                            './MySQL实战45讲/html/38都说InnoDB好那还要不要使用Memory引擎.html',
+                        audio:
+                            './MySQL实战45讲/audio/38都说InnoDB好那还要不要使用Memory引擎.mp3'
+                    },
+                    {
+                        id: 'wnjxsk41uhg',
+                        title: '39 | 自增主键为什么不是连续的？',
+                        src:
+                            './MySQL实战45讲/html/39自增主键为什么不是连续的.html',
+                        audio:
+                            './MySQL实战45讲/audio/39自增主键为什么不是连续的.mp3'
+                    },
+                    {
+                        id: 'mkwpq58tqhh',
+                        title: '40 | insert语句的锁为什么这么多？',
+                        src:
+                            './MySQL实战45讲/html/40insert语句的锁为什么这么多.html',
+                        audio:
+                            './MySQL实战45讲/audio/40insert语句的锁为什么这么多.mp3'
+                    },
+                    {
+                        id: '807nmktlybp',
+                        title: '41 | 怎么最快地复制一张表？',
+                        src: './MySQL实战45讲/html/41怎么最快地复制一张表.html',
+                        audio:
+                            './MySQL实战45讲/audio/41怎么最快地复制一张表.mp3'
+                    },
+                    {
+                        id: 'sp7hz5lvv9p',
+                        title: '42 | grant之后要跟着flush privileges吗？',
+                        src:
+                            './MySQL实战45讲/html/42grant之后要跟着flushprivileges吗.html',
+                        audio:
+                            './MySQL实战45讲/audio/42grant之后要跟着flushprivileges吗.mp3'
+                    },
+                    {
+                        id: 'p0snw1zecoi',
+                        title: '43 | 要不要使用分区表？',
+                        src: './MySQL实战45讲/html/43要不要使用分区表.html',
+                        audio: './MySQL实战45讲/audio/43要不要使用分区表.mp3'
+                    },
+                    {
+                        id: 'q9v4zyprxsp',
+                        title: '44 | 答疑文章（三）：说一说这些好问题',
+                        src:
+                            './MySQL实战45讲/html/44答疑文章三说一说这些好问题.html',
+                        audio:
+                            './MySQL实战45讲/audio/44讲答疑文章三说一说这些好问题_MP3.mp3'
+                    },
+                    {
+                        id: '8tagn7lk8zh',
+                        title: '45 | 自增id用完怎么办？',
+                        src: './MySQL实战45讲/html/45自增id用完怎么办.html',
+                        audio: './MySQL实战45讲/audio/45自增id用完怎么办.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'x53ki12179t',
+                title: '特别放送',
+                subList: [
+                    {
+                        id: '1seli6o3wsh',
+                        title: '直播回顾 | 林晓斌：我的 MySQL 心路历程',
+                        src:
+                            './MySQL实战45讲/html/直播回顾林晓斌我的MySQL心路历程.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'ffd9hatinin',
+                title: '结束语',
+                subList: [
+                    {
+                        id: '6gktl84p2v6',
+                        title: '结束语 | 点线网面，一起构建MySQL知识网络',
+                        src:
+                            './MySQL实战45讲/html/结束语点线网面一起构建MySQL知识网络.html',
+                        audio:
+                            './MySQL实战45讲/audio/结束语点线网面一起构建MySQL知识网络.mp3'
+                    }
+                ]
+            },
+            {
+                id: '5mqm0gs3b38',
+                title: '结课测试',
+                subList: [
+                    {
+                        id: '5xna6zvunvc',
+                        title: '结课测试｜这些MySQL知识你都掌握了吗？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: '78goc4k0ebr',
+        type: 'pm',
+        cid: '100002601',
+        title: '邱岳的产品手记',
+        subTitle: '重构你的产品思维',
+        authorName: '邱岳',
+        authorInfo: '无码科技产品经理，公众号二爷鉴书作者',
+        contents: [
+            {
+                id: '3qt6xj5aovs',
+                title: '全部课程',
+                subList: [
+                    {
+                        id: '5d1gj5d0pgp',
+                        title: '开篇词 | 产品经理的世界没有对错',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '6v9pfdfp66t',
+                        title: '01 | 验证码是个好设计吗？',
+                        src:
+                            './邱岳的产品手记/html/01讲验证码是个好设计吗.html',
+                        audio:
+                            './邱岳的产品手记/audio/01讲验证码是个好设计吗.mp3'
+                    },
+                    {
+                        id: 'bn154c7cd9c',
+                        title: '02 | 产品经理工具指南',
+                        src: './邱岳的产品手记/html/02讲产品经理工具指南.html',
+                        audio: './邱岳的产品手记/audio/02讲产品经理工具指南.mp3'
+                    },
+                    {
+                        id: 'z4v279uujph',
+                        title: '03 | 产品案例分析·Trigraphy的设计哲学',
+                        src:
+                            './邱岳的产品手记/html/03讲产品案例分析·Trigraphy的设计哲学.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'fgg47a0c8v0',
+                        title: '04 | 如何当好AI时代的产品经理？（学习篇）',
+                        src:
+                            './邱岳的产品手记/html/04讲如何当好AI时代的产品经理学习篇.html',
+                        audio:
+                            './邱岳的产品手记/audio/04讲如何当好AI时代的产品经理学习篇.mp3'
+                    },
+                    {
+                        id: '97ij1m5yj5k',
+                        title: '05 | 如何当好AI时代的产品经理？（实践篇）',
+                        src:
+                            './邱岳的产品手记/html/05讲如何当好AI时代的产品经理实践篇.html',
+                        audio:
+                            './邱岳的产品手记/audio/05讲如何当好AI时代的产品经理实践篇.mp3'
+                    },
+                    {
+                        id: '8n6jcqhmby5',
+                        title: '06 | 产品案例分析 · The Guardian的文本之美',
+                        src:
+                            './邱岳的产品手记/html/06讲产品案例分析·TheGuardian的文本之美.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'wvkz3xxp2b2',
+                        title: '07 | 关于需求变更（上）：需求背后的需求',
+                        src:
+                            './邱岳的产品手记/html/07讲关于需求变更上需求背后的需求.html',
+                        audio:
+                            './邱岳的产品手记/audio/07讲关于需求变更上需求背后的需求.mp3'
+                    },
+                    {
+                        id: 'l37mtqrmktr',
+                        title: '08 | 关于需求变更（下） : 化变更于无形',
+                        src:
+                            './邱岳的产品手记/html/08讲关于需求变更下化变更于无形.html',
+                        audio:
+                            './邱岳的产品手记/audio/08讲关于需求变更下化变更于无形.mp3'
+                    },
+                    {
+                        id: 'i6u5cfavlcj',
+                        title: '09 | 产品案例分析：Hopper的“人工智能”',
+                        src:
+                            './邱岳的产品手记/html/09讲产品案例分析Hopper的人工智能.html',
+                        audio: ''
+                    },
+                    {
+                        id: '2ug10i8rh1w',
+                        title: '10 | 产品被抄袭了，怎么办？',
+                        src:
+                            './邱岳的产品手记/html/10讲产品被抄袭了怎么办.html',
+                        audio:
+                            './邱岳的产品手记/audio/10讲产品被抄袭了怎么办.mp3'
+                    },
+                    {
+                        id: 'jlgpee4qsyi',
+                        title: '11 | 如何借鉴灵感？',
+                        src: './邱岳的产品手记/html/11讲如何借鉴灵感.html',
+                        audio: './邱岳的产品手记/audio/11讲如何借鉴灵感.mp3'
+                    },
+                    {
+                        id: 'anvnuzf343k',
+                        title: '12 | 产品案例分析：LabRdr的设计实验',
+                        src:
+                            './邱岳的产品手记/html/12讲产品案例分析LabRdr的设计实验.html',
+                        audio: ''
+                    },
+                    {
+                        id: '6g6nqjjatx3',
+                        title: '13 | 无用却必要：产品规划（上）',
+                        src:
+                            './邱岳的产品手记/html/13讲无用却必要产品规划上.html',
+                        audio:
+                            './邱岳的产品手记/audio/13讲无用却必要产品规划上.mp3'
+                    },
+                    {
+                        id: 'eyfh60nj5bb',
+                        title: '14 | 留白与节奏：产品规划（下）',
+                        src:
+                            './邱岳的产品手记/html/14讲留白与节奏产品规划下.html',
+                        audio:
+                            './邱岳的产品手记/audio/14讲留白与节奏产品规划下.mp3'
+                    },
+                    {
+                        id: '38zklor2w4a',
+                        title:
+                            '15 | 产品案例分析：Mimo与Learn Python的导学之趣',
+                        src:
+                            './邱岳的产品手记/html/15讲产品案例分析Mimo与LearnPython的导学之趣.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'o6ij5sc0mu5',
+                        title: '16 | 在内部产品中找到产品经理的价值',
+                        src:
+                            './邱岳的产品手记/html/16讲在内部产品中找到产品经理的价值.html',
+                        audio:
+                            './邱岳的产品手记/audio/16讲在内部产品中找到产品经理的价值.mp3'
+                    },
+                    {
+                        id: 'i5lsmhnejfg',
+                        title: '17 | 产品经理如何获得非权力性的影响力？',
+                        src:
+                            './邱岳的产品手记/html/17讲产品经理如何获得非权力性的影响力.html',
+                        audio:
+                            './邱岳的产品手记/audio/17讲产品经理如何获得非权力性的影响力.mp3'
+                    },
+                    {
+                        id: 'pavxpzlvtv5',
+                        title: '18 | 产品案例分析：WWF Together的情怀设计',
+                        src:
+                            './邱岳的产品手记/html/18讲产品案例分析WWFTogether的情怀设计.html',
+                        audio: ''
+                    },
+                    {
+                        id: '3f6xrn066vc',
+                        title:
+                            '19 | 产品经理如何与开发打交道（上）：打破思维的边界',
+                        src:
+                            './邱岳的产品手记/html/19讲产品经理如何与开发打交道上打破思维的边界.html',
+                        audio:
+                            './邱岳的产品手记/audio/19讲产品经理如何与开发打交道上打破思维的边界.mp3'
+                    },
+                    {
+                        id: '07ai5v7dxwj',
+                        title:
+                            '20 | 产品经理如何与开发打交道（下）：合作与共赢',
+                        src:
+                            './邱岳的产品手记/html/20讲产品经理如何与开发打交道下合作与共赢.html',
+                        audio:
+                            './邱岳的产品手记/audio/20讲产品经理如何与开发打交道下合作与共赢.mp3'
+                    },
+                    {
+                        id: 'l9wfic5ivih',
+                        title: '21 | 产品案例分析：Fabulous的精致养成',
+                        src:
+                            './邱岳的产品手记/html/21讲产品案例分析Fabulous的精致养成.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'b1a78xmg1uf',
+                        title: '22 | 产品经理的图文基本功（上）：产品文档',
+                        src:
+                            './邱岳的产品手记/html/22讲产品经理的图文基本功上产品文档.html',
+                        audio:
+                            './邱岳的产品手记/audio/22讲产品经理的图文基本功上产品文档.mp3'
+                    },
+                    {
+                        id: 'zjh971ibv8l',
+                        title: '23 | 产品经理的图文基本功（下）：产品图例',
+                        src:
+                            './邱岳的产品手记/html/23讲产品经理的图文基本功下产品图例.html',
+                        audio:
+                            './邱岳的产品手记/audio/23讲产品经理的图文基本功下产品图例.mp3'
+                    },
+                    {
+                        id: '2b5c9tw997h',
+                        title: '24 | 产品案例分析：PathSource的混乱与直观',
+                        src:
+                            './邱岳的产品手记/html/24讲产品案例分析PathSource的混乱与直观.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'r74r6al6sik',
+                        title: '25 | 产品世界的暗黑模式：操纵的诱惑',
+                        src:
+                            './邱岳的产品手记/html/25讲产品世界的暗黑模式操纵的诱惑.html',
+                        audio:
+                            './邱岳的产品手记/audio/25讲产品世界的暗黑模式操纵的诱惑.mp3'
+                    },
+                    {
+                        id: 'td0t06jpnej',
+                        title: '26 | 写好产品文档的诀窍',
+                        src:
+                            './邱岳的产品手记/html/26讲写好产品文档的诀窍.html',
+                        audio:
+                            './邱岳的产品手记/audio/26讲写好产品文档的诀窍.mp3'
+                    },
+                    {
+                        id: '0evngugjfmk',
+                        title: '27 | 产品案例分析：Quartz&Hooked的对话式交互',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '8296lk2tkr6',
+                        title: '28 | 产品分析的套路（上）：谁是利益相关者？',
+                        src:
+                            './邱岳的产品手记/html/28讲产品分析的套路上谁是利益相关者.html',
+                        audio:
+                            './邱岳的产品手记/audio/28讲产品分析的套路上谁是利益相关者.mp3'
+                    },
+                    {
+                        id: '6zx837htxy6',
+                        title: '29 | 产品分析的套路（中）：解决什么问题？',
+                        src:
+                            './邱岳的产品手记/html/29讲产品分析的套路中解决什么问题.html',
+                        audio:
+                            './邱岳的产品手记/audio/29讲产品分析的套路中解决什么问题.mp3'
+                    },
+                    {
+                        id: 'kdt4rh1w0hv',
+                        title: '30 | 产品案例分析：Primer的扑克牌交互',
+                        src:
+                            './邱岳的产品手记/html/30讲产品案例分析Primer的扑克牌交互.html',
+                        audio: ''
+                    },
+                    {
+                        id: '3s10k3xtpv3',
+                        title: '31 | 产品分析的套路（下）：如何出解决方案？',
+                        src:
+                            './邱岳的产品手记/html/31讲产品分析的套路下如何出解决方案.html',
+                        audio:
+                            './邱岳的产品手记/audio/31讲产品分析的套路下如何出解决方案.mp3'
+                    },
+                    {
+                        id: '9ms2ffvi468',
+                        title:
+                            '32 | 从受众规模、需求频率和强度出发：排定需求优先级的方法（上）',
+                        src:
+                            './邱岳的产品手记/html/32讲从受众规模需求频率和强度出发排定需求优先级的方法上.html',
+                        audio:
+                            './邱岳的产品手记/audio/32讲从受众规模需求频率和强度出发排定需求优先级的方法上.mp3'
+                    },
+                    {
+                        id: 'jom05eyh9i9',
+                        title: '33 | 产品案例分析：Arts & Culture 的架构之美',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'z8yeyzchmt9',
+                        title: '34 | 价值曲线分析：排定需求优先级的方法（下）',
+                        src:
+                            './邱岳的产品手记/html/34讲价值曲线分析排定需求优先级的方法下.html',
+                        audio:
+                            './邱岳的产品手记/audio/34讲价值曲线分析排定需求优先级的方法下.mp3'
+                    },
+                    {
+                        id: 'fxw131xlvpg',
+                        title: '35 | 答疑时间：关于产品经理的12个问题',
+                        src:
+                            './邱岳的产品手记/html/35讲答疑时间关于产品经理的12个问题.html',
+                        audio:
+                            './邱岳的产品手记/audio/35讲答疑时间关于产品经理的12个问题.mp3'
+                    },
+                    {
+                        id: '8arm3t01k89',
+                        title: '36 | 产品案例分析：解读知识星球',
+                        src:
+                            './邱岳的产品手记/html/36讲产品案例分析解读知识星球.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'c17vygosccp',
+                        title:
+                            '37 | 如何做好需求评审（上）：需求评审不只是一次会议',
+                        src:
+                            './邱岳的产品手记/html/37讲如何做好需求评审上需求评审不只是一次会议.html',
+                        audio:
+                            './邱岳的产品手记/audio/37讲如何做好需求评审上需求评审不只是一次会议.mp3'
+                    },
+                    {
+                        id: '1raju4m98r1',
+                        title: '38 | 如何做好需求评审（下）：在评审中控住全场',
+                        src:
+                            './邱岳的产品手记/html/38讲如何做好需求评审下在评审中控住全场.html',
+                        audio:
+                            './邱岳的产品手记/audio/38讲如何做好需求评审下在评审中控住全场.mp3'
+                    },
+                    {
+                        id: 'wgaaf7bff9o',
+                        title: '39 | 产品案例分析：SeatGeek的订票设计',
+                        src:
+                            './邱岳的产品手记/html/39讲产品案例分析SeatGeek的订票设计.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'a8tlnu4gcn0',
+                        title: '40 | 新年给产品经理的几碗鸡汤',
+                        src:
+                            './邱岳的产品手记/html/40讲新年给产品经理的几碗鸡汤.html',
+                        audio:
+                            './邱岳的产品手记/audio/40讲新年给产品经理的几碗鸡汤.mp3'
+                    },
+                    {
+                        id: 'pddap9llyvz',
+                        title: '41 | 产品经理的项目管理心得',
+                        src:
+                            './邱岳的产品手记/html/41讲产品经理的项目管理心得.html',
+                        audio:
+                            './邱岳的产品手记/audio/41讲产品经理的项目管理心得.mp3'
+                    },
+                    {
+                        id: '6u1tternno8',
+                        title: '42 | 产品案例分析：Unread的阅读体验',
+                        src:
+                            './邱岳的产品手记/html/42讲产品案例分析Unread的阅读体验.html',
+                        audio: ''
+                    },
+                    {
+                        id: '2zwrub7bytz',
+                        title:
+                            '43 | “玩”的力量：从游戏设计中学习产品设计（上）',
+                        src:
+                            './邱岳的产品手记/html/43讲玩的力量从游戏设计中学习产品设计上.html',
+                        audio:
+                            './邱岳的产品手记/audio/43讲玩的力量从游戏设计中学习产品设计上.mp3'
+                    },
+                    {
+                        id: '3q68ig5upxb',
+                        title:
+                            '44 | “玩”的启示：从游戏设计中学习产品设计（下）',
+                        src:
+                            './邱岳的产品手记/html/44讲玩的启示从游戏设计中学习产品设计下.html',
+                        audio:
+                            './邱岳的产品手记/audio/44讲玩的启示从游戏设计中学习产品设计下.mp3'
+                    },
+                    {
+                        id: '1rxjt793ub6',
+                        title: '45 | 产品案例分析：Chartistic的“复杂”图表',
+                        src:
+                            './邱岳的产品手记/html/45讲产品案例分析Chartistic的复杂图表.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'qo8zcnnck4i',
+                        title: '尾声：你的快乐是哪一种',
+                        src: './邱岳的产品手记/html/尾声你的快乐是哪一种.html',
+                        audio: './邱岳的产品手记/audio/尾声你的快乐是哪一种.mp3'
+                    },
+                    {
+                        id: '2otowtxa3n0',
+                        title: '【第二季回归】二爷归来，再次扬帆起航',
+                        src:
+                            './邱岳的产品手记/html/【第二季回归】二爷归来再次扬帆起航.html',
+                        audio:
+                            './邱岳的产品手记/audio/【第二季回归】二爷归来再次扬帆起航.mp3'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: '70a9t1q1ion',
+        type: 'pm',
+        cid: '100012001',
+        title: '邱岳的产品实战',
+        subTitle: '从0到100的产品启示录',
+        authorName: '邱岳',
+        authorInfo: '十年资深产品人，无码科技产品经理',
+        contents: [
+            {
+                id: 'usf3efspbqu',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: 'cjs2yhe39w8',
+                        title: '开篇词 | 和自己较劲，一个产品经理的实战历程',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'v9smg9ecnvq',
+                title: '模块一：增长你的产品：一款产品的诞生与增长',
+                subList: [
+                    {
+                        id: '4zyntmu9vcv',
+                        title: '01 | 如何验证你的产品创意？',
+                        src:
+                            './邱岳的产品实战/html/01讲如何验证你的产品创意.html',
+                        audio:
+                            './邱岳的产品实战/audio/01讲如何验证你的产品创意.mp3'
+                    },
+                    {
+                        id: '1x5eawbu7xj',
+                        title: '02 | 如何锤炼你的产品创意',
+                        src:
+                            './邱岳的产品实战/html/02讲如何锤炼你的产品创意.html',
+                        audio:
+                            './邱岳的产品实战/audio/02讲如何锤炼你的产品创意.mp3'
+                    },
+                    {
+                        id: '15bw3tnqk88',
+                        title: '03 | 要不要相信你的调查问卷',
+                        src:
+                            './邱岳的产品实战/html/03讲要不要相信你的调查问卷.html',
+                        audio:
+                            './邱岳的产品实战/audio/03讲要不要相信你的调查问卷.mp3'
+                    },
+                    {
+                        id: 'r7ksb4fbt29',
+                        title: '04 | 用最少的资源给你的产品试试水',
+                        src:
+                            './邱岳的产品实战/html/04讲用最少的资源给你的产品试试水.html',
+                        audio:
+                            './邱岳的产品实战/audio/04讲用最少的资源给你的产品试试水.mp3'
+                    },
+                    {
+                        id: '9je2br0r8mj',
+                        title: '05 | 如何快速利用 MVP 思想',
+                        src:
+                            './邱岳的产品实战/html/05讲如何快速利用MVP思想.html',
+                        audio:
+                            './邱岳的产品实战/audio/05讲如何快速利用MVP思想.mp3'
+                    },
+                    {
+                        id: '1yvh3vvte3n',
+                        title: '06 | 如何做好产品立项',
+                        src: './邱岳的产品实战/html/06讲如何做好产品立项.html',
+                        audio: './邱岳的产品实战/audio/06讲如何做好产品立项.mp3'
+                    },
+                    {
+                        id: 'jgzufdjavl3',
+                        title: '07 | 产品发布的那些坑儿',
+                        src:
+                            './邱岳的产品实战/html/07讲产品发布的那些坑儿.html',
+                        audio:
+                            './邱岳的产品实战/audio/07讲产品发布的那些坑儿.mp3'
+                    },
+                    {
+                        id: 'yb8jx2jhx5s',
+                        title: '08 | 产品增长越来越难，到底应该怎么办？',
+                        src:
+                            './邱岳的产品实战/html/08讲产品增长越来越难到底应该怎么办.html',
+                        audio:
+                            './邱岳的产品实战/audio/08讲产品增长越来越难到底应该怎么办.mp3'
+                    },
+                    {
+                        id: 'vm526tmhn7y',
+                        title: '09 | 产品增长的核心，究竟是什么？',
+                        src:
+                            './邱岳的产品实战/html/09讲产品增长的核心究竟是什么.html',
+                        audio:
+                            './邱岳的产品实战/audio/09讲产品增长的核心究竟是什么.mp3'
+                    },
+                    {
+                        id: 'auj3o30xvye',
+                        title: '10 | 你需要组建增长团队吗，应该如何组建呢？',
+                        src:
+                            './邱岳的产品实战/html/10讲你需要组建增长团队吗应该如何组建呢.html',
+                        audio:
+                            './邱岳的产品实战/audio/10讲你需要组建增长团队吗应该如何组建呢.mp3'
+                    },
+                    {
+                        id: 'u60ozc7g5zk',
+                        title: '11 | 产品增长有哪些业务公式与关键指标？（上）',
+                        src:
+                            './邱岳的产品实战/html/11讲产品增长有哪些业务公式与关键指标上.html',
+                        audio:
+                            './邱岳的产品实战/audio/11讲产品增长有哪些业务公式与关键指标上.mp3'
+                    },
+                    {
+                        id: 'eh2l85x1d1c',
+                        title: '12 | 产品增长有哪些业务公式与关键指标？（下）',
+                        src:
+                            './邱岳的产品实战/html/12讲产品增长有哪些业务公式与关键指标下.html',
+                        audio:
+                            './邱岳的产品实战/audio/12讲产品增长有哪些业务公式与关键指标下.mp3'
+                    },
+                    {
+                        id: 'ueb1cvwfxch',
+                        title: '13 | 产品做增长的过程中，有哪些关键套路？',
+                        src:
+                            './邱岳的产品实战/html/13讲产品做增长的过程中有哪些关键套路.html',
+                        audio:
+                            './邱岳的产品实战/audio/13讲产品做增长的过程中有哪些关键套路.mp3'
+                    },
+                    {
+                        id: 'tmnxvp4ry26',
+                        title: '14 | 实战增长，我们要知道哪些事儿？',
+                        src:
+                            './邱岳的产品实战/html/14讲实战增长我们要知道哪些事儿.html',
+                        audio:
+                            './邱岳的产品实战/audio/14讲实战增长我们要知道哪些事儿.mp3'
+                    },
+                    {
+                        id: '6y8dg1ejs63',
+                        title: '15 | 增长执行时，需要哪些关键的能力?',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '9b3mjgodv78',
+                        title: '16 | 当钩子靠不住时，如何提高用户留存？（上）',
+                        src:
+                            './邱岳的产品实战/html/16讲当钩子靠不住时如何提高用户留存上.html',
+                        audio:
+                            './邱岳的产品实战/audio/16讲当钩子靠不住时如何提高用户留存上.mp3'
+                    },
+                    {
+                        id: 'mphrbbsfivh',
+                        title: '17 | 当钩子靠不住时，如何提高用户留存？（下）',
+                        src:
+                            './邱岳的产品实战/html/17讲当钩子靠不住时如何提高用户留存下.html',
+                        audio:
+                            './邱岳的产品实战/audio/17讲当钩子靠不住时如何提高用户留存下.mp3'
+                    },
+                    {
+                        id: 'mcvtv5yvi56',
+                        title: '18 | 如何把你的新用户转化为忠实的长期用户？',
+                        src:
+                            './邱岳的产品实战/html/18讲如何把你的新用户转化为忠实的长期用户.html',
+                        audio:
+                            './邱岳的产品实战/audio/18讲如何把你的新用户转化为忠实的长期用户.mp3'
+                    },
+                    {
+                        id: 'ptnmsjnalmb',
+                        title:
+                            '19 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（上）',
+                        src:
+                            './邱岳的产品实战/html/19讲满眼尽是病毒裂变到底什么是传播和获客的正确姿势上.html',
+                        audio:
+                            './邱岳的产品实战/audio/19讲满眼尽是病毒裂变到底什么是传播和获客的正确姿势上.mp3'
+                    },
+                    {
+                        id: '5e6920a31sd',
+                        title:
+                            '20 | 满眼尽是“病毒”“裂变”，到底什么是传播和获客的正确姿势？（下）',
+                        src:
+                            './邱岳的产品实战/html/20讲满眼尽是病毒裂变到底什么是传播和获客的正确姿势下.html',
+                        audio:
+                            './邱岳的产品实战/audio/20讲满眼尽是病毒裂变到底什么是传播和获客的正确姿势下.mp3'
+                    },
+                    {
+                        id: '93ko78cwrp2',
+                        title: '21 | 增长黑客的阴暗面',
+                        src: './邱岳的产品实战/html/21讲增长黑客的阴暗面.html',
+                        audio: './邱岳的产品实战/audio/21讲增长黑客的阴暗面.mp3'
+                    }
+                ]
+            },
+            {
+                id: '701ydc7pxta',
+                title: '模块二：升级你的产品能力：产品经理的数据能力与商业意识',
+                subList: [
+                    {
+                        id: 'cltnnojt7ak',
+                        title:
+                            '22 | 产品经理需要具备哪些基本的数据能力和意识？',
+                        src:
+                            './邱岳的产品实战/html/22讲产品经理需要具备哪些基本的数据能力和意识.html',
+                        audio:
+                            './邱岳的产品实战/audio/22讲产品经理需要具备哪些基本的数据能力和意识.mp3'
+                    },
+                    {
+                        id: 'abggftb8k7h',
+                        title:
+                            '23 | 突发式流量数据暴跌，产品经理应该如何应对？【分析篇】',
+                        src:
+                            './邱岳的产品实战/html/23讲突发式流量数据暴跌产品经理应该如何应对【分析篇】.html',
+                        audio:
+                            './邱岳的产品实战/audio/23讲突发式流量数据暴跌产品经理应该如何应对【分析篇】.mp3'
+                    },
+                    {
+                        id: 'dvel6rsw51q',
+                        title:
+                            '24 | 突发式流量数据暴跌，产品经理应该如何应对？【拆解篇】',
+                        src:
+                            './邱岳的产品实战/html/24讲突发式流量数据暴跌产品经理应该如何应对【拆解篇】.html',
+                        audio:
+                            './邱岳的产品实战/audio/24讲突发式流量数据暴跌产品经理应该如何应对【拆解篇】.mp3'
+                    },
+                    {
+                        id: 'f300rf451uk',
+                        title:
+                            '25 | 突发式流量数据暴跌，产品经理应该如何应对？【处理篇】',
+                        src:
+                            './邱岳的产品实战/html/25讲突发式流量数据暴跌产品经理应该如何应对【处理篇】.html',
+                        audio:
+                            './邱岳的产品实战/audio/25讲突发式流量数据暴跌产品经理应该如何应对【处理篇】.mp3'
+                    },
+                    {
+                        id: '19p60wnq7ab',
+                        title: '26 | 当收集数据的前后，我们应该做什么？',
+                        src:
+                            './邱岳的产品实战/html/26讲当收集数据的前后我们应该做什么.html',
+                        audio:
+                            './邱岳的产品实战/audio/26讲当收集数据的前后我们应该做什么.mp3'
+                    },
+                    {
+                        id: 'uy57im6rn5b',
+                        title:
+                            '27 | 从具体业务出发，如何利用数据辅助你的决策？',
+                        src:
+                            './邱岳的产品实战/html/27讲从具体业务出发如何利用数据辅助你的决策.html',
+                        audio:
+                            './邱岳的产品实战/audio/27讲从具体业务出发如何利用数据辅助你的决策.mp3'
+                    },
+                    {
+                        id: 'mg2ffutoip2',
+                        title:
+                            '28 |  那些数据不能告诉你的事儿：尽信“数”不如无“数”',
+                        src:
+                            './邱岳的产品实战/html/28讲那些数据不能告诉你的事儿尽信数不如无数.html',
+                        audio:
+                            './邱岳的产品实战/audio/28讲那些数据不能告诉你的事儿尽信数不如无数.mp3'
+                    },
+                    {
+                        id: 'nox5sz4bviu',
+                        title:
+                            '29 |  每个产品经理都要掌握的基本商业概念是什么？',
+                        src:
+                            './邱岳的产品实战/html/29讲每个产品经理都要掌握的基本商业概念是什么.html',
+                        audio:
+                            './邱岳的产品实战/audio/29讲每个产品经理都要掌握的基本商业概念是什么.mp3'
+                    },
+                    {
+                        id: 'kvmw21nzew4',
+                        title: '30 | 如何提高你的商业产品收入？（上）',
+                        src:
+                            './邱岳的产品实战/html/30讲如何提高你的商业产品收入上.html',
+                        audio:
+                            './邱岳的产品实战/audio/30讲如何提高你的商业产品收入上.mp3'
+                    },
+                    {
+                        id: 'rh7ffnrhvgx',
+                        title: '31 | 如何提高你的商业产品收入（下）',
+                        src:
+                            './邱岳的产品实战/html/31讲如何提高你的商业产品收入下.html',
+                        audio:
+                            './邱岳的产品实战/audio/31讲如何提高你的商业产品收入下.mp3'
+                    },
+                    {
+                        id: 'obs88gvsrbu',
+                        title: '32 | “烧钱获客”中有哪些值得学习的商业逻辑？',
+                        src:
+                            './邱岳的产品实战/html/32讲烧钱获客中有哪些值得学习的商业逻辑.html',
+                        audio:
+                            './邱岳的产品实战/audio/32讲烧钱获客中有哪些值得学习的商业逻辑.mp3'
+                    },
+                    {
+                        id: '19uvcmn2dfm',
+                        title: '33 | “烧钱获客”的正确姿势有哪些？',
+                        src:
+                            './邱岳的产品实战/html/33讲烧钱获客的正确姿势有哪些.html',
+                        audio:
+                            './邱岳的产品实战/audio/33讲烧钱获客的正确姿势有哪些.mp3'
+                    },
+                    {
+                        id: 'ul02q5tbu4c',
+                        title: '34 | 如何具备赚钱的意识与能力？',
+                        src:
+                            './邱岳的产品实战/html/34讲如何具备赚钱的意识与能力.html',
+                        audio:
+                            './邱岳的产品实战/audio/34讲如何具备赚钱的意识与能力.mp3'
+                    }
+                ]
+            },
+            {
+                id: '8uvxyh1dhsq',
+                title: '模块三：产品经典案例解析：小程序的生态与实践',
+                subList: [
+                    {
+                        id: 'zju5vpifuy6',
+                        title: '35 | 对产品经理来说，做小程序有什么价值？',
+                        src:
+                            './邱岳的产品实战/html/35讲对产品经理来说做小程序有什么价值.html',
+                        audio:
+                            './邱岳的产品实战/audio/35讲对产品经理来说做小程序有什么价值.mp3'
+                    },
+                    {
+                        id: '1owbo0ab1rg',
+                        title: '36 | 如何利用小程序去做传播？',
+                        src:
+                            './邱岳的产品实战/html/36讲如何利用小程序去做传播.html',
+                        audio:
+                            './邱岳的产品实战/audio/36讲如何利用小程序去做传播.mp3'
+                    },
+                    {
+                        id: '2hfb5j3hrqe',
+                        title: '37 | 关于小程序，一些你应该知道的事儿',
+                        src:
+                            './邱岳的产品实战/html/37讲关于小程序一些你应该知道的事儿.html',
+                        audio:
+                            './邱岳的产品实战/audio/37讲关于小程序一些你应该知道的事儿.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'phkkm7czggw',
+                title: '模块四：产品会客厅——场景化处理你的产品疑难杂症',
+                subList: [
+                    {
+                        id: 'fkqa3at63dy',
+                        title: '产品会客厅 |  千万级用户的产品是如何打造的？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'hjtclz52cic',
+                        title: '产品会客厅 | 极客时间产品规划大揭秘',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'k28ea6mh6bv',
+                        title:
+                            '产品会客厅 | 没有项目管理经验，如何推动团队一起完成任务？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '3e6yfm11ssv',
+                        title:
+                            '产品会客厅 | 需求评审怎么做，如何区分什么是真的用户需求？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'rneccyr7xep',
+                        title:
+                            '产品会客厅 | 一次简洁并有效的产品分析需要怎么做？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'bms934kho52',
+                        title:
+                            '产品会客厅 | 从“分享有赏”案例讲起，如何做关键决策？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '6cbhfxrtakq',
+                        title:
+                            '产品会客厅 |  从案例出发，如何利用数据分析来验证新功能的效果？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '5mtvmtybx84',
+                        title: '产品会客厅 | 产品经理面试究竟考什么？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'f113qc3t0j8',
+                        title:
+                            '产品会客厅 | 产品经理的职业发展，你在哪个阶段？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'svyjl547hsr',
+                        title:
+                            '产品会客厅 |  在产品的获客与传播上，“极客时间”做了些什么？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'oyxp96g9747',
+                        title:
+                            '产品会客厅 | 从流量型平台转到资源匮乏平台，如何应对业务变化？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'f0u02j6tr6k',
+                        title:
+                            '产品会客厅 | 面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（上）',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'jvc6he4rqxf',
+                        title:
+                            '产品会客厅 |  面向大众的通用型产品VS受众面少的垂直领域，二者如何博弈？（下）',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'jguh5sabyv5',
+                        title: '产品会客厅 | 未来的产品会有怎样的发展趋势？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'bjzh0ajif9w',
+                        title:
+                            '产品会客厅 | 产品经理如何上手体验一个App？（上）',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'mvlp3dn11yf',
+                        title:
+                            '产品会客厅 |  产品经理如何上手体验一个App （下）',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'vtykh6l3y4s',
+                        title:
+                            '产品会客厅 | 从“极客时间”App的信息架构上，我们能学到什么？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'joa2l07p4a1',
+                        title: '产品会客厅 | 专栏销量过万是一种什么样的感受？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'tpuga8eu3rd',
+                title: '尾声',
+                subList: [
+                    {
+                        id: 'ztk312hno3e',
+                        title: '尾声 | 祝你胸怀远大，心狠手辣',
+                        src:
+                            './邱岳的产品实战/html/尾声讲祝你胸怀远大心狠手辣.html',
+                        audio:
+                            './邱岳的产品实战/audio/尾声讲祝你胸怀远大心狠手辣.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'wv427unzks2',
+                title: '结课测试',
+                subList: [
+                    {
+                        id: 'pckm413u9c8',
+                        title: '结课测试 | 关于产品的这些知识，你都掌握了吗？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'ruzz3alfp95',
+        type: 'pm',
+        cid: '100043001',
+        title: '摄影入门课',
+        subTitle: '希望人人都能拍出好照片',
+        authorName: '小麥',
+        authorInfo: '独立摄影师',
+        contents: [
+            {
+                id: '888v7ido4sv',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: 'yquw6k1y82m',
+                        title: '开篇词 | 拍了十三年照片，我还是个小白',
+                        src:
+                            './摄影入门课/html/开篇词拍了十三年照片我还是个小白.html',
+                        audio:
+                            './摄影入门课/audio/开篇词拍了十三年照片我还是个小白.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'b45xntgesf1',
+                title: '摄影史',
+                subList: [
+                    {
+                        id: 'kz8l612f2sa',
+                        title:
+                            '01 | 影像时代的视觉语言（上）：是什么推动了摄影的发展？',
+                        src:
+                            './摄影入门课/html/01影像时代的视觉语言上是什么推动了摄影的发展.html',
+                        audio:
+                            './摄影入门课/audio/01影像时代的视觉语言上是什么推动了摄影的发展.mp3'
+                    },
+                    {
+                        id: 'hao78r7ss3e',
+                        title: '02 | 影像时代的视觉语言（下）：有图就有真相？',
+                        src:
+                            './摄影入门课/html/02影像时代的视觉语言下有图就有真相.html',
+                        audio:
+                            './摄影入门课/audio/02影像时代的视觉语言下有图就有真相.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'itk1kpbj7ma',
+                title: '理论篇',
+                subList: [
+                    {
+                        id: 'rg8g1he38y2',
+                        title: '03 | 光圈与景深：拍照片可以不对焦？',
+                        src:
+                            './摄影入门课/html/03光圈与景深拍照片可以不对焦.html',
+                        audio:
+                            './摄影入门课/audio/03光圈与景深拍照片可以不对焦.mp3'
+                    },
+                    {
+                        id: 'sjia8x5jrqr',
+                        title:
+                            '04 | 镜头焦段与实际运用：你拍到的是你看到的么？',
+                        src:
+                            './摄影入门课/html/04镜头焦段与实际运用你拍到的是你看到的么.html',
+                        audio:
+                            './摄影入门课/audio/04镜头焦段与实际运用你拍到的是你看到的么.mp3'
+                    },
+                    {
+                        id: 'rda8cibk7ze',
+                        title: '05 | 快门：你看到就能拍到么？',
+                        src: './摄影入门课/html/05快门你看到就能拍到么.html',
+                        audio: './摄影入门课/audio/05快门你看到就能拍到么.mp3'
+                    },
+                    {
+                        id: '6wj8g9bviqt',
+                        title:
+                            '06 | 感光度 (ISO) 与其他相机参数：除了光圈和快门，你还应该知道些什么？',
+                        src:
+                            './摄影入门课/html/06感光度ISO与其他相机参数除了光圈和快门你还应该知道些什么.html',
+                        audio:
+                            './摄影入门课/audio/06感光度ISO与其他相机参数除了光圈和快门你还应该知道些什么.mp3'
+                    },
+                    {
+                        id: 'y2e8w9kgozl',
+                        title: '07 | 测光：什么才是正确曝光？',
+                        src: './摄影入门课/html/07测光什么才是正确曝光.html',
+                        audio: './摄影入门课/audio/07测光什么才是正确曝光.mp3'
+                    },
+                    {
+                        id: 'h98yix1cfkd',
+                        title: '08 | 拍摄设备选择（上）：都有什么相机？',
+                        src:
+                            './摄影入门课/html/08拍摄设备选择上都有什么相机.html',
+                        audio:
+                            './摄影入门课/audio/08拍摄设备选择上都有什么相机.mp3'
+                    },
+                    {
+                        id: 'gf42vosjq4b',
+                        title:
+                            '09 | 拍摄设备选择（下）：什么相机才是最好的相机？',
+                        src:
+                            './摄影入门课/html/09拍摄设备选择下什么相机才是最好的相机.html',
+                        audio:
+                            './摄影入门课/audio/09拍摄设备选择下什么相机才是最好的相机.mp3'
+                    },
+                    {
+                        id: 'l6cnpz8mq3u',
+                        title: '10 | 好照片的构成因素：什么照片才是好照片？',
+                        src:
+                            './摄影入门课/html/10好照片的构成因素什么照片才是好照片.html',
+                        audio:
+                            './摄影入门课/audio/10好照片的构成因素什么照片才是好照片.mp3'
+                    }
+                ]
+            },
+            {
+                id: '0urxgs327ky',
+                title: '实战篇',
+                subList: [
+                    {
+                        id: 'mf28gjt49pf',
+                        title: '11 | 光（上）：摄影的“影”长什么样？',
+                        src: './摄影入门课/html/11光上摄影的影长什么样.html',
+                        audio: './摄影入门课/audio/11光上摄影的影长什么样.mp3'
+                    },
+                    {
+                        id: 'i8d8p1bxhwm',
+                        title: '12 | 光（中）：你真的会在阳光下拍照片么？',
+                        src:
+                            './摄影入门课/html/12光中你真的会在阳光下拍照片么.html',
+                        audio:
+                            './摄影入门课/audio/12光中你真的会在阳光下拍照片么.mp3'
+                    },
+                    {
+                        id: 'b1az6rl2pmi',
+                        title:
+                            '13 | 光（下）：闪光灯是因为环境太暗所以照亮儿用的么？',
+                        src:
+                            './摄影入门课/html/13光下闪光灯是因为环境太暗所以照亮儿用的么.html',
+                        audio:
+                            './摄影入门课/audio/13光下闪光灯是因为环境太暗所以照亮儿用的么.mp3'
+                    },
+                    {
+                        id: 'hgm2ufnwk1d',
+                        title: '14 | 静物：静物是静物么？',
+                        src: './摄影入门课/html/14静物静物是静物么.html',
+                        audio: './摄影入门课/audio/14静物静物是静物么.mp3'
+                    },
+                    {
+                        id: 'hh16gwntki9',
+                        title: '15 | 人物：会聊天比会拍照片更重要',
+                        src:
+                            './摄影入门课/html/15人物会聊天比会拍照片更重要.html',
+                        audio:
+                            './摄影入门课/audio/15人物会聊天比会拍照片更重要.mp3'
+                    },
+                    {
+                        id: 'yiq4ksd9eki',
+                        title: '16 | 风光：你不想让别人看见什么？',
+                        src:
+                            './摄影入门课/html/16风光你不想让别人看见什么.html',
+                        audio:
+                            './摄影入门课/audio/16风光你不想让别人看见什么.mp3'
+                    },
+                    {
+                        id: 'hd4mtdymxgl',
+                        title: '17 | 街拍：艺术这场“大骗局”',
+                        src: './摄影入门课/html/17街拍艺术这场大骗局.html',
+                        audio: './摄影入门课/audio/17街拍艺术这场大骗局.mp3'
+                    },
+                    {
+                        id: 'sk7dc4gysh1',
+                        title:
+                            '18 | 基础手机后期（上）：VSCO 完整指南（@随你们去）',
+                        src:
+                            './摄影入门课/html/18基础手机后期上VSCO完整指南@随你们去.html',
+                        audio:
+                            './摄影入门课/audio/18基础手机后期上VSCO完整指南@随你们去.mp3'
+                    },
+                    {
+                        id: 'oy7cpdqvs0v',
+                        title:
+                            '19 | 基础手机后期（下）：Snapseed 使用攻略（@随你们去）',
+                        src:
+                            './摄影入门课/html/19基础手机后期下Snapseed使用攻略@随你们去.html',
+                        audio:
+                            './摄影入门课/audio/19基础手机后期下Snapseed使用攻略@随你们去.mp3'
+                    },
+                    {
+                        id: 'exrst48yx95',
+                        title: '20 | 摄影的更多可能：摄影到底是不是艺术？',
+                        src:
+                            './摄影入门课/html/20摄影的更多可能摄影到底是不是艺术.html',
+                        audio:
+                            './摄影入门课/audio/20摄影的更多可能摄影到底是不是艺术.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'x3k7a0e6c8h',
+                title: '结束语',
+                subList: [
+                    {
+                        id: '8nmw2mu0gd4',
+                        title: '在此谢罪，结束语被迫延期了',
+                        src: './摄影入门课/html/在此谢罪结束语被迫延期了.html',
+                        audio: './摄影入门课/audio/在此谢罪结束语被迫延期了.mp3'
+                    },
+                    {
+                        id: 'hc25joc4qde',
+                        title: '结束语 | 过好生活本身远比把他们拍下来重要',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'x9tbfmk6zsi',
+                title: '加餐',
+                subList: [
+                    {
+                        id: 'lh5pnvf3vnx',
+                        title: '第一次社群分享半实录：怎么能问出一个好问题？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'm2oczk99wpt',
+                        title: '第二次社群分享半实录：拍照片的三个阶段',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'ya3kyshg1dt',
+                        title: '第三次社群分享半实录：大型评片儿现场',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'ko4fdhpvxag',
+                        title: '关于《3》这本画册',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
     // -------- 前端
     {
         id: 'chongxueqianduan',

@@ -1,3 +1,8 @@
+export function getAbsoluteSourcePath(src) {
+    src = src.replace('./', '')
+    return window.location.origin + '/api/' + src
+}
+
 /**
  * 通过id获取src
  * @param {*} id

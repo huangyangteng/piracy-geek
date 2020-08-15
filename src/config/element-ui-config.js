@@ -15,9 +15,11 @@ import {
     Button,
     Popover,
     Drawer,
-    Link
+    Link,
+    Slider
 } from 'element-ui'
 
+Vue.use(Slider)
 Vue.use(Dialog)
 Vue.use(Link)
 Vue.use(Dropdown)

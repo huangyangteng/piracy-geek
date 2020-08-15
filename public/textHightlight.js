@@ -81,12 +81,18 @@
      * @returns {object} refined boundaries and initial state of highlighting algorithm.
      */
     function refineRangeBoundaries(range) {
-        var startContainer = range.startContainer,
-            endContainer = range.endContainer,
-            ancestor = range.commonAncestorContainer,
+        var startContainer = range.startContainer, //起始点的DOM元素
+            endContainer = range.endContainer, //结束点的DOM元素
+            ancestor = range.commonAncestorContainer, //起始点和结束的共同的祖先元素
             goDeeper = true
 
+        // --------- 处理结束点的DOM
         if (range.endOffset === 0) {
+            /**
+             *  <p>一二三四五六七八</p>
+             *  <div>九十</div>
+             */
+            //选到了下一行，即“九”前面的位置，endContainer就等于p元素
             while (
                 !endContainer.previousSibling &&
                 endContainer.parentNode !== ancestor
@@ -95,19 +101,25 @@
             }
             endContainer = endContainer.previousSibling
         } else if (endContainer.nodeType === NODE_TYPE.TEXT_NODE) {
-            //文本节点
-            // 如果一段文字只选了一部分，把未选中的部分截取掉
+            /**
+             *  <p>一二三四五六七八</p>
+             *  <div>九十</div>
+             */
+            // 一段文字只选了一部分，例如"二三四五"，把未选中的部分截取掉,endContainer就是"二三四五"
             if (range.endOffset < endContainer.nodeValue.length) {
                 endContainer.splitText(range.endOffset)
             }
         } else if (range.endOffset > 0) {
+            //这个是什么情况？？
             endContainer = endContainer.childNodes.item(range.endOffset - 1)
         }
-
+        // --------- 处理开始点的DOM
         if (startContainer.nodeType === NODE_TYPE.TEXT_NODE) {
+            // 选中了部分文本节点
             if (range.startOffset === startContainer.nodeValue.length) {
                 goDeeper = false
             } else if (range.startOffset > 0) {
+                // 选中的位置不是0，就要开始截取   例如 一二三四 选中了二三四，就要把一截掉
                 startContainer = startContainer.splitText(range.startOffset)
                 if (endContainer === startContainer.previousSibling) {
                     endContainer = startContainer
@@ -496,10 +508,12 @@
 
         if (this.options.onBeforeHighlight(range) === true) {
             timestamp = +new Date()
+            //接下来两行代码的作用是你：创建wrapper元素: <span class="highlighted" data-timestamp="1277747271"></span>
             wrapper = TextHighlighter.createWrapper(this.options)
             wrapper.setAttribute(TIMESTAMP_ATTR, timestamp)
-
+            // 高亮元素
             createdHighlights = this.highlightRange(range, wrapper)
+            // 标准化高亮元素
             normalizedHighlights = this.normalizeHighlights(createdHighlights)
 
             this.options.onAfterHighlight(
@@ -547,7 +561,7 @@
                     wrapperClone = wrapper.cloneNode(true)
                     wrapperClone.setAttribute(DATA_ATTR, true)
                     nodeParent = node.parentNode
-
+                    // 用span把高亮的文本包裹起来
                     // highlight if a node is inside the el
                     if (
                         dom(this.el).contains(nodeParent) ||
@@ -560,19 +574,21 @@
 
                 goDeeper = false
             }
+            // 如果开始节点===结束节点，
             if (
                 node === endContainer &&
                 !(endContainer.hasChildNodes() && goDeeper)
             ) {
                 done = true
             }
-
+            // 如果节点属于忽略列表中的元素，忽略
             if (node.tagName && IGNORE_TAGS.indexOf(node.tagName) > -1) {
                 if (endContainer.parentNode === node) {
                     done = true
                 }
                 goDeeper = false
             }
+            // 如果node有子元素  下面的代码的作用是不是遍历dom节点？？
             if (goDeeper && node.hasChildNodes()) {
                 node = node.firstChild
             } else if (node.nextSibling) {

@@ -31,6 +31,7 @@ export default {
         window.addEventListener('click', e => {
             let target = e.target
             if (target.nodeName == 'IMG') {
+                if (target.className == 'not-preview') return
                 this.updatePicturePreview({
                     src: target.src,
                     width: target.naturalWidth + 'px',

@@ -2,10 +2,13 @@
     <section>
         <div class="box"></div>
         <div class="mouse-follow" :style="followBoxStyle"></div>
+        <AudioPlayer></AudioPlayer>
     </section>
 </template>
 <script>
+import AudioPlayer from '../../components/AudioPlayer'
 export default {
+    components: { AudioPlayer },
     data() {
         return {
             followBox: {

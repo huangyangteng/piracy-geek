@@ -24,15 +24,29 @@ const getters = {
     curColumnId: state => state.curColumn.id,
     curColumnTitle: state => state.curColumn.title,
     curContents: state => state.curColumn.contents,
-    curArticleTitle: (state, getters) => {
+    curArticleList: (state, getters) => {
+        //当前专栏所有文章列表
         let tmp = getters.curContents.map(item => item.subList)
-        let list = tmp.reduce((prev, cur) => prev.concat(cur))
+        return tmp.reduce((prev, cur) => prev.concat(cur))
+    },
+    curArticleTitle: (state, getters) => {
         try {
-            return list.find(item => item.id == state.curArticleId).title
+            return getters.curArticleList.find(
+                item => item.id == state.curArticleId
+            ).title
         } catch (error) {
             return ''
         }
     },
+    curArticleAudio: (state, getters) => {
+        let article = getters.curArticleList.find(
+            item => item.id == state.curArticleId
+        )
+        if (!article) return null
+        if (!article.audio) return null
+        return article.audio.replace('./', '')
+    },
+
     // 显示状态
     isFold: state => !state.status.navIsShow,
     isFullScreen: state => {

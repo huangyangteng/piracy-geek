@@ -10,8 +10,11 @@
             v-show="isFold"
             class="el-icon-s-unfold fold-icon"
         ></i>
+        <!-- 标题 -->
         <span class="jk-title">{{ curColumnTitle }}</span>
-
+        <!-- 音频播放 -->
+        <AudioPlayer></AudioPlayer>
+        <!-- 选择颜色 -->
         <aside>
             <section class="hltr-tool">
                 <div
@@ -23,6 +26,7 @@
                     @click="changeHltrColor(color)"
                 ></div>
             </section>
+
             <section class="read-tools">
                 <el-tooltip content="保存高亮信息" placement="top">
                     <i
@@ -62,9 +66,11 @@
 <script>
 import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
 import addNote from './AddNote'
+import AudioPlayer from '../../../components/AudioPlayer'
 export default {
     components: {
-        addNote
+        addNote,
+        AudioPlayer
     },
     data() {
         return {

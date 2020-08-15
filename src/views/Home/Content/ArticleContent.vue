@@ -62,6 +62,7 @@ export default {
                 document.querySelector('.article-wrapper').scrollTop = top
                 this.setTitle()
                 this.loadHightLight(id)
+                this.bindEvent()
             })
         },
         loadHightLight(id) {
@@ -143,6 +144,17 @@ export default {
         },
         hideLoading() {
             this.loadingInstance.close()
+        },
+        bindEvent() {
+            //绑定事件
+            // let copyBtnDoms = document.querySelectorAll('.richcontent-pre-copy')
+            document.addEventListener('click', e => {
+                if (e.target.className == 'richcontent-pre-copy') {
+                    let code = e.target.previousElementSibling
+                    console.log('bindEvent -> code', code)
+                    // 从code中提取代码
+                }
+            })
         }
     },
     watch: {
@@ -192,6 +204,9 @@ export default {
     transition: background-color 0.3s ease;
     img {
         width: 100%;
+    }
+    h1 {
+        font-size: 21px;
     }
 }
 ._2c4hPkl9 > div > div {

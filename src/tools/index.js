@@ -9,3 +9,10 @@ export function uid() {
     })
     return uuid
 }
+export function formatDuration(time) {
+    let min = Math.floor(time / 60) % 60
+    let sec = Math.floor(time % 60)
+    min = min < 10 ? '0' + min : min
+    sec = sec < 10 ? '0' + sec : sec
+    return min + ':' + sec
+}
