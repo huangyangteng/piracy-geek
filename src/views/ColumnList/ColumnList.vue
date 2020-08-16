@@ -43,7 +43,7 @@ export default {
     name: 'ColumnList',
     data() {
         return {
-            activePath: 'cs',
+            activePath: 'web',
             columnList: formatColumn(COLUMN_LIST, PATH_LIST)
         }
     },

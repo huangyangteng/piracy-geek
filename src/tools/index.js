@@ -16,3 +16,36 @@ export function formatDuration(time) {
     sec = sec < 10 ? '0' + sec : sec
     return min + ':' + sec
 }
+export function getElementTop(element) {
+    let actualTop = element.offsetTop
+    let current = element.offsetParent
+    while (current !== null) {
+        actualTop += current.offsetTop
+        current = current.offsetParent
+    }
+    return actualTop
+}
+export function getElementLeft(element) {
+    let actualLeft = element.offsetLeft
+    let current = element.offsetParent
+    while (current !== null) {
+        actualLeft += current.offsetLeft
+        current = current.offsetParent
+    }
+    return actualLeft
+}
+export function copyToBoard(value) {
+    console.log('copyToBoard -> value', value)
+    const input = document.createElement('input')
+    document.body.appendChild(input)
+    input.setAttribute('value', value)
+    input.select()
+
+    if (document.execCommand('copy')) {
+        document.execCommand('copy')
+        document.body.removeChild(input)
+        return true
+    }
+    document.body.removeChild(input)
+    return false
+}

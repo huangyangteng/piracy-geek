@@ -67,6 +67,7 @@
 import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
 import addNote from './AddNote'
 import AudioPlayer from '../../../components/AudioPlayer'
+import { getElementTop, copyToBoard } from '../../../tools'
 export default {
     components: {
         addNote,
@@ -121,6 +122,22 @@ export default {
                 }
             }
         },
+        copyHightlight(copyId) {
+            let hightlightDom = document.querySelectorAll('.highlighted')
+            let copyText = ''
+            for (let i = 0; i < hightlightDom.length; i++) {
+                let curDom = hightlightDom[i]
+                if (curDom.dataset['timestamp'] == copyId) {
+                    copyText += curDom.innerHTML
+                }
+            }
+            if (copyToBoard(copyText)) {
+                this.$Message({
+                    type: 'success',
+                    message: '复制成功'
+                })
+            }
+        },
         bindCancelHighlight() {
             // 添加删除功能
             let articleWrapperDom = document.querySelector('.article-wrapper')
@@ -129,8 +146,15 @@ export default {
                     '.hightlight-oprate'
                 )
                 if (!hightLightOprateMenu) return
+                // 如果点击了取消
                 if (e.target.className == 'hight-op-item delete') {
                     this.cancelHighlight(e.target.id)
+                    hightLightOprateMenu.style.visibility = 'hidden'
+                    return
+                }
+                // 如果点击了复制
+                if (e.target.className == 'hight-op-item copy') {
+                    this.copyHightlight(e.target.id)
                     hightLightOprateMenu.style.visibility = 'hidden'
                     return
                 }
@@ -138,19 +162,20 @@ export default {
                     hightLightOprateMenu.style.visibility = 'hidden'
                     return
                 }
+                // 如果点击了高亮元素
                 let articleWrapperWidth = articleWrapperDom.offsetWidth - 80
-                let highlightTextWidth = e.target.offsetWidth
-                if (articleWrapperWidth - highlightTextWidth <= 10) {
-                    // 高亮超过一行
-                    hightLightOprateMenu.style.left =
-                        highlightTextWidth / 2 - 113 + 'px'
-                } else {
-                    hightLightOprateMenu.style.left = e.target.offsetLeft + 'px'
-                }
-                hightLightOprateMenu.style.top = e.target.offsetTop - 50 + 'px'
+                //水平位置默认居中
+                hightLightOprateMenu.style.left =
+                    articleWrapperWidth / 2 - 113 + 'px'
+                hightLightOprateMenu.style.top =
+                    getElementTop(e.target) - 70 - 50 + 'px'
+                // hightLightOprateMenu.style.top = e.target.offsetTop - 50 + 'px'
                 hightLightOprateMenu.style.visibility = 'visible'
                 // 在取消高亮按钮上设置id,用于取消高亮
                 hightLightOprateMenu.querySelector('.delete').id =
+                    e.target.dataset.timestamp
+                // 在复制按钮上也设置id
+                hightLightOprateMenu.querySelector('.copy').id =
                     e.target.dataset.timestamp
             })
         },

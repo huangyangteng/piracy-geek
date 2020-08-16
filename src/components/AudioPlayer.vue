@@ -77,7 +77,7 @@ export default {
                 { value: 1.25, label: '1.25x' },
                 { value: 1.5, label: '1.5x' },
                 { value: 1.75, label: '1.75x' },
-                { value: 2, label: '2.0x' },
+                { value: 2, label: '2.0x' }
             ],
             duration: 0,
             curTime: 0,
@@ -96,9 +96,6 @@ export default {
         },
         audioSrc() {
             return this.sourceBase + this.curArticleAudio
-        },
-        step() {
-            return this.duration / 100
         },
         playPercent() {
             return this.curTime
@@ -143,7 +140,9 @@ export default {
             }
         },
         changeSlider(val) {
-            if (this.isPlay) return
+            if (this.isPlay) {
+                return
+            }
 
             this.curTime = val
             this.$refs.audioDom.currentTime = this.curTime
@@ -151,9 +150,13 @@ export default {
         },
         stopChangeSlider(val) {
             console.log('stopChangeSlider -> val', val)
+            // this.audioPause()
+            // this.curTime = val
+            // this.$refs.audioDom.currentTime = this.curTime
         }
     },
     mounted() {
+        if (!this.curArticleAudio) return
         this.$refs.audioDom.addEventListener('timeupdate', () => {
             if (!this.$refs.audioDom) return
             if (this.isPlay) {
