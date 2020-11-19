@@ -1,5 +1,345 @@
 export default [
     {
+        id: 'lpkpjtea8sf',
+        type: 'skill',
+        cid: '100052201',
+        title: '职场求生攻略',
+        subTitle: '会工作也是个技术活儿',
+        authorName: '臧萌',
+        authorInfo: 'PayPal 数据处理组技术负责人，《Java 入门 1 2 3》作者',
+        contents: [
+            {
+                id: 'nn02ea5zyjw',
+                title: '开篇词',
+                subList: [
+                    {
+                        id: 'q8eqp47cpqt',
+                        title: '开篇词 | 学会如何工作，和学习技术同等重要',
+                        src:
+                            './职场求生攻略/html/开篇词学会如何工作和学习技术同等重要【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/开篇词学会如何工作和学习技术同等重要【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: 't52l9rtutbo',
+                title: '职业素养篇',
+                subList: [
+                    {
+                        id: 'nt3lh56d2yk',
+                        title:
+                            '01丨优先级：工作中那么多事情，我要如何安排优先级？',
+                        src:
+                            './职场求生攻略/html/01优先级工作中那么多事情我要如何安排优先级【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/01优先级工作中那么多事情我要如何安排优先级【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'hkr8n5iqu28',
+                        title: '02丨沟通：邮件那么重要，你还在轻视邮件吗？',
+                        src:
+                            './职场求生攻略/html/02沟通邮件那么重要你还在轻视邮件吗【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/02沟通邮件那么重要你还在轻视邮件吗【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'iuzooc7uk1g',
+                        title: '03丨沟通：程序员为什么应该爱上交流？',
+                        src:
+                            './职场求生攻略/html/03沟通程序员为什么应该爱上交流【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/03沟通程序员为什么应该爱上交流【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'ajx42tor6ni',
+                        title:
+                            '04丨主观能动性：为什么程序员，需要发挥主观能动性？',
+                        src:
+                            './职场求生攻略/html/04主观能动性为什么程序员需要发挥主观能动性【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/04主观能动性为什么程序员需要发挥主观能动性【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'puvpxckxel0',
+                        title:
+                            '05丨责任的边界：程序员的职责范围仅仅只是被安排的任务吗？',
+                        src:
+                            './职场求生攻略/html/05责任的边界程序员的职责范围仅仅只是被安排的任务吗【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/05责任的边界程序员的职责范围仅仅只是被安排的任务吗【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'lp65gb4bq28',
+                        title: '06 | 职业素养篇热点问题答疑',
+                        src:
+                            './职场求生攻略/html/06职业素养篇热点问题答疑【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/06职业素养篇热点问题答疑【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'jies587aimn',
+                title: '职业选择篇',
+                subList: [
+                    {
+                        id: '277mwqvtut4',
+                        title: '07 | 职业规划：如何选择一个公司？',
+                        src:
+                            './职场求生攻略/html/07职业规划如何选择一个公司【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/07职业规划如何选择一个公司【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'gcespt543w0',
+                        title: '08丨管理者关系：怎么才叫“跟对人”？',
+                        src:
+                            './职场求生攻略/html/08管理者关系怎么才叫跟对人【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/08管理者关系怎么才叫跟对人【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'et5vok1fk8c',
+                        title: '09丨管理者关系：跟对人和做对事哪个更重要？',
+                        src:
+                            './职场求生攻略/html/09管理者关系跟对人和做对事哪个更重要【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/09管理者关系跟对人和做对事哪个更重要【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: '0fdfta1ipin',
+                        title: '10丨职业规划： 跳槽之前你想清楚这些事情了吗？',
+                        src:
+                            './职场求生攻略/html/10职业规划跳槽之前你想清楚这些事情了吗【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/10职业规划跳槽之前你想清楚这些事情了吗【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'uvtufgmez91',
+                        title: '11丨面试：如何准备简历和面试？',
+                        src:
+                            './职场求生攻略/html/11面试如何准备简历和面试【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/11面试如何准备简历和面试【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'n7v7261apep',
+                        title: '12丨外包：外包不也是写程序吗？有什么不一样的？',
+                        src:
+                            './职场求生攻略/html/12外包外包不也是写程序吗有什么不一样的【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/12外包外包不也是写程序吗有什么不一样的【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'pe0kb5czoun',
+                        title:
+                            '13 | 外派：大家都在一个办公室工作，有什么不一样？',
+                        src:
+                            './职场求生攻略/html/13外派大家都在一个办公室工作有什么不一样【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/13外派大家都在一个办公室工作有什么不一样【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'n4i2l0xir2r',
+                        title: '14 | 职业规划 ：转管理是程序员的终极选择吗？',
+                        src:
+                            './职场求生攻略/html/14职业规划转管理是程序员的终极选择吗【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/14职业规划转管理是程序员的终极选择吗【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'tfmw4mpxy8s',
+                        title:
+                            '15 | 职业规划 ：程序员加入创业公司，这些事情你想清楚了吗？',
+                        src:
+                            './职场求生攻略/html/15职业规划程序员加入创业公司这些事情你想清楚了吗【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/15职业规划程序员加入创业公司这些事情你想清楚了吗【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'ov20fel5j4q',
+                        title: '16 | 答疑篇：为啥你工作八年，只抵别人一年？',
+                        src:
+                            './职场求生攻略/html/16答疑篇为啥你工作八年只抵别人一年【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/16答疑篇为啥你工作八年只抵别人一年【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: '898fxn01ryy',
+                title: '职场情商篇',
+                subList: [
+                    {
+                        id: 'tx2iijhhpa2',
+                        title:
+                            '17 | 升职：看着周围的人都升职了，我什么时候才能升职？',
+                        src:
+                            './职场求生攻略/html/17升职看着周围的人都升职了我什么时候才能升职【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/17升职看着周围的人都升职了我什么时候才能升职【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'nfunl769p40',
+                        title:
+                            '18 | 职场政治：我只想好好干活，职场政治和我有什么关系？',
+                        src:
+                            './职场求生攻略/html/18职场政治我只想好好干活职场政治和我有什么关系【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/18职场政治我只想好好干活职场政治和我有什么关系【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'z9fu7uufz2a',
+                        title:
+                            '19 | 职场政治：面对公司自上而下的技术更新，我该怎么办？',
+                        src:
+                            './职场求生攻略/html/19职场政治面对公司自上而下的技术更新我该怎么办【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/19职场政治面对公司自上而下的技术更新我该怎么办【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: '0ggcchcfqlx',
+                        title: '20 | 沟通技巧：如何跟自己的同事请教问题？',
+                        src:
+                            './职场求生攻略/html/20沟通技巧如何跟自己的同事请教问题【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/20沟通技巧如何跟自己的同事请教问题【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: '2smkpln2k3t',
+                        title: '21 | 答疑篇：想升职，我该准备些什么？',
+                        src:
+                            './职场求生攻略/html/21答疑篇想升职我该准备些什么【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/21答疑篇想升职我该准备些什么【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'x13jz1o39l7',
+                title: '技术成长篇',
+                subList: [
+                    {
+                        id: 'rhw5nw8qcd0',
+                        title: '22 | 学习观：程序员如何定义自己的技术舒适区？',
+                        src:
+                            './职场求生攻略/html/22学习观程序员如何定义自己的技术舒适区【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/22学习观程序员如何定义自己的技术舒适区【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'tlxldj9gs5p',
+                        title: '23丨技术观：做程序员，技术观为何如此重要？',
+                        src:
+                            './职场求生攻略/html/23技术观做程序员技术观为何如此重要【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/23技术观做程序员技术观为何如此重要【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'ne396a6r7w2',
+                        title:
+                            '24丨技术观：程序员在技术的成长之路上，有哪些陷阱？',
+                        src:
+                            './职场求生攻略/html/24技术观程序员在技术的成长之路上有哪些陷阱【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/24技术观程序员在技术的成长之路上有哪些陷阱【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'ef49pzwhnwk',
+                        title:
+                            '25 | 系统架构：如何从写代码的程序员，成长为软件系统架构师？',
+                        src:
+                            './职场求生攻略/html/25系统架构如何从写代码的程序员成长为软件系统架构师【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/25系统架构如何从写代码的程序员成长为软件系统架构师【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'l2va3h4pcl5',
+                        title:
+                            '26 | 系统集成：为什么最容易出问题的是系统集成？',
+                        src:
+                            './职场求生攻略/html/26系统集成为什么最容易出问题的是系统集成【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/26系统集成为什么最容易出问题的是系统集成【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: 'cqrwtf39a8g',
+                        title: '27 | 答疑篇：什么样的技术观能够更快成长？',
+                        src:
+                            './职场求生攻略/html/27答疑篇什么样的技术观能够更快成长【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/27答疑篇什么样的技术观能够更快成长【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: '90nvufs5tnf',
+                title: '加餐',
+                subList: [
+                    {
+                        id: '1owb0xrav4j',
+                        title:
+                            '28 | 沟通中的冲突：什么时候应该妥协，什么时候应该坚持？',
+                        src:
+                            './职场求生攻略/html/28沟通原则什么时候应该妥协什么时候应该坚持.html',
+                        audio: ''
+                    },
+                    {
+                        id: '94a4ubqt2y5',
+                        title: '29 | 加班：加班逃不过，如何用正确姿势加班？',
+                        src:
+                            './职场求生攻略/html/29加班加班逃不过如何用正确姿势加班【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/29加班加班逃不过如何用正确姿势加班【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: '9kfu2i66ozn',
+                        title: '30 | 焦虑：程序员怎样才能越干越给力？',
+                        src:
+                            './职场求生攻略/html/30焦虑程序员怎样才能越干越给力【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/30焦虑程序员怎样才能越干越给力【更多IT资源www.cong0sousuo.top】.mp3'
+                    },
+                    {
+                        id: '156jr4eyl9y',
+                        title: '31 | 数据观：在你眼里，数据到底是什么？',
+                        src:
+                            './职场求生攻略/html/31数据观在你眼里数据到底是什么【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/31数据观在你眼里数据到底是什么【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: '74a4c4y4hiz',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 'jqyjr51or3r',
+                        title: '结束语 | 职场的攀岩之路',
+                        src:
+                            './职场求生攻略/html/结束语职场的攀岩之路【更多IT资源www.cong0sousuo.top】.html',
+                        audio:
+                            './职场求生攻略/audio/结束语职场的攀岩之路【更多IT资源www.cong0sousuo.top】.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'djxv8iptm0t',
+                title: '测试题',
+                subList: [
+                    {
+                        id: '9a59vjnlkdx',
+                        title: '结课测试 | 这些职场相关问题，你能答对多少？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 'niew50p7h79',
         type: 'backend',
         cid: '100029501',
