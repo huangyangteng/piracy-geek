@@ -599,7 +599,6 @@ video::-webkit-media-controls-enclosure {
 }
 
 ._29HP61GA_0 {
-    max-width:800px;
     margin:0 auto;
     margin-bottom: 20px;
     font-weight: 400;
@@ -609,7 +608,8 @@ video::-webkit-media-controls-enclosure {
     word-break: normal;
     font-size: 17px;
     -webkit-transition: background-color .3s ease;
-    transition: background-color .3s ease
+    transition: background-color .3s ease;
+    max-width: 1200px!important;
 }
 
 ._29HP61GA_0 .MathJax_Display {

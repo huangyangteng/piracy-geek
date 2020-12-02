@@ -1,5 +1,807 @@
 export default [
     {
+        id: 'rt061ll7u9l',
+        type: 'backend',
+        cid: '100015201',
+        title: '深入剖析Kubernetes',
+        subTitle: 'Kubernetes原来可以如此简单',
+        authorName: '张磊',
+        authorInfo: 'Kubernetes社区资深成员与项目维护者',
+        contents: [
+            {
+                id: 'tzuvh1ngsbi',
+                title: '课前必读',
+                subList: [
+                    {
+                        id: '8n825cqz97d',
+                        title: '01 | 预习篇 · 小鲸鱼大事记（一）：初出茅庐',
+                        src:
+                            './深入剖析Kubernetes/html/01预习篇·小鲸鱼大事记一初出茅庐.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/01预习篇·小鲸鱼大事记一初出茅庐.mp3'
+                    },
+                    {
+                        id: 'nnvizh9ch5v',
+                        title: '02 | 预习篇 · 小鲸鱼大事记（二）：崭露头角',
+                        src:
+                            './深入剖析Kubernetes/html/02预习篇·小鲸鱼大事记二崭露头角.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/02预习篇·小鲸鱼大事记二崭露头角.mp3'
+                    },
+                    {
+                        id: '4mff3epkiu4',
+                        title: '03 | 预习篇 · 小鲸鱼大事记（三）：群雄并起',
+                        src:
+                            './深入剖析Kubernetes/html/03预习篇·小鲸鱼大事记三群雄并起.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/03预习篇·小鲸鱼大事记三群雄并起.mp3'
+                    },
+                    {
+                        id: '71m16tr9ups',
+                        title: '04 | 预习篇 · 小鲸鱼大事记（四）：尘埃落定',
+                        src:
+                            './深入剖析Kubernetes/html/04预习篇·小鲸鱼大事记四尘埃落定.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/04预习篇·小鲸鱼大事记四尘埃落定.mp3'
+                    }
+                ]
+            },
+            {
+                id: '0gc76bc22sr',
+                title: '容器技术概念入门篇',
+                subList: [
+                    {
+                        id: 'd6opi06e61x',
+                        title: '05 | 白话容器基础（一）：从进程说开去',
+                        src:
+                            './深入剖析Kubernetes/html/05白话容器基础一从进程说开去.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/05白话容器基础一从进程说开去.mp3'
+                    },
+                    {
+                        id: 'y7izptjenma',
+                        title: '06 | 白话容器基础（二）：隔离与限制',
+                        src:
+                            './深入剖析Kubernetes/html/06白话容器基础二隔离与限制.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/06白话容器基础二隔离与限制.mp3'
+                    },
+                    {
+                        id: 'wzniv3gpiw3',
+                        title: '07 | 白话容器基础（三）：深入理解容器镜像',
+                        src:
+                            './深入剖析Kubernetes/html/07白话容器基础三深入理解容器镜像.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/07白话容器基础三深入理解容器镜像.mp3'
+                    },
+                    {
+                        id: 'hciuw1gdi4e',
+                        title: '08 | 白话容器基础（四）：重新认识Docker容器',
+                        src:
+                            './深入剖析Kubernetes/html/08白话容器基础四重新认识Docker容器.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/08白话容器基础四重新认识Docker容器.mp3'
+                    },
+                    {
+                        id: 'g4277josanb',
+                        title: '09 | 从容器到容器云：谈谈Kubernetes的本质',
+                        src:
+                            './深入剖析Kubernetes/html/09从容器到容器云谈谈Kubernetes的本质.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/09从容器到容器云谈谈Kubernetes的本质.mp3'
+                    }
+                ]
+            },
+            {
+                id: '3m3877uq806',
+                title: 'Kubernetes集群搭建与实践',
+                subList: [
+                    {
+                        id: '2ypyw4hq9zx',
+                        title: '10 | Kubernetes一键部署利器：kubeadm',
+                        src:
+                            './深入剖析Kubernetes/html/10Kubernetes一键部署利器kubeadm.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/10Kubernetes一键部署利器kubeadm.mp3'
+                    },
+                    {
+                        id: 'u5t5huso681',
+                        title: '11 | 从0到1：搭建一个完整的Kubernetes集群',
+                        src:
+                            './深入剖析Kubernetes/html/11从0到1搭建一个完整的Kubernetes集群.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/11从0到1搭建一个完整的Kubernetes集群.mp3'
+                    },
+                    {
+                        id: '6dm57jbr5wt',
+                        title: '12 | 牛刀小试：我的第一个容器化应用',
+                        src:
+                            './深入剖析Kubernetes/html/12牛刀小试我的第一个容器化应用.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/12牛刀小试我的第一个容器化应用.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'av0if7c23zx',
+                title: '容器编排与Kubernetes作业管理',
+                subList: [
+                    {
+                        id: 'baajiagc8s3',
+                        title: '13 | 为什么我们需要Pod？',
+                        src:
+                            './深入剖析Kubernetes/html/13为什么我们需要Pod.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/13为什么我们需要Pod.mp3'
+                    },
+                    {
+                        id: 'uk7w597tqkm',
+                        title: '14 | 深入解析Pod对象（一）：基本概念',
+                        src:
+                            './深入剖析Kubernetes/html/14深入解析Pod对象一基本概念.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/14深入解析Pod对象一基本概念.mp3'
+                    },
+                    {
+                        id: 'jofsauu6moe',
+                        title: '15 | 深入解析Pod对象（二）：使用进阶',
+                        src:
+                            './深入剖析Kubernetes/html/15深入解析Pod对象二使用进阶.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/15深入解析Pod对象二使用进阶.mp3'
+                    },
+                    {
+                        id: 'hsiqqyakhk7',
+                        title: '16 | 编排其实很简单：谈谈“控制器”模型',
+                        src:
+                            './深入剖析Kubernetes/html/16编排其实很简单谈谈控制器模型.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/16编排其实很简单谈谈控制器模型.mp3'
+                    },
+                    {
+                        id: '48alcb6chdp',
+                        title: '17 | 经典PaaS的记忆：作业副本与水平扩展',
+                        src:
+                            './深入剖析Kubernetes/html/17经典PaaS的记忆作业副本与水平扩展.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/17经典PaaS的记忆作业副本与水平扩展.mp3'
+                    },
+                    {
+                        id: 'ynd1oapsam3',
+                        title: '18 | 深入理解StatefulSet（一）：拓扑状态',
+                        src:
+                            './深入剖析Kubernetes/html/18深入理解StatefulSet一拓扑状态.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/18深入理解StatefulSet一拓扑状态.mp3'
+                    },
+                    {
+                        id: '4jp4c4rjswm',
+                        title: '19 | 深入理解StatefulSet（二）：存储状态',
+                        src:
+                            './深入剖析Kubernetes/html/19深入理解StatefulSet二存储状态.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/19深入理解StatefulSet二存储状态.mp3'
+                    },
+                    {
+                        id: 'inb5kl6xkif',
+                        title: '20 | 深入理解StatefulSet（三）：有状态应用实践',
+                        src:
+                            './深入剖析Kubernetes/html/20深入理解StatefulSet三有状态应用实践.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/20深入理解StatefulSet三有状态应用实践.mp3'
+                    },
+                    {
+                        id: 'z052x6kosh9',
+                        title: '21 | 容器化守护进程的意义：DaemonSet',
+                        src:
+                            './深入剖析Kubernetes/html/21容器化守护进程的意义DaemonSet.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/21容器化守护进程的意义DaemonSet.mp3'
+                    },
+                    {
+                        id: '36dpwffdbnk',
+                        title: '22 | 撬动离线业务：Job与CronJob',
+                        src:
+                            './深入剖析Kubernetes/html/22撬动离线业务Job与CronJob.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/22撬动离线业务Job与CronJob.mp3'
+                    },
+                    {
+                        id: '3zzqt9v7d4y',
+                        title: '23 | 声明式API与Kubernetes编程范式',
+                        src:
+                            './深入剖析Kubernetes/html/23声明式API与Kubernetes编程范式.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/23声明式API与Kubernetes编程范式.mp3'
+                    },
+                    {
+                        id: '3mqkmp52gnl',
+                        title: '24 | 深入解析声明式API（一）：API对象的奥秘',
+                        src:
+                            './深入剖析Kubernetes/html/24深入解析声明式API一API对象的奥秘.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/24深入解析声明式API一API对象的奥秘.mp3'
+                    },
+                    {
+                        id: 'ldai2yrd1wb',
+                        title: '25 | 深入解析声明式API（二）：编写自定义控制器',
+                        src:
+                            './深入剖析Kubernetes/html/25深入解析声明式API二编写自定义控制器.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/25深入解析声明式API二编写自定义控制器.mp3'
+                    },
+                    {
+                        id: '2sbcuj4j0ok',
+                        title: '26 | 基于角色的权限控制：RBAC',
+                        src:
+                            './深入剖析Kubernetes/html/26基于角色的权限控制RBAC.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/26基于角色的权限控制RBAC.mp3'
+                    },
+                    {
+                        id: '5gvroivnvjw',
+                        title: '27 | 聪明的微创新：Operator工作原理解读',
+                        src:
+                            './深入剖析Kubernetes/html/27聪明的微创新Operator工作原理解读.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/27聪明的微创新Operator工作原理解读.mp3'
+                    }
+                ]
+            },
+            {
+                id: '7ockvkv90rz',
+                title: 'Kubernetes容器持久化存储',
+                subList: [
+                    {
+                        id: 'ctwwyyhndmq',
+                        title: '28 | PV、PVC、StorageClass，这些到底在说啥？',
+                        src:
+                            './深入剖析Kubernetes/html/28PVPVCStorageClass这些到底在说啥.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/28PVPVCStorageClass这些到底在说啥.mp3'
+                    },
+                    {
+                        id: 'oggzhi6wj97',
+                        title:
+                            '29 | PV、PVC体系是不是多此一举？从本地持久化卷谈起',
+                        src:
+                            './深入剖析Kubernetes/html/29PVPVC体系是不是多此一举从本地持久化卷谈起.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/29PVPVC体系是不是多此一举从本地持久化卷谈起.mp3'
+                    },
+                    {
+                        id: '7aagorgbfht',
+                        title: '30 | 编写自己的存储插件：FlexVolume与CSI',
+                        src:
+                            './深入剖析Kubernetes/html/30编写自己的存储插件FlexVolume与CSI.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/30编写自己的存储插件FlexVolume与CSI.mp3'
+                    },
+                    {
+                        id: 'pkduessca7r',
+                        title: '31 | 容器存储实践：CSI插件编写指南',
+                        src:
+                            './深入剖析Kubernetes/html/31容器存储实践CSI插件编写指南.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/31容器存储实践CSI插件编写指南.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'g9paasudwto',
+                title: 'Kubernetes容器网络',
+                subList: [
+                    {
+                        id: 'llky4vpqukv',
+                        title: '32 | 浅谈容器网络',
+                        src: './深入剖析Kubernetes/html/32浅谈容器网络.html',
+                        audio: './深入剖析Kubernetes/audio/32浅谈容器网络.mp3'
+                    },
+                    {
+                        id: 'isblgrm9vq5',
+                        title: '33 | 深入解析容器跨主机网络',
+                        src:
+                            './深入剖析Kubernetes/html/33深入解析容器跨主机网络.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/33深入解析容器跨主机网络.mp3'
+                    },
+                    {
+                        id: '0s39o5sarn5',
+                        title: '34 | Kubernetes网络模型与CNI网络插件',
+                        src:
+                            './深入剖析Kubernetes/html/34Kubernetes网络模型与CNI网络插件.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/34Kubernetes网络模型与CNI网络插件.mp3'
+                    },
+                    {
+                        id: '9lzexbmqltk',
+                        title: '35 | 解读Kubernetes三层网络方案',
+                        src:
+                            './深入剖析Kubernetes/html/35解读Kubernetes三层网络方案.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/35解读Kubernetes三层网络方案.mp3'
+                    },
+                    {
+                        id: 'geurov0ug09',
+                        title:
+                            '36 | 为什么说Kubernetes只有soft multi-tenancy？',
+                        src:
+                            './深入剖析Kubernetes/html/36为什么说Kubernetes只有softmultitenancy.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/36为什么说Kubernetes只有softmultitenancy.mp3'
+                    },
+                    {
+                        id: 'dpgpau69jlb',
+                        title: '37 | 找到容器不容易：Service、DNS与服务发现',
+                        src:
+                            './深入剖析Kubernetes/html/37找到容器不容易ServiceDNS与服务发现.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/37找到容器不容易ServiceDNS与服务发现.mp3'
+                    },
+                    {
+                        id: 'dqsg3rgvch6',
+                        title: '38 | 从外界连通Service与Service调试“三板斧”',
+                        src:
+                            './深入剖析Kubernetes/html/38从外界连通Service与Service调试三板斧.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/38从外界连通Service与Service调试三板斧.mp3'
+                    },
+                    {
+                        id: '9lzd233cdxz',
+                        title: '39 | 谈谈Service与Ingress',
+                        src:
+                            './深入剖析Kubernetes/html/39谈谈Service与Ingress.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/39谈谈Service与Ingress.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'pmbv25inqa1',
+                title: 'Kubernetes作业调度与资源管理',
+                subList: [
+                    {
+                        id: 's5i7sd0fidb',
+                        title: '40 | Kubernetes的资源模型与资源管理',
+                        src:
+                            './深入剖析Kubernetes/html/40Kubernetes的资源模型与资源管理.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/40Kubernetes的资源模型与资源管理.mp3'
+                    },
+                    {
+                        id: 'yemygkj4x3n',
+                        title: '41 | 十字路口上的Kubernetes默认调度器',
+                        src:
+                            './深入剖析Kubernetes/html/41十字路口上的Kubernetes默认调度器.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/41十字路口上的Kubernetes默认调度器.mp3'
+                    },
+                    {
+                        id: 'xshntl2zbtu',
+                        title: '42 | Kubernetes默认调度器调度策略解析',
+                        src:
+                            './深入剖析Kubernetes/html/42Kubernetes默认调度器调度策略解析.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/42Kubernetes默认调度器调度策略解析.mp3'
+                    },
+                    {
+                        id: 'ei5keujayyn',
+                        title: '43 | Kubernetes默认调度器的优先级与抢占机制',
+                        src:
+                            './深入剖析Kubernetes/html/43Kubernetes默认调度器的优先级与抢占机制.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/43Kubernetes默认调度器的优先级与抢占机制.mp3'
+                    },
+                    {
+                        id: 'c1u8kmhn29v',
+                        title: '44 | Kubernetes GPU管理与Device Plugin机制',
+                        src:
+                            './深入剖析Kubernetes/html/44KubernetesGPU管理与DevicePlugin机制.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/44KubernetesGPU管理与DevicePlugin机制.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'bdgnaq610bj',
+                title: 'Kubernetes容器运行时',
+                subList: [
+                    {
+                        id: '4ix0ck28ott',
+                        title: '45 | 幕后英雄：SIG-Node与CRI',
+                        src:
+                            './深入剖析Kubernetes/html/45幕后英雄SIGNode与CRI.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/45幕后英雄SIGNode与CRI.mp3'
+                    },
+                    {
+                        id: '1lrx6ux2ie1',
+                        title: '46 | 解读 CRI 与 容器运行时',
+                        src:
+                            './深入剖析Kubernetes/html/46解读CRI与容器运行时.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/46解读CRI与容器运行时.mp3'
+                    },
+                    {
+                        id: '0dnh82xn84k',
+                        title: '47 | 绝不仅仅是安全：Kata Containers 与 gVisor',
+                        src:
+                            './深入剖析Kubernetes/html/47绝不仅仅是安全KataContainers与gVisor.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/47绝不仅仅是安全KataContainers与gVisor.mp3'
+                    }
+                ]
+            },
+            {
+                id: '1ov0136zeyb',
+                title: 'Kubernetes容器监控与日志',
+                subList: [
+                    {
+                        id: 'pzzljv64fui',
+                        title:
+                            '48 | Prometheus、Metrics Server与Kubernetes监控体系',
+                        src:
+                            './深入剖析Kubernetes/html/48PrometheusMetricsServer与Kubernetes监控体系.html',
+                        audio:
+                            './深入剖析Kubernetes/audio/48PrometheusMetricsServer与Kubernetes监控体系.mp3'
+                    },
+                    {
+                        id: 'io3qjp915l8',
+                        title:
+                            '49 | Custom Metrics: 让Auto Scaling不再“食之无味”',
+                        src: '',
+                        audio:
+                            './深入剖析Kubernetes/audio/49CustomMetrics让AutoScaling不再食之无味.mp3'
+                    },
+                    {
+                        id: 'tga1q9zm77v',
+                        title: '50 | 让日志无处可逃：容器日志收集与管理',
+                        src: '',
+                        audio:
+                            './深入剖析Kubernetes/audio/50让日志无处可逃容器日志收集与管理.mp3'
+                    }
+                ]
+            },
+            {
+                id: '10v7mceu7sh',
+                title: '再谈开源与社区',
+                subList: [
+                    {
+                        id: 'hqysy21ls3e',
+                        title: '51 | 谈谈Kubernetes开源社区和未来走向',
+                        src: '',
+                        audio:
+                            './深入剖析Kubernetes/audio/51谈谈Kubernetes开源社区和未来走向.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'rykf5619vba',
+                title: '答疑文章',
+                subList: [
+                    {
+                        id: 'sp5h0uyldni',
+                        title: '52 | 答疑：在问题中解决问题，在思考中产生思考',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: '7url7jpdfv8',
+                title: '特别放送',
+                subList: [
+                    {
+                        id: 'bx0gpm19dd8',
+                        title: '特别放送 | 2019 年，容器技术生态会发生些什么？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'w9g45xlspyt',
+                        title:
+                            '特别放送 | 基于 Kubernetes 的云原生应用管理，到底应该怎么做？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'cfekfg3bxot',
+                title: '结束语',
+                subList: [
+                    {
+                        id: 's4ljfyzzzpu',
+                        title: '结束语 | Kubernetes：赢开发者赢天下',
+                        src: '',
+                        audio:
+                            './深入剖析Kubernetes/audio/结束语Kubernetes赢开发者赢天下.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'eois5yqxego',
+                title: '结课测试',
+                subList: [
+                    {
+                        id: 'cd7tnq7ukxu',
+                        title:
+                            '结课测试｜这些Kubernetes的相关知识，你都掌握了吗？',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'ztnbgyi6ae1',
+        type: 'web',
+        cid: '100053801',
+        title: '跟月影学可视化',
+        authorInfo: '360的',
+        authorName: '月影',
+        contents: [
+            {
+                id: 'cdywx0u429n',
+                title: '课前必学',
+                subList: [
+                    {
+                        id: '1n8fy9v4ktv',
+                        title: '开篇词 | 不写网页的前端工程师，还能干什么？',
+                        src:
+                            './跟月影学可视化/html/00开篇词不写网页的前端工程师还能干什么.html',
+                        audio:
+                            './跟月影学可视化/audio/00开篇词不写网页的前端工程师还能干什么.mp3'
+                    },
+                    {
+                        id: '0jmepk60fm4',
+                        title: '预习 | Web前端与可视化到底有什么区别？',
+                        src:
+                            './跟月影学可视化/html/00预习Web前端与可视化到底有什么区别.html',
+                        audio:
+                            './跟月影学可视化/audio/00预习Web前端与可视化到底有什么区别.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'd7voexpq7ne',
+                title: '图形基础篇',
+                subList: [
+                    {
+                        id: 'pcdvwvijtpk',
+                        title: '01 | 浏览器中实现可视化的四种方式',
+                        src:
+                            './跟月影学可视化/html/01浏览器中实现可视化的四种方式.html',
+                        audio:
+                            './跟月影学可视化/audio/01浏览器中实现可视化的四种方式.mp3'
+                    },
+                    {
+                        id: 'ur9dudhq03i',
+                        title:
+                            '02 |  指令式绘图系统：如何用Canvas绘制层次关系图？',
+                        src:
+                            './跟月影学可视化/html/02指令式绘图系统如何用Canvas绘制层次关系图.html',
+                        audio:
+                            './跟月影学可视化/audio/02指令式绘图系统如何用Canvas绘制层次关系图.mp3'
+                    },
+                    {
+                        id: 'tr04nyqr5b5',
+                        title:
+                            '03 | 声明式图形系统：如何用SVG图形元素绘制可视化图表？',
+                        src:
+                            './跟月影学可视化/html/03声明式图形系统如何用SVG图形元素绘制可视化图表.html',
+                        audio:
+                            './跟月影学可视化/audio/03声明式图形系统如何用SVG图形元素绘制可视化图表.mp3'
+                    },
+                    {
+                        id: 'tnrorn8s730',
+                        title:
+                            '04 | GPU与渲染管线：如何用WebGL绘制最简单的几何图形？',
+                        src:
+                            './跟月影学可视化/html/04GPU与渲染管线如何用WebGL绘制最简单的几何图形上.html',
+                        audio:
+                            './跟月影学可视化/audio/04GPU与渲染管线如何用WebGL绘制最简单的几何图形上.mp3'
+                    }
+                ]
+            },
+            {
+                id: '410yyaa4iyq',
+                title: '数学篇',
+                subList: [
+                    {
+                        id: 'ix8z8bvmppc',
+                        title: '05 | 如何用向量和坐标系描述点和线段？',
+                        src:
+                            './跟月影学可视化/html/05如何用向量和坐标系描述点和线段.html',
+                        audio:
+                            './跟月影学可视化/audio/05如何用向量和坐标系描述点和线段.mp3'
+                    },
+                    {
+                        id: 'wqwe473pm5k',
+                        title: '06 |  可视化中你必须要掌握的向量乘法知识',
+                        src:
+                            './跟月影学可视化/html/06可视化中你必须要掌握的向量乘法知识.html',
+                        audio:
+                            './跟月影学可视化/audio/06可视化中你必须要掌握的向量乘法知识.mp3'
+                    },
+                    {
+                        id: '61gp6h39je2',
+                        title: '07 | 如何用向量和参数方程描述曲线？',
+                        src:
+                            './跟月影学可视化/html/07如何用向量和参数方程描述曲线.html',
+                        audio:
+                            './跟月影学可视化/audio/07如何用向量和参数方程描述曲线.mp3'
+                    },
+                    {
+                        id: 'ygrsdz70l6k',
+                        title:
+                            '08 | 如何利用三角剖分和向量操作描述并处理多边形？',
+                        src:
+                            './跟月影学可视化/html/08如何利用三角剖分和向量操作描述并处理多边形.html',
+                        audio:
+                            './跟月影学可视化/audio/08如何利用三角剖分和向量操作描述并处理多边形.mp3'
+                    },
+                    {
+                        id: 'ob4rxekhayl',
+                        title: '09 | 如何用仿射变换对几何图形进行坐标变换？',
+                        src:
+                            './跟月影学可视化/html/09如何用仿射变换对几何图形进行坐标变换.html',
+                        audio:
+                            './跟月影学可视化/audio/09如何用仿射变换对几何图形进行坐标变换.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'podjol935pw',
+                title: '视觉基础篇',
+                subList: [
+                    {
+                        id: 'jz8nl2wd6uw',
+                        title: '10 | 图形系统如何表示颜色？',
+                        src:
+                            './跟月影学可视化/html/10图形系统如何表示颜色.html',
+                        audio:
+                            './跟月影学可视化/audio/10图形系统如何表示颜色.mp3'
+                    },
+                    {
+                        id: 'wrx64786wvb',
+                        title:
+                            '11｜图案生成：如何生成重复图案、分形图案以及随机效果？',
+                        src:
+                            './跟月影学可视化/html/11图案生成如何生成重复图案分形图案以及随机效果.html',
+                        audio:
+                            './跟月影学可视化/audio/11图案生成如何生成重复图案分形图案以及随机效果.mp3'
+                    },
+                    {
+                        id: '53bsli2vyov',
+                        title: '12 | 如何使用滤镜函数实现美颜效果？',
+                        src:
+                            './跟月影学可视化/html/12如何使用滤镜函数实现美颜效果.html',
+                        audio:
+                            './跟月影学可视化/audio/12如何使用滤镜函数实现美颜效果.mp3'
+                    },
+                    {
+                        id: 'm44sh6n1x1a',
+                        title: '13 | 如何给简单的图案添加纹理和复杂滤镜？',
+                        src:
+                            './跟月影学可视化/html/13如何给简单的图案添加纹理和复杂滤镜.html',
+                        audio:
+                            './跟月影学可视化/audio/13如何给简单的图案添加纹理和复杂滤镜.mp3'
+                    },
+                    {
+                        id: 'e0n1vdfxpn8',
+                        title: '14 | 如何使用片元着色器进行几何造型？',
+                        src:
+                            './跟月影学可视化/html/14如何使用片元着色器进行几何造型.html',
+                        audio:
+                            './跟月影学可视化/audio/14如何使用片元着色器进行几何造型.mp3'
+                    },
+                    {
+                        id: '1anus9u2kij',
+                        title: '15 | 如何用极坐标系绘制有趣图案？',
+                        src:
+                            './跟月影学可视化/html/15如何用极坐标系绘制有趣图案.html',
+                        audio:
+                            './跟月影学可视化/audio/15如何用极坐标系绘制有趣图案.mp3'
+                    },
+                    {
+                        id: 'nxeqgfr3p8l',
+                        title: '16 | 如何使用噪声生成复杂的纹理？',
+                        src:
+                            './跟月影学可视化/html/16如何使用噪声生成复杂的纹理.html',
+                        audio:
+                            './跟月影学可视化/audio/16如何使用噪声生成复杂的纹理.mp3'
+                    },
+                    {
+                        id: '33k445fon80',
+                        title: '17 | 如何使用后期处理通道增强图像效果？',
+                        src:
+                            './跟月影学可视化/html/17如何使用后期处理通道增强图像效果.html',
+                        audio:
+                            './跟月影学可视化/audio/17如何使用后期处理通道增强图像效果.mp3'
+                    }
+                ]
+            },
+            {
+                id: 'gjomzq50c7c',
+                title: '视觉高级篇',
+                subList: [
+                    {
+                        id: 'ngpfhw3flid',
+                        title: '18 | 如何生成简单动画让图形动起来？',
+                        src:
+                            './跟月影学可视化/html/18如何生成简单动画让图形动起来.html',
+                        audio:
+                            './跟月影学可视化/audio/18如何生成简单动画让图形动起来.mp3'
+                    },
+                    {
+                        id: '2jmlce8c8hv',
+                        title: '19 | 如何用着色器实现像素动画？',
+                        src:
+                            './跟月影学可视化/html/19如何用着色器实现像素动画.html',
+                        audio:
+                            './跟月影学可视化/audio/19如何用着色器实现像素动画.mp3'
+                    },
+                    {
+                        id: 'qfju33o53jq',
+                        title: '20 | 如何用WebGL绘制3D物体？',
+                        src:
+                            './跟月影学可视化/html/20如何用WebGL绘制3D物体.html',
+                        audio:
+                            './跟月影学可视化/audio/20如何用WebGL绘制3D物体.mp3'
+                    },
+                    {
+                        id: '0t4hpnah65c',
+                        title: '21 | 如何添加相机，用透视原理对物体进行投影？',
+                        src:
+                            './跟月影学可视化/html/21如何添加相机用透视原理对物体进行投影.html',
+                        audio:
+                            './跟月影学可视化/audio/21如何添加相机用透视原理对物体进行投影.mp3'
+                    },
+                    {
+                        id: '201wnniku70',
+                        title: '22 | 如何用仿射变换来移动和旋转3D物体？',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: '1fh0out8gpg',
+                        title: '23 | 如何模拟光照让3D场景更逼真？（上）',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'cy8t9eb8ps1',
+                        title: '24 |  如何模拟光照让3D场景更逼真？（下）',
+                        src: '',
+                        audio: ''
+                    },
+                    {
+                        id: 'zcz42hptsou',
+                        title: '25 | 如何用法线贴图模拟真实物体表面',
+                        src: '',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'i9ol8w3n1x3',
+                title: '特别放送',
+                subList: [
+                    {
+                        id: 'wadq4ossnz7',
+                        title: '加餐一 | 作为一名程序员，数学到底要多好？',
+                        src:
+                            './跟月影学可视化/html/加餐一作为一名程序员数学到底要多好.html',
+                        audio:
+                            './跟月影学可视化/audio/加餐一作为一名程序员数学到底要多好.mp3'
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 'lpkpjtea8sf',
         type: 'skill',
         cid: '100052201',

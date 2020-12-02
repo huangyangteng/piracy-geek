@@ -58,7 +58,9 @@ export default {
             this.hideLoading()
             this.$nextTick(() => {
                 this.generateOutline()
+
                 this.polyfillPage()
+
                 document.querySelector('.article-wrapper').scrollTop = top
                 this.setTitle()
                 this.loadHightLight(id)
@@ -130,7 +132,19 @@ export default {
             } else {
                 nav = arr[0]
             }
-            nav.previousElementSibling.remove()
+            try {
+                nav.previousElementSibling.remove()
+            } catch (error) {
+                console.log('polyfillPage error', error)
+            }
+            let navDom = document.querySelector('._31dn84GH_0')
+            console.log(
+                '🚀 ~ file: ArticleContent.vue ~ line 141 ~ polyfillPage ~ navDom',
+                navDom
+            )
+            if (navDom) {
+                navDom.remove()
+            }
         },
         showLoading() {
             let app = document.getElementById('app')
@@ -191,7 +205,7 @@ export default {
 </style>
 <style lang="scss">
 ._3ADRghFH_0 {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 20px;
     font-weight: 400;
