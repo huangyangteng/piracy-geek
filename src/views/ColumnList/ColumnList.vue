@@ -103,9 +103,12 @@ export default {
         document.title = '专栏列表-Piracy Geektime'
     },
     watch: {
-        '$route.query.path'(path) {
-            if (path) {
-                this.activePath = path
+        '$route.query.path': {
+            immediate: true,
+            handler(path) {
+                if (path) {
+                    this.activePath = path
+                }
             }
         }
     }
