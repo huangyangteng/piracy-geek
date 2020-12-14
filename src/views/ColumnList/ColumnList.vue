@@ -101,6 +101,13 @@ export default {
     },
     mounted() {
         document.title = '专栏列表-Piracy Geektime'
+    },
+    watch: {
+        '$route.query.path'(path) {
+            if (path) {
+                this.activePath = path
+            }
+        }
     }
 }
 </script>
