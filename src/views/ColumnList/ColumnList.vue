@@ -125,7 +125,7 @@ $--color-primary: #fa8919;
         justify-content: space-between;
     }
     > main {
-        background: #f6f7fa;
+        background: $component-bg-color;
         margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
@@ -138,7 +138,7 @@ $--color-primary: #fa8919;
     justify-content: space-between;
     width: 180px;
     padding: 10px;
-    background: #f6f7fa;
+    background: $component-bg-color;
     border-radius: 5px;
     cursor: pointer;
     &:last-child {
@@ -170,7 +170,7 @@ $--color-primary: #fa8919;
 }
 
 .panel-column-item {
-    background: #fff;
+    background: $component-bg-color-2;
     padding: 10px 5px;
     border-radius: 5px;
     flex-basis: 30%;
@@ -210,7 +210,7 @@ $--color-primary: #fa8919;
     font-size: 13px;
     font-weight: 400;
     color: #858585;
-    background: #f1f1f1;
+    background: $component-bg-color;
     border-radius: 2px;
 }
 </style>

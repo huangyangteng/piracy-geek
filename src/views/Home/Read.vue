@@ -142,9 +142,10 @@ export default {
     min-width: 200px;
     overflow-y: auto;
     overflow-x: hidden;
-    border-right: 1px solid #e2e2e2;
+    border-right: 1px solid $border-color;
     height: 100%;
     position: relative;
+    background: $component-bg-color-2;
 }
 .read-content {
     flex: 1;

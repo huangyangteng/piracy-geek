@@ -174,8 +174,8 @@ export default {
     height: 60px;
     width: 160px;
     box-sizing: border-box;
-    background: #fff;
-    border: 1px solid #f0f0f0;
+    background: $component-bg-color-2;
+    border: 1px solid $border-color;
     border-top: none;
     margin-bottom: 7px;
     border-bottom-left-radius: 8px;

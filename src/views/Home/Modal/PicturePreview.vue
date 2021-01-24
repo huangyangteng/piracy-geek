@@ -3,7 +3,7 @@
         <el-dialog
             title="提示"
             :visible.sync="picturePreview.show"
-            :width="picturePreview.width"
+            width="1280"
             custom-class="picture-preview"
             center
             :show-close="showClose"
@@ -45,6 +45,7 @@ export default {
 <style lang="scss">
 .picture-preview {
     background: transparent;
+    width: 1280px;
     .el-dialog__header {
         padding: 0;
     }
@@ -53,7 +54,8 @@ export default {
         padding: 0 !important;
     }
     img {
-        max-width: 1200px;
+        width: 100%;
+        margin-top: -10px;
     }
 }
 </style>

@@ -1,5 +1,6 @@
+@import './variable.scss';
 html {
-    color: #333;
+    color: $font-color;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-rendering: optimizelegibility;
@@ -237,7 +238,7 @@ small {
 b,
 strong {
     font-weight: 700;
-    color: #000
+    color: $font-color!important;
 }
 
 [draggable] {
@@ -300,8 +301,8 @@ h4,
 h5,
 h6 {
     font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
-    color: #000;
-    line-height: 1.35
+    color: $font-color!important;
+    line-height: 1.35;
 }
 
 .typo-h1,
@@ -410,7 +411,7 @@ h6 {
 .typo em,
 caption,
 legend {
-    color: #000;
+    color: $font-color!important;;
     font-weight: inherit
 }
 
@@ -434,7 +435,7 @@ legend {
 
 .common-content {
     font-weight: 400;
-    color: #353535;
+    color: $font-color;
     line-height: 1.75rem;
     white-space: normal;
     word-break: normal;
@@ -516,7 +517,7 @@ legend {
 
 .common-content p {
     font-weight: 400;
-    color: #353535;
+    color: $font-color!important;
     margin-top: .15rem
 }
 
@@ -602,14 +603,14 @@ video::-webkit-media-controls-enclosure {
     margin:0 auto;
     margin-bottom: 20px;
     font-weight: 400;
-    color: #353535;
+    color: $font-color!important;
     line-height: 1.76;
     white-space: normal;
     word-break: normal;
-    font-size: 17px;
+    font-size: 20px!important;
     -webkit-transition: background-color .3s ease;
     transition: background-color .3s ease;
-    max-width: 1200px!important;
+    max-width: 960px!important;
 }
 
 ._29HP61GA_0 .MathJax_Display {
@@ -741,7 +742,7 @@ video::-webkit-media-controls-enclosure {
 ._29HP61GA_0 center,
 ._29HP61GA_0 p {
     font-weight: 400;
-    color: #353535;
+    color: $font-color!important;
     margin-top: 0;
     margin-bottom: 30px;
     word-break: break-word
@@ -756,7 +757,7 @@ video::-webkit-media-controls-enclosure {
     margin-bottom: 34px;
     border-left: 3px solid #e8e8e8;
     padding-left: 17px;
-    color: #353535
+    color: $font-color
 }
 
 ._29HP61GA_0 blockquote p {
@@ -791,7 +792,7 @@ video::-webkit-media-controls-enclosure {
     height: 6px;
     width: 6px;
     border-radius: 50%;
-    background: #353535;
+    background: $font-color;
     position: absolute;
     top: 10px;
     left: 0

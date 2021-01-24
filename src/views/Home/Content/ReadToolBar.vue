@@ -28,7 +28,11 @@
             </section>
 
             <section class="read-tools">
-                <el-tooltip content="保存高亮信息" placement="top">
+                <el-tooltip
+                    effect="dark"
+                    content="保存高亮信息"
+                    placement="top"
+                >
                     <i
                         @click="saveHighlight"
                         class="el-icon-collection"
@@ -36,7 +40,7 @@
                     ></i>
                 </el-tooltip>
 
-                <el-tooltip content="选课" placement="top">
+                <el-tooltip effect="dark" content="选课" placement="top">
                     <i
                         @click="chooseColumn"
                         class="el-icon-reading"
@@ -44,14 +48,14 @@
                     ></i>
                 </el-tooltip>
 
-                <el-tooltip content="全屏阅读" placement="top">
+                <el-tooltip effect="dark" content="全屏阅读" placement="top">
                     <i
                         @click="fullScreen"
                         class="el-icon-full-screen"
                         style="margin-left: 10px;margin-right: 10px"
                     ></i>
                 </el-tooltip>
-                <el-tooltip content="返回主页" placement="top">
+                <el-tooltip effect="dark" content="返回主页" placement="top">
                     <i
                         @click="toHome"
                         class="el-icon-s-home"
@@ -60,7 +64,7 @@
                 </el-tooltip>
             </section>
         </aside>
-        <addNote></addNote>
+        <addNote v-if="false"></addNote>
     </section>
 </template>
 <script>
@@ -75,9 +79,9 @@ export default {
     },
     data() {
         return {
-            colorList: ['#ffff7b', '#29B6F6', '#F44336'],
+            colorList: ['#40392a', '#29B6F6', '#F44336'],
             hltr: null,
-            activeColor: '#ffff7b'
+            activeColor: '#40392a'
         }
     },
     computed: {
@@ -196,7 +200,8 @@ export default {
 </script>
 <style lang="scss">
 .read-tool-bar {
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid $border-color;
+    background: $component-bg-color;
     height: 66px;
     padding: 0 38px;
     box-sizing: border-box;
@@ -206,7 +211,6 @@ export default {
         cursor: pointer;
         margin-right: 25px;
         font-size: 30px;
-        color: #666;
         font-weight: 200;
     }
     > aside {
@@ -222,7 +226,7 @@ export default {
     }
 }
 .jk-title {
-    color: #333;
+    color: $font-primary;
     font-weight: 400;
     font-size: 1.5em;
 }

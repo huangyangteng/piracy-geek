@@ -28,7 +28,7 @@
                     >
                         <h2>{{ item.title_en }}</h2>
                         <img :src="item.img" alt="" />
-                        <div style="color:#1f1f1f">{{ item.title }}</div>
+                        <div>{{ item.title }}</div>
                     </a>
                 </section>
                 <footer>
@@ -125,7 +125,7 @@ export default {
         text-align: center;
         font-size: 15vw;
         font-weight: 800;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid $border-color;
     }
     > section {
         display: flex;
@@ -157,6 +157,9 @@ export default {
     }
     > img {
         width: 100%;
+    }
+    > div {
+        color: $font-color;
     }
 }
 </style>

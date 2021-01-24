@@ -199,6 +199,7 @@ export default {
     box-sizing: border-box;
     height: 100%;
     position: relative;
+    background: $component-bg-color;
 }
 .article-wrapper #app {
 }

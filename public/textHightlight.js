@@ -460,7 +460,7 @@
 
         this.el = element
         this.options = defaults(options, {
-            color: '#ffff7b',
+            color: '#40392a',
             highlightedClass: 'highlighted',
             contextClass: 'highlighter-context',
             onRemoveHighlight: function() {
