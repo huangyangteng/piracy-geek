@@ -16,9 +16,22 @@ import {
     Popover,
     Drawer,
     Link,
-    Slider
+    Slider,
+    Card,
+    Form,
+    FormItem,
+    Col,
+    DatePicker,
+    Radio,
+    RadioGroup
 } from 'element-ui'
 
+Vue.use(RadioGroup)
+Vue.use(Radio)
+Vue.use(DatePicker)
+Vue.use(Col)
+Vue.use(Form)
+Vue.use(FormItem)
 Vue.use(Slider)
 Vue.use(Dialog)
 Vue.use(Link)
@@ -34,6 +47,7 @@ Vue.use(Input)
 Vue.use(Button)
 Vue.use(Popover)
 Vue.use(Drawer)
+Vue.use(Card)
 Vue.use(Loading.directive)
 
 Vue.prototype.$Message = Message
