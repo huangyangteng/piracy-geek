@@ -144,3 +144,157 @@ body{
     }
  
 }
+
+
+
+
+
+* {
+    margin: 0;
+}
+
+div,
+section,
+aside,
+main,
+header {
+    box-sizing: border-box;
+}
+
+.el-cascader-menu {
+    height: 200px;
+}
+.el-button--primary.is-plain {
+    background-color: $component-bg-color;
+}
+
+// 设置字体图标的颜色
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.el-popconfirm__main {
+    margin-bottom: 10px;
+}
+// 深色主题覆盖样式
+// 下拉框
+.el-input__inner {
+    background-color: $component-bg-color;
+    color: $font-color;
+}
+.el-scrollbar {
+    background-color: $component-bg-color;
+}
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+    background-color: $page-bg-color;
+}
+.el-select-dropdown__item {
+    color: $font-color;
+}
+
+// 时间选择框
+.el-range-input {
+    background-color: $component-bg-color;
+    color: $font-color;
+}
+.el-picker-panel {
+    background-color: $component-bg-color;
+    color: $font-color;
+}
+.el-date-table td.in-range div {
+    background-color: $page-bg-color;
+}
+
+//text-area
+.el-textarea__inner {
+    background-color: $component-bg-color;
+}
+
+// table
+.el-table tr {
+    background-color: $component-bg-color;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background-color: $component-bg-color;
+}
+.el-table .el-table__header-wrapper th {
+    background-color: $page-bg-color;
+    color: $font-color;
+}
+.el-table th {
+    background-color: $page-bg-color;
+    color: $font-color;
+}
+
+//pagination
+.el-pagination .btn-prev,
+.el-pagination .btn-next {
+    background-color: $component-bg-color;
+}
+.el-pagination button:disabled {
+    background-color: $component-bg-color;
+}
+.el-pager li {
+    background-color: $component-bg-color;
+    color: $font-color;
+}
+
+//input
+.el-input.is-disabled .el-input__inner {
+    // background-color: $--bg-color-disabled;
+    // color: $--text-color-disabled;
+}
+
+.el-popover {
+    background-color: $component-bg-color;
+    color: $font-color;
+}
+
+// radio-button
+.el-radio-button__inner {
+    background-color: $component-bg-color;
+}
+// button
+.el-button--default {
+    background-color: $component-bg-color;
+}
+
+// loading
+.el-loading-mask {
+    background-color: rgba($color: #fff, $alpha: 0.5);
+}
+
+//confirm
+.el-message-box {
+    background-color: $component-bg-color;
+    color: $font-color;
+}
+
+//popover
+.el-popover {
+    min-width: auto;
+}
+
+.el-loading-spinner {
+    height: 136px;
+    // background: url(../images/loading.svg) center center no-repeat;
+    background-size: 120px 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .circular {
+        display: none;
+    }
+    .el-loading-text {
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: var(--font-color);
+        line-height: 24px;
+        padding-left: 15px;
+    }
+}

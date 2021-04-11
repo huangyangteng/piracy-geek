@@ -1,19 +1,18 @@
-let host = require('./src/config/host')
 const path = require('path')
-
+const DEV_HOST = 'http://localhost:8882'
 module.exports = {
     devServer: {
         //只在开发时有效，打包后失效
         open: true, //自动打开浏览器
         proxy: {
             //配置接口转发
-            '/api': {
-                target: host.dev, //开发环境后端接口地址
+            '/gk-api': {
+                target: DEV_HOST, //开发环境后端接口地址
                 changeOrigin: true,
                 autoRewrite: true,
                 cookieDomainRewrite: true,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/gk-api': ''
                 }
             }
         }

@@ -49,3 +49,41 @@ export function copyToBoard(value) {
     document.body.removeChild(input)
     return false
 }
+
+/**
+ * 浏览器下载静态文件
+ * @param {String} name 文件名
+ * @param {String} content 文件内容 二进制流的形式
+ */
+export function downloadFile(content, name) {
+    if (typeof name == 'undefined') {
+        throw new Error('The first parameter name is a must')
+    }
+    if (typeof content == 'undefined') {
+        throw new Error('The second parameter content is a must')
+    }
+    // if (typeof content != 'string') {
+    //     throw new Error('The second parameter content must be a string')
+    // }
+    let eleLink = document.createElement('a')
+    eleLink.download = name
+    eleLink.style.display = 'none'
+    let blob = new Blob([content])
+    eleLink.href = URL.createObjectURL(blob)
+    document.body.appendChild(eleLink)
+    eleLink.click()
+    document.body.removeChild(eleLink)
+}
+
+import axios from 'axios'
+//提供一个link，完成文件下载，link可以是  http://xxx.com/xxx.xls
+export function downloadByLink(link, fileName) {
+    axios
+        .request({
+            url: link,
+            responseType: 'blob'
+        })
+        .then(res => {
+            downloadFile(res.data, fileName)
+        })
+}

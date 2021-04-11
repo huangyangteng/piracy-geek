@@ -1,10 +1,12 @@
-import http from "./http";
+import http from './http'
 
-const getError = () => http.get("/error/500");
-
-const getRandomError = () => http.get("/error/random");
+const taobaoExpert = data =>
+    http.request({
+        method: 'POST',
+        url: '/util/taobao',
+        data
+    })
 
 export const UTIL_API = {
-    getError,
-    getRandomError
-};
+    taobaoExpert
+}

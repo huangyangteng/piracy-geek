@@ -1,11 +1,11 @@
 import axios from 'axios'
-import store from '../store'
+// import store from '../store'
 import router from '../router'
 import { Message } from 'element-ui'
 
 let instance = axios.create({
-    timeout: 1000 * 30, // 超时时间
-    baseURL: '/api' // 设置baseURL，区分开发环境和生产环境
+    timeout: 1000 * 600, // 超时时间
+    baseURL: '/gk-api' // 设置baseURL，区分开发环境和生产环境
 })
 
 const CancelToken = axios.CancelToken
@@ -74,7 +74,7 @@ class AuthManager {
         return this.jwt
     }
     updateJWT(jwt) {
-        store.dispatch('user/updateJWT', jwt)
+        // store.dispatch('user/updateJWT', jwt)
         this.jwt = jwt
     }
 }
@@ -108,10 +108,10 @@ class InterceptorManager {
 
     handleResponseCode(code) {
         switch (code) {
-            case '100000':
-                this.authManager.updateJWT(this.resData.jwt)
+            case '2000':
+                // this.authManager.updateJWT(this.resData.jwt)
                 break
-            case '200000':
+            case '4000':
                 this.authManager.goLogin()
                 break
             default:
