@@ -3300,7 +3300,8 @@ export default [
                     {
                         id: 'pvd1gz37lsj',
                         title: '01 | 冯·诺依曼体系结构：计算机组成的金字塔',
-                        src: '',
+                        src:
+                            './深入浅出计算机组成原理/html/01冯诺依曼体系结构计算机组成的金字塔.html',
                         audio: ''
                     },
                     {
@@ -3346,7 +3347,8 @@ export default [
                     {
                         id: 'usatckwoe74',
                         title: '06 | 指令跳转：原来if...else就是goto',
-                        src: '',
+                        src:
+                            './深入浅出计算机组成原理/html/06指令跳转原来ifelse.html',
                         audio: ''
                     },
                     {
