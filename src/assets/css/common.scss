@@ -45,3 +45,32 @@ em.highlight{
 .mar-r-8{
     margin-right: 8px;
 }
+
+.CommentItemPC_main_2sjJG {
+    list-style-position: inside;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 26px;
+    border-bottom: 1px solid hsla(0,0%,91.4%,.6);
+}
+.CommentItemPC_main_2sjJG .CommentItemPC_avatar_3FLYR {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+.CommentItemPC_main_2sjJG .CommentItemPC_info_36Chp {
+    margin-left: .5rem;
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
+
+.ArticlePC_articleTitle_cZCVM,.ArticlePC_articleInfo_2VF1_,.ArticlePC_articleContent_2SKln,.ArticlePC_comment_2Vlfl,.ArticlePC_comments_3-W_z{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.AudioPlayerPC_main_1QFlQ{
+    display: none;
+}

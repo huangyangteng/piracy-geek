@@ -35,18 +35,16 @@ export function getElementLeft(element) {
     return actualLeft
 }
 export function copyToBoard(value) {
-    console.log('copyToBoard -> value', value)
-    const input = document.createElement('input')
-    document.body.appendChild(input)
-    input.setAttribute('value', value)
-    input.select()
-
+    const element = document.createElement('textarea')
+    document.body.appendChild(element)
+    element.value = value
+    element.select()
     if (document.execCommand('copy')) {
         document.execCommand('copy')
-        document.body.removeChild(input)
+        document.body.removeChild(element)
         return true
     }
-    document.body.removeChild(input)
+    document.body.removeChild(element)
     return false
 }
 

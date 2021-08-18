@@ -9,7 +9,7 @@
 import { Loading } from 'element-ui'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
-import { uid } from '../../../tools/index'
+import { uid, copyToBoard } from '../../../tools/index'
 import axios from 'axios'
 const CancelToken = axios.CancelToken
 let cancel
@@ -160,16 +160,30 @@ export default {
             this.loadingInstance.close()
         },
         bindEvent() {
-            //绑定事件
-            // let copyBtnDoms = document.querySelectorAll('.richcontent-pre-copy')
-            document.addEventListener('click', e => {
-                if (e.target.className == 'richcontent-pre-copy') {
-                    let code = e.target.previousElementSibling
-                    console.log('bindEvent -> code', code)
-                    // 从code中提取代码
-                }
-            })
+            // 复制代码
+            try {
+                Array.from(
+                    document.querySelectorAll('[data-slate-type="pre"]')
+                ).forEach(dom => {
+                    dom.firstChild.onclick = () => {
+                        let result = copyToBoard(dom.innerText)
+                        if (result) {
+                            console.log(this)
+                            this.$Message.success('复制成功!')
+                        }
+                    }
+                })
+            } catch (error) {
+                console.log('bindEvent -> error', error)
+            }
         }
+    },
+    async mounted() {
+        // const res = await axios.get('/test.html')
+        // this.articleContent = res.data
+        // this.$nextTick(() => {
+        //     this.bindEvent()
+        // })
     },
     watch: {
         curArticleId: {
