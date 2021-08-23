@@ -11,7 +11,7 @@
             class="el-icon-s-unfold fold-icon"
         ></i>
         <!-- 标题 -->
-        <span class="jk-title">{{ curColumnTitle }}</span>
+        <span class="jk-title" @click="toHome">{{ curColumnTitle }}</span>
         <!-- 音频播放 -->
         <AudioPlayer></AudioPlayer>
         <!-- 选择颜色 -->

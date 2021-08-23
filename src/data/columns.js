@@ -14864,624 +14864,914 @@ export default [
         title: '互联网人的英语私教课'
     },
     {
-        title: '左耳听风',
+        id: 'k77ub3hrkje',
         type: 'skill',
-        id: 'c32iugx4yjo',
-        cid: '100002201', //极客时间真实课程id
+        cid: '100002201',
+        title: '左耳听风',
         subTitle: '洞悉技术的本质，享受科技的乐趣',
         authorName: '陈皓',
         authorInfo: '网名“左耳朵耗子”，资深技术专家，骨灰级程序员',
-        divided: true,
         contents: [
             {
-                id: 'v3th7mnu92p',
-                title: '所有文章',
+                id: 'ynvxzztkwv6',
+                title: '技术基础',
                 subList: [
                     {
-                        id: 'ut182wm8p1p',
+                        id: 'sbqmorq5zl6',
+                        title: '开篇词  |  洞悉技术的本质，享受科技的乐趣',
+                        src:
+                            '左耳听风/html/__181__开篇词 _ 洞悉技术的本质，享受科技的乐趣.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'n730yeadexz',
                         title: '01 | 程序员如何用技术变现（上）',
                         src:
-                            './左耳听风/html/01-程序员如何用技术变现（上）.html'
+                            '左耳听风/html/__183__01 _ 程序员如何用技术变现（上）.html',
+                        audio: ''
                     },
                     {
-                        id: '5hruzm34p4k',
+                        id: '1y7ufcpi8nw',
                         title: '02 | 程序员如何用技术变现（下）',
                         src:
-                            './左耳听风/html/02-程序员如何用技术变现（下）.html'
+                            '左耳听风/html/__185__02 _ 程序员如何用技术变现（下）.html',
+                        audio: ''
                     },
                     {
-                        id: '3g52j85z6zt',
+                        id: 'cja8e0au431',
                         title: '03 | Equifax信息泄露始末',
-                        src: './左耳听风/html/03-Equifax信息泄露始末.html'
+                        src:
+                            '左耳听风/html/__281__03 _ Equifax信息泄露始末.html',
+                        audio: ''
                     },
                     {
-                        id: 'o2ww51bankl',
+                        id: 'jt41aetsbpk',
                         title: '04 | 从Equifax信息泄露看数据安全',
                         src:
-                            './左耳听风/html/04-从Equifax信息泄露看数据安全.html'
+                            '左耳听风/html/__285__04 _ 从Equifax信息泄露看数据安全.html',
+                        audio: ''
                     },
                     {
-                        id: 'olrsuaad6qn',
+                        id: 'olga9ou4tqr',
                         title: '05 | 何为技术领导力？',
-                        src: './左耳听风/html/05-何为技术领导力.html'
+                        src: '左耳听风/html/__288__05 _ 何为技术领导力？.html',
+                        audio: ''
                     },
                     {
-                        id: 'zu5b2ey19pr',
+                        id: '3ricnebadw7',
                         title: '06 | 如何才能拥有技术领导力？',
-                        src: './左耳听风/html/06-如何拥有技术领导力.html'
+                        src:
+                            '左耳听风/html/__291__06 _ 如何才能拥有技术领导力？.html',
+                        audio: ''
                     },
                     {
-                        id: 'rulocyp85f9',
+                        id: 'ebzxz0jg3vo',
                         title: '07 | 推荐阅读：每个程序员都该知道的知识',
                         src:
-                            './左耳听风/html/07-推荐阅读：每个程序员都该知道的事.html'
+                            '左耳听风/html/__471__07 _ 推荐阅读：每个程序员都该知道的知识.html',
+                        audio: ''
                     },
                     {
-                        id: 'ng5zhrrj2jb',
+                        id: 'w35d0imsq3o',
                         title: '08 | Go语言，Docker和新技术',
-                        src: './左耳听风/html/08-Go语言，Docker和新技术.html'
+                        src:
+                            '左耳听风/html/__294__08 _ Go语言，Docker和新技术.html',
+                        audio: ''
                     },
                     {
-                        id: 'ivyr5odi5c1',
+                        id: 'axor8ejexp7',
                         title: '09 | 答疑解惑：渴望、热情和选择',
                         src:
-                            './左耳听风/html/09-答疑解惑：渴望、热情和选择.html'
+                            '左耳听风/html/__540__09 _ 答疑解惑：渴望、热情和选择.html',
+                        audio: ''
                     },
                     {
-                        id: 'm5zfdq1hhup',
+                        id: '44iw8xc95vt',
                         title: '10 | 如何成为一个大家愿意追随的Leader？',
                         src:
-                            './左耳听风/html/10-如何成为一个大家愿意追随的Leader？.html'
+                            '左耳听风/html/__297__10 _ 如何成为一个大家愿意追随的Leader？.html',
+                        audio: ''
                     },
                     {
-                        id: 'mi86mdq1ste',
+                        id: '3h96ywhdgcc',
                         title: '11 | 程序中的错误处理：错误返回码和异常捕捉',
                         src:
-                            './左耳听风/html/11-程序中的错误处理：错误返回码和异常捕捉.html'
+                            '左耳听风/html/__675__11 _ 程序中的错误处理：错误返回码和异常捕捉.html',
+                        audio: ''
                     },
                     {
-                        id: 'tdr3lkpj2dh',
+                        id: 'tjonhb341og',
                         title:
                             '12 | 程序中的错误处理：异步编程以及我的最佳实践',
                         src:
-                            './左耳听风/html/12-程序中的错误处理：异步编程和最佳实践.html'
+                            '左耳听风/html/__693__12 _ 程序中的错误处理：异步编程以及我的最佳实践.html',
+                        audio: ''
                     },
                     {
-                        id: 'togvkm7ttly',
+                        id: 'eihahmavvjs',
                         title: '13 | 魔数 0x5f3759df',
-                        src: './左耳听风/html/13-魔数-0x5f3759df.html'
+                        src: '左耳听风/html/__730__13 _ 魔数 0x5f3759df.html',
+                        audio: ''
                     },
                     {
-                        id: 'ghe1ryvryux',
+                        id: 'mjr9crv0thr',
                         title: '14 | 推荐阅读：机器学习101',
-                        src: './左耳听风/html/14-推荐阅读：机器学习101.html'
+                        src:
+                            '左耳听风/html/__862__14 _ 推荐阅读：机器学习101.html',
+                        audio: ''
                     },
                     {
-                        id: '2vlyxnn2u5x',
+                        id: 'nhmj5v2a1ko',
                         title: '15 | 时间管理：同扭曲时间的事儿抗争',
                         src:
-                            './左耳听风/html/15-时间管理：同扭曲时间的事儿抗争.html'
+                            '左耳听风/html/__995__15 _ 时间管理：同扭曲时间的事儿抗争.html',
+                        audio: ''
                     },
                     {
-                        id: '5fcyrbgxca6',
+                        id: '6ywg3vkl5kn',
                         title: '16 | 时间管理：如何利用好自己的时间？',
-                        src: './左耳听风/html/16-时间管理：投资赚取时间.html'
+                        src:
+                            '左耳听风/html/__997__16 _ 时间管理：如何利用好自己的时间？.html',
+                        audio: ''
                     },
                     {
-                        id: '2lw26yiz17l',
+                        id: '0xsu4hcfukd',
                         title: '17 | 故障处理最佳实践：应对故障',
                         src:
-                            './左耳听风/html/17-故障处理最佳实践：应对故障.html'
+                            '左耳听风/html/__1059__17 _ 故障处理最佳实践：应对故障.html',
+                        audio: ''
                     },
                     {
-                        id: 'vy1hj8226s9',
+                        id: 'bdtqjzu3hf6',
                         title: '18 | 故障处理最佳实践：故障改进',
                         src:
-                            './左耳听风/html/18-故障处理最佳实践：故障改进.html'
+                            '左耳听风/html/__1064__18 _ 故障处理最佳实践：故障改进.html',
+                        audio: ''
                     },
                     {
-                        id: 'ud3lipuytql',
+                        id: 'id6qx7xqcdv',
                         title: '19 | 答疑解惑：我们应该能够识别的表象和本质',
                         src:
-                            './左耳听风/html/19-答疑解惑：我们应该能够识别的表象和本质.html'
+                            '左耳听风/html/__865__19 _ 答疑解惑：我们应该能够识别的表象和本质.html',
+                        audio: ''
                     },
                     {
-                        id: 'mpg2hod9x0w',
+                        id: 'y4e3hv5f4r2',
                         title: '20 | Git协同工作流，你该怎么选？',
-                        src: './左耳听风/html/20-分布式系统架构的冰与火.html'
-                    },
+                        src:
+                            '左耳听风/html/__2440__20 _ Git协同工作流，你该怎么选？.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'w5d45ha4tvd',
+                title: '分布式架构',
+                subList: [
                     {
-                        id: 'aarf3960nq4',
+                        id: 'vcl55v9ms91',
                         title: '21 | 分布式系统架构的冰与火',
                         src:
-                            './左耳听风/html/21-从亚马逊的实践，谈分布式系统的难点.html'
+                            '左耳听风/html/__1411__21 _ 分布式系统架构的冰与火.html',
+                        audio: ''
                     },
                     {
-                        id: 'o6ajhrzo7lh',
+                        id: 'g3bkso4nt2a',
                         title: '22 | 从亚马逊的实践，谈分布式系统的难点',
-                        src: './左耳听风/html/22-分布式系统的技术栈.html'
+                        src:
+                            '左耳听风/html/__1505__22 _ 从亚马逊的实践，谈分布式系统的难点.html',
+                        audio: ''
                     },
                     {
-                        id: '0i6hvh7bmrh',
+                        id: '8cnuq254kgd',
                         title: '23 | 分布式系统的技术栈',
                         src:
-                            './左耳听风/html/23-分布式系统关键技术：全栈监控.html'
+                            '左耳听风/html/__1512__23 _ 分布式系统的技术栈.html',
+                        audio: ''
                     },
                     {
-                        id: 'lxcpqb5g3g5',
+                        id: 'lb46taagedp',
                         title: '24 | 分布式系统关键技术：全栈监控',
                         src:
-                            './左耳听风/html/24-分布式系统关键技术：服务调度.html'
+                            '左耳听风/html/__1513__24 _ 分布式系统关键技术：全栈监控.html',
+                        audio: ''
                     },
                     {
-                        id: 'fwpuzdzf4ct',
+                        id: 'onfxcvnn05s',
                         title: '25 | 分布式系统关键技术：服务调度',
                         src:
-                            './左耳听风/html/25-分布式系统关键技术：流量与数据调度.html'
+                            '左耳听风/html/__1604__25 _ 分布式系统关键技术：服务调度.html',
+                        audio: ''
                     },
                     {
-                        id: 'jt1m05jp25i',
+                        id: 'uxuy7n9cter',
                         title: '26 | 分布式系统关键技术：流量与数据调度',
-                        src: './左耳听风/html/26-洞悉PaaS平台的本质.html'
+                        src:
+                            '左耳听风/html/__1609__26 _ 分布式系统关键技术：流量与数据调度.html',
+                        audio: ''
                     },
                     {
-                        id: '6izuse9ktxq',
+                        id: '39gsui41kiw',
                         title: '27 | 洞悉PaaS平台的本质',
                         src:
-                            './左耳听风/html/27-推荐阅读：分布式系统架构经典资料.html'
+                            '左耳听风/html/__1610__27 _ 洞悉PaaS平台的本质.html',
+                        audio: ''
                     },
                     {
-                        id: 'u3bnj30xhca',
+                        id: 'w7wmg2qa129',
                         title: '28 | 推荐阅读：分布式系统架构经典资料',
-                        src: './左耳听风/html/28-编程范式游记（1）--起源.html'
+                        src:
+                            '左耳听风/html/__2080__28 _ 推荐阅读：分布式系统架构经典资料.html',
+                        audio: ''
                     },
                     {
-                        id: 'mf8jb854zv3',
+                        id: 'nez3kv58o85',
                         title: '29 | 推荐阅读：分布式数据调度相关论文',
                         src:
-                            './左耳听风/html/29-编程范式游记（2）--泛型编程.html'
-                    },
+                            '左耳听风/html/__2421__29 _ 推荐阅读：分布式数据调度相关论文.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'a2df7xbvo8s',
+                title: '编程范式',
+                subList: [
                     {
-                        id: 'aveidai82v4',
+                        id: 'a6wt7g5ktcq',
                         title: '30 | 编程范式游记（1）- 起源',
                         src:
-                            './左耳听风/html/30-编程范式游记（3）---类型系统和泛型的本质.html'
+                            '左耳听风/html/__301__30 _ 编程范式游记（1）- 起源.html',
+                        audio: ''
                     },
                     {
-                        id: 'em01vyhobp1',
+                        id: 'qfvebh5943c',
                         title: '31 | 编程范式游记（2）- 泛型编程',
-                        src: './左耳听风/html/31-Git协同工作流，你该怎样选.html'
+                        src:
+                            '左耳听风/html/__303__31 _ 编程范式游记（2）- 泛型编程.html',
+                        audio: ''
                     },
                     {
-                        id: 'b99ka7dsg8h',
+                        id: 'o76mvpkegql',
                         title: '32 | 编程范式游记（3） - 类型系统和泛型的本质',
                         src:
-                            './左耳听风/html/32-推荐阅读：分布式数据调度相关论文.html'
+                            '左耳听风/html/__2017__32 _ 编程范式游记（3） - 类型系统和泛型的本质.html',
+                        audio: ''
                     },
                     {
-                        id: '3avkqn9r3pk',
+                        id: 'w67x47g34yk',
                         title: '33 | 编程范式游记（4）- 函数式编程',
                         src:
-                            './左耳听风/html/33-编程范式游记（4）--函数式编程.html'
+                            '左耳听风/html/__2711__33 _ 编程范式游记（4）- 函数式编程.html',
+                        audio: ''
                     },
                     {
-                        id: 'j3tsnrqrv33',
+                        id: 'h16dpnbkrj4',
                         title: '34 | 编程范式游记（5）- 修饰器模式',
                         src:
-                            './左耳听风/html/34-编程范式游记（5）--修饰器模式.html'
+                            '左耳听风/html/__2723__34 _ 编程范式游记（5）- 修饰器模式.html',
+                        audio: ''
                     },
                     {
-                        id: 'nuigt9z0790',
+                        id: 'n1jevxh996l',
                         title: '35 | 编程范式游记（6）- 面向对象编程',
                         src:
-                            './左耳听风/html/35-编程范式游记（6）--面向对象编程.html'
+                            '左耳听风/html/__2729__35 _ 编程范式游记（6）- 面向对象编程.html',
+                        audio: ''
                     },
                     {
-                        id: 'r8o9lo1y1co',
+                        id: 'vz6a5zt1gfm',
                         title: '36 | 编程范式游记（7）- 基于原型的编程范式',
                         src:
-                            './左耳听风/html/36-编程范式游记（7）--基于原型的编程范式.html'
+                            '左耳听风/html/__2741__36 _ 编程范式游记（7）- 基于原型的编程范式.html',
+                        audio: ''
                     },
                     {
-                        id: '8b7sw4w6u84',
+                        id: 'qjbpsbxqkk3',
                         title: '37 | 编程范式游记（8）- Go 语言的委托模式',
                         src:
-                            './左耳听风/html/37-编程范式游记（8）--Go-语言的委托模式.html'
+                            '左耳听风/html/__2748__37 _ 编程范式游记（8）- Go 语言的委托模式.html',
+                        audio: ''
                     },
                     {
-                        id: '73abhfj78cb',
+                        id: 'ojdlbhskpg7',
                         title: '38 | 编程范式游记（9）- 编程的本质',
                         src:
-                            './左耳听风/html/38-编程范式游记（9）--编程的本质.html'
+                            '左耳听风/html/__2751__38 _ 编程范式游记（9）- 编程的本质.html',
+                        audio: ''
                     },
                     {
-                        id: '7kbhmn66fs1',
+                        id: 'r3b52oifcx1',
                         title: '39 | 编程范式游记（10）- 逻辑编程范式',
                         src:
-                            './左耳听风/html/39-编程范式游记（10）--逻辑编程范式.html'
+                            '左耳听风/html/__2752__39 _ 编程范式游记（10）- 逻辑编程范式.html',
+                        audio: ''
                     },
                     {
-                        id: '786640j4g8m',
+                        id: '2wdez29jjnm',
                         title: '40 | 编程范式游记（11）- 程序世界里的编程范式',
                         src:
-                            './左耳听风/html/40-编程范式游记（11）--程序世界里的编程范式.html'
-                    },
+                            '左耳听风/html/__2754__40 _ 编程范式游记（11）- 程序世界里的编程范式.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'zh6vu46jw9i',
+                title: '弹力设计',
+                subList: [
                     {
-                        id: 'owgb7ax17mw',
+                        id: 'n9aggsntia1',
                         title: '41 | 弹力设计篇之“认识故障和弹力设计”',
                         src:
-                            './左耳听风/html/41-弹力设计篇之“认识故障和弹力设计”.html'
+                            '左耳听风/html/__3912__41 _ 弹力设计篇之“认识故障和弹力设计”.html',
+                        audio: ''
                     },
                     {
-                        id: 'ruae6y93iki',
+                        id: 'jsihduw33b5',
                         title: '42 | 弹力设计篇之“隔离设计”',
-                        src: './左耳听风/html/42-弹力设计篇之“隔离设计”.html'
+                        src:
+                            '左耳听风/html/__3917__42 _ 弹力设计篇之“隔离设计”.html',
+                        audio: ''
                     },
                     {
-                        id: 'hmpmde4mm0b',
+                        id: 'y0bbloinfag',
                         title: '43 | 弹力设计篇之“异步通讯设计”',
                         src:
-                            './左耳听风/html/43-弹力设计篇之“异步通讯设计”.html'
+                            '左耳听风/html/__3926__43 _ 弹力设计篇之“异步通讯设计”.html',
+                        audio: ''
                     },
                     {
-                        id: 'dn0w88aecd1',
+                        id: 'hll4roukdtg',
                         title: '44 | 弹力设计篇之“幂等性设计”',
-                        src: './左耳听风/html/44-弹力设计篇之“幂等性设计”.html'
+                        src:
+                            '左耳听风/html/__4050__44 _ 弹力设计篇之“幂等性设计”.html',
+                        audio: ''
                     },
                     {
-                        id: '8zpsan1mn33',
+                        id: '2lv76wbmram',
                         title: '45 | 弹力设计篇之“服务的状态”',
-                        src: './左耳听风/html/45-弹力设计篇之“服务的状态”.html'
+                        src:
+                            '左耳听风/html/__4086__45 _ 弹力设计篇之“服务的状态”.html',
+                        audio: ''
                     },
                     {
-                        id: 'qrn8pwuiymf',
+                        id: '2faafp1ldku',
                         title: '46 | 弹力设计篇之“补偿事务”',
-                        src: './左耳听风/html/46-弹力设计篇之“补偿事务”.html'
+                        src:
+                            '左耳听风/html/__4087__46 _ 弹力设计篇之“补偿事务”.html',
+                        audio: ''
                     },
                     {
-                        id: '1zdc7xlorb7',
+                        id: '0tljloyka1p',
                         title: '47 | 弹力设计篇之“重试设计”',
-                        src: './左耳听风/html/47-弹力设计篇之“重试设计”.html'
+                        src:
+                            '左耳听风/html/__4121__47 _ 弹力设计篇之“重试设计”.html',
+                        audio: ''
                     },
                     {
-                        id: '3pjhynhvpox',
+                        id: 'a30pz8aqdx6',
                         title: '48 | 弹力设计篇之“熔断设计”',
-                        src: './左耳听风/html/48-弹力设计篇之“熔断设计”.html'
+                        src:
+                            '左耳听风/html/__4241__48 _ 弹力设计篇之“熔断设计”.html',
+                        audio: ''
                     },
                     {
-                        id: 'te8zkpzpdfs',
+                        id: '38kbtmydu6g',
                         title: '49 | 弹力设计篇之“限流设计”',
-                        src: './左耳听风/html/49-弹力设计篇之“限流设计”.html'
+                        src:
+                            '左耳听风/html/__4245__49 _ 弹力设计篇之“限流设计”.html',
+                        audio: ''
                     },
                     {
-                        id: 'y3dupkzlshg',
+                        id: 'txjw9u61uzj',
                         title: '50 | 弹力设计篇之“降级设计”',
-                        src: './左耳听风/html/50-弹力设计篇之“降级设计”.html'
+                        src:
+                            '左耳听风/html/__4252__50 _ 弹力设计篇之“降级设计”.html',
+                        audio: ''
                     },
                     {
-                        id: 'tnly0isbhnk',
+                        id: '6f8hbb1usub',
                         title: '51 | 弹力设计篇之“弹力设计总结”',
                         src:
-                            './左耳听风/html/51-弹力设计篇之“弹力设计总结”.html'
-                    },
+                            '左耳听风/html/__4253__51 _ 弹力设计篇之“弹力设计总结”.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'm8un762jidy',
+                title: '管理设计',
+                subList: [
                     {
-                        id: 'a7cq7kqmyd6',
+                        id: '8zbrjc1akw2',
                         title: '52 | 管理设计篇之“分布式锁”',
                         src:
-                            './左耳听风/html/52-区块链技术---区块链的革命性及技术概要.html'
+                            '左耳听风/html/__5175__52 _ 管理设计篇之“分布式锁”.html',
+                        audio: ''
                     },
                     {
-                        id: 'f7m4dwtev7s',
+                        id: 'esim03t3bz2',
                         title: '53 | 管理设计篇之“配置中心”',
                         src:
-                            './左耳听风/html/53-区块链技术---区块链技术细节---哈希算法.html'
+                            '左耳听风/html/__5819__53 _ 管理设计篇之“配置中心”.html',
+                        audio: ''
                     },
                     {
-                        id: 'imfzw1w8qq3',
+                        id: 'byyyq31n5s7',
                         title: '54 | 管理设计篇之“边车模式”',
                         src:
-                            './左耳听风/html/54-区块链技术---区块链技术细节---加密和挖矿.html'
+                            '左耳听风/html/__5909__54 _ 管理设计篇之“边车模式”.html',
+                        audio: ''
                     },
                     {
-                        id: '27k8ym14uzw',
+                        id: 'je9ykbrwbe0',
                         title: '55 | 管理设计篇之“服务网格”',
                         src:
-                            './左耳听风/html/55-区块链技术---去中心化的共识机制.html'
+                            '左耳听风/html/__5920__55 _ 管理设计篇之“服务网格”.html',
+                        audio: ''
                     },
                     {
-                        id: 'wd0jk6rueh8',
+                        id: 'vk8cl0omskl',
                         title: '56 | 管理设计篇之“网关模式”',
-                        src: './左耳听风/html/56-区块链技术---智能合约.html'
+                        src:
+                            '左耳听风/html/__6086__56 _ 管理设计篇之“网关模式”.html',
+                        audio: ''
                     },
                     {
-                        id: 'sjk3o0t9d64',
+                        id: 'ov93fil5s0y',
                         title: '57 | 管理设计篇之“部署升级策略”',
                         src:
-                            './左耳听风/html/57-区块链技术---传统金融和虚拟货币.html'
-                    },
+                            '左耳听风/html/__6283__57 _ 管理设计篇之“部署升级策略”.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: '95rjp4eyn9l',
+                title: '性能设计',
+                subList: [
                     {
-                        id: 'dty6ktvddv4',
+                        id: '8ef8ptto4iw',
                         title: '58 | 性能设计篇之“缓存”',
-                        src: './左耳听风/html/58-管理设计篇之_分布式锁_.html'
-                    },
-                    {
-                        id: 'hptyueat42d',
-                        title: '59 | 性能设计篇之“异步处理”',
-                        src: './左耳听风/html/59-管理设计篇之_配置中心_.html'
-                    },
-                    {
-                        id: '538pd6wyetf',
-                        title: '60 | 性能设计篇之“数据库扩展”',
-                        src: './左耳听风/html/60-管理设计篇之_边车模式_.html'
-                    },
-                    {
-                        id: 'l2otnghyk1o',
-                        title: '61 | 性能设计篇之“秒杀”',
-                        src: './左耳听风/html/61-管理设计篇之_服务网格_.html'
-                    },
-                    {
-                        id: 'lqx5mahfbdg',
-                        title: '62 | 性能设计篇之“边缘计算”',
-                        src: './左耳听风/html/62-管理设计篇之_网关模式_.html'
-                    },
-                    {
-                        id: '094s029cjn8',
-                        title: '63 | 区块链技术的本质',
                         src:
-                            './左耳听风/html/63-管理设计篇之_部署升级策略_.html'
+                            '左耳听风/html/__6282__58 _ 性能设计篇之“缓存”.html',
+                        audio: ''
                     },
                     {
-                        id: 'iwf19drktvu',
+                        id: '2sghqt0w0qv',
+                        title: '59 | 性能设计篇之“异步处理”',
+                        src:
+                            '左耳听风/html/__7036__59 _ 性能设计篇之“异步处理”.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'x0872p41zbf',
+                        title: '60 | 性能设计篇之“数据库扩展”',
+                        src:
+                            '左耳听风/html/__7045__60 _ 性能设计篇之“数据库扩展”.html',
+                        audio: ''
+                    },
+                    {
+                        id: 't019wmjrj94',
+                        title: '61 | 性能设计篇之“秒杀”',
+                        src:
+                            '左耳听风/html/__7047__61 _ 性能设计篇之“秒杀”.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'fxs0g9hljpi',
+                        title: '62 | 性能设计篇之“边缘计算”',
+                        src:
+                            '左耳听风/html/__7086__62 _ 性能设计篇之“边缘计算”.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'ftemgh2bskn',
+                title: '区块链',
+                subList: [
+                    {
+                        id: 'o6d689g8be1',
+                        title: '63 | 区块链技术的本质',
+                        src: '左耳听风/html/__5197__63 _ 区块链技术的本质.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'wrr7o3ekvhj',
                         title: '64 | 区块链技术细节：哈希算法',
-                        src: './左耳听风/html/64-性能设计篇之_缓存_.html'
+                        src:
+                            '左耳听风/html/__5363__64 _ 区块链技术细节：哈希算法.html',
+                        audio: ''
                     },
                     {
-                        id: 'tn2hev8a2d9',
+                        id: 'ijo54zh70y0',
                         title: '65 |  区块链技术细节：加密和挖矿',
-                        src: './左耳听风/html/65-性能设计篇之_异步处理_.html'
+                        src:
+                            '左耳听风/html/__5438__65 _ 区块链技术细节：加密和挖矿.html',
+                        audio: ''
                     },
                     {
-                        id: 'kz25snznttb',
+                        id: 's2kcmov0ml6',
                         title: '66 | 区块链技术细节：去中心化的共识机制',
-                        src: './左耳听风/html/66-性能设计篇之_数据库扩展_.html'
+                        src:
+                            '左耳听风/html/__5612__66 _ 区块链技术细节：去中心化的共识机制.html',
+                        audio: ''
                     },
                     {
-                        id: 'a7dl6v49eyk',
+                        id: '4ffrlk1y4eg',
                         title: '67 | 区块链技术细节：智能合约',
-                        src: './左耳听风/html/67-性能设计篇之_秒杀_.html'
+                        src:
+                            '左耳听风/html/__5623__67 _ 区块链技术细节：智能合约.html',
+                        audio: ''
                     },
                     {
-                        id: 'o6ah88rhzor',
+                        id: '34qm3295747',
                         title: '68 | 区块链技术 - 传统金融和虚拟货币',
-                        src: './左耳听风/html/68-性能设计篇之_边缘计算_.html'
-                    },
+                        src:
+                            '左耳听风/html/__5636__68 _ 区块链技术 - 传统金融和虚拟货币.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'eg42ogcq3ki',
+                title: '程序员练级攻略',
+                subList: [
                     {
-                        id: '389r5bqlzww',
+                        id: 'rqxur1bfyrz',
                         title: '69 | 程序员练级攻略：开篇词',
                         src:
-                            './左耳听风/html/69-程序员练级攻略（2018）：开篇词.html'
+                            '左耳听风/html/__8136__69 _ 程序员练级攻略：开篇词.html',
+                        audio: ''
                     },
                     {
-                        id: 'dueftjfkqc6',
+                        id: '1eiqykeutpj',
                         title: '70 | 程序员练级攻略：零基础启蒙',
                         src:
-                            './左耳听风/html/70-程序员练级攻略（2018）：零基础启蒙.html'
+                            '左耳听风/html/__8216__70 _ 程序员练级攻略：零基础启蒙.html',
+                        audio: ''
                     },
                     {
-                        id: '6qu7ymywao7',
+                        id: 'feh4jaohi0p',
                         title: '71 | 程序员练级攻略：正式入门',
                         src:
-                            './左耳听风/html/71-程序员练级攻略（2018）：正式入门.html'
+                            '左耳听风/html/__8217__71 _ 程序员练级攻略：正式入门.html',
+                        audio: ''
                     },
                     {
-                        id: '6v020vwy9su',
+                        id: '0018a9xo7u0',
                         title: '72 | 程序员练级攻略：程序员修养',
                         src:
-                            './左耳听风/html/72-程序员练级攻略（2018）：程序员修养.html'
+                            '左耳听风/html/__8700__72 _ 程序员练级攻略：程序员修养.html',
+                        audio: ''
                     },
                     {
-                        id: 'abzfhuae3lz',
+                        id: 'cncajpib0ya',
                         title: '73 | 程序员练级攻略：编程语言',
                         src:
-                            './左耳听风/html/73-程序员练级攻略（2018）：编程语言.html'
+                            '左耳听风/html/__8701__73 _ 程序员练级攻略：编程语言.html',
+                        audio: ''
                     },
                     {
-                        id: 'rfi2o7bsudt',
+                        id: '34w5tsbe4nj',
                         title: '74 | 程序员练级攻略：理论学科',
                         src:
-                            './左耳听风/html/74-程序员练级攻略（2018）：理论学科.html'
+                            '左耳听风/html/__8887__74 _ 程序员练级攻略：理论学科.html',
+                        audio: ''
                     },
                     {
-                        id: 'kg9vwrrdzvi',
+                        id: '7amh6q02ivq',
                         title: '75 | 程序员练级攻略：系统知识',
                         src:
-                            './左耳听风/html/75-程序员练级攻略（2018）：系统知识.html'
+                            '左耳听风/html/__8888__75 _ 程序员练级攻略：系统知识.html',
+                        audio: ''
                     },
                     {
-                        id: 'f6r3kopnpw2',
+                        id: '6wgy7xkzo05',
                         title: '76 | 程序员练级攻略：软件设计',
                         src:
-                            './左耳听风/html/76-程序员练级攻略（2018）：软件设计.html'
+                            '左耳听风/html/__9369__76 _ 程序员练级攻略：软件设计.html',
+                        audio: ''
                     },
                     {
-                        id: 'yd42gjjsu5q',
+                        id: 'u4h70emvh0u',
                         title: '77 | 程序员练级攻略：Linux系统、内存和网络',
                         src:
-                            './左耳听风/html/77-程序员练级攻略（2018）：Linux系统、内存和网络.html'
+                            '左耳听风/html/__9759__77 _ 程序员练级攻略：Linux系统、内存和网络.html',
+                        audio: ''
                     },
                     {
-                        id: 'qvpdotsnxdq',
+                        id: 'a5rp73id741',
                         title:
                             '78 | 程序员练级攻略：异步I/O模型和Lock-Free编程',
                         src:
-                            './左耳听风/html/78-程序员练级攻略（2018）：异步I_O模型和Lock-Free编程.html'
+                            '左耳听风/html/__9851__78 _ 程序员练级攻略：异步I_O模型和Lock-Free编程.html',
+                        audio: ''
                     },
                     {
-                        id: 'hcwoqowajko',
+                        id: '5d0r35tjhvu',
                         title: '79 | 程序员练级攻略：Java底层知识',
                         src:
-                            './左耳听风/html/79-程序员练级攻略（2018）：Java底层知识.html'
+                            '左耳听风/html/__10216__79 _ 程序员练级攻略：Java底层知识.html',
+                        audio: ''
                     },
                     {
-                        id: 'm37yqk24pln',
+                        id: 'y71icrtmqkm',
                         title: '80 | 程序员练级攻略：数据库',
                         src:
-                            './左耳听风/html/80-程序员练级攻略（2018）：数据库.html'
+                            '左耳听风/html/__10301__80 _ 程序员练级攻略：数据库.html',
+                        audio: ''
                     },
                     {
-                        id: 'n3jmztbcdpn',
+                        id: '31damzr330i',
                         title: '81 | 程序员练级攻略：分布式架构入门',
                         src:
-                            './左耳听风/html/81-程序员练级攻略（2018）：分布式架构入门.html'
+                            '左耳听风/html/__10603__81 _ 程序员练级攻略：分布式架构入门.html',
+                        audio: ''
                     },
                     {
-                        id: '2w8dknmnnnc',
+                        id: '2k6opf66e4j',
                         title: '82 | 程序员练级攻略：分布式架构经典图书和论文',
                         src:
-                            './左耳听风/html/82-程序员练级攻略（2018）：分布式架构经典图书和论文.html'
+                            '左耳听风/html/__10604__82 _ 程序员练级攻略：分布式架构经典图书和论文.html',
+                        audio: ''
                     },
                     {
-                        id: 'dc39v36x0fm',
+                        id: 'fvqtnyjqmlw',
                         title: '83 | 程序员练级攻略：分布式架构工程设计',
                         src:
-                            './左耳听风/html/83-程序员练级攻略（2018）：分布式架构工程设计.html'
+                            '左耳听风/html/__11232__83 _ 程序员练级攻略：分布式架构工程设计.html',
+                        audio: ''
                     },
                     {
-                        id: 'ku5s363qcpt',
+                        id: '7vnaqihp2yb',
                         title: '84 | 程序员练级攻略：微服务',
                         src:
-                            './左耳听风/html/84-程序员练级攻略（2018）：微服务.html'
+                            '左耳听风/html/__11116__84 _ 程序员练级攻略：微服务.html',
+                        audio: ''
                     },
                     {
-                        id: '300unnvj3ue',
+                        id: 'nzdisfg1dir',
                         title: '85 | 程序员练级攻略：容器化和自动化运维',
                         src:
-                            './左耳听风/html/85-程序员练级攻略（2018）：容器化和自动化运维.html'
+                            '左耳听风/html/__11665__85 _ 程序员练级攻略：容器化和自动化运维.html',
+                        audio: ''
                     },
                     {
-                        id: 'h9vskrmkgtl',
+                        id: 'xpce42vir0a',
                         title: '86 | 程序员练级攻略：机器学习和人工智能',
                         src:
-                            './左耳听风/html/86-程序员练级攻略（2018）：机器学习和人工智能.html'
+                            '左耳听风/html/__11669__86 _ 程序员练级攻略：机器学习和人工智能.html',
+                        audio: ''
                     },
                     {
-                        id: 'za0b3fcylxn',
+                        id: '0attlhdo2bx',
                         title: '87 | 程序员练级攻略：前端基础和底层原理',
                         src:
-                            './左耳听风/html/87-程序员练级攻略（2018）：前端基础和底层原理.html'
+                            '左耳听风/html/__12271__87 _ 程序员练级攻略：前端基础和底层原理.html',
+                        audio: ''
                     },
                     {
-                        id: 'pzonmi2lke5',
+                        id: 'pk7b1m1cqfk',
                         title: '88 | 程序员练级攻略：前端性能优化和框架',
                         src:
-                            './左耳听风/html/88-程序员练级攻略（2018）：前端性能优化和框架.html'
+                            '左耳听风/html/__12389__88 _ 程序员练级攻略：前端性能优化和框架.html',
+                        audio: ''
                     },
                     {
-                        id: 'd6v99rp91yi',
+                        id: 'qr6twnmvgen',
                         title: '89 | 程序员练级攻略：UI/UX设计',
                         src:
-                            './左耳听风/html/89-程序员练级攻略（2018）：UI_UX设计.html'
+                            '左耳听风/html/__12486__89 _ 程序员练级攻略：UI_UX设计.html',
+                        audio: ''
                     },
                     {
-                        id: 'wcj1e9o85qf',
+                        id: 'byndic41sz8',
                         title: '90 | 程序员练级攻略：技术资源集散地',
                         src:
-                            './左耳听风/html/90-程序员练级攻略（2018）：技术资源集散地.html'
+                            '左耳听风/html/__12561__90 _ 程序员练级攻略：技术资源集散地.html',
+                        audio: ''
                     },
                     {
-                        id: 'b4a7vvhwtoj',
-                        title: '91 | 程序员面试攻略：面试前的准备',
+                        id: '6livrookul8',
+                        title: '91 | 程序员练级攻略的正确打开方式',
                         src:
-                            './左耳听风/html/91-程序员面试攻略：面试前的准备.html'
-                    },
+                            '左耳听风/html/__242946__91 _ 程序员练级攻略的正确打开方式.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'blahvexv46a',
+                title: '程序员面试攻略',
+                subList: [
                     {
-                        id: '4n6bwpt852j',
-                        title: '92 | 程序员面试攻略：面试中的技巧',
+                        id: '3f3ghscfivz',
+                        title: '92 | 程序员面试攻略：面试前的准备',
                         src:
-                            './左耳听风/html/92-程序员面试攻略：面试中的技巧.html'
+                            '左耳听风/html/__13067__92 _ 程序员面试攻略：面试前的准备.html',
+                        audio: ''
                     },
                     {
-                        id: 'wzrkpoj43na',
-                        title: '93 | 程序员面试攻略：面试风格',
-                        src: './左耳听风/html/93-程序员面试攻略：面试风格.html'
-                    },
-                    {
-                        id: '4vlr7p8tpio',
-                        title: '94 | 程序员面试攻略：实力才是王中王',
+                        id: 'y14bg88sbrf',
+                        title: '93 | 程序员面试攻略：面试中的技巧',
                         src:
-                            './左耳听风/html/94-程序员面试攻略：实力才是王中王.html'
+                            '左耳听风/html/__13069__93 _ 程序员面试攻略：面试中的技巧.html',
+                        audio: ''
                     },
                     {
-                        id: 'sklzsd7s191',
-                        title: '95 | 高效学习：端正学习态度',
-                        src: './左耳听风/html/95-高效学习：端正学习态度.html'
-                    },
-                    {
-                        id: 'b98ohkbnw6q',
-                        title: '96 | 高效学习：源头、原理和知识地图',
+                        id: '3n4y5jzqxt5',
+                        title: '94 | 程序员面试攻略：面试风格',
                         src:
-                            './左耳听风/html/96-高效学习：源头、原理和知识地图.html'
+                            '左耳听风/html/__13191__94 _ 程序员面试攻略：面试风格.html',
+                        audio: ''
                     },
                     {
-                        id: 'opu0qyw4rjf',
-                        title: '97 | 高效学习：深度，归纳和坚持实践',
+                        id: 'wpjie8yvkww',
+                        title: '95 | 程序员面试攻略：实力才是王中王',
                         src:
-                            './左耳听风/html/97-高效学习：深度，归纳和坚持实践.html'
-                    },
+                            '左耳听风/html/__13192__95 _ 程序员面试攻略：实力才是王中王.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'gitycfl05el',
+                title: '高效学习',
+                subList: [
                     {
-                        id: '7octxbl21m3',
-                        title: '98 | 高效学习：如何学习和阅读代码',
+                        id: 'ixk3t2sl7xu',
+                        title: '96 | 高效学习：端正学习态度',
                         src:
-                            './左耳听风/html/98-高效学习：如何学习和阅读代码.html'
+                            '左耳听风/html/__14271__96 _ 高效学习：端正学习态度.html',
+                        audio: ''
                     },
                     {
-                        id: 'ho59ss83h9r',
-                        title: '99 | 高效学习：面对枯燥和量大的知识',
+                        id: '5kr31w8t2xm',
+                        title: '97 | 高效学习：源头、原理和知识地图',
                         src:
-                            './左耳听风/html/99-高效学习：面对枯燥和量大的知识.html'
+                            '左耳听风/html/__14321__97 _ 高效学习：源头、原理和知识地图.html',
+                        audio: ''
                     },
                     {
-                        id: '8hj2gecx1re',
-                        title: '100 | 高效沟通：Talk和Code同等重要',
+                        id: 'avisxbzyhap',
+                        title: '98 | 高效学习：深度，归纳和坚持实践',
                         src:
-                            './左耳听风/html/100-高效沟通：Talk和Code同等重要.html'
+                            '左耳听风/html/__14360__98 _ 高效学习：深度，归纳和坚持实践.html',
+                        audio: ''
                     },
                     {
-                        id: 'pkli4l7ef20',
-                        title: '101 | 高效沟通：沟通阻碍和应对方法',
+                        id: '8aux6itp8jo',
+                        title: '99 | 高效学习：如何学习和阅读代码',
                         src:
-                            './左耳听风/html/101-高效沟通：沟通阻碍和应对方法.html'
+                            '左耳听风/html/__14380__99 _ 高效学习：如何学习和阅读代码.html',
+                        audio: ''
                     },
                     {
-                        id: 'f9urqxp29t0',
-                        title: '102 | 高效沟通：沟通方式及技巧',
-                        src: './左耳听风/html/102-高效沟通：沟通方式及技巧.html'
-                    },
-                    {
-                        id: '1vcbwqgtc5c',
-                        title: '103 | 高效沟通：沟通技术',
-                        src: './左耳听风/html/103-高效沟通：沟通技术.html'
-                    },
-                    {
-                        id: 'gmlt5iu132u',
-                        title: '104 | 高效沟通：好老板要善于提问',
+                        id: 'ne1oks7zk41',
+                        title: '100 | 高效学习：面对枯燥和量大的知识',
                         src:
-                            './左耳听风/html/104-高效沟通：好老板要善于提问.html'
+                            '左耳听风/html/__14389__100 _ 高效学习：面对枯燥和量大的知识.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'g3kb8hb9u86',
+                title: '高效沟通',
+                subList: [
+                    {
+                        id: 'vdjrwfntwu8',
+                        title: '101 | 高效沟通：Talk和Code同等重要',
+                        src:
+                            '左耳听风/html/__28550__101 _ 高效沟通：Talk和Code同等重要.html',
+                        audio: ''
                     },
                     {
-                        id: '1ccy0cu9z15',
-                        title: '105 | 高效沟通：好好说话的艺术',
-                        src: './左耳听风/html/105-高效沟通：好好说话的艺术.html'
+                        id: 'm5wyp9299pt',
+                        title: '102 | 高效沟通：沟通阻碍和应对方法',
+                        src:
+                            '左耳听风/html/__32619__102 _ 高效沟通：沟通阻碍和应对方法.html',
+                        audio: ''
                     },
                     {
-                        id: '42dkc0m2fsi',
+                        id: 'mspnym6n9r2',
+                        title: '103 | 高效沟通：沟通方式及技巧',
+                        src:
+                            '左耳听风/html/__32796__103 _ 高效沟通：沟通方式及技巧.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'rjk3zofjp2k',
+                        title: '104 | 高效沟通：沟通技术',
+                        src:
+                            '左耳听风/html/__32902__104 _ 高效沟通：沟通技术.html',
+                        audio: ''
+                    },
+                    {
+                        id: '4uvktosckp4',
+                        title: '105 | 高效沟通：好老板要善于提问',
+                        src:
+                            '左耳听风/html/__33112__105 _ 高效沟通：好老板要善于提问.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'ttwml5yeb48',
+                        title: '106 | 高效沟通：好好说话的艺术',
+                        src:
+                            '左耳听风/html/__41008__106 _ 高效沟通：好好说话的艺术.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'axjyscikwks',
+                title: 'Go语言编程模式',
+                subList: [
+                    {
+                        id: 'tyk41f2cps7',
+                        title: '107 | Go编程模式：切片、接口、时间和性能',
+                        src:
+                            '左耳听风/html/__332600__107 _ Go编程模式：切片、接口、时间和性能.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'kdh5fu7elk4',
+                        title: '108 | Go 编程模式：错误处理',
+                        src:
+                            '左耳听风/html/__332602__108 _ Go 编程模式：错误处理.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'sutjecka1fc',
+                        title: '109 | Go 编程模式：Functional Options',
+                        src:
+                            '左耳听风/html/__332603__109 _ Go 编程模式：Functional Options.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'txh6oh3busb',
+                        title: '110 | Go编程模式：委托和反转控制',
+                        src:
+                            '左耳听风/html/__332605__110 _ Go编程模式：委托和反转控制.html',
+                        audio: ''
+                    },
+                    {
+                        id: '3n9085levjw',
+                        title: '111 | Go 编程模式：Map-Reduce',
+                        src:
+                            '左耳听风/html/__332606__111 _ Go 编程模式：Map-Reduce.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'vwojlr0p009',
+                        title: '112 | Go 编程模式：Go Generation',
+                        src:
+                            '左耳听风/html/__332607__112 _ Go 编程模式：Go Generation.html',
+                        audio: ''
+                    },
+                    {
+                        id: '44t9my1k0ro',
+                        title: '113 | Go编程模式：修饰器',
+                        src:
+                            '左耳听风/html/__332608__113 _ Go编程模式：修饰器.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'ptbpb86k987',
+                        title: '114 | Go编程模式：Pipeline',
+                        src:
+                            '左耳听风/html/__332610__114 _ Go编程模式：Pipeline.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'niifj36sotj',
+                        title: '115 | Go 编程模式：Kubernetes Visitor模式',
+                        src:
+                            '左耳听风/html/__332612__115 _ Go 编程模式：Kubernetes Visitor模式.html',
+                        audio: ''
+                    }
+                ]
+            },
+            {
+                id: 'cj9zddvz2jx',
+                title: '尾声&加餐',
+                subList: [
+                    {
+                        id: 'u7piyy0f5aw',
                         title: '结束语 | 业精于勤，行成于思',
-                        src: ''
+                        src:
+                            '左耳听风/html/__41118__结束语 _ 业精于勤，行成于思.html',
+                        audio: ''
                     },
                     {
-                        id: 'q3l2ppadfui',
+                        id: '02h4fnpb3bw',
                         title: '加餐 | 谈谈我的“三观”',
-                        src: ''
+                        src:
+                            '左耳听风/html/__84603__加餐 _ 谈谈我的“三观”.html',
+                        audio: ''
                     }
                 ]
             }
