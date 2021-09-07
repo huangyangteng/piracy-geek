@@ -27,6 +27,9 @@ export default {
     methods: {
         ...mapMutations('component', ['updatePicturePreview'])
     },
+    created() {
+        this.updatePicturePreview({ show: false })
+    },
     mounted() {
         window.addEventListener('click', e => {
             let target = e.target

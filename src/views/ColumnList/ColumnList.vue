@@ -117,7 +117,7 @@ export default {
 <style lang="scss" scoped>
 $--color-primary: #fa8919;
 .column-list {
-    max-width: 1000px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 60px 20px;
     > header {
@@ -136,7 +136,7 @@ $--color-primary: #fa8919;
     display: inline-flex;
     margin-right: 20px;
     justify-content: space-between;
-    width: 180px;
+    flex: 1;
     padding: 10px;
     background: $component-bg-color;
     border-radius: 5px;
