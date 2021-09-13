@@ -1,7 +1,8 @@
 export default [
     {
         path: '/',
-        component: () => import('./Home.vue')
+        redirect: '/column-list'
+        // component: () => import('./Home.vue')
     },
     {
         path: '/read',

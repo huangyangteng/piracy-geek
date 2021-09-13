@@ -9,7 +9,7 @@ const taobaoExpert = data =>
 const getFiles = query =>
     http.request({
         url: '/util/files',
-        query
+        params: query
     })
 const upload = data =>
     http.request({

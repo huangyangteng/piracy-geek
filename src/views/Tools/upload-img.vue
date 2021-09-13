@@ -16,6 +16,7 @@
 import { UTIL_API } from '../../api/util'
 import PicturePreview from '../Home/Modal/PicturePreview'
 import { mapState, mapMutations } from 'vuex'
+import dayjs from 'dayjs'
 export default {
     name: 'upload-img',
     components: {
@@ -66,7 +67,13 @@ export default {
             }
         },
         async getFiles() {
-            const res = await UTIL_API.getFiles()
+            // 只获取最近三个小时之内的数据
+            const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
+            const start = dayjs()
+                .subtract(3, 'hour')
+                .format('YYYY-MM-DD HH:mm:ss')
+            const res = await UTIL_API.getFiles({ start, end })
+
             if (res.code === 2000) {
                 this.imageList = res.data
             }
@@ -75,15 +82,15 @@ export default {
     },
     mounted() {
         this.getFiles()
-        clearInterval(this.timer)
-        this.timer = setInterval(() => {
-            console.log('get files')
-            this.getFiles()
-        }, 10 * 1000)
+        // clearInterval(this.timer)
+        // this.timer = setInterval(() => {
+        //     console.log('get files')
+        //     this.getFiles()
+        // }, 10 * 1000)
         document.addEventListener('paste', this.handlePaster)
     },
     beforeDestroy() {
-        clearInterval(this.timer)
+        // clearInterval(this.timer)
         document.removeEventListener('paste', this.handlePaster)
     }
 }
