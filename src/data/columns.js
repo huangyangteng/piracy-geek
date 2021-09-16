@@ -7743,7 +7743,7 @@ export default [
         ]
     },
     {
-        id: 'er2uxy2s01f',
+        id: 'klad1o97mmx',
         type: 'cs',
         cid: '100026001',
         title: '深入浅出计算机组成原理',
@@ -7752,545 +7752,495 @@ export default [
         authorInfo: 'bothub创始人',
         contents: [
             {
-                id: 'rpkztqjbw0j',
+                id: '7ut40znfcng',
                 title: '入门篇',
                 subList: [
                     {
-                        id: '48uym3qnu2c',
+                        id: 't8zdc85dv5u',
                         title: '开篇词 | 为什么你需要学习计算机组成原理？',
                         src:
-                            './深入浅出计算机组成原理/html/00开篇词为什么你需要学习计算机组成原理.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/00开篇词为什么你需要学习计算机组成原理.mp3'
-                    },
-                    {
-                        id: 'pvd1gz37lsj',
-                        title: '01 | 冯·诺依曼体系结构：计算机组成的金字塔',
-                        src:
-                            './深入浅出计算机组成原理/html/01冯诺依曼体系结构计算机组成的金字塔.html',
+                            '深入浅出计算机组成原理/html/__91427__开篇词 _ 为什么你需要学习计算机组成原理？.html',
                         audio: ''
                     },
                     {
-                        id: 'elxf8hlv8ou',
+                        id: 'yj4rthzvenr',
+                        title: '01 | 冯·诺依曼体系结构：计算机组成的金字塔',
+                        src:
+                            '深入浅出计算机组成原理/html/__91793__01 _ 冯·诺依曼体系结构：计算机组成的金字塔.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'o2a301xcpkl',
                         title:
                             '02 | 给你一张知识地图，计算机组成原理应该这么学',
                         src:
-                            './深入浅出计算机组成原理/html/02给你一张知识地图计算机组成原理应该这么学.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/02给你一张知识地图计算机组成原理应该这么学.mp3'
+                            '深入浅出计算机组成原理/html/__92378__02 _ 给你一张知识地图，计算机组成原理应该这么学.html',
+                        audio: ''
                     },
                     {
-                        id: 'ia5stxmf4cu',
+                        id: '9hmybydlpf0',
                         title:
                             '03 | 通过你的CPU主频，我们来谈谈“性能”究竟是什么？',
                         src:
-                            './深入浅出计算机组成原理/html/03通过你的CPU主频我们来谈谈性能究竟是什么.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/03通过你的CPU主频我们来谈谈性能究竟是什么.mp3'
+                            '深入浅出计算机组成原理/html/__92215__03 _ 通过你的CPU主频，我们来谈谈“性能”究竟是什么？.html',
+                        audio: ''
                     },
                     {
-                        id: 'di5i3r8avyk',
+                        id: 'n3qysljo8iv',
                         title: '04 | 穿越功耗墙，我们该从哪些方面提升“性能”？',
                         src:
-                            './深入浅出计算机组成原理/html/04穿越功耗墙我们该从哪些方面提升性能.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/04穿越功耗墙我们该从哪些方面提升性能.mp3'
+                            '深入浅出计算机组成原理/html/__93246__04 _ 穿越功耗墙，我们该从哪些方面提升“性能”？.html',
+                        audio: ''
                     }
                 ]
             },
             {
-                id: 'lhjyufd0mpe',
+                id: 'r5fy4o7cl3g',
                 title: '原理篇：指令和运算',
                 subList: [
                     {
-                        id: '5xzingrz2ai',
+                        id: 'd9jdnzcercx',
                         title: '05 | 计算机指令：让我们试试用纸带编程',
                         src:
-                            './深入浅出计算机组成原理/html/05计算机指令让我们试试用纸带编程.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/05计算机指令让我们试试用纸带编程.mp3'
-                    },
-                    {
-                        id: 'usatckwoe74',
-                        title: '06 | 指令跳转：原来if...else就是goto',
-                        src:
-                            './深入浅出计算机组成原理/html/06指令跳转原来ifelse.html',
+                            '深入浅出计算机组成原理/html/__93359__05 _ 计算机指令：让我们试试用纸带编程.html',
                         audio: ''
                     },
                     {
-                        id: 'bab5vqg5xzb',
-                        title: '07 | 函数调用：为什么会发生stack overflow？',
+                        id: 'rp1o3ad38wq',
+                        title: '06 | 指令跳转：原来if...else就是goto',
                         src:
-                            './深入浅出计算机组成原理/html/07函数调用为什么会发生stackoverflow.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/07函数调用为什么会发生stackoverflow.mp3'
+                            '深入浅出计算机组成原理/html/__94075__06 _ 指令跳转：原来if...else就是goto.html',
+                        audio: ''
                     },
                     {
-                        id: '50xfjebm79l',
+                        id: '2yn1h94jdvi',
+                        title: '07 | 函数调用：为什么会发生stack overflow？',
+                        src:
+                            '深入浅出计算机组成原理/html/__94427__07 _ 函数调用：为什么会发生stack overflow？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'zb6n95wo2oe',
                         title:
                             '08 | ELF和静态链接：为什么程序无法同时在Linux和Windows下运行？',
                         src:
-                            './深入浅出计算机组成原理/html/08ELF和静态链接为什么程序无法同时在Linux和Windows下运行.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/08ELF和静态链接为什么程序无法同时在Linux和Windows下运行.mp3'
+                            '深入浅出计算机组成原理/html/__94470__08 _ ELF和静态链接：为什么程序无法同时在Linux和Windows下运行？.html',
+                        audio: ''
                     },
                     {
-                        id: 'lde9bqjdju6',
+                        id: '84uccdddu3u',
                         title: '09 | 程序装载：“640K内存”真的不够用么？',
                         src:
-                            './深入浅出计算机组成原理/html/09程序装载640K内存真的不够用么.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/09程序装载640K内存真的不够用么.mp3'
+                            '深入浅出计算机组成原理/html/__95223__09 _ 程序装载：“640K内存”真的不够用么？.html',
+                        audio: ''
                     },
                     {
-                        id: 'trzcf6cz8js',
+                        id: 'fztcgccx3fe',
                         title: '10 | 动态链接：程序内部的“共享单车”',
                         src:
-                            './深入浅出计算机组成原理/html/10动态链接程序内部的共享单车.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/10动态链接程序内部的共享单车.mp3'
+                            '深入浅出计算机组成原理/html/__95244__10 _ 动态链接：程序内部的“共享单车”.html',
+                        audio: ''
                     },
                     {
-                        id: 'xow9x18krjh',
+                        id: '8xs6ko70a84',
                         title:
                             '11 | 二进制编码：“手持两把锟斤拷，口中疾呼烫烫烫”？',
                         src:
-                            './深入浅出计算机组成原理/html/11二进制编码手持两把锟斤拷口中疾呼烫烫烫.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/11二进制编码手持两把锟斤拷口中疾呼烫烫烫.mp3'
+                            '深入浅出计算机组成原理/html/__95844__11 _ 二进制编码：“手持两把锟斤拷，口中疾呼烫烫烫”？.html',
+                        audio: ''
                     },
                     {
-                        id: '3wr6fvbgyic',
+                        id: 'jsob921lc1p',
                         title:
                             '12 | 理解电路：从电报机到门电路，我们如何做到“千里传信”？',
                         src:
-                            './深入浅出计算机组成原理/html/12理解电路从电报机到门电路我们如何做到千里传信.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/12理解电路从电报机到门电路我们如何做到千里传信.mp3'
+                            '深入浅出计算机组成原理/html/__95868__12 _ 理解电路：从电报机到门电路，我们如何做到“千里传信”？.html',
+                        audio: ''
                     },
                     {
-                        id: '5jc3234gsq0',
+                        id: '8yvqrs4piv6',
                         title: '13 | 加法器：如何像搭乐高一样搭电路（上）？',
                         src:
-                            './深入浅出计算机组成原理/html/13加法器如何像搭乐高一样搭电路上.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/13加法器如何像搭乐高一样搭电路上.mp3'
+                            '深入浅出计算机组成原理/html/__95883__13 _ 加法器：如何像搭乐高一样搭电路（上）？.html',
+                        audio: ''
                     },
                     {
-                        id: 'm42oc3fje5z',
+                        id: 'iys7u8evc4i',
                         title: '14 | 乘法器：如何像搭乐高一样搭电路（下）？',
                         src:
-                            './深入浅出计算机组成原理/html/14乘法器如何像搭乐高一样搭电路下.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/14乘法器如何像搭乐高一样搭电路下.mp3'
+                            '深入浅出计算机组成原理/html/__97477__14 _ 乘法器：如何像搭乐高一样搭电路（下）？.html',
+                        audio: ''
                     },
                     {
-                        id: 'yca3serfxla',
+                        id: '9oh2ua7hfh6',
                         title:
                             '15 | 浮点数和定点数（上）：怎么用有限的Bit表示尽可能多的信息？',
                         src:
-                            './深入浅出计算机组成原理/html/15浮点数和定点数上怎么用有限的Bit表示尽可能多的信息.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/15浮点数和定点数上怎么用有限的Bit表示尽可能多的信息.mp3'
+                            '深入浅出计算机组成原理/html/__97866__15 _ 浮点数和定点数（上）：怎么用有限的Bit表示尽可能多的信息？.html',
+                        audio: ''
                     },
                     {
-                        id: 'hfl48dmmtg2',
+                        id: 'nyeagajjt3f',
                         title:
                             '16 | 浮点数和定点数（下）：深入理解浮点数到底有什么用？',
                         src:
-                            './深入浅出计算机组成原理/html/16浮点数和定点数下深入理解浮点数到底有什么用.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/16浮点数和定点数下深入理解浮点数到底有什么用.mp3'
+                            '深入浅出计算机组成原理/html/__98312__16 _ 浮点数和定点数（下）：深入理解浮点数到底有什么用？.html',
+                        audio: ''
                     }
                 ]
             },
             {
-                id: 'kzylhau135h',
+                id: 'df7jswbqau5',
                 title: '原理篇：处理器',
                 subList: [
                     {
-                        id: 'vll6731pw48',
+                        id: 'xy9h3xepu6i',
                         title: '17 | 建立数据通路（上）：指令+运算=CPU',
                         src:
-                            './深入浅出计算机组成原理/html/17建立数据通路上指令+运算=CPU.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/17建立数据通路上指令+运算=CPU.mp3'
+                            '深入浅出计算机组成原理/html/__98872__17 _ 建立数据通路（上）：指令+运算=CPU.html',
+                        audio: ''
                     },
                     {
-                        id: '5v7tz4x7tvy',
+                        id: '3ddo5xyoh1j',
                         title: '18 | 建立数据通路（中）：指令+运算=CPU',
                         src:
-                            './深入浅出计算机组成原理/html/18建立数据通路中指令+运算=CPU.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/18建立数据通路中指令+运算=CPU.mp3'
+                            '深入浅出计算机组成原理/html/__99092__18 _ 建立数据通路（中）：指令+运算=CPU.html',
+                        audio: ''
                     },
                     {
-                        id: 'fxjdwurysln',
+                        id: 'raxtsmeyeah',
                         title: '19 | 建立数据通路（下）：指令+运算=CPU',
                         src:
-                            './深入浅出计算机组成原理/html/19建立数据通路下指令+运算=CPU.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/19建立数据通路下指令+运算=CPU.mp3'
+                            '深入浅出计算机组成原理/html/__99505__19 _ 建立数据通路（下）：指令+运算=CPU.html',
+                        audio: ''
                     },
                     {
-                        id: 'n72k8zqliin',
+                        id: 'hq51k2z44ay',
                         title:
                             '20 | 面向流水线的指令设计（上）：一心多用的现代CPU',
                         src:
-                            './深入浅出计算机组成原理/html/20面向流水线的指令设计上一心多用的现代CPU.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/20面向流水线的指令设计上一心多用的现代CPU.mp3'
+                            '深入浅出计算机组成原理/html/__99523__20 _ 面向流水线的指令设计（上）：一心多用的现代CPU.html',
+                        audio: ''
                     },
                     {
-                        id: 'avesfl3u0ie',
+                        id: '9ez9vc97sl6',
                         title:
                             '21 | 面向流水线的指令设计（下）：奔腾4是怎么失败的？',
                         src:
-                            './深入浅出计算机组成原理/html/21面向流水线的指令设计下奔腾4是怎么失败的.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/21面向流水线的指令设计下奔腾4是怎么失败的.mp3'
+                            '深入浅出计算机组成原理/html/__100554__21 _ 面向流水线的指令设计（下）：奔腾4是怎么失败的？.html',
+                        audio: ''
                     },
                     {
-                        id: 'vvauyi80obu',
+                        id: '0ljsoxzi4eh',
                         title: '22 | 冒险和预测（一）：hazard是“危”也是“机”',
                         src:
-                            './深入浅出计算机组成原理/html/22冒险和预测一hazard是危也是机.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/22冒险和预测一hazard是危也是机.mp3'
+                            '深入浅出计算机组成原理/html/__100569__22 _ 冒险和预测（一）：hazard是“危”也是“机”.html',
+                        audio: ''
                     },
                     {
-                        id: 'reeh6c0rix3',
+                        id: 'h4f79xv66qa',
                         title: '23 | 冒险和预测（二）：流水线里的接力赛',
                         src:
-                            './深入浅出计算机组成原理/html/23冒险和预测二流水线里的接力赛.html',
+                            '深入浅出计算机组成原理/html/__101172__23 _ 冒险和预测（二）：流水线里的接力赛.html',
                         audio: ''
                     },
                     {
-                        id: 'la6mdltypl5',
+                        id: 'fbe5uu76r5o',
                         title: '24 | 冒险和预测（三）：CPU里的“线程池”',
                         src:
-                            './深入浅出计算机组成原理/html/24冒险和预测三CPU里的线程池.html',
+                            '深入浅出计算机组成原理/html/__101436__24 _ 冒险和预测（三）：CPU里的“线程池”.html',
                         audio: ''
                     },
                     {
-                        id: '8ylzxx7n3dl',
+                        id: 'bqgpt93jjzh',
                         title:
                             '25 | 冒险和预测（四）：今天下雨了，明天还会下雨么？',
                         src:
-                            './深入浅出计算机组成原理/html/25冒险和预测四今天下雨了明天还会下雨么.html',
+                            '深入浅出计算机组成原理/html/__102166__25 _ 冒险和预测（四）：今天下雨了，明天还会下雨么？.html',
                         audio: ''
                     },
                     {
-                        id: 'z5dhsrz8krd',
+                        id: 'abf4m45sdx6',
                         title:
                             '26 | Superscalar和VLIW：如何让CPU的吞吐率超过1？',
                         src:
-                            './深入浅出计算机组成原理/html/26Superscalar和VLIW如何让CPU的吞吐率超过1.html',
+                            '深入浅出计算机组成原理/html/__102888__26 _ Superscalar和VLIW：如何让CPU的吞吐率超过1？.html',
                         audio: ''
                     },
                     {
-                        id: 'uuaj7dut6p5',
+                        id: 'slkrtwoovpr',
                         title: '27 | SIMD：如何加速矩阵乘法？',
                         src:
-                            './深入浅出计算机组成原理/html/27SIMD如何加速矩阵乘法.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/27SIMD如何加速矩阵乘法.mp3'
-                    },
-                    {
-                        id: 'vpfgwb5zzvq',
-                        title: '28 | 异常和中断：程序出错了怎么办？',
-                        src:
-                            './深入浅出计算机组成原理/html/28异常和中断程序出错了怎么办.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/28异常和中断程序出错了怎么办.mp3'
-                    },
-                    {
-                        id: '6vthlagvcx6',
-                        title: '29 | CISC和RISC：为什么手机芯片都是ARM？',
-                        src:
-                            './深入浅出计算机组成原理/html/29CISC和RISC为什么手机芯片都是ARM.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/29CISC和RISC为什么手机芯片都是ARM.mp3'
-                    },
-                    {
-                        id: 'ujqyx7jttwv',
-                        title: '30 | GPU（上）：为什么玩游戏需要使用GPU？',
-                        src:
-                            './深入浅出计算机组成原理/html/30GPU上为什么玩游戏需要使用GPU.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/30GPU上为什么玩游戏需要使用GPU.mp3'
-                    },
-                    {
-                        id: 'oyx1u3u6770',
-                        title: '31 | GPU（下）：为什么深度学习需要使用GPU？',
-                        src:
-                            './深入浅出计算机组成原理/html/31GPU下为什么深度学习需要使用GPU.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/31GPU下为什么深度学习需要使用GPU.mp3'
-                    },
-                    {
-                        id: 'ndih2jyfy0q',
-                        title: '32 | FPGA和ASIC：计算机体系结构的黄金时代',
-                        src: '',
+                            '深入浅出计算机组成原理/html/__103433__27 _ SIMD：如何加速矩阵乘法？.html',
                         audio: ''
                     },
                     {
-                        id: 'e6z8uft3rbu',
-                        title: '33 | 解读TPU：设计和拆解一块ASIC芯片',
+                        id: 'f1cb80tqnp3',
+                        title: '28 | 异常和中断：程序出错了怎么办？',
                         src:
-                            './深入浅出计算机组成原理/html/33解读TPU设计和拆解一块ASIC芯片.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/33解读TPU设计和拆解一块ASIC芯片.mp3'
+                            '深入浅出计算机组成原理/html/__103717__28 _ 异常和中断：程序出错了怎么办？.html',
+                        audio: ''
                     },
                     {
-                        id: 'draexav2uwh',
+                        id: 'd8spybnrgkt',
+                        title: '29 | CISC和RISC：为什么手机芯片都是ARM？',
+                        src:
+                            '深入浅出计算机组成原理/html/__104259__29 _ CISC和RISC：为什么手机芯片都是ARM？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'nurssrgwor4',
+                        title: '30 | GPU（上）：为什么玩游戏需要使用GPU？',
+                        src:
+                            '深入浅出计算机组成原理/html/__104747__30 _ GPU（上）：为什么玩游戏需要使用GPU？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'cfyex9wd88j',
+                        title: '31 | GPU（下）：为什么深度学习需要使用GPU？',
+                        src:
+                            '深入浅出计算机组成原理/html/__105401__31 _ GPU（下）：为什么深度学习需要使用GPU？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'ns30ozyi9gy',
+                        title: '32 | FPGA和ASIC：计算机体系结构的黄金时代',
+                        src:
+                            '深入浅出计算机组成原理/html/__105974__32 _ FPGA和ASIC：计算机体系结构的黄金时代.html',
+                        audio: ''
+                    },
+                    {
+                        id: '7v5k7b742r5',
+                        title: '33 | 解读TPU：设计和拆解一块ASIC芯片',
+                        src:
+                            '深入浅出计算机组成原理/html/__106476__33 _ 解读TPU：设计和拆解一块ASIC芯片.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'j1ghb304hh6',
                         title:
                             '34 | 理解虚拟机：你在云上拿到的计算机是什么样的？',
                         src:
-                            './深入浅出计算机组成原理/html/34理解虚拟机你在云上拿到的计算机是什么样的.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/34理解虚拟机你在云上拿到的计算机是什么样的.mp3'
+                            '深入浅出计算机组成原理/html/__107183__34 _ 理解虚拟机：你在云上拿到的计算机是什么样的？.html',
+                        audio: ''
                     }
                 ]
             },
             {
-                id: 'fx84kapzcnp',
+                id: 'vkzn8tthx23',
                 title: '原理篇：存储与I/O系统',
                 subList: [
                     {
-                        id: 'wriircbckun',
+                        id: 'tur5b7yiga2',
                         title:
                             '35 | 存储器层次结构全景：数据存储的大金字塔长什么样？',
                         src:
-                            './深入浅出计算机组成原理/html/35存储器层次结构全景数据存储的大金字塔长什么样.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/35存储器层次结构全景数据存储的大金字塔长什么样.mp3'
+                            '深入浅出计算机组成原理/html/__107422__35 _ 存储器层次结构全景：数据存储的大金字塔长什么样？.html',
+                        audio: ''
                     },
                     {
-                        id: 'r20bucyda0e',
+                        id: 'r4ik27soikm',
                         title:
                             '36 | 局部性原理：数据库性能跟不上，加个缓存就好了？',
                         src:
-                            './深入浅出计算机组成原理/html/36局部性原理数据库性能跟不上加个缓存就好了.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/36局部性原理数据库性能跟不上加个缓存就好了.mp3'
-                    },
-                    {
-                        id: '5wwzok9bslx',
-                        title: '37 | 高速缓存（上）：“4毫秒”究竟值多少钱？',
-                        src: '',
+                            '深入浅出计算机组成原理/html/__107447__36 _ 局部性原理：数据库性能跟不上，加个缓存就好了？.html',
                         audio: ''
                     },
                     {
-                        id: 'gwf7rn92llj',
-                        title: '38 | 高速缓存（下）：你确定你的数据更新了么？',
+                        id: '2aza4wl9lvk',
+                        title: '37 | 高速缓存（上）：“4毫秒”究竟值多少钱？',
                         src:
-                            './深入浅出计算机组成原理/html/38高速缓存下你确定你的数据更新了么.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/38高速缓存下你确定你的数据更新了么.mp3'
+                            '深入浅出计算机组成原理/html/__107477__37 _ 高速缓存（上）：“4毫秒”究竟值多少钱？.html',
+                        audio: ''
                     },
                     {
-                        id: '35o0sdearhk',
+                        id: '3apc4y4rgng',
+                        title: '38 | 高速缓存（下）：你确定你的数据更新了么？',
+                        src:
+                            '深入浅出计算机组成原理/html/__109331__38 _ 高速缓存（下）：你确定你的数据更新了么？.html',
+                        audio: ''
+                    },
+                    {
+                        id: '547gcs5ga8y',
                         title:
                             '39 | MESI协议：如何让多核CPU的高速缓存保持一致？',
                         src:
-                            './深入浅出计算机组成原理/html/39MESI协议如何让多核CPU的高速缓存保持一致.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/39MESI协议如何让多核CPU的高速缓存保持一致.mp3'
-                    },
-                    {
-                        id: 'bl1h1b95wy1',
-                        title:
-                            '40 | 理解内存（上）：虚拟内存和内存保护是什么？',
-                        src:
-                            './深入浅出计算机组成原理/html/40理解内存上虚拟内存和内存保护是什么.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/40理解内存上虚拟内存和内存保护是什么.mp3'
-                    },
-                    {
-                        id: '09bioupnpdw',
-                        title: '41 | 理解内存（下）：解析TLB和内存保护',
-                        src:
-                            './深入浅出计算机组成原理/html/41理解内存下解析TLB和内存保护.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/41理解内存下解析TLB和内存保护.mp3'
-                    },
-                    {
-                        id: 'xhlvz1l7w12',
-                        title: '42 | 总线：计算机内部的高速公路',
-                        src:
-                            './深入浅出计算机组成原理/html/42总线计算机内部的高速公路.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/42总线计算机内部的高速公路.mp3'
-                    },
-                    {
-                        id: 'h2dj5ztad4d',
-                        title:
-                            '43 | 输入输出设备：我们并不是只能用灯泡显示“0”和“1”',
-                        src:
-                            './深入浅出计算机组成原理/html/43输入输出设备我们并不是只能用灯泡显示0和1.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/43输入输出设备我们并不是只能用灯泡显示0和1.mp3'
-                    },
-                    {
-                        id: 'dch4nd0e8ov',
-                        title: '44 | 理解IO_WAIT：I/O性能到底是怎么回事儿？',
-                        src: '',
+                            '深入浅出计算机组成原理/html/__109874__39 _ MESI协议：如何让多核CPU的高速缓存保持一致？.html',
                         audio: ''
                     },
                     {
-                        id: 'r69ezswa7jc',
+                        id: 'v2bhr3sadtn',
+                        title:
+                            '40 | 理解内存（上）：虚拟内存和内存保护是什么？',
+                        src:
+                            '深入浅出计算机组成原理/html/__110474__40 _ 理解内存（上）：虚拟内存和内存保护是什么？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'n2b5py6yqjs',
+                        title: '41 | 理解内存（下）：解析TLB和内存保护',
+                        src:
+                            '深入浅出计算机组成原理/html/__111172__41 _ 理解内存（下）：解析TLB和内存保护.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'rdu4zowf7n6',
+                        title: '42 | 总线：计算机内部的高速公路',
+                        src:
+                            '深入浅出计算机组成原理/html/__111952__42 _ 总线：计算机内部的高速公路.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'e9xyvwmldeg',
+                        title:
+                            '43 | 输入输出设备：我们并不是只能用灯泡显示“0”和“1”',
+                        src:
+                            '深入浅出计算机组成原理/html/__113361__43 _ 输入输出设备：我们并不是只能用灯泡显示“0”和“1”.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'srix9515159',
+                        title: '44 | 理解IO_WAIT：I/O性能到底是怎么回事儿？',
+                        src:
+                            '深入浅出计算机组成原理/html/__113809__44 _ 理解IO_WAIT：I_O性能到底是怎么回事儿？.html',
+                        audio: ''
+                    },
+                    {
+                        id: '4v453afo5fh',
                         title: '45 | 机械硬盘：Google早期用过的“黑科技”',
                         src:
-                            './深入浅出计算机组成原理/html/45机械硬盘Google早期用过的黑科技.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/45机械硬盘Google早期用过的黑科技.mp3'
+                            '深入浅出计算机组成原理/html/__116104__45 _ 机械硬盘：Google早期用过的“黑科技”.html',
+                        audio: ''
                     },
                     {
-                        id: 'ix1qu3ugsts',
+                        id: 'iufqf618kf1',
                         title: '46 | SSD硬盘（上）：如何完成性能优化的KPI？',
                         src:
-                            './深入浅出计算机组成原理/html/46SSD硬盘上如何完成性能优化的KPI.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/46SSD硬盘上如何完成性能优化的KPI.mp3'
+                            '深入浅出计算机组成原理/html/__117144__46 _ SSD硬盘（上）：如何完成性能优化的KPI？.html',
+                        audio: ''
                     },
                     {
-                        id: 'zv0d0mxsy3r',
+                        id: 'eoujp7e5ls3',
                         title: '47 | SSD硬盘（下）：如何完成性能优化的KPI？',
                         src:
-                            './深入浅出计算机组成原理/html/47SSD硬盘下如何完成性能优化的KPI.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/47SSD硬盘下如何完成性能优化的KPI.mp3'
+                            '深入浅出计算机组成原理/html/__118191__47 _ SSD硬盘（下）：如何完成性能优化的KPI？.html',
+                        audio: ''
                     },
                     {
-                        id: 'ulipxwlmjnp',
+                        id: 'r5yl8x3bsxw',
                         title: '48 | DMA：为什么Kafka这么快？',
                         src:
-                            './深入浅出计算机组成原理/html/48DMA为什么Kafka这么快.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/48DMA为什么Kafka这么快.mp3'
+                            '深入浅出计算机组成原理/html/__118657__48 _ DMA：为什么Kafka这么快？.html',
+                        audio: ''
                     },
                     {
-                        id: 'lz3ka65cqwk',
+                        id: 'd59s3gu2lqj',
                         title: '49 | 数据完整性（上）：硬件坏了怎么办？',
                         src:
-                            './深入浅出计算机组成原理/html/49数据完整性上硬件坏了怎么办.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/49数据完整性上硬件坏了怎么办.mp3'
+                            '深入浅出计算机组成原理/html/__119901__49 _ 数据完整性（上）：硬件坏了怎么办？.html',
+                        audio: ''
                     },
                     {
-                        id: 'z478lsljklm',
+                        id: '36jgwvg477x',
                         title: '50 | 数据完整性（下）：如何还原犯罪现场？',
                         src:
-                            './深入浅出计算机组成原理/html/50数据完整性下如何还原犯罪现场.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/50数据完整性下如何还原犯罪现场.mp3'
+                            '深入浅出计算机组成原理/html/__123407__50 _ 数据完整性（下）：如何还原犯罪现场？.html',
+                        audio: ''
                     },
                     {
-                        id: 'avjh9ws6k2m',
+                        id: '5kv9abxd6vd',
                         title:
                             '51 | 分布式计算：如果所有人的大脑都联网会怎样？',
                         src:
-                            './深入浅出计算机组成原理/html/51分布式计算如果所有人的大脑都联网会怎样.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/51分布式计算如果所有人的大脑都联网会怎样.mp3'
+                            '深入浅出计算机组成原理/html/__128197__51 _ 分布式计算：如果所有人的大脑都联网会怎样？.html',
+                        audio: ''
                     }
                 ]
             },
             {
-                id: 'pxynd4z3cmg',
+                id: '0pypnqp7un0',
                 title: '应用篇',
                 subList: [
                     {
-                        id: 'zb9tnohecji',
+                        id: 'zj7207tvpxx',
                         title:
                             '52 | 设计大型DMP系统（上）：MongoDB并不是什么灵丹妙药',
                         src:
-                            './深入浅出计算机组成原理/html/52设计大型DMP系统上MongoDB并不是什么灵丹妙药.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/52设计大型DMP系统上MongoDB并不是什么灵丹妙药.mp3'
+                            '深入浅出计算机组成原理/html/__130507__52 _ 设计大型DMP系统（上）：MongoDB并不是什么灵丹妙药.html',
+                        audio: ''
                     },
                     {
-                        id: 'rwesjpooi6e',
+                        id: 'k1a1jt3ta9k',
                         title: '53 | 设计大型DMP系统（下）：SSD拯救了所有的DBA',
                         src:
-                            './深入浅出计算机组成原理/html/53设计大型DMP系统下SSD拯救了所有的DBA.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/53设计大型DMP系统下SSD拯救了所有的DBA.mp3'
+                            '深入浅出计算机组成原理/html/__131720__53 _ 设计大型DMP系统（下）：SSD拯救了所有的DBA.html',
+                        audio: ''
                     },
                     {
-                        id: '42x26cjb91b',
+                        id: '8buze8r48oi',
                         title:
                             '54 | 理解Disruptor（上）：带你体会CPU高速缓存的风驰电掣',
                         src:
-                            './深入浅出计算机组成原理/html/54理解Disruptor上带你体会CPU高速缓存的风驰电掣.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/54理解Disruptor上带你体会CPU高速缓存的风驰电掣.mp3'
+                            '深入浅出计算机组成原理/html/__132477__54 _ 理解Disruptor（上）：带你体会CPU高速缓存的风驰电掣.html',
+                        audio: ''
                     },
                     {
-                        id: 'nnj7lk4jrrl',
+                        id: 'hdn65wyupmw',
                         title:
                             '55 | 理解Disruptor（下）：不需要换挡和踩刹车的CPU，有多快？',
                         src:
-                            './深入浅出计算机组成原理/html/55理解Disruptor下不需要换挡和踩刹车的CPU有多快.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/55理解Disruptor下不需要换挡和踩刹车的CPU有多快.mp3'
+                            '深入浅出计算机组成原理/html/__134020__55 _ 理解Disruptor（下）：不需要换挡和踩刹车的CPU，有多快？.html',
+                        audio: ''
                     },
                     {
-                        id: 'ohm8jalnjbg',
+                        id: 'wvpr46q0r7v',
                         title: '结束语 | 知也无涯，愿你也享受发现的乐趣',
                         src:
-                            './深入浅出计算机组成原理/html/结束语知也无涯愿你也享受发现的乐趣.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/结束语知也无涯愿你也享受发现的乐趣.mp3'
+                            '深入浅出计算机组成原理/html/__134999__结束语 _ 知也无涯，愿你也享受发现的乐趣.html',
+                        audio: ''
                     }
                 ]
             },
             {
-                id: 'g1nyr364wnp',
+                id: 'xltfnw6m2ct',
                 title: '答疑与加餐',
                 subList: [
                     {
-                        id: 'dxkn8mej1jt',
+                        id: '5a669gst64i',
                         title: '特别加餐 | 我在2019年F8大会的两日见闻录',
                         src:
-                            './深入浅出计算机组成原理/html/特别加餐我在2019年F8大会的两日见闻录.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/特别加餐我在2019年F8大会的两日见闻录.mp3'
+                            '深入浅出计算机组成原理/html/__93720__特别加餐 _ 我在2019年F8大会的两日见闻录.html',
+                        audio: ''
                     },
                     {
-                        id: 'rgy8frc2oqe',
+                        id: '34mmtpr3nu4',
                         title:
                             'FAQ第一期 | 学与不学，知识就在那里，不如就先学好了',
                         src:
-                            './深入浅出计算机组成原理/html/FAQ第一期学与不学知识就在那里不如就先学好了.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/FAQ第一期学与不学知识就在那里不如就先学好了.mp3'
+                            '深入浅出计算机组成原理/html/__111447__FAQ第一期 _ 学与不学，知识就在那里，不如就先学好了.html',
+                        audio: ''
                     },
                     {
-                        id: 'm1hd10dschk',
+                        id: 'vzzhjnisaar',
                         title:
                             '用户故事 | 赵文海：怕什么真理无穷，进一寸有一寸的欢喜',
                         src:
-                            './深入浅出计算机组成原理/html/用户故事赵文海怕什么真理无穷进一寸有一寸的欢喜.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/用户故事赵文海怕什么真理无穷进一寸有一寸的欢喜.mp3'
+                            '深入浅出计算机组成原理/html/__118482__用户故事 _ 赵文海：怕什么真理无穷，进一寸有一寸的欢喜.html',
+                        audio: ''
                     },
                     {
-                        id: '2enmhnd5qtb',
+                        id: 'ww57ogy2oi8',
                         title: 'FAQ第二期 | 世界上第一个编程语言是怎么来的？',
                         src:
-                            './深入浅出计算机组成原理/html/FAQ第二期世界上第一个编程语言是怎么来的.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/FAQ第二期世界上第一个编程语言是怎么来的.mp3'
+                            '深入浅出计算机组成原理/html/__120012__FAQ第二期 _ 世界上第一个编程语言是怎么来的？.html',
+                        audio: ''
                     },
                     {
-                        id: 'oc0gml6ziwq',
+                        id: 'okgocem221m',
                         title: '特别加餐 | 我的一天怎么过？',
                         src:
-                            './深入浅出计算机组成原理/html/特别加餐我的一天怎么过.html',
-                        audio:
-                            './深入浅出计算机组成原理/audio/特别加餐我的一天怎么过.mp3'
+                            '深入浅出计算机组成原理/html/__129197__特别加餐 _ 我的一天怎么过？.html',
+                        audio: ''
                     }
                 ]
             }
