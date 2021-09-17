@@ -8,5 +8,10 @@ export default [
         path: '/upload',
         name: 'upload',
         component: () => import('./upload-img.vue')
+    },
+    {
+        path: '/love',
+        name: 'love',
+        component: () => import('./love.vue')
     }
 ]
