@@ -1,20 +1,27 @@
 <template>
     <section class="upload-wrapper">
+        <section style="padding:20px">
+            <el-button type="primary" style="width:100%;" long @click="getFiles"
+                >刷新</el-button
+            >
+        </section>
         <img
+            @dblclick="delImage(item.id)"
             v-for="item in imageList"
             :key="item.id"
             :src="FILE_PREFIX + item.path"
             alt=""
             srcset=""
-            @click="clikeImg(FILE_PREFIX + item.path, $event)"
         />
-        <PicturePreview></PicturePreview>
+        <PicturePreview v-if="false"></PicturePreview>
     </section>
 </template>
 
 <script>
 import { UTIL_API } from '../../api/util'
 import PicturePreview from '../Home/Modal/PicturePreview'
+import { resizeImg } from './resize-img'
+
 import { mapState, mapMutations } from 'vuex'
 import dayjs from 'dayjs'
 export default {
@@ -34,6 +41,13 @@ export default {
     },
     methods: {
         ...mapMutations('component', ['updatePicturePreview']),
+        delImage(id) {
+            console.log()
+            const index = this.imageList.findIndex(item => item.id === id)
+            if (index != -1) {
+                this.imageList.splice(index, 1)
+            }
+        },
         clikeImg(src, e) {
             e.stopPropagation()
             this.updatePicturePreview({
@@ -58,8 +72,12 @@ export default {
                 console.log('no file')
                 return
             }
+
+            const compressedFile = await resizeImg(file)
+
             let formData = new FormData()
-            formData.append('file', file)
+            formData.append('file', compressedFile)
+
             const res = await UTIL_API.upload(formData)
             if (res.code === 2000) {
                 this.$Message.success('上传成功')

@@ -11736,7 +11736,8 @@ export default [
                     {
                         id: 'onynblhdn0b',
                         title: '第19讲-HttpDNS：网络世界的地址簿也会指错路',
-                        src: ''
+                        src:
+                            './趣谈网络协议/html/第19讲-HTTPDNS：网络世界的地址簿也会指错路.html'
                     },
                     {
                         id: 'wsuoewqghes',

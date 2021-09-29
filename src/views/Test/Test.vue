@@ -3,6 +3,11 @@
         <div class="box"></div>
         <div class="mouse-follow" :style="followBoxStyle"></div>
         <AudioPlayer></AudioPlayer>
+        <img
+            src="http://111.229.14.189/gk-files/upload_cfa0325cdf41940ef58bead328ec74ed.jpg"
+            alt=""
+            srcset=""
+        />
     </section>
 </template>
 <script>

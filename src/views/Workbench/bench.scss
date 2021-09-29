@@ -1,0 +1,28 @@
+
+
+.bench-layout{
+  
+    height: 100vh;
+    .bench-header{
+        height: 48px;
+        background-color: #2B2B2B;
+    }
+    .bench-wrapper{
+        display: flex;
+        height: calc(100vh - 48px);
+        .bench-sidebar{
+            width: 200px;
+            padding: 16px;
+            background-color: #202020;
+            color:$color;
+        }
+        .bench-content{
+            flex:1;
+            
+        }
+    }
+   
+}
+// *{
+//     outline: 1px solid blue;
+// }

@@ -23,9 +23,13 @@ import {
     Col,
     DatePicker,
     Radio,
-    RadioGroup
+    RadioGroup,
+    Table,
+    TableColumn
 } from 'element-ui'
 
+Vue.use(Table)
+Vue.use(TableColumn)
 Vue.use(RadioGroup)
 Vue.use(Radio)
 Vue.use(DatePicker)
