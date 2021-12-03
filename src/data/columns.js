@@ -11718,8 +11718,7 @@ export default [
                     {
                         id: '2w856dn3kqt',
                         title: '第17讲-P2P协议：我下小电影，99%急死你',
-                        src:
-                            './趣谈网络协议/html/第17讲-P2P协议：我下小电影，99%急死你.html'
+                        src: './趣谈网络协议/html/p2p.html'
                     }
                 ]
             },

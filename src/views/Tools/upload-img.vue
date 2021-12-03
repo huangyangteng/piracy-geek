@@ -1,6 +1,7 @@
 <template>
     <section class="upload-wrapper">
         <section style="padding:20px">
+            <el-button @click="$router.push({ path: '/' })">home</el-button>
             <el-button type="primary" style="width:100%;" long @click="getFiles"
                 >刷新</el-button
             >
@@ -90,7 +91,11 @@ export default {
             const start = dayjs()
                 .subtract(3, 'hour')
                 .format('YYYY-MM-DD HH:mm:ss')
-            const res = await UTIL_API.getFiles({ start, end })
+            const res = await UTIL_API.getFiles({
+                start,
+                end,
+                random: Math.random()
+            })
 
             if (res.code === 2000) {
                 this.imageList = res.data
