@@ -27,7 +27,9 @@
                     <span class="column-tag mar-r-8">{{
                         column.authorName
                     }}</span>
-                    <span class="column-tag">{{ column.authorInfo }}</span>
+                    <span class="column-tag">{{
+                        column.authorInfo.split('，')[0]
+                    }}</span>
                 </p>
             </section>
         </main>

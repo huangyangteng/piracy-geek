@@ -12,6 +12,14 @@
         ></i>
         <!-- 标题 -->
         <span class="jk-title" @click="toHome">{{ curColumnTitle }}</span>
+
+        <a
+            style="margin-left: 20px;color:#fff"
+            v-if="curColumn && curColumn.resource"
+            target="_blank"
+            :href="curColumn.resource"
+            >课程配套资源下载</a
+        >
         <!-- 音频播放 -->
         <AudioPlayer></AudioPlayer>
         <!-- 选择颜色 -->
@@ -85,7 +93,7 @@ export default {
         }
     },
     computed: {
-        ...mapState('column', ['columnList']),
+        ...mapState('column', ['columnList', 'curColumn']),
         ...mapGetters('column', ['curColumnTitle', 'isFold']),
         ...mapGetters('lastRead', ['getLastArticleId'])
     },
@@ -274,7 +282,7 @@ export default {
     display: flex;
     align-items: center;
     border-radius: 8px;
-    transition: 0.5 all;
+    transition: 0.5s all;
     visibility: hidden;
 }
 .hightlight-oprate::before {

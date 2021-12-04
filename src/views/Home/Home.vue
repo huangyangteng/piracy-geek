@@ -33,7 +33,9 @@
                 </section>
                 <footer>
                     {{ title }}<br />
-                    All Rights Reserved ©2020
+                    <a style="color:#fafafa" href="https;//beian.miit.gov.cn/"
+                        >蜀ICP备2021027437号-1</a
+                    >
                 </footer>
             </section>
         </transition>
