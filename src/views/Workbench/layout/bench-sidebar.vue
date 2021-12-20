@@ -23,10 +23,23 @@ export default {
         return {
             menus: [
                 {
+                    name: 'MY COLUMN',
+                    children: [
+                        { name: 'COLUMN LIST', route: '/workbench/column' },
+                        {
+                            name: 'RECENT COLUMN',
+                            route: '/workbench/recent-column'
+                        }
+                    ]
+                },
+                {
                     name: 'MY MUSIC',
                     children: [
                         { name: 'MUSIC LIST', route: '/workbench/music' },
-                        { name: 'RECENT MUSIC', route: '/workbench/album' }
+                        {
+                            name: 'RECENT MUSIC',
+                            route: '/workbench/recent-music'
+                        }
                     ]
                 },
                 {
@@ -37,10 +50,9 @@ export default {
                     ]
                 },
                 {
-                    name: 'MY COLUME',
+                    name: 'MY TOOLS',
                     children: [
-                        { name: 'MUSIC LIST', route: '' },
-                        { name: 'RECENT MUSIC', route: '' }
+                        { name: 'TOOLS LIST', route: '/workbench/tools' }
                     ]
                 }
             ]

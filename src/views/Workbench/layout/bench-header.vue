@@ -1,12 +1,22 @@
 <template>
-    <section class="bench-header"></section>
+    <section class="bench-header">
+        <div class="center">
+            <el-input
+                v-model="searchKey"
+                prefix-icon="el-icon-search"
+                placeholder="Search Something..."
+            ></el-input>
+        </div>
+    </section>
 </template>
 
 <script>
 export default {
     name: 'bench-header',
     data() {
-        return {}
+        return {
+            searchKey: ''
+        }
     },
     computed: {},
     methods: {},
@@ -14,4 +24,11 @@ export default {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="scss" scoped>
+.bench-header {
+    .center {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+</style>

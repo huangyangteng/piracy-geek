@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MusicCover from '../components/music/music-cover'
+import MusicCover from '../../components/music/music-cover'
 export default {
     name: 'music-list',
     components: {
