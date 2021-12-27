@@ -8,13 +8,14 @@
         </section>
         <img
             @dblclick="delImage(item.id)"
+            @click="clikeImg(item.path, $event)"
             v-for="item in imageList"
             :key="item.id"
             :src="FILE_PREFIX + item.path"
             alt=""
             srcset=""
         />
-        <PicturePreview v-if="false"></PicturePreview>
+        <PicturePreview v-if="true"></PicturePreview>
     </section>
 </template>
 
@@ -32,7 +33,14 @@ export default {
     },
     data() {
         return {
-            imageList: [],
+            imageList: [
+                {
+                    id: 'yNyfsZ2YqimVRI59',
+                    name: 'blob',
+                    path: 'gk-files/upload_03c0691e543907f6bc92df63eba2da12',
+                    date: '2021-12-27 21:50:10'
+                }
+            ],
             FILE_PREFIX: '/',
             timer: 0
         }
@@ -53,7 +61,7 @@ export default {
             e.stopPropagation()
             this.updatePicturePreview({
                 show: true,
-                src: src,
+                src: this.FILE_PREFIX + src,
                 width: e.target.naturalWidth + 'px'
             })
         },
