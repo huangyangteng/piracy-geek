@@ -70,7 +70,7 @@ const mutations = {
         state.columnList = list
     },
     updateColumn(state, column) {
-        state.curColumn = Object.assign(state.curColumn, column)
+        state.curColumn = column
     },
     updateArticleId(state, id) {
         state.curArticleId = id
