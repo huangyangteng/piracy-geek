@@ -24,6 +24,7 @@ class RequestList {
     constructor() {
         this.list = []
     }
+
     add(request) {
         // 处理重复请求
         // 在请求发送之前执行取消操作
@@ -37,6 +38,7 @@ class RequestList {
             })
         )
     }
+
     remove(completedRequest) {
         this.list.some((pendingRequest, index) => {
             // 判断当前请求是否存在于数组中
@@ -66,13 +68,16 @@ class AuthManager {
             //未登录
         }
     }
+
     goLogin() {
         Message.error('登录过期！')
         router.push({ name: 'login' })
     }
+
     getJWT() {
         return this.jwt
     }
+
     updateJWT(jwt) {
         // store.dispatch('user/updateJWT', jwt)
         this.jwt = jwt
@@ -100,7 +105,13 @@ class InterceptorManager {
     handleResponse() {
         // 在一个ajax响应后再执行一下取消操作，把已经完成的请求从请求列表中移除
         this.requestList.remove(this.request)
-
+        //
+        const SILENTS_URLS = ['/user/login']
+        const item = SILENTS_URLS.find(url => this.request.url.includes(url))
+        console.log(item)
+        if (item) {
+            return this.resData
+        }
         let code = this.resData.code.toString()
         this.handleResponseCode(code)
         return this.resData
@@ -156,4 +167,4 @@ instance.interceptors.response.use(
     }
 )
 
-export default instance
+export default instance;

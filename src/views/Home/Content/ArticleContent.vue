@@ -11,6 +11,8 @@ import { mapState, mapGetters, mapMutations } from 'vuex'
 import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid, copyToBoard } from '../../../tools/index'
 import axios from 'axios'
+import { HISTORY_API } from '../../../api/history'
+
 const CancelToken = axios.CancelToken
 let cancel
 export default {
@@ -23,6 +25,7 @@ export default {
     },
     computed: {
         ...mapState('column', ['curArticleId']),
+        ...mapGetters('user', ['userId']),
         ...mapGetters('column', [
             'curContents',
             'curColumnTitle',
@@ -50,9 +53,10 @@ export default {
             this.articleContent =
                 '<div class="hightlight-oprate"> <div class="hight-op-item delete">取消高亮</div> <div class="hight-op-item note">笔记</div> <div class="hight-op-item copy">复制</div> </div>' +
                 this.filterWaterMark(res.data)
-            this.saveHistory()
+
             this.hideLoading()
             this.$nextTick(() => {
+                this.saveHistory()
                 this.generateOutline()
 
                 this.polyfillPage()
@@ -110,8 +114,24 @@ export default {
         setTitle() {
             document.title = this.curArticleTitle + '—' + this.curColumnTitle
         },
-        saveHistory() {
-            if (this.$route.params.column) {
+        async saveHistory() {
+            if (this.$route.params.column && this.userId) {
+                console.log('log history')
+                console.log('curTitle', this.curArticleTitle)
+                //记录专栏阅读历史
+                const res = await HISTORY_API.save({
+                    userId: this.userId,
+                    itemId: this.$route.params.column,
+                    type: 'column',
+                    info: JSON.stringify({
+                        articleId: this.$route.params.article,
+                        articleTitle: this.curArticleTitle,
+                        columnTitle: this.curColumnTitle
+                    })
+                })
+                console.log(res)
+                //TODO:记录文章阅读历史及进度
+
                 this.setLastColumn(this.$route.params.column)
                 this.setLastArticle({
                     column: this.$route.params.column,
@@ -211,6 +231,7 @@ export default {
     position: relative;
     background: $component-bg-color;
 }
+
 .article-wrapper #app {
 }
 </style>
@@ -227,16 +248,20 @@ export default {
     font-size: 17px;
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
+
     img {
         width: 100%;
     }
+
     h1 {
         font-size: 21px;
     }
 }
+
 ._2c4hPkl9 > div > div {
     margin: 30px 0;
 }
+
 ._1qhD3bdE_0 img {
     width: 20px;
 }

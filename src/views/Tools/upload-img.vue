@@ -1,10 +1,11 @@
 <template>
     <section class="upload-wrapper">
-        <section style="padding:20px">
+        <section class="upload-query">
             <el-button @click="$router.push({ path: '/' })">home</el-button>
-            <el-button type="primary" style="width:100%;" long @click="getFiles"
-                >刷新</el-button
-            >
+            <el-button @click="getToDay">最近24小时</el-button>
+            <el-button @click="get3Day">最近3天</el-button>
+            <el-button @click="get7Day">最近1周</el-button>
+            <el-button type="primary" @click="getFiles">刷新</el-button>
         </section>
         <img
             @dblclick="delImage(item.id)"
@@ -26,6 +27,7 @@ import { resizeImg } from './resize-img'
 
 import { mapState, mapMutations } from 'vuex'
 import dayjs from 'dayjs'
+
 export default {
     name: 'upload-img',
     components: {
@@ -50,6 +52,27 @@ export default {
     },
     methods: {
         ...mapMutations('component', ['updatePicturePreview']),
+        getToDay() {
+            const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
+            const start = dayjs()
+                .subtract(1, 'day')
+                .format('YYYY-MM-DD HH:mm:ss')
+            this.getFiles({ start, end })
+        },
+        get3Day() {
+            const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
+            const start = dayjs()
+                .subtract(3, 'day')
+                .format('YYYY-MM-DD HH:mm:ss')
+            this.getFiles({ start, end })
+        },
+        get7Day() {
+            const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
+            const start = dayjs()
+                .subtract(7, 'day')
+                .format('YYYY-MM-DD HH:mm:ss')
+            this.getFiles({ start, end })
+        },
         delImage(id) {
             console.log()
             const index = this.imageList.findIndex(item => item.id === id)
@@ -93,12 +116,7 @@ export default {
                 this.getFiles()
             }
         },
-        async getFiles() {
-            // 只获取最近三个小时之内的数据
-            const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
-            const start = dayjs()
-                .subtract(3, 'hour')
-                .format('YYYY-MM-DD HH:mm:ss')
+        async getFiles({ start, end }) {
             const res = await UTIL_API.getFiles({
                 start,
                 end,
@@ -112,16 +130,15 @@ export default {
         }
     },
     mounted() {
-        this.getFiles()
-        // clearInterval(this.timer)
-        // this.timer = setInterval(() => {
-        //     console.log('get files')
-        //     this.getFiles()
-        // }, 10 * 1000)
+        // 只获取最近三个小时之内的数据
+        const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
+        const start = dayjs()
+            .subtract(3, 'hour')
+            .format('YYYY-MM-DD HH:mm:ss')
+        this.getFiles({ start, end })
         document.addEventListener('paste', this.handlePaster)
     },
     beforeDestroy() {
-        // clearInterval(this.timer)
         document.removeEventListener('paste', this.handlePaster)
     }
 }
@@ -130,9 +147,18 @@ export default {
 <style lang="scss" scoped>
 .upload-wrapper {
     margin: 0 auto;
+
     img {
         width: 450px;
         margin: 10px;
+    }
+}
+
+.upload-query {
+    padding: 20px 40px;
+
+    button {
+        margin-right: 10px;
     }
 }
 </style>

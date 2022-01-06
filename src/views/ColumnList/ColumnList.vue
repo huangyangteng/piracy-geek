@@ -41,6 +41,7 @@ import PATH_LIST from '../../data/pathList'
 import { mapState } from 'vuex'
 
 import { formatColumn } from '../../tools/column-tools'
+
 export default {
     name: 'ColumnList',
     data() {
@@ -86,7 +87,10 @@ export default {
                 let column = this.selectedColumns.find(
                     item => item.id == columnId
                 )
-                lastArticle = column.contents[0].id
+                const tmp = column.contents[0]
+                if (Array.isArray(tmp.subList)) {
+                    lastArticle = tmp.subList[0].id
+                }
             }
             return lastArticle
         },
@@ -122,10 +126,12 @@ $--color-primary: #fa8919;
     max-width: 1280px;
     margin: 0 auto;
     padding: 60px 20px;
+
     > header {
         display: flex;
         justify-content: space-between;
     }
+
     > main {
         background: $component-bg-color;
         margin-top: 20px;
@@ -134,6 +140,7 @@ $--color-primary: #fa8919;
         padding: 40px 20px;
     }
 }
+
 .tab-study-path {
     display: inline-flex;
     margin-right: 20px;
@@ -143,29 +150,35 @@ $--color-primary: #fa8919;
     background: $component-bg-color;
     border-radius: 5px;
     cursor: pointer;
+
     &:last-child {
         margin-right: 0;
     }
+
     > aside {
         > strong {
             font-weight: 400;
             display: block;
             transition: 0.5s;
         }
+
         > span {
             font-weight: 100;
             font-size: 12px;
             padding-left: 8px;
         }
     }
+
     img {
         width: 36px;
         height: 36px;
     }
 }
+
 .tab-study-path:hover,
 .tab-study-path.active {
     box-shadow: 0 0 10px rgba($color: #fa8919, $alpha: 0.1);
+
     strong {
         color: #fa8919;
     }
@@ -180,6 +193,7 @@ $--color-primary: #fa8919;
     margin-bottom: 20px;
     cursor: pointer;
     height: 126px;
+
     > h3 {
         margin: 0;
         font-size: 20px;
@@ -188,6 +202,7 @@ $--color-primary: #fa8919;
         white-space: nowrap;
         margin-left: 10px;
     }
+
     > h4 {
         margin: 0;
         margin-top: 6px;
@@ -196,15 +211,18 @@ $--color-primary: #fa8919;
         font-weight: 400;
         color: #767676;
     }
+
     > p {
         margin: 20px 0 10px 12px;
     }
 }
+
 .panel-column-item:hover {
     h3 {
         color: $--color-primary;
     }
 }
+
 .column-tag {
     height: 20px;
     line-height: 20px;

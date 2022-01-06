@@ -25,10 +25,16 @@ import {
     Radio,
     RadioGroup,
     Table,
-    TableColumn
+    TableColumn,
+    Progress,
+    TimelineItem,
+    Timeline
 } from 'element-ui'
 
+Vue.use(TimelineItem)
+Vue.use(Timeline)
 Vue.use(Table)
+Vue.use(Progress)
 Vue.use(TableColumn)
 Vue.use(RadioGroup)
 Vue.use(Radio)
@@ -54,4 +60,4 @@ Vue.use(Drawer)
 Vue.use(Card)
 Vue.use(Loading.directive)
 
-Vue.prototype.$Message = Message
+Vue.prototype.$Message = Message;

@@ -31,9 +31,13 @@ const getters = {
     },
     curArticleTitle: (state, getters) => {
         try {
-            return getters.curArticleList.find(
+            console.log(' getters.curArticleList', getters.curArticleList)
+            console.log('curArticleId',state.curArticleId)
+            const cur= getters.curArticleList.find(
                 item => item.id == state.curArticleId
-            ).title
+            )
+            console.log('cur',cur)
+            return cur.title
         } catch (error) {
             return ''
         }

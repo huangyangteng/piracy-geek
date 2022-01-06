@@ -86,8 +86,8 @@ module.exports={
 
 ### 3. vscode 安装插件
 
-* ESLint  作者 Dirk Baeumer
-* Prettier  作者 Esben Petersen
+* ESLint 作者 Dirk Baeumer
+* Prettier 作者 Esben Petersen
 
 ### 4. 可能出现的问题
 
@@ -119,8 +119,6 @@ module.exports = {
   },
 };
 ```
-
-
 
 ## 三、为项目添加文档
 
@@ -282,7 +280,7 @@ views
 
 以`Guide`模块为例
 
-Guild的路由   ——》Home模块的路由  ——》router.js导入所有模块路由
+Guild的路由 ——》Home模块的路由 ——》router.js导入所有模块路由
 
 Guide模块，导出自己模块的路由
 
@@ -341,8 +339,6 @@ export default router
 
 ```
 
-
-
 ## 五、引入UI框架
 
 注意事项：
@@ -384,13 +380,7 @@ Vue.prototype.$Message = Message;
 import './config/element-ui-config'
 ```
 
-
-
-
-
 ### UI框架为ElementUI
-
-
 
 ## 六、API请求管理
 
@@ -406,7 +396,7 @@ npm i axios -S
 
 ### 跨域设置
 
-* 开发时 
+* 开发时
     * 使用devServer的proxy模块配置接口转发，配置/api前缀的url，转发到后台地址
 * 部署时
     * 使用nginx做接口转发，配置/api前缀的url，转发到后台地址
@@ -449,19 +439,15 @@ module.exports = {
 
 3. axios的baseURL设置成’/api’，这样请求后台接口时就不用每次都添加/api前缀了
 
-
-
 ### API统一管理
 
->将API按照功能模块进行划分，所有模块依赖http.js文件
+> 将API按照功能模块进行划分，所有模块依赖http.js文件
 >
 >在http.js文件中进行统一的接口拦截、错误处理
 >
 >页面中使用API可以按需引入
 
 ![image-20200206172142741](https://tva1.sinaimg.cn/large/006tNbRwgy1gbmt06rt7qj312k0rg0sw.jpg)
-
-
 
 在src目录下，新建api文件夹，用于统一管理所有的数据请求
 
@@ -479,15 +465,15 @@ import router from "../router";
 import { Message } from "element-ui";
 
 let instance = axios.create({
-    timeout: 1000 * 30,// 超时时间
-    baseURL: "/api"// 设置baseURL，区分开发环境和生产环境
+  timeout: 1000 * 30,// 超时时间
+  baseURL: "/api"// 设置baseURL，区分开发环境和生产环境
 });
 
 const CancelToken = axios.CancelToken;
 
 
 /**
- * 
+ *
  * 保存每次发起的请求，
  * 避免重复发送请求。
  * 数组中的元素的数据结构为
@@ -497,59 +483,64 @@ const CancelToken = axios.CancelToken;
  * }
  */
 class RequestList {
-    constructor() {
-        this.list = [];
-    }
-    add(request) {
-        // 处理重复请求
-        // 在请求发送之前执行取消操作
-        this.remove(request);
-        
-        // 将一个请求添加到列表中
-        new CancelToken(cancelCallback => this.list.push({
-            tag : request.url + "&" + request.method,
-            cancelCallback
-        }));
-        
-    }
-    remove(completedRequest) {
-        this.list.some((pendingRequest, index) => {
-            // 判断当前请求是否存在于数组中
-            if (pendingRequest.tag === completedRequest.url + "&" + completedRequest.method) {
+  constructor() {
+    this.list = [];
+  }
 
-                pendingRequest.cancelCallback();// 执行取消操作
-                this.list.splice(index, 1);// 删除请求
-            }
-        })
-    }
+  add(request) {
+    // 处理重复请求
+    // 在请求发送之前执行取消操作
+    this.remove(request);
+
+    // 将一个请求添加到列表中
+    new CancelToken(cancelCallback => this.list.push({
+      tag: request.url + "&" + request.method,
+      cancelCallback
+    }));
+
+  }
+
+  remove(completedRequest) {
+    this.list.some((pendingRequest, index) => {
+      // 判断当前请求是否存在于数组中
+      if (pendingRequest.tag === completedRequest.url + "&" + completedRequest.method) {
+
+        pendingRequest.cancelCallback();// 执行取消操作
+        this.list.splice(index, 1);// 删除请求
+      }
+    })
+  }
 }
 
 // 管理权限相关
 class AuthManager {
-    constructor() {
-        let state = localStorage.getItem('vuex')
-        try {
-            state = JSON.parse(state)
-            if (state.user.jwt) {
-                this.jwt = state.user.jwt
-            } else {
-                //未登录
-            }
-        } catch (error) {
-            //未登录
-        }
+  constructor() {
+    let state = localStorage.getItem('vuex')
+    try {
+      state = JSON.parse(state)
+      if (state.user.jwt) {
+        this.jwt = state.user.jwt
+      } else {
+        //未登录
+      }
+    } catch (error) {
+      //未登录
     }
-    goLogin() {
-        Message.error('登录过期！')
-        router.push({ name: 'login' })
-    }
-    getJWT() {
-        return this.jwt
-    }
-    updateJWT(jwt) {
-        store.dispatch('user/updateJWT', jwt)
-        this.jwt = jwt
-    }
+  }
+
+  goLogin() {
+    Message.error('登录过期！')
+    router.push({ name: 'login' })
+  }
+
+  getJWT() {
+    return this.jwt
+  }
+
+  updateJWT(jwt) {
+    store.dispatch('user/updateJWT', jwt)
+    this.jwt = jwt
+  }
 }
 
 
@@ -557,81 +548,81 @@ class AuthManager {
  * 处理请求拦截相关操作
  */
 class InterceptorManager {
-    constructor(request, resData) {
-        this.request = request;
-        this.resData = resData;
-        this.authManager = new AuthManager();
-        this.requestList = new RequestList();
+  constructor(request, resData) {
+    this.request = request;
+    this.resData = resData;
+    this.authManager = new AuthManager();
+    this.requestList = new RequestList();
+  }
+
+  handleRequest() {
+    this.requestList.add(this.request);
+    this.request.headers.jwt = this.authManager.getJWT();
+
+    return this.request;
+  }
+
+  handleResponse() {
+    // 在一个ajax响应后再执行一下取消操作，把已经完成的请求从请求列表中移除
+    this.requestList.remove(this.request);
+
+    let code = this.resData.code.toString();
+    this.handleResponseCode(code);
+    return this.resData;
+  }
+
+  handleResponseCode(code) {
+
+    switch (code) {
+      case '100000' :
+        this.authManager.updateJWT(
+          this.resData.jwt
+        );
+        break;
+      case '200000' :
+        this.authManager.goLogin();
+        break;
+      default :
+        Message.error("请求失败:" + this.resData.data);
+        break;
     }
+  }
 
-    handleRequest() {
-        this.requestList.add(this.request);
-        this.request.headers.jwt = this.authManager.getJWT();
-
-        return this.request;
-    }
-
-    handleResponse() {
-        // 在一个ajax响应后再执行一下取消操作，把已经完成的请求从请求列表中移除
-        this.requestList.remove(this.request);
-
-        let code = this.resData.code.toString();
-        this.handleResponseCode(code);
-        return this.resData;
-    }
-
-    handleResponseCode(code) {
-        
-        switch (code) {
-            case '100000' :
-                this.authManager.updateJWT(
-                    this.resData.jwt
-                );
-                break;
-            case '200000' : 
-                this.authManager.goLogin();
-                break;
-            default : 
-                Message.error("请求失败:" + this.resData.data);
-                break;
-        }
-    }
-
-    handleError() {
-        Message.error(`
+  handleError() {
+    Message.error(`
             接口访问失败：
             URL：${this.request.config.url}，
             ErrorCode：${this.request.status}，
             StatusText：${this.request.statusText}
             `
-        );
+    );
 
-        return Promise.reject(this.request);
-    }
+    return Promise.reject(this.request);
+  }
 }
 
 // 请求拦截
 instance.interceptors.request.use(
-    config => {
-        let interceptor = new InterceptorManager(config);
-        return interceptor.handleRequest();
-    },
-    error => Promise.error(error)
+  config => {
+    let interceptor = new InterceptorManager(config);
+    return interceptor.handleRequest();
+  },
+  error => Promise.error(error)
 );
 
 // 响应拦截
 instance.interceptors.response.use(
-    // 请求成功
-    res => {
-        let interceptor = new InterceptorManager(res.config, res.data);
-        return interceptor.handleResponse();
-    },
-    // 请求失败
-    error => {
-        const { response } = error;
-        let interceptor = new InterceptorManager(response);
-        return interceptor.handleError();
-    }
+  // 请求成功
+  res => {
+    let interceptor = new InterceptorManager(res.config, res.data);
+    return interceptor.handleResponse();
+  },
+  // 请求失败
+  error => {
+    const { response } = error;
+    let interceptor = new InterceptorManager(response);
+    return interceptor.handleError();
+  }
 );
 
 export default instance;
@@ -640,7 +631,7 @@ export default instance;
 
 #### 接口划分与定义
 
- 按照前端模块对接口进行划分，一个模块一个文件
+按照前端模块对接口进行划分，一个模块一个文件
 
 以用户模块为例，新建 user.js,将用户相关的接口定义在此处
 
@@ -659,8 +650,8 @@ import http from './http'
 const login = params => http.post('/user/login', params)
 const getUserList = () => http.get('/user/list')
 export const USER_API = {
-    login,
-    getUserList
+  login,
+  getUserList
 }
 
 ```
@@ -670,18 +661,19 @@ export const USER_API = {
 ```js
 
 import { USER_API } from '../../api/user'
+
 export default {
-    methods: {
-        async login() {
-            let res = await USER_API.login(this.loginInfo)
-            this.$store.dispatch('user/login', res)
-        }
+  methods: {
+    async login() {
+      let res = await USER_API.login(this.loginInfo)
+      this.$store.dispatch('user/login', res)
     }
+  }
 }
 
 ```
 
- ## 七、vuex管理全局状态
+## 七、vuex管理全局状态
 
 使用vuex将系统中涉及到的全局状态统一管理起来
 
@@ -706,8 +698,6 @@ export default new Vuex.Store({
 
 ```
 
-
-
 ### 分模块管理状态
 
 > 以用户模块为例
@@ -715,14 +705,12 @@ export default new Vuex.Store({
 用户状态主要有
 
 * info 用户信息，包括用户名、权限等
-* jwt   token，用于校验用户
+* jwt token，用于校验用户
 
 实现的功能：
 
 * 登录之后，储存用户信息，储存jwt
 * 登出之后，清空用户信息，清空jwt
-
-
 
 根据此目录结构新建文件
 
@@ -740,70 +728,68 @@ store
 
 ```js
 //mutation-types.js
-const USER = {
-    LOGIN: 'login', //登录
-    LOGOUT: 'logout',//登出
-    UPDATE_JWT: 'updateJWT'//更新jwt
+const USER_MU = {
+  LOGIN: 'login', //登录
+  LOGOUT: 'logout',//登出
+  UPDATE_JWT: 'updateJWT'//更新jwt
 }
 
-export { USER }
+export { USER_MU }
 
 ```
 
 2. 在modules目录下新建user.js，用于管理user模块的状态键入以下内容，
 
-
-
 ```js
 //user.js  主要定义对状态的操作
-import { USER } from '../mutation-types'
+import { USER_MU } from '../mutation-types'
 
 const state = {
-    //定义用户相关状态
-    info: {},
-    jwt: ''
+  //定义用户相关状态
+  info: {},
+  jwt: ''
 }
 
 const getters = {
-    //定义需要经过处理才能返回的state
+  //定义需要经过处理才能返回的state
 }
 
 const actions = {
-    //处理异步请求及复杂逻辑
-    login({ commit }, userInfo) {
-        console.log(userInfo)
-        commit(USER.LOGIN, userInfo)
-        commit(USER.UPDATE_JWT, userInfo.jwt)
-    },
-    logout({ commit }) {
-        commit(USER.LOGOUT)
-    },
-    updateJwt({ commit }, newJwt) {
-        commit(USER.UPDATE_JWT, newJwt)
-    }
+  //处理异步请求及复杂逻辑
+  login({ commit }, userInfo) {
+    console.log(userInfo)
+    commit(USER_MU.SET_USER, userInfo)
+    commit(USER_MU.UPDATE_JWT, userInfo.jwt)
+  },
+  logout({ commit }) {
+    commit(USER_MU.LOGOUT)
+  },
+  updateJwt({ commit }, newJwt) {
+    commit(USER_MU.UPDATE_JWT, newJwt)
+  }
 }
 
 const mutations = {
-    //更改state中的状态
-    [USER.LOGIN](state, userInfo) {
-        state.info = userInfo.data
-    },
-    [USER.LOGOUT](state) {
-        state.info = {}
-        localStorage.removeItem('vuex')
-    },
-    [USER.UPDATE_JWT](state, jwt) {
-        state.jwt = jwt
-    }
+  //更改state中的状态
+  [USER_MU.SET_USER](state, userInfo) {
+    state.info = userInfo.data
+  },
+  [USER_MU.LOGOUT](state) {
+    state.info = {}
+    localStorage.removeItem('vuex')
+  },
+  [USER_MU.UPDATE_JWT](state, jwt) {
+    state.jwt = jwt
+  }
 }
 
 export default {
-    //导出用户模块相关信息
-    namespaced: true,
-    state,
-    actions,
-    mutations,
-    getters
+  //导出用户模块相关信息
+  namespaced: true,
+  state,
+  actions,
+  mutations,
+  getters
 }
 
 ```
@@ -823,8 +809,6 @@ export default new Vuex.Store({
 
 ```
 
-
-
 至此，已实现状态的定义，接下来看如何更改状态
 
 ### 更改状态
@@ -835,38 +819,40 @@ export default new Vuex.Store({
 
             this.$store.dispatch('user/login', res)
             this.$store.dispatch('user/updateJWT', res.jwt)
+
 ```vue
 //Login.vue 详细代码
 <template>
-    <section class="login-container">
-        <h1>登录</h1>
-        <p>用户名：</p>
-        <el-input v-model="loginInfo.name" />
-        <p>密码：</p>
-        <el-input v-model="loginInfo.pass" type="password" />
-        <el-button @click="login" class="login-submit" long type="primary">
-            登录
-        </el-button>
-    </section>
+  <section class="login-container">
+    <h1>登录</h1>
+    <p>用户名：</p>
+    <el-input v-model="loginInfo.name" />
+    <p>密码：</p>
+    <el-input v-model="loginInfo.pass" type="password" />
+    <el-button @click="login" class="login-submit" long type="primary">
+      登录
+    </el-button>
+  </section>
 </template>
 <script>
-import { USER } from '../../api/user'
+import { USER_MU } from '../../api/user'
+
 export default {
-    data() {
-        return {
-            loginInfo: {
-                name: 'super',
-                pass: '123'
-            }
-        }
-    },
-    methods: {
-        async login() {
-            let res = await USER_API.login(this.loginInfo)
-            this.$store.dispatch('user/login', res)
-            this.$router.push({ name: 'home' })
-        }
+  data() {
+    return {
+      loginInfo: {
+        name: 'super',
+        pass: '123'
+      }
     }
+  },
+  methods: {
+    async login() {
+      let res = await USER_API.login(this.loginInfo)
+      this.$store.dispatch('user/login', res)
+      this.$router.push({ name: 'home' })
+    }
+  }
 }
 </script>
 
@@ -898,8 +884,6 @@ export default {
     },
 }
 ```
-
-
 
 ## 八、工具函数管理
 
@@ -956,8 +940,6 @@ export function deepCopy(obj) {
 ```
 
 ### IE9
-
-
 
 ## 十、打包与部署
 

@@ -4,6 +4,10 @@ export default [
         component: () => import('./Workbench.vue'),
         children: [
             {
+                path: '',
+                redirect: '/workbench/column'
+            },
+            {
                 path: '/workbench/music',
                 component: () => import('./pages/music/music-list.vue')
             },
@@ -17,7 +21,7 @@ export default [
             },
             {
                 path: '/workbench/recent-column',
-                component: () => import('./pages/column/column-list')
+                component: () => import('./pages/column/recent-column')
             },
             {
                 path: '/workbench/tools',
