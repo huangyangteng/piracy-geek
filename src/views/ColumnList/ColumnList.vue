@@ -64,7 +64,10 @@ export default {
     },
     methods: {
         clickColumn(item) {
-            this.activePath = item.name
+            this.$router.push({
+                name: this.$route.name,
+                query: { path: item.name }
+            })
         },
         _getArticleId(columnId) {
             // 从历史记录中找上次阅读的id
@@ -129,7 +132,7 @@ $--color-primary: #fa8919;
 
     > header {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     > main {
@@ -145,15 +148,17 @@ $--color-primary: #fa8919;
     display: inline-flex;
     margin-right: 20px;
     justify-content: space-between;
-    flex: 1;
     padding: 10px;
+    min-width: 190px;
+    flex: 1;
+    margin-bottom: 10px;
     background: $component-bg-color;
     border-radius: 5px;
     cursor: pointer;
 
-    &:last-child {
-        margin-right: 0;
-    }
+    //&:last-child {
+    //    margin-right: 0;
+    //}
 
     > aside {
         > strong {

@@ -17,6 +17,7 @@ export default [
             },
             {
                 path: '/workbench/column',
+                name: 'workbenchColumn',
                 component: () => import('./pages/column/column-list')
             },
             {

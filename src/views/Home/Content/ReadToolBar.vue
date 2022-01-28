@@ -80,6 +80,7 @@ import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
 import addNote from './AddNote'
 import AudioPlayer from '../../../components/AudioPlayer'
 import { getElementTop, copyToBoard } from '../../../tools'
+
 export default {
     components: {
         addNote,
@@ -102,7 +103,7 @@ export default {
         ...mapMutations('component', ['updateColumnListDraw']),
         ...mapActions('column', ['fullScreen']),
         toHome() {
-            this.$router.push({ name: 'columnList' })
+            this.$router.push({ name: 'workbenchColumn' })
         },
         toggleFold() {
             this.toggleNavIsShow(this.isFold)
@@ -215,12 +216,14 @@ export default {
     box-sizing: border-box;
     display: flex;
     align-items: center;
+
     > i {
         cursor: pointer;
         margin-right: 25px;
         font-size: 30px;
         font-weight: 200;
     }
+
     > aside {
         flex: 1;
         margin-right: 20px;
@@ -228,23 +231,28 @@ export default {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
         i {
             cursor: pointer;
         }
     }
 }
+
 .jk-title {
     color: $font-primary;
     font-weight: 400;
     font-size: 1.5em;
 }
+
 .icon-tip {
     color: #fa8919;
 }
+
 .hltr-tool {
     display: inline-block;
     margin-right: 20px;
 }
+
 .hltr-color {
     display: inline-block;
     width: 26px;
@@ -254,16 +262,19 @@ export default {
     border: 1px solid #eee;
     margin-right: 10px;
 }
+
 .hltr-color.active {
     width: 30px;
     height: 30px;
     border-color: #333;
 }
+
 .read-tools {
     display: inline-block;
     height: 30px;
     line-height: 30px;
 }
+
 .highlighted {
     position: relative;
 }
@@ -285,6 +296,7 @@ export default {
     transition: 0.5s all;
     visibility: hidden;
 }
+
 .hightlight-oprate::before {
     content: '';
     position: absolute;
@@ -296,6 +308,7 @@ export default {
     bottom: -6px;
     left: 95px;
 }
+
 .hight-op-item {
     cursor: pointer;
     padding: 0 16px;
@@ -305,12 +318,15 @@ export default {
     align-items: center;
     justify-content: center;
 }
+
 .hight-op-item:hover {
     background: #353535;
 }
+
 .hight-op-item:first-child {
     border-radius: 8px;
 }
+
 .hight-op-item:last-child {
     border-radius: 8px;
 }

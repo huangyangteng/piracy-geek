@@ -9,6 +9,7 @@ let instance = axios.create({
 })
 
 const CancelToken = axios.CancelToken
+const SILENTS_URLS = ['/user/login', '/history']
 
 /**
  *
@@ -106,7 +107,7 @@ class InterceptorManager {
         // 在一个ajax响应后再执行一下取消操作，把已经完成的请求从请求列表中移除
         this.requestList.remove(this.request)
         //
-        const SILENTS_URLS = ['/user/login']
+
         const item = SILENTS_URLS.find(url => this.request.url.includes(url))
         console.log(item)
         if (item) {
@@ -132,12 +133,15 @@ class InterceptorManager {
     }
 
     handleError() {
-        Message.error(`
+        const item = SILENTS_URLS.find(url => this.request.url.includes(url))
+        if (!item) {
+            Message.error(`
             接口访问失败：
             URL：${this.request.config.url}，
             ErrorCode：${this.request.status}，
             StatusText：${this.request.statusText}
             `)
+        }
 
         return Promise.reject(this.request)
     }
