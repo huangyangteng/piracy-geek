@@ -197,7 +197,9 @@ $--color-primary: #fa8919;
     margin-right: 20px;
     margin-bottom: 20px;
     cursor: pointer;
-    height: 126px;
+    min-height: 126px;
+    min-width: 300px;
+    flex: 1;
 
     > h3 {
         margin: 0;

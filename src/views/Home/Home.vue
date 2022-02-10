@@ -67,7 +67,7 @@ export default {
                     title_en: 'LEARNING RESOURCES',
                     title: '前端学习资源（极客时间）',
                     img: require('../../assets/imgs/clip-education-1.png'),
-                    href: '#/column-list'
+                    href: '#/workbench'
                 },
                 {
                     title_en: 'MAC WORK ENVIRONMENT',

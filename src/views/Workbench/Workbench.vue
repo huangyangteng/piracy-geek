@@ -190,4 +190,21 @@ export default {
         background: #2b2b2b;
     }
 }
+
+//小于750的尺寸
+@media (max-width: 750px) {
+    //隐藏侧边栏
+    .bench-sidebar {
+        display: none;
+    }
+    .search-wrapper {
+        .search-input {
+            width: 350px;
+        }
+
+        .search-suggest-list {
+            width: 350px;
+        }
+    }
+}
 </style>

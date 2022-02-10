@@ -45,5 +45,6 @@ COLUMNS.forEach(column => {
         })
     })
 })
-
+const cids=COLUMNS.map(item=>item.cid)
+console.log(cids)
 export default COLUMNS

@@ -10,6 +10,11 @@
             v-show="isFold"
             class="el-icon-s-unfold fold-icon"
         ></i>
+        <span
+            @click="toHome"
+            class="el-icon-arrow-left back-home-icon"
+            style="margin-right: 10px"
+        ></span>
         <!-- 标题 -->
         <span class="jk-title" @click="toHome">{{ curColumnTitle }}</span>
 
@@ -23,7 +28,7 @@
         <!-- 音频播放 -->
         <AudioPlayer></AudioPlayer>
         <!-- 选择颜色 -->
-        <aside>
+        <aside class="toolbar-aside">
             <section class="hltr-tool">
                 <div
                     v-for="color in colorList"
@@ -277,6 +282,24 @@ export default {
 
 .highlighted {
     position: relative;
+}
+
+//小于750的尺寸
+@media (max-width: 750px) {
+    .toolbar-aside,
+    .fold-icon {
+        display: none !important;
+    }
+
+    .read-tool-bar {
+        padding: 0 10px;
+
+        .back-home-icon {
+            display: inline-block;
+            font-size: 24px;
+            margin-text-outline: -1px;
+        }
+    }
 }
 </style>
 <style lang="css">

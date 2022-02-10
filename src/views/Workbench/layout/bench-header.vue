@@ -216,12 +216,14 @@ export default {
     }
 
     .login {
-        padding-right: 120px;
+        padding-right: 5%;
         font-size: 12px;
+        min-width: 80px;
     }
 
     .login-reference {
-      cursor: pointer;
+        cursor: pointer;
+
         .line {
             argin: 0px 2px;
             font-size: 12px;

@@ -2373,5 +2373,112 @@ export const INTEREST_LIST = [
                 ]
             }
         ]
+    },
+    {
+        id: 'azyvqnfj552',
+        type: 'interest',
+        cid: '350',
+        title: '爱上跑步',
+        subTitle: '明星教练带你科学跑步',
+        authorName: '钱亮',
+        authorInfo: '比利时RSLab 跑步实验室跑步教练兼培训师，Nike黑马体能教练',
+        contents: [
+            {
+                id: '25uih0khic1',
+                title: '全部章节',
+                subList: [
+                    {
+                        id: '3402a5eeslp',
+                        title: '开篇词 | 跑步，不那么简单的事儿',
+                        audio: ''
+                    },
+                    {
+                        id: 'hrt3kxcedvu',
+                        title: '01 | 跑两步就喘了，是不是我不适合跑步？',
+                        src:
+                            '爱上跑步/html/__291035__01 _ 跑两步就喘了，是不是我不适合跑步？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'a169buhvof1',
+                        title: '02 | 正确的跑步姿势是什么样的？',
+                        src:
+                            '爱上跑步/html/__290962__02 _ 正确的跑步姿势是什么样的？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'izbxznbxlac',
+                        title: '03 | 为什么跑步要先热身？',
+                        src:
+                            '爱上跑步/html/__290935__03 _ 为什么跑步要先热身？.html',
+                        audio: ''
+                    },
+                    {
+                        id: '7dn10ixf550',
+                        title: '04 | 怎样制定你的第一个10公里跑步计划？',
+                        src:
+                            '爱上跑步/html/__290305__04 _ 怎样制定你的第一个10公里跑步计划？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'ihps0r0zivo',
+                        title: '05 | 快跑和慢跑，哪个更燃脂？',
+                        src:
+                            '爱上跑步/html/__290402__05 _ 快跑和慢跑，哪个更燃脂？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'ygqe95bcuev',
+                        title: '06 | 普通跑步者应该如何选择跑鞋？',
+                        src:
+                            '爱上跑步/html/__290993__06 _ 普通跑步者应该如何选择跑鞋？.html',
+                        audio: ''
+                    },
+                    {
+                        id: '1qdbvzqioeg',
+                        title: '07 | 买跑步装备，不要踩这些坑儿',
+                        src:
+                            '爱上跑步/html/__291028__07 _ 买跑步装备，不要踩这些坑儿.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'gmy61axpoza',
+                        title: '08 | 跑步前到底应不应该吃东西？',
+                        src:
+                            '爱上跑步/html/__290409__08 _ 跑步前到底应不应该吃东西？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'du7kby0dlwq',
+                        title: '09 | 跑步到底伤不伤膝盖？',
+                        src:
+                            '爱上跑步/html/__290411__09 _ 跑步到底伤不伤膝盖？.html',
+                        audio: ''
+                    },
+                    {
+                        id: '8ur4xollvci',
+                        title: '10 | 参加了20场马拉松，我是如何准备的？',
+                        src:
+                            '爱上跑步/html/__290416__10 _ 参加了20场马拉松，我是如何准备的？.html',
+                        audio: ''
+                    },
+                    {
+                        id: '7r8wturj46b',
+                        title: '11 | 除了马拉松，还能参加哪些跑步赛事？',
+                        src:
+                            '爱上跑步/html/__290867__11 _ 除了马拉松，还能参加哪些跑步赛事？.html',
+                        audio: ''
+                    },
+                    {
+                        id: 'x8wpmplstae',
+                        title:
+                            '12 | 热点问题答疑 ：跑完第二天浑身疼，还要不要继续跑？',
+                        src:
+                            '爱上跑步/html/__290875__12 _ 热点问题答疑 ：跑完第二天浑身疼，还要不要继续跑？.html',
+                        audio: ''
+                    }
+                ]
+            }
+        ]
     }
 ]

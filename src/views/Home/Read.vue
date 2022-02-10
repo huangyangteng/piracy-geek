@@ -4,7 +4,7 @@
         <DragLine v-show="!isFold" @on-drag="dragAside"></DragLine>
         <section class="read-content">
             <ReadToolBar v-show="status.toolbarIsShow"></ReadToolBar>
-            <ArticleContent> </ArticleContent>
+            <ArticleContent></ArticleContent>
         </section>
         <i
             v-show="isFullScreen"
@@ -24,6 +24,7 @@ import PicturePreview from './Modal/PicturePreview'
 import DragLine from '../../components/dragLine'
 import ColumnListDraw from './Modal/ColumnListDraw'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
+
 export default {
     components: {
         ReadAside,
@@ -137,6 +138,7 @@ export default {
     height: 100%;
     overflow: hidden;
 }
+
 .read-aside {
     width: 420px;
     min-width: 200px;
@@ -147,13 +149,22 @@ export default {
     position: relative;
     background: $component-bg-color-2;
 }
+
 .read-content {
     flex: 1;
+    width: 100%;
 }
+
 .exit-full {
     position: fixed;
     top: 40px;
     right: 100px;
     cursor: pointer;
+}
+//小于750的尺寸
+@media (max-width: 750px) {
+  .read-aside{
+    display: none;
+  }
 }
 </style>

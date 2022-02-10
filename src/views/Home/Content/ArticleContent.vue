@@ -225,11 +225,20 @@ export default {
 <style lang="scss" scoped>
 .article-wrapper {
     padding: 80px 40px;
+    padding-left: 20%;
+    padding-right: 20%;
     overflow-y: auto;
     box-sizing: border-box;
     height: 100%;
     position: relative;
     background: $component-bg-color;
+}
+
+//小于750的尺寸
+@media (max-width: 750px) {
+    .article-wrapper {
+        padding:20px;
+    }
 }
 
 .article-wrapper #app {

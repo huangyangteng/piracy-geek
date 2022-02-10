@@ -93,6 +93,10 @@ body {
 
 
 .read-content {
+  img, video {
+    width: 100%;
+  }
+
   p {
     line-height: 2 !important;
     font-size: 20px !important;
@@ -159,12 +163,21 @@ body {
   }
 
   ._20-cXID6_0 {
-    min-width: 960px !important;
+    //min-width: 960px !important;
   }
 
   ._50pDbNcP_0 {
-    min-width: 960px !important;
+    //min-width: 960px !important;
   }
+  .MedalIcon_ignoreMedalIcon_3-1Ts{
+    display: block;
+  }
+
+  .noteMenu_noteMenu_zbKHG, .noteDialog_noteDialog_2w-W2, .Pharmacode_main_2SACi, .noteDialog_noteDialog_2w-W2, .Index_comment_1Pwfq, .RichContentFootImg_footImg_23_U6, .ArticleLikeModulePc_LikeWrapper_HqHD5, {
+    display: none;
+
+  }
+
 
 }
 
@@ -375,10 +388,11 @@ header {
   background-color: $component-bg-color;
   color: $font-color;
   border: 0;
-  padding:6px 0;
+  padding: 6px 0;
 }
-.el-dropdown-menu__item:not(.is-disabled):hover, .el-dropdown-menu__item:focus{
-  color:$--color-primary;
+
+.el-dropdown-menu__item:not(.is-disabled):hover, .el-dropdown-menu__item:focus {
+  color: $--color-primary;
   background-color: $component-bg-color;
 
 }
