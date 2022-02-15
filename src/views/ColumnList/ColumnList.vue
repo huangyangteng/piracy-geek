@@ -115,6 +115,7 @@ export default {
         '$route.query.path': {
             immediate: true,
             handler(path) {
+                console.log(path)
                 if (path) {
                     this.activePath = path
                 }
