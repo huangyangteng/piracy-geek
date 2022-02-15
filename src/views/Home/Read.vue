@@ -163,8 +163,8 @@ export default {
 }
 //小于750的尺寸
 @media (max-width: 750px) {
-  .read-aside{
-    display: none;
-  }
+    .read-aside {
+        display: none;
+    }
 }
 </style>

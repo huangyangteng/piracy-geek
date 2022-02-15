@@ -1,11 +1,11 @@
 <template>
     <section>
-       <juejin-star></juejin-star>
+        <juejin-star></juejin-star>
     </section>
 </template>
 
 <script>
-import JuejinStar from "../../components/tools/juejin-star";
+import JuejinStar from '../../components/tools/juejin-star'
 export default {
     name: 'tools-list',
     components: { JuejinStar },

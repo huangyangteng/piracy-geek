@@ -262,18 +262,18 @@ export default {
 }
 .gk-play-slider {
     margin-top: -8px;
-    /deep/.el-slider__runway {
+    ::v-deep.el-slider__runway {
         height: 3px;
     }
-    /deep/.el-slider__bar {
+    ::v-deep.el-slider__bar {
         height: 3px;
     }
-    /deep/.el-slider__button {
+    ::v-deep.el-slider__button {
         width: 10px;
         height: 10px;
         border: solid 1px #fa8919;
     }
-    /deep/.el-slider__button-wrapper .el-tooltip {
+    ::v-deep.el-slider__button-wrapper .el-tooltip {
         margin-top: -4px;
     }
 }
