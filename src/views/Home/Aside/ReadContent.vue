@@ -1,27 +1,27 @@
 <template>
     <section>
-         <el-menu
-                :unique-opened="config.uniqueOpened"
-                :default-active="curArticleId"
-                class="el-menu-vertical-demo"
-                @select="$emit('select',$event)"
+        <el-menu
+            :unique-opened="config.uniqueOpened"
+            :default-active="curArticleId"
+            class="el-menu-vertical-demo"
+            @select="selectArticle"
+        >
+            <el-submenu
+                :index="item.id"
+                v-for="item in curContents"
+                :key="item.id"
             >
-                <el-submenu
-                    :index="item.id"
-                    v-for="item in curContents"
-                    :key="item.id"
+                <template slot="title">
+                    <span>{{ item.title }}</span>
+                </template>
+                <el-menu-item
+                    v-for="sub in item.subList"
+                    :index="sub.id"
+                    :key="sub.id"
+                    >{{ sub.title }}</el-menu-item
                 >
-                    <template slot="title">
-                        <span>{{ item.title }}</span>
-                    </template>
-                    <el-menu-item
-                        v-for="sub in item.subList"
-                        :index="sub.id"
-                        :key="sub.id"
-                        >{{ sub.title }}</el-menu-item
-                    >
-                </el-submenu>
-            </el-menu>
+            </el-submenu>
+        </el-menu>
     </section>
 </template>
 
@@ -31,18 +31,23 @@ export default {
     name: 'ReadContent',
     data() {
         return {
-              config: {
+            config: {
                 uniqueOpened: true
-            },
+            }
         }
     },
     computed: {
         ...mapState('column', ['curArticleId', 'outlineList']),
-        ...mapGetters('column', ['curContents', 'isFold']),
-
+        ...mapGetters('column', ['curContents', 'isFold'])
+    },
+    methods: {
+        selectArticle(article) {
+            let { column } = this.$route.params
+            this.$router.push({ name: 'read', params: { column, article } })
+        }
     },
     created() {}
 }
 </script>
 
-<style lang='less' scoped></style>
+<style lang="less" scoped></style>

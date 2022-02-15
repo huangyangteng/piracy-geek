@@ -15,7 +15,7 @@
             <ReadOutline v-if="!showMenu"></ReadOutline>
         </transition>
         <transition name="fade">
-            <ReadContent v-if="showMenu" @select="selectArticle"></ReadContent>
+            <ReadContent v-if="showMenu" ></ReadContent>
         </transition>
     </aside>
 </template>
