@@ -29,28 +29,18 @@ const getters = {
         let tmp = getters.curContents.map(item => item.subList)
         return tmp.reduce((prev, cur) => prev.concat(cur))
     },
+    curArticle: (state, getters) => {
+        return getters.curArticleList.find(
+            item => item.id == state.curArticleId
+        )
+    },
     curArticleTitle: (state, getters) => {
         try {
-            console.log(' getters.curArticleList', getters.curArticleList)
-            console.log('curArticleId',state.curArticleId)
-            const cur= getters.curArticleList.find(
-                item => item.id == state.curArticleId
-            )
-            console.log('cur',cur)
-            return cur.title
+            return getters.curArticle.title
         } catch (error) {
             return ''
         }
     },
-    curArticleAudio: (state, getters) => {
-        let article = getters.curArticleList.find(
-            item => item.id == state.curArticleId
-        )
-        if (!article) return null
-        if (!article.audio) return null
-        return article.audio.replace('./', '')
-    },
-
     // 显示状态
     isFold: state => !state.status.navIsShow,
     isFullScreen: state => {

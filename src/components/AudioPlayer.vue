@@ -1,5 +1,5 @@
 <template>
-    <section class="gk-audio-wrapper" v-if="curArticleAudio">
+    <section class="gk-audio-wrapper" v-if="audioSrc">
         <div class="audio-controls">
             <div class="play-back" @click="changeCurrentTime('reduce')">
                 <i class="el-icon-refresh-left"></i>
@@ -66,8 +66,9 @@
  * 逻辑：    播放时，进度条走  播放时，改变currentTime,percent通过currentTime计算
  *          拖动进度条，视频暂停 视频进度走
  */
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 import { formatDuration } from '../tools'
+import { getAudio } from '../data/audio'
 export default {
     data() {
         return {
@@ -87,7 +88,8 @@ export default {
         }
     },
     computed: {
-        ...mapGetters('column', ['curArticleAudio']),
+        ...mapGetters('column', ['curArticle']),
+        ...mapState('column', ['curColumn']),
         isPlay() {
             return this.status == 'play'
         },
@@ -95,7 +97,17 @@ export default {
             return this.rateList.find(item => item.value == this.curRate).label
         },
         audioSrc() {
-            return this.sourceBase + this.curArticleAudio
+            try {
+                //eslint-disable-next-line
+                const reg = /\_{2}((\d)+)\_{2}/
+                const articleId = this.curArticle.src.match(reg)[1]
+                console.log('this.curArticle.src', this.curArticle.src)
+                const src = getAudio(this.curColumn.cid, articleId)
+                console.log('src', src)
+                return src
+            } catch (error) {
+                return ''
+            }
         },
         playPercent() {
             return this.curTime
@@ -150,13 +162,10 @@ export default {
         },
         stopChangeSlider(val) {
             console.log('stopChangeSlider -> val', val)
-            // this.audioPause()
-            // this.curTime = val
-            // this.$refs.audioDom.currentTime = this.curTime
         }
     },
     mounted() {
-        if (!this.curArticleAudio) return
+        if (!this.audioSrc) return
         this.$refs.audioDom.addEventListener('timeupdate', () => {
             if (!this.$refs.audioDom) return
             if (this.isPlay) {
@@ -225,6 +234,7 @@ export default {
         left: 0px;
         font-size: 13px;
         cursor: pointer;
+        width: auto !important;
     }
 }
 .play-back {
