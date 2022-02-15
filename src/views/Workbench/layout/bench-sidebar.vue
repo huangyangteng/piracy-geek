@@ -45,8 +45,8 @@ export default {
                 {
                     name: 'MY VIDEO',
                     children: [
-                        { name: 'MUSIC LIST', route: '' },
-                        { name: 'RECENT MUSIC', route: '' }
+                        { name: 'VIDEO LIST', route: '/workbench/video' },
+                        { name: 'RECENT VIDEO', route: '/workbench/recent-video' }
                     ]
                 },
                 {

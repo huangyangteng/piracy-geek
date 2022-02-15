@@ -12,6 +12,10 @@ export default [
                 component: () => import('./pages/music/music-list.vue')
             },
             {
+                path: '/workbench/recent-music',
+                component: () => import('./pages/music/recent-music.vue')
+            },
+            {
                 path: '/workbench/album',
                 component: () => import('./pages/music/album-list.vue')
             },
@@ -29,12 +33,12 @@ export default [
                 component: () => import('./pages/tools/tools-list')
             },
             {
-                path: '/workbench/videos',
-                component: () => import('./pages/tools/tools-list')
+                path: '/workbench/video',
+                component: () => import('./pages/video/video-list.vue')
             },
             {
                 path: '/workbench/recent-video',
-                component: () => import('./pages/tools/tools-list')
+                component: () => import('./pages/video/recent-video.vue')
             }
         ]
     }
