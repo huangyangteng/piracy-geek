@@ -5,7 +5,7 @@
             <el-button @click="getToDay">最近24小时</el-button>
             <el-button @click="get3Day">最近3天</el-button>
             <el-button @click="get7Day">最近1周</el-button>
-            <el-button type="primary" @click="getFiles">刷新</el-button>
+            <el-button type="primary" @click="getRecentFiles">刷新</el-button>
         </section>
         <img
             @dblclick="delImage(item.id)"
@@ -81,12 +81,14 @@ export default {
             }
         },
         clikeImg(src, e) {
+            console.log('e.target.offsetWidth', e.target.offsetWidth)
+            e.target.style.width = e.target.offsetWidth * 1.2 + 'px'
             e.stopPropagation()
-            this.updatePicturePreview({
-                show: true,
-                src: this.FILE_PREFIX + src,
-                width: e.target.naturalWidth + 'px'
-            })
+            // this.updatePicturePreview({
+            //     show: true,
+            //     src: this.FILE_PREFIX + src,
+            //     width: e.target.naturalWidth + 'px'
+            // })
         },
         async handlePaster() {
             var items = event.clipboardData && event.clipboardData.items
@@ -127,15 +129,18 @@ export default {
                 this.imageList = res.data
             }
             console.log('getFiles -> res', res.data)
+        },
+        getRecentFiles() {
+            // 只获取最近三个小时之内的数据
+            const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
+            const start = dayjs()
+                .subtract(3, 'hour')
+                .format('YYYY-MM-DD HH:mm:ss')
+            this.getFiles({ start, end })
         }
     },
     mounted() {
-        // 只获取最近三个小时之内的数据
-        const end = dayjs().format('YYYY-MM-DD HH:mm:ss')
-        const start = dayjs()
-            .subtract(3, 'hour')
-            .format('YYYY-MM-DD HH:mm:ss')
-        this.getFiles({ start, end })
+        this.getRecentFiles()
         document.addEventListener('paste', this.handlePaster)
     },
     beforeDestroy() {
@@ -149,7 +154,7 @@ export default {
     margin: 0 auto;
 
     img {
-        width: 450px;
+        width: 600px;
         margin: 10px;
     }
 }
