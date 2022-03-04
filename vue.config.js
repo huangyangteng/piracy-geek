@@ -17,7 +17,7 @@ module.exports = {
                 // }
             },
             '/gk-files': {
-                target: 'http://localhost'
+                target: PRODUCT_HOST
             },
             '/api': {
                 target: 'http://www.leexiao.site/'

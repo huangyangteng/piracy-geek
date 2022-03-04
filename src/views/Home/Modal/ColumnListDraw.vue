@@ -6,7 +6,8 @@
             :with-header="false"
         >
             <section class="geek-drawer-content">
-                <section v-for="(value, key) in columnList" :key="key">
+                <ReadContent></ReadContent>
+                <!-- <section v-for="(value, key) in columnList" :key="key" v-if="false">
                     <h3 style="margin:20px 0 10px 0;color:#333">
                         {{ getPathName(key) }}
                     </h3>
@@ -18,7 +19,7 @@
                         style="margin:5px"
                         >{{ column.title }}</el-link
                     >
-                </section>
+                </section> -->
             </section>
         </el-drawer>
     </section>
@@ -28,7 +29,11 @@ import COLUMN_LIST from '../../../data/columns'
 import PATH_LIST from '../../../data/pathList'
 import { mapState, mapGetters, mapMutations } from 'vuex'
 import { formatColumn } from '../../../tools/column-tools'
+import ReadContent from '../../Home/Aside/ReadContent.vue'
 export default {
+    components:{
+        ReadContent
+    },
     data() {
         return {
             columnList: formatColumn(COLUMN_LIST, PATH_LIST)

@@ -1,6 +1,7 @@
 <template>
     <section class="history-wrapper">
-        <el-timeline>
+        <div v-if="!isLogin">登录之后才能记录阅读历史，请点击右上角"登录"按钮进行登录</div>
+        <el-timeline v-else>
             <el-timeline-item
                 v-for="item in histories"
                 :key="item.itemId"
@@ -32,7 +33,7 @@ export default {
         }
     },
     computed: {
-        ...mapGetters('user', ['userId'])
+        ...mapGetters('user', ['userId', 'isLogin'])
     },
     methods: {
         async getHistory() {

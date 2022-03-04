@@ -15,29 +15,7 @@
             <ReadOutline v-if="!showMenu"></ReadOutline>
         </transition>
         <transition name="fade">
-            <el-menu
-                v-if="showMenu"
-                :unique-opened="config.uniqueOpened"
-                :default-active="curArticleId"
-                class="el-menu-vertical-demo"
-                @select="selectArticle"
-            >
-                <el-submenu
-                    :index="item.id"
-                    v-for="item in curContents"
-                    :key="item.id"
-                >
-                    <template slot="title">
-                        <span>{{ item.title }}</span>
-                    </template>
-                    <el-menu-item
-                        v-for="sub in item.subList"
-                        :index="sub.id"
-                        :key="sub.id"
-                        >{{ sub.title }}</el-menu-item
-                    >
-                </el-submenu>
-            </el-menu>
+            <ReadContent v-if="showMenu" ></ReadContent>
         </transition>
     </aside>
 </template>
@@ -45,10 +23,12 @@
 import { mapState, mapGetters } from 'vuex'
 import ReadOutline from './ReadOutline'
 import OutlineConfig from '../Modal/OutlineConfig'
+import ReadContent from './ReadContent.vue'
 export default {
     components: {
         ReadOutline,
-        OutlineConfig
+        OutlineConfig,
+        ReadContent
     },
     data() {
         return {

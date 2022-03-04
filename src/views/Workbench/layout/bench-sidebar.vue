@@ -8,6 +8,7 @@
                     @click="toPage(item.route)"
                     v-for="item in m.children"
                     :key="item.name"
+                    :class="{ active: isActive(item) }"
                 >
                     {{ item.name }}
                 </p>
@@ -33,6 +34,16 @@ export default {
                     ]
                 },
                 {
+                    name: 'MY VIDEO',
+                    children: [
+                        { name: 'VIDEO LIST', route: '/workbench/video' },
+                        {
+                            name: 'RECENT VIDEO',
+                            route: '/workbench/recent-video'
+                        }
+                    ]
+                },
+                {
                     name: 'MY MUSIC',
                     children: [
                         { name: 'MUSIC LIST', route: '/workbench/music' },
@@ -40,13 +51,6 @@ export default {
                             name: 'RECENT MUSIC',
                             route: '/workbench/recent-music'
                         }
-                    ]
-                },
-                {
-                    name: 'MY VIDEO',
-                    children: [
-                        { name: 'MUSIC LIST', route: '' },
-                        { name: 'RECENT MUSIC', route: '' }
                     ]
                 },
                 {
@@ -63,6 +67,9 @@ export default {
         toPage(link) {
             if (this.$route.path == link) return
             this.$router.push({ path: link })
+        },
+        isActive(item) {
+            return this.$route.path.includes(item.route)
         }
     },
     created() {}
@@ -87,6 +94,10 @@ export default {
         line-height: 2;
         padding-left: 30px;
         cursor: pointer;
+        &.active {
+            color: $--color-primary;
+            font-weight: 500;
+        }
     }
 }
 </style>

@@ -166,3 +166,31 @@ export function isEnglish(str) {
     const reg = /^\w+$/
     return reg.test(str)
 }
+export function isVideo(ext) {
+    const REG_VIDEO = /^(mp4|mpeg|vob|avi|mpg|wmv|mov|)$/
+    return REG_VIDEO.test(ext)
+}
+/**
+ * 获取文件后缀名
+ * @param {String} filename
+ */
+export function getExt(filename) {
+    if (typeof filename == 'string') {
+        return filename
+            .split('.')
+            .pop()
+            .toLowerCase()
+    } else {
+        throw new Error('filename must be a string type')
+    }
+}
+export function hashCode(str) {
+    const hash = str
+        .split('')
+        .reduce(
+            (prevHash, currVal) =>
+                ((prevHash << 5) - prevHash + currVal.charCodeAt(0)) | 0,
+            0
+        )
+    return Math.abs(hash)
+}

@@ -25,7 +25,7 @@ function createReg(searchKey) {
     let regStr = str + searchKeyArr.join(str) + str
     return RegExp(regStr, 'i')
 }
-
+//从专栏中查找
 function findColumns(searchKey, reg, total) {
     // 取前10条
     let sum = 0
@@ -69,19 +69,23 @@ function findArticles(searchKey, reg, total) {
     let finds = []
     for (let i = 0; i < articles.length; i++) {
         if (sum === total) break
-        //如果输入的都是英文或者数字字符，没有中文
-        if (isEnglish(searchKey)) {
-            if (reg.test(articles[i].title_pinyin)) {
-                finds.push(articles[i])
-                sum++
-            }
-        } else {
-            //处理中文
-            if (articles[i].title.includes(searchKey)) {
-                finds.push(articles[i])
-                sum++
-            }
+        if (articles[i].title.toLowerCase().includes(searchKey.toLowerCase())) {
+            finds.push(articles[i])
+            sum++
         }
+        //如果输入的都是英文或者数字字符，没有中文
+        // if (isEnglish(searchKey)) {
+        //     if (reg.test(articles[i].title_pinyin)) {
+        //         finds.push(articles[i])
+        //         sum++
+        //     }
+        // } else {
+        //     //处理中文
+        //     if (articles[i].title.includes(searchKey)) {
+        //         finds.push(articles[i])
+        //         sum++
+        //     }
+        // }
     }
     return finds
 }
