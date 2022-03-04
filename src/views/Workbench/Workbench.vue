@@ -106,11 +106,6 @@ export default {
                         article: articleId
                     }
                 })
-                console.log('articleId', articleId)
-                // this.$router.push({
-                //     name: 'read',
-                //     params: { column: columnId, article: articleId }
-                // })
             }
         },
         onKeyDown(e) {
@@ -131,13 +126,14 @@ export default {
                 //回车
                 if (this.activeIndex !== -1) {
                     const item = this.suggestList[this.activeIndex]
-                    this.$router.push({
-                        name: 'read',
-                        params: {
-                            column: item.columnId,
-                            article: item.id
-                        }
-                    })
+                    this.toArticle(item)
+                    // this.$router.push({
+                    //     name: 'read',
+                    //     params: {
+                    //         column: item.columnId,
+                    //         article: item.id
+                    //     }
+                    // })
                 }
             }
         }
