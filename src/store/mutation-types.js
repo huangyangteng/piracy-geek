@@ -7,4 +7,12 @@ const USER_MU = {
     LOGOUT: 'LOGOUT',
     UPDATE_JWT: 'UPDATE_JWT'
 }
-export { LAST_READ, USER_MU }
+
+const WATCH_MU = {
+    ADD_NOTE: 'addNote',
+    REMOVE_NOTE: 'removeNote',
+    MODIFY_NOTE: 'modifyNote',
+    ADD_HISTORY: 'addHistory',
+    SET_CONFIG: 'SET_CONFIG'
+}
+export { LAST_READ, USER_MU,WATCH_MU }

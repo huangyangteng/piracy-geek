@@ -1,6 +1,28 @@
 import dayjs from 'dayjs'
-import { hashCode, uid, isVideo, getExt } from './index'
+import { hashCode, uid } from './index'
+
 export const PREVIEW_PREFIX = ''
+
+export function isVideo(ext) {
+    const REG_VIDEO = /^(mp4|mpeg|vob|avi|mpg|wmv|mov|)$/
+    return REG_VIDEO.test(ext)
+}
+
+/**
+ * 获取文件后缀名
+ * @param {String} filename
+ */
+export function getExt(filename) {
+    if (typeof filename == 'string') {
+        return filename
+            .split('.')
+            .pop()
+            .toLowerCase()
+    } else {
+        throw new Error('filename must be a string type')
+    }
+}
+
 export function getVideoList(units) {
     let videos = units
         .map(item => item.list)
@@ -8,6 +30,7 @@ export function getVideoList(units) {
     videos = videos.filter(item => isVideo(getExt(item.src)))
     return videos
 }
+
 // 获取上次播放的课程id
 export function getLastPlay(courseId, history) {
     const courses = history.filter(item => item.courseId == courseId)
@@ -25,6 +48,7 @@ export function getNameById(id, units) {
     const item = getVideoItem(id, units)
     return item ? item.name : ''
 }
+
 // 获取下一个播放的视频 length 5 (0,1,2,3,4)
 export function getNextVideo(id, units) {
     let videos = units
@@ -37,6 +61,7 @@ export function getNextVideo(id, units) {
         return videos[index + 1]
     }
 }
+
 // 获取下一个播放的视频 length 5 (0,1,2,3,4)
 export function getPrevVideo(id, units) {
     let videos = units
@@ -64,6 +89,7 @@ export function getSrcById(id, units) {
         return item.src
     }
 }
+
 function getVideoItem(id, units) {
     let videos = units
         .map(item => item.list)
@@ -71,6 +97,7 @@ function getVideoItem(id, units) {
     let item = videos.find(item => item.id == id)
     return item
 }
+
 // 格式化时间
 export function formatVideoTime(time) {
     let sec_num = parseInt(time, 10) // don't forget the second param
@@ -146,6 +173,7 @@ function formatName(name) {
         .replace('【更多IT教程 微信535950311】', '')
         .replace('.mp4', '')
 }
+
 function getNumber(txt) {
     //优先匹配开头的数字 1xx 2xx
     let numb = txt.match(/^\d+/g)
@@ -160,6 +188,7 @@ function getNumber(txt) {
         return 99999
     }
 }
+
 export function formatSrc(str) {
     const i = str.indexOf('learn')
     return str.slice(i, str.length)
@@ -186,4 +215,14 @@ function getSort(str) {
 export function getPrefix(str, title) {
     let i = str.indexOf(title)
     return str.slice(0, i + title.length) + '/'
+}
+
+export function download(link, name) {
+    let eleLink = document.createElement('a')
+    eleLink.download = name
+    eleLink.style.display = 'none'
+    eleLink.href = link
+    document.body.appendChild(eleLink)
+    eleLink.click()
+    document.body.removeChild(eleLink)
 }

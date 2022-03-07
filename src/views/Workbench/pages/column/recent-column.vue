@@ -1,6 +1,8 @@
 <template>
     <section class="history-wrapper">
-        <div v-if="!isLogin">登录之后才能记录阅读历史，请点击右上角"登录"按钮进行登录</div>
+        <div v-if="!isLogin">
+            登录之后才能记录阅读历史，请点击右上角"登录"按钮进行登录
+        </div>
         <el-timeline v-else>
             <el-timeline-item
                 v-for="item in histories"
@@ -53,6 +55,13 @@ export default {
                     article: item.articleId
                 }
             })
+        }
+    },
+    watch: {
+        isLogin(login) {
+            if (login) {
+                this.getHistory()
+            }
         }
     },
     created() {

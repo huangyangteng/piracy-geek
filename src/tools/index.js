@@ -56,6 +56,21 @@ export function copyToBoard(value) {
     document.body.removeChild(element)
     return false
 }
+/**
+ *深拷贝
+ * @export
+ * @param {*} obj
+ * @returns
+ */
+export function deepCopy(obj) {
+    if (typeof obj != 'object') {
+        return obj
+    }
+    if (obj == null) {
+        return obj
+    }
+    return JSON.parse(JSON.stringify(obj))
+}
 
 /**
  * 浏览器下载静态文件
@@ -166,10 +181,12 @@ export function isEnglish(str) {
     const reg = /^\w+$/
     return reg.test(str)
 }
+
 export function isVideo(ext) {
     const REG_VIDEO = /^(mp4|mpeg|vob|avi|mpg|wmv|mov|)$/
     return REG_VIDEO.test(ext)
 }
+
 /**
  * 获取文件后缀名
  * @param {String} filename
@@ -184,6 +201,7 @@ export function getExt(filename) {
         throw new Error('filename must be a string type')
     }
 }
+
 export function hashCode(str) {
     const hash = str
         .split('')
@@ -193,4 +211,16 @@ export function hashCode(str) {
             0
         )
     return Math.abs(hash)
+}
+
+/**
+ * 对象转化为url参数
+ * @param {*} obj
+ */
+export function getParams(obj) {
+    return Object.keys(obj)
+        .map(function(k) {
+            return encodeURIComponent(k) + '=' + encodeURIComponent(obj[k])
+        })
+        .join('&')
 }

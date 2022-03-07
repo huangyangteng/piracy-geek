@@ -2,6 +2,9 @@ body {
   color: $font-color;
   background-color: $page-bg-color;
 }
+section,div,nav,aside{
+  box-sizing: border-box;
+}
 
 .el-menu {
   background-color: $component-bg-color-2;

@@ -1,4 +1,5 @@
 import http from './http'
+import { getParams } from '../tools'
 
 const getList = params =>
     http.request({
@@ -10,10 +11,13 @@ const query = params =>
         url: '/watch/query',
         params
     })
-const run = () =>
+const run = path =>
     http.request({
-        url: '/watch/run'
+        method: 'POST',
+        url: '/watch/run',
+        data: getParams({ dir: path })
     })
+
 export const WATCH_API = {
     getList,
     run,

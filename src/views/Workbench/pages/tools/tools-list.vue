@@ -1,14 +1,17 @@
 <template>
-    <section>
+    <section class="tools-list">
         <juejin-star></juejin-star>
+        <video-update></video-update>
     </section>
 </template>
 
 <script>
 import JuejinStar from '../../components/tools/juejin-star'
+import VideoUpdate from '../../components/tools/video-update'
+
 export default {
     name: 'tools-list',
-    components: { JuejinStar },
+    components: { VideoUpdate, JuejinStar },
     data() {
         return {}
     },
@@ -18,4 +21,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+</style>

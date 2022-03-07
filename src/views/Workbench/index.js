@@ -36,10 +36,16 @@ export default [
                 path: '/workbench/video',
                 component: () => import('./pages/video/video-list.vue')
             },
+
             {
                 path: '/workbench/recent-video',
                 component: () => import('./pages/video/recent-video.vue')
             }
         ]
+    },
+    {
+        name: 'watch',
+        path: '/workbench/watch/:id',
+        component: () => import('./pages/video/watch')
     }
 ]
