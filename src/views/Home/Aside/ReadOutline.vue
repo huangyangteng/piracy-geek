@@ -15,7 +15,9 @@
 </template>
 <script>
 import { mapState } from 'vuex'
+
 export default {
+    name: 'read-outline',
     data() {
         return {}
     },
@@ -56,23 +58,29 @@ export default {
     font-size: 12px;
     position: relative;
 }
+
 .outline-wrapper > header {
     text-align: center;
     margin-bottom: 10px;
 }
+
 .outline-wrapper > div {
     cursor: pointer;
     transition: 0.5s;
 }
+
 .outline-wrapper > div:hover {
     color: #fa8919;
     text-decoration: underline;
 }
+
 .outline-wrapper > .outline-h1 {
 }
+
 .outline-wrapper > .outline-h2 {
     padding-left: 20px;
 }
+
 .outline-wrapper > .outline-h3 {
     padding-left: 40px;
 }

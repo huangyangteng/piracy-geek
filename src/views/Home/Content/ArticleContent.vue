@@ -1,5 +1,6 @@
 <template>
     <section
+        @mouseup="logMarks"
         class="article-wrapper"
         v-html="articleContent"
         ref="articalWrapper"
@@ -34,6 +35,9 @@ export default {
     },
     methods: {
         ...mapMutations('lastRead', ['setLastColumn', 'setLastArticle']),
+        logMarks() {
+            this.$store.dispatch('lastRead/saveMarks')
+        },
         async handlerArticle(src, top, id) {
             // 每次发送新的请求之前，取消上一次的请求
 
@@ -200,6 +204,9 @@ export default {
         // this.$nextTick(() => {
         //     this.bindEvent()
         // })
+        // document.addEventListener('mouseup', () => {
+        //     console.log('mouse up')
+        // })
     },
     watch: {
         curArticleId: {
@@ -237,7 +244,7 @@ export default {
 //小于750的尺寸
 @media (max-width: 750px) {
     .article-wrapper {
-        padding:20px;
+        padding: 20px;
     }
 }
 

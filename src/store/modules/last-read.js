@@ -1,4 +1,5 @@
 import { LAST_READ } from '../mutation-types'
+
 const state = {
     lastColumnId: '',
     lastArticleList: [],
@@ -44,7 +45,18 @@ const getters = {
     }
 }
 
-const actions = {}
+const actions = {
+    saveMarks({ commit, rootState }) {
+        let savedHightLight = window.hltr.serializeHighlights()
+        if (savedHightLight == '[]') {
+            return
+        }
+        commit('saveHightLight', {
+            id: rootState.column.curArticleId,
+            content: savedHightLight
+        })
+    }
+}
 
 const mutations = {
     saveHightLight(state, obj) {

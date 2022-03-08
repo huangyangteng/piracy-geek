@@ -41,25 +41,25 @@
             </section>
 
             <section class="read-tools">
-                <el-tooltip
-                    effect="dark"
-                    content="保存高亮信息"
-                    placement="top"
-                >
-                    <i
-                        @click="saveHighlight"
-                        class="el-icon-collection"
-                        style="margin-right: 10px"
-                    ></i>
-                </el-tooltip>
+                <!--                <el-tooltip-->
+                <!--                    effect="dark"-->
+                <!--                    content="$&#45;&#45;color-primary信息"-->
+                <!--                    placement="top"-->
+                <!--                >-->
+                <!--                    <i-->
+                <!--                        @click="saveHighlight"-->
+                <!--                        class="el-icon-collection"-->
+                <!--                        style="margin-right: 10px"-->
+                <!--                    ></i>-->
+                <!--                </el-tooltip>-->
 
-                <el-tooltip effect="dark" content="选课" placement="top">
-                    <i
-                        @click="chooseColumn"
-                        class="el-icon-reading"
-                        style="font-size: 16px"
-                    ></i>
-                </el-tooltip>
+                <!--                <el-tooltip effect="dark" content="选课" placement="top">-->
+                <!--                    <i-->
+                <!--                        @click="chooseColumn"-->
+                <!--                        class="el-icon-reading"-->
+                <!--                        style="font-size: 16px"-->
+                <!--                    ></i>-->
+                <!--                </el-tooltip>-->
 
                 <el-tooltip effect="dark" content="全屏阅读" placement="top">
                     <i

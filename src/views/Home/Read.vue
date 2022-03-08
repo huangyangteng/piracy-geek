@@ -5,6 +5,7 @@
         <section class="read-content">
             <ReadToolBar v-show="status.toolbarIsShow"></ReadToolBar>
             <ArticleContent></ArticleContent>
+            <article-outline></article-outline>
         </section>
         <i
             v-show="isFullScreen"
@@ -24,19 +25,21 @@ import PicturePreview from './Modal/PicturePreview'
 import DragLine from '../../components/dragLine'
 import ColumnListDraw from './Modal/ColumnListDraw'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
+import ArticleOutline from './Content/ArticleOutLine'
 
 export default {
     components: {
+        ArticleOutline,
         ReadAside,
         ReadToolBar,
         ArticleContent,
         PicturePreview,
         DragLine,
-        ColumnListDraw,
+        ColumnListDraw
     },
     data() {
         return {
-            asideWidth: 420,
+            asideWidth: 420
         }
     },
     computed: {
@@ -45,9 +48,9 @@ export default {
         ...mapGetters('column', ['isFullScreen', 'isFold']),
         asideStyle() {
             return {
-                width: this.asideWidth + 10 + 'px',
+                width: this.asideWidth + 10 + 'px'
             }
-        },
+        }
     },
     watch: {
         $route: {
@@ -66,20 +69,20 @@ export default {
                         this.updateArticleId(to.params.article)
                     }
                 }
-            },
-        },
+            }
+        }
     },
     methods: {
         ...mapActions('column', ['notFullScreen']),
         ...mapMutations('column', [
             'setColumnList',
             'updateColumn',
-            'updateArticleId',
+            'updateArticleId'
         ]),
         ...mapMutations('lastRead', [
             'setLastColumn',
             'setLastArticle',
-            'setReadPosition',
+            'setReadPosition'
         ]),
         async updateAll(column, article) {
             await this.getAllColumn()
@@ -94,7 +97,7 @@ export default {
             }
         },
         getColumnById(columnId) {
-            return this.columnList.filter((item) => item.id == columnId)[0]
+            return this.columnList.filter(item => item.id == columnId)[0]
         },
         saveReadPosition() {
             // 记录上次阅读的位置 article:top
@@ -107,13 +110,13 @@ export default {
                 this.setLastColumn(this.$route.params.column)
                 this.setLastArticle({
                     column: this.$route.params.column,
-                    article: this.$route.params.article,
+                    article: this.$route.params.article
                 })
             }
         },
         dragAside(left) {
             this.asideWidth = left
-        },
+        }
     },
     created() {
         // 页面刷新或关闭时，储存当前阅读内容
@@ -122,14 +125,17 @@ export default {
             this.saveReadPosition()
         }
     },
-    beforeRouteUpdate(to, from, next) {
+  mounted() {
+  //    当页面宽度小于1850时，把侧边栏隐藏掉
+  },
+  beforeRouteUpdate(to, from, next) {
         this.saveReadPosition()
         next()
     },
     beforeRouteLeave(to, from, next) {
         this.saveReadPosition()
         next()
-    },
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -161,6 +167,7 @@ export default {
     right: 100px;
     cursor: pointer;
 }
+
 //小于750的尺寸
 @media (max-width: 750px) {
     .read-wrapper {
