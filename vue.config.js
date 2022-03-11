@@ -24,6 +24,12 @@ module.exports = {
             },
             '/learnvideo': {
                 target: 'http://localhost'
+            },
+            '/bdy': {
+                target: 'https://pan.baidu.com/api/streaming'
+            },
+            '/bdy-video': {
+                target: 'http://localhost'
             }
         }
     },

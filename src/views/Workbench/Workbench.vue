@@ -159,6 +159,7 @@ export default {
         margin: 0px auto;
         line-height: 48px;
         height: 48px;
+        padding-left: 10px;
     }
 
     .search-suggest-list {

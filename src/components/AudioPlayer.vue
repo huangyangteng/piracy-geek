@@ -40,8 +40,8 @@
                         v-for="item in rateList"
                         :key="item.value"
                         :command="item.value"
-                        >{{ item.label }}</el-dropdown-item
-                    >
+                        >{{ item.label }}
+                    </el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
         </div>
@@ -69,6 +69,7 @@
 import { mapGetters, mapState } from 'vuex'
 import { formatDuration } from '../tools'
 import { getAudio } from '../data/audio'
+
 export default {
     data() {
         return {
@@ -177,6 +178,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .gk-audio-wrapper {
+    position: fixed;
+    right: 10px;
+    top: 100px;
     display: inline-block;
     margin-left: 20px;
     text-align: center;
@@ -199,11 +203,13 @@ export default {
         outline: 0;
     }
 }
+
 .audio-controls {
     display: flex;
     align-items: center;
     position: relative;
 }
+
 .play-icon {
     margin: 0 0px 0 15px;
     width: 32px;
@@ -212,6 +218,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .play-icon-bg {
         background-image: url('https://static001.geekbang.org/resource/image/0f/76/0f0963bc50f97aa1171fa81ae6e96776.jpg');
         background-repeat: no-repeat;
@@ -224,6 +231,7 @@ export default {
         top: 0;
         left: 0;
     }
+
     > img {
         cursor: pointer;
         line-height: 32px;
@@ -237,12 +245,14 @@ export default {
         width: auto !important;
     }
 }
+
 .play-back {
     width: 17px;
     height: 17px;
     margin-top: -10px;
     position: relative;
     cursor: pointer;
+
     > i {
         font-size: 17px;
         color: #b2b2b2;
@@ -250,9 +260,11 @@ export default {
         -webkit-transform-origin: 55.7% 50%;
         transform-origin: 55.7% 50%;
     }
+
     > i:hover {
         color: #888;
     }
+
     > span {
         olor: #b2b2b2;
         position: absolute;
@@ -264,25 +276,31 @@ export default {
         transform: scale(0.5);
     }
 }
+
 .play-select {
     cursor: pointer;
     position: absolute;
     right: 5px;
     font-size: 12px;
 }
+
 .gk-play-slider {
     margin-top: -8px;
+
     ::v-deep.el-slider__runway {
         height: 3px;
     }
+
     ::v-deep.el-slider__bar {
         height: 3px;
     }
+
     ::v-deep.el-slider__button {
         width: 10px;
         height: 10px;
         border: solid 1px #fa8919;
     }
+
     ::v-deep.el-slider__button-wrapper .el-tooltip {
         margin-top: -4px;
     }

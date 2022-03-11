@@ -1,6 +1,8 @@
 <template>
     <section class="bench-header">
-        <div class="left"></div>
+        <div class="left" style="padding-right:10px">
+            <i class="el-icon-guide"></i>
+        </div>
         <div class="center">
             <el-input
                 v-model="searchKey"
@@ -11,6 +13,7 @@
         </div>
         <div class="right">
             <div class="login">
+                <!--              已登录-->
                 <div class="user-info" v-if="isLogin">
                     <el-dropdown @command="handleUser">
                         <span class="el-dropdown-link">
@@ -30,6 +33,7 @@
                         </el-dropdown-menu>
                     </el-dropdown>
                 </div>
+                <!--              未登录-->
                 <el-popover
                     v-else
                     style="box-shadow: 0 6px 24px rgba(0 ,0, 0 , 0.2)"

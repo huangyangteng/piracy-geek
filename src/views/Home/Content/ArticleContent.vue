@@ -13,6 +13,7 @@ import { getAriticleSrcById } from '../../../tools/column-tools'
 import { uid, copyToBoard } from '../../../tools/index'
 import axios from 'axios'
 import { HISTORY_API } from '../../../api/history'
+// import { addListener, removeListener } from 'resize-detector'
 
 const CancelToken = axios.CancelToken
 let cancel
@@ -199,14 +200,18 @@ export default {
         }
     },
     async mounted() {
-        // const res = await axios.get('/test.html')
-        // this.articleContent = res.data
-        // this.$nextTick(() => {
-        //     this.bindEvent()
+        // addListener(this.$refs.articalWrapper, () => {
+        //     //页面宽度小于1400时，隐藏侧边栏
+        //     if (document.body.offsetWidth < 1600) {
+        //       console.log(this.$store.getters['column/isFold'])
+        //         if (!this.$store.getters['column/isFold']) {
+        //             this.$store.commit('column/toggleNavIsShow', false)
+        //         }
+        //     }
         // })
-        // document.addEventListener('mouseup', () => {
-        //     console.log('mouse up')
-        // })
+    },
+    beforeDestroy() {
+        // removeListener(this.$refs.articalWrapper)
     },
     watch: {
         curArticleId: {

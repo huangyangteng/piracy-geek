@@ -1,13 +1,15 @@
 <template>
     <section>
         <bing-dun-dun></bing-dun-dun>
+        <test-bdy></test-bdy>
     </section>
 </template>
 <script>
 import BingDunDun from '../../components/bingdundu/BingDunDUn'
+import TestBdy from './test-bdy'
 
 export default {
-    components: { BingDunDun },
+    components: { TestBdy, BingDunDun },
     data() {
         return {}
     },

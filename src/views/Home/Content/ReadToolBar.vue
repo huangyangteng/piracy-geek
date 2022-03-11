@@ -26,7 +26,7 @@
             >课程配套资源下载</a
         >
         <!-- 音频播放 -->
-        <AudioPlayer></AudioPlayer>
+
         <!-- 选择颜色 -->
         <aside class="toolbar-aside">
             <section class="hltr-tool">
@@ -83,13 +83,11 @@
 <script>
 import { mapGetters, mapMutations, mapState, mapActions } from 'vuex'
 import addNote from './AddNote'
-import AudioPlayer from '../../../components/AudioPlayer'
 import { getElementTop, copyToBoard } from '../../../tools'
 
 export default {
     components: {
         addNote,
-        AudioPlayer
     },
     data() {
         return {

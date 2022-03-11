@@ -20,6 +20,7 @@
     "element-ui": "^2.13.0",
     "hotkeys-js": "^3.8.7",
     "pinyin": "^2.10.2",
+    "resize-detector": "^0.3.0",
     "three": "^0.137.5",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",

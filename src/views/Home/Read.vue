@@ -7,6 +7,7 @@
             <ArticleContent></ArticleContent>
             <article-outline></article-outline>
         </section>
+        <AudioPlayer></AudioPlayer>
         <i
             v-show="isFullScreen"
             @click="notFullScreen"
@@ -26,6 +27,7 @@ import DragLine from '../../components/dragLine'
 import ColumnListDraw from './Modal/ColumnListDraw'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 import ArticleOutline from './Content/ArticleOutLine'
+import AudioPlayer from '../../components/AudioPlayer'
 
 export default {
     components: {
@@ -35,7 +37,8 @@ export default {
         ArticleContent,
         PicturePreview,
         DragLine,
-        ColumnListDraw
+        ColumnListDraw,
+        AudioPlayer
     },
     data() {
         return {
@@ -125,10 +128,10 @@ export default {
             this.saveReadPosition()
         }
     },
-  mounted() {
-  //    当页面宽度小于1850时，把侧边栏隐藏掉
-  },
-  beforeRouteUpdate(to, from, next) {
+    mounted() {
+        //    当页面宽度小于1850时，把侧边栏隐藏掉
+    },
+    beforeRouteUpdate(to, from, next) {
         this.saveReadPosition()
         next()
     },
