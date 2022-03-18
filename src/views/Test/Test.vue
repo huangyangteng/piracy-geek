@@ -1,7 +1,7 @@
 <template>
     <section>
         <bing-dun-dun></bing-dun-dun>
-        <test-bdy></test-bdy>
+        <test-bdy v-if="false"></test-bdy>
     </section>
 </template>
 <script>

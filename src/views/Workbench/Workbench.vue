@@ -1,5 +1,5 @@
 <template>
-    <section class="bench-layout">
+    <section class="bench-layout animate__animated animate__fadeIn">
         <bench-header @focus="onFocus"></bench-header>
         <section
             class="bench-wrapper"
@@ -10,6 +10,7 @@
                 <router-view></router-view>
             </section>
         </section>
+        <!--        搜索面板-->
         <div class="search-wrapper" v-show="showSearch" @click.self="reset">
             <div class="search-input">
                 <el-input
@@ -40,19 +41,26 @@
             </div>
             <div class="search-list" v-show="suggestList.length"></div>
         </div>
+        <!--        bingdundun展示-->
+        <bing-dun-dun
+            class="animate__animated animate__fadeInDown bingdundun"
+        ></bing-dun-dun>
     </section>
 </template>
 
 <script>
 import './bench.scss'
+import 'animate.css'
 import BenchSidebar from './layout/bench-sidebar'
 import BenchHeader from './layout/bench-header'
 import { searchEverything } from '../../tools/search'
 import { SEARCH_TYPE } from '../../data/search'
+import BingDunDun from '../../components/bingdundu/BingDunDUn'
 
 export default {
     name: 'Workbench',
     components: {
+        BingDunDun,
         'bench-sidebar': BenchSidebar,
         BenchHeader
     },
@@ -145,6 +153,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.bingdundun {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin-right: -180px;
+    margin-bottom: -100px;
+}
+
 .search-wrapper {
     position: fixed;
     z-index: 1;

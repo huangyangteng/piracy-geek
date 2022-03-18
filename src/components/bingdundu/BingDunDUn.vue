@@ -1,17 +1,26 @@
 <template>
-    <section class="model-wrapper" id="model-box"></section>
+    <section
+        class="model-wrapper"
+        id="model-box"
+        @click="clickBingDun"
+    ></section>
 </template>
 
 <script>
 import { init } from './renderBingDunDun'
-
 export default {
     name: 'bing-dun-dun',
     data() {
-        return {}
+        return {
+            show: true
+        }
     },
     computed: {},
-    methods: {},
+    methods: {
+        clickBingDun() {
+            this.show = false
+        }
+    },
     mounted() {
         init()
     }
@@ -22,6 +31,5 @@ export default {
 .model-wrapper {
     width: 600px;
     height: 400px;
-    background: #ccc;
 }
 </style>
