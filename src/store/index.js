@@ -5,6 +5,7 @@ import column from './modules/column'
 import lastRead from './modules/last-read'
 import component from './modules/component'
 import user from './modules/user'
+import watch from './modules/watch'
 
 Vue.use(Vuex)
 
@@ -16,7 +17,8 @@ export default new Vuex.Store({
         lastRead,
         column,
         component,
-        user
+        user,
+        watch
     },
     plugins: [vuexStore({ key: 'gk-read' })]
 })

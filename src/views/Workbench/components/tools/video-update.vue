@@ -8,7 +8,7 @@
 
 <script>
 import ToolsItem from './tools-item'
-import { WATCH_API } from '../../../../api/video'
+import { WATCH_API } from '../../../../api/watch'
 
 export default {
     name: 'video-update',

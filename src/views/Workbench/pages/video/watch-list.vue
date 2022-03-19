@@ -13,19 +13,21 @@
         <section class="course-list">
             <div
                 class="course-item"
-                @click="jumpToCourse(item.id)"
+                @click="jumpToCourse(item)"
                 v-for="item in courses"
                 :key="item.id"
             >
                 <section>
+                    <img v-if="item.poster" :src="item.poster" />
                     <video
+                        v-else
                         @mouseenter="onMouseEnter"
                         @mouseleave="onMouseLeave"
                         loop
                         :src="getVideoSrc(item)"
                     ></video>
                 </section>
-                <footer>{{ item.title }}</footer>
+                <footer>{{ item.title ? item.title : item.name }}</footer>
             </div>
         </section>
     </section>
@@ -33,24 +35,33 @@
 
 <script>
 import { videoCategory } from '../../../../data/video/video-list'
-import { formatSrc } from '../../../../tools/video-tools'
+import { formatSrc } from '../../../../tools/watch-tools'
 import { isVideo, getExt } from '../../../../tools/index'
-import { WATCH_API } from '../../../../api/video'
+import { WATCH_API } from '../../../../api/watch'
 
 export default {
-    name: 'video-list',
+    name: 'watch-list',
     data() {
         return {
             activeCategory: videoCategory[0].name,
             categories: videoCategory,
-            list: []
+            list: [],
+            bbList: []
         }
     },
     computed: {
         courses() {
             console.log(this.list)
-            return this.list.find(item => item.type === this.activeCategory)
-                ?.list
+            let local = this.list.find(
+                item => item.type === this.activeCategory
+            )?.list
+            if (!local) {
+                local = []
+            }
+            let bb = this.bbList.filter(
+                item => item.type === this.activeCategory
+            )
+            return bb.concat(local)
         }
     },
     watch: {
@@ -85,18 +96,37 @@ export default {
             return formatSrc(video)
         },
         async queryList() {
+            const bbRes = await WATCH_API.getBBVideos()
             const res = await WATCH_API.getList()
             if (res.code == 2000) {
                 this.list = res.data
+                this.bbList = bbRes.data
             }
         },
-        jumpToCourse(id) {
-            this.$router.push({
-                name: 'watch',
-                params: {
-                    id: id
-                }
-            })
+        jumpToCourse(item) {
+            if (item.bid) {
+                this.$router.push({
+                    name: 'watch',
+                    params: {
+                        id: item.bid
+                    },
+                    query: {
+                        category: this.activeCategory,
+                        link: item.link,
+                        type: 'bb'
+                    }
+                })
+            } else {
+                this.$router.push({
+                    name: 'watch',
+                    params: {
+                        id: item.id
+                    },
+                    query: {
+                        category: this.activeCategory
+                    }
+                })
+            }
         }
     },
     created() {}
@@ -144,7 +174,8 @@ export default {
         // background: $component-bg-color;
         border-radius: 10px;
 
-        video {
+        video,
+        img {
             width: 100%;
             height: 100%;
             // object-fit: cover;

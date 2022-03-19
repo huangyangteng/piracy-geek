@@ -2,14 +2,20 @@
     <section>
         <bing-dun-dun></bing-dun-dun>
         <test-bdy v-if="false"></test-bdy>
+        <section style="width: 800px;height: 600px;position: relative">
+            <wave v-if="false"></wave>
+            <cube></cube>
+        </section>
     </section>
 </template>
 <script>
 import BingDunDun from '../../components/bingdundu/BingDunDUn'
 import TestBdy from './test-bdy'
+import Wave from '../../components/loading/wave'
+import Cube from '../../components/loading/cube'
 
 export default {
-    components: { TestBdy, BingDunDun },
+    components: { Cube, Wave, TestBdy, BingDunDun },
     data() {
         return {}
     },

@@ -15,4 +15,4 @@ const WATCH_MU = {
     ADD_HISTORY: 'addHistory',
     SET_CONFIG: 'SET_CONFIG'
 }
-export { LAST_READ, USER_MU,WATCH_MU }
+export { LAST_READ, USER_MU, WATCH_MU }

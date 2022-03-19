@@ -1,19 +1,33 @@
 <template>
     <section class="watch-wrapper">
         <nav class="watch-bar">
-            <h1 @click="toHome">
-                <i class="el-icon-arrow-left back-home-icon"></i>
+            <h1>
+                <i
+                    @click="toHome"
+                    class="el-icon-arrow-left back-home-icon"
+                ></i>
                 <span>{{ courseTitle }}</span>
                 <b>
                     /
                 </b>
                 {{ videoTitle }}
             </h1>
-            <span></span>
-            <span></span>
+            <div class="watch-config">
+                <el-switch
+                    v-model="showAside"
+                    :active-value="false"
+                    :inactive-value="true"
+                    active-text="剧场模式"
+                    style="margin-right: 20px"
+                >
+                </el-switch>
+                <el-switch v-model="playNextConfig" active-text="自动连播">
+                </el-switch>
+            </div>
         </nav>
         <section class="watch-container" :style="watchContainerStyle">
             <section class="play-container" :style="videoStyle">
+                <wave v-show="pageLoading"></wave>
                 <video-player
                     ref="videoPlayer"
                     class="video-player vjs-custom-skin"
@@ -23,42 +37,6 @@
                     @pause="onPause"
                     @ended="onEnded"
                 ></video-player>
-                <div v-if="false" class="video-info" :style="videoInfoStyle">
-                    <section>
-                        <h1 style="margin-right:20px">
-                            {{ courseTitle }}
-                        </h1>
-                        <h2>
-                            {{ videoTitle }}
-                        </h2>
-                    </section>
-
-                    <aside>
-                        <Tooltip
-                            v-if="true"
-                            content="返回主页"
-                            style="margin-right:16px"
-                        >
-                            <Icon @click="toHome" type="ios-home" />
-                        </Tooltip>
-                        <KeyboardTip v-if="false" style="margin-right:16px">
-                            <Icon type="md-bulb" />
-                        </KeyboardTip>
-                        <Tooltip content="剧场模式" style="margin-right:16px">
-                            <Icon @click="expand" type="ios-qr-scanner" />
-                        </Tooltip>
-                        <Tooltip content="上一个" style="margin-right:16px">
-                            <Icon @click="playPrevVideo" type="ios-rewind" />
-                        </Tooltip>
-                        <Tooltip content="下一个" style="margin-right:16px">
-                            <Icon
-                                @click="playNextVideo"
-                                type="ios-fastforward"
-                            />
-                        </Tooltip>
-                        <video-config></video-config>
-                    </aside>
-                </div>
             </section>
             <aside v-show="showAside" class="outline-list">
                 <section>
@@ -97,28 +75,27 @@ import {
     getPrevVideo,
     getExt,
     isVideo,
-    download
-} from '../../../../tools/video-tools'
+    download,
+    formatBBCourse
+} from '../../../../tools/watch-tools'
 
 require('video.js/dist/video-js.css')
 require('vue-video-player/src/custom-theme.css')
 import 'videojs-hotkeys'
-import KeyboardTip from '../../components/video/keyboard-tip'
 import OutlineList from '../../components/video/outline-list'
 import NoteList, { OPERATE } from '../../components/video/note-list'
-import VideoConfig from '../../components/video/video-config.vue'
 import { mapState, mapMutations, mapGetters } from 'vuex'
-import { WATCH_API } from '../../../../api/video'
+import { WATCH_API } from '../../../../api/watch'
 import { WATCH_MU } from '../../../../store/mutation-types'
+import Wave from '../../../../components/loading/wave'
 
 export default {
     name: 'watch',
     components: {
+        Wave,
         videoPlayer,
-        KeyboardTip,
         OutlineList,
-        NoteList,
-        VideoConfig
+        NoteList
     },
     data() {
         return {
@@ -144,12 +121,12 @@ export default {
             showAside: true, //侧边栏是否显示
             showOutline: true, //显示大纲视图
             historyTimer: null,
-            nextTimer: 0 //播放下一个的倒计时
+            nextTimer: 0, //播放下一个的倒计时
+            pageLoading: true
         }
     },
     computed: {
         ...mapState('watch', ['notes', 'history']),
-        ...mapGetters(['isLight']),
         ...mapState('watch', {
             playNext: state => state.config.playNext
         }),
@@ -181,7 +158,7 @@ export default {
             } else {
                 return {
                     width: '100%',
-                    height: `calc(100vh - 160px)`,
+                    height: `calc(100vh - 45px)`,
                     marginTop: 0,
                     margin: 'auto'
                 }
@@ -204,6 +181,14 @@ export default {
             } else {
                 return {}
             }
+        },
+        playNextConfig: {
+            get() {
+                return this.playNext
+            },
+            set(val) {
+                this.$store.commit('watch/SET_CONFIG', { playNext: val })
+            }
         }
     },
     watch: {
@@ -215,15 +200,36 @@ export default {
             immediate: true,
             handler(id) {
                 if (id) {
-                    this.courseId = id
-                    this.queryCourseById(id)
+                    if (this.$route.query.type === 'bb') {
+                        this.courseId = id
+                        this.queryBBCourse(this.$route.query.link)
+                    } else {
+                        this.courseId = id
+                        this.queryCourseById(id)
+                    }
                 }
             }
         },
-        '$route.query.videoId'(videoId) {
-            //视频id,切换侧边栏时触发
-            const src = getSrcById(videoId, this.units)
-            this.playVideo(src, true)
+        '$route.query.videoId': {
+            immediate: false,
+            handler(videoId) {
+                //视频id,切换侧边栏时触发
+                this.pageLoading = true
+                let src
+                if (this.$route.query.type === 'bb') {
+                    console.log('bb video ', videoId)
+                    WATCH_API.getBBCourse({
+                        link: this.$route.query.link,
+                        onlySrc: 1
+                    }).then(res => {
+                        src = res.data.src
+                        this.playVideo(src, true)
+                    })
+                } else {
+                    src = getSrcById(videoId, this.units)
+                    this.playVideo(src, true)
+                }
+            }
         }
     },
     methods: {
@@ -253,8 +259,25 @@ export default {
                     }
                     this.playVideo()
                 }
-                this.showHistory()
+                // this.showHistory()
             }
+        },
+        async queryBBCourse(link) {
+            //  从blibli获取视频信息
+            const res = await WATCH_API.getBBCourse({
+                link
+            })
+            if (res.code != 2000) {
+                return
+            }
+            const { title, src } = res.data
+            this.courseTitle = title
+            this.units = formatBBCourse(res.data)
+            this.videoList = this.units[0].list
+            this.videoId = this.$route.query.videoId
+                ? this.$route.query.videoId
+                : this.videoList[0].id
+            this.playVideo(src)
         },
         handleNote({ operate, data }) {
             console.log('handleNote -> data', data)
@@ -291,11 +314,32 @@ export default {
                 query: { videoId: videoId }
             })
         },
-        selectVideo(str) {
+        selectVideo(videoItem) {
             //选中侧边栏时的操作
-            const [id, src] = str.split('&')
+            const { id, src, page } = videoItem
             this.videoId = id
 
+            //b站的视频播放 http://localhost:8080/#/workbench/watch/BV1Mg411g7C8?type=bb&link=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Mg411g7C8
+            if (!src) {
+                let link = this.$route.query.link
+                if (link.includes('?') && !link.includes('p=')) {
+                    link = link + `&p=${page}`
+                } else {
+                    link = link.split('?')[0] + `?p=${page}`
+                }
+                console.log('link', link)
+                this.$router.push({
+                    name: 'watch',
+                    params: { id: this.courseId },
+                    query: {
+                        videoId: this.videoId,
+                        link,
+                        type: 'bb',
+                        category: this.$route.query.category
+                    }
+                })
+                return
+            }
             // 如果src后缀是视频，则播放，否则下载
             if (isVideo(getExt(src))) {
                 this.$router.push({
@@ -316,13 +360,20 @@ export default {
             if (!src) {
                 src = this.curVideo.src
             }
-            src = window.location.origin + '/' + src
+            if (!src.includes('http')) {
+                src = window.location.origin + '/' + src
+            }
+
             this.playerOptions.sources[0].src = src
             if (autoplay) {
                 this.playerOptions.autoplay = true
             }
             // 设置title
             document.title = this.curVideo.name
+            //隐藏loading
+            setTimeout(() => {
+                this.pageLoading = false
+            }, 1000)
         },
         playerIsReady(player) {
             this.insertElement()
@@ -343,7 +394,10 @@ export default {
         },
         toHome() {
             this.$router.push({
-                path: '/workbench/video'
+                path: '/workbench/video',
+                query: {
+                    category: this.$route.query.category
+                }
             })
         },
         logHistory() {
@@ -439,10 +493,6 @@ export default {
             // 视频播放时，记录历史记录
             this.logHistory()
         },
-        changeTheme() {
-            // this[GLOBAL_MU.TOGGLE_THEME](theme)
-            // setTheme(theme)
-        },
         insertElement() {
             const span = document.createElement('span')
             span.className = 'el-icon-right play-next-icon'
@@ -462,12 +512,7 @@ export default {
     created() {
         clearInterval(this.historyTimer)
     },
-    mounted() {
-        // setTimeout(() => {
-        //     const bar = document.querySelector('.vjs-control-bar')
-        //     console.log(bar)
-        // }, 3000)
-    },
+    mounted() {},
     destroyed() {
         clearInterval(this.historyTimer)
     }
@@ -480,6 +525,10 @@ export default {
     //.ivu-menu {
     //  background: $component-bg-color-2!important;
     //}
+}
+
+.watch-config {
+    margin-left: 40px;
 }
 
 .history-notice {

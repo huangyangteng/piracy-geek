@@ -17,7 +17,7 @@
                 <el-menu-item
                     v-for="item in unit.list"
                     :key="item.id"
-                    :index="item.id + '&' + item.src"
+                    :index="item.id + ''"
                     ><span>{{ cleanName(item.name) }}</span>
                 </el-menu-item>
             </el-submenu>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { getSrcById } from '../../../../tools/video-tools'
+import { getVideoItem } from '../../../../tools/watch-tools'
 
 export default {
     name: 'outline-list',
@@ -50,8 +50,7 @@ export default {
     },
     watch: {
         active(id) {
-            const src = getSrcById(id, this.units)
-            this.activeName = id + '&' + src
+            this.activeName = String(id)
         }
     },
     computed: {
@@ -61,8 +60,8 @@ export default {
         onSearch() {
             // units结果+  item结果拼成一个unit, 关键字高亮
         },
-        onSelect(src) {
-            this.$emit('on-change', src)
+        onSelect(id) {
+            this.$emit('on-change', getVideoItem(id, this.units))
         },
         cleanName(name) {
             return name

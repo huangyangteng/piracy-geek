@@ -28,10 +28,16 @@ import {
     TableColumn,
     Progress,
     TimelineItem,
-    Timeline
+    Timeline,
+    Switch,
+    Select,
+    Option
 } from 'element-ui'
 
+Vue.use(Select)
+Vue.use(Option)
 Vue.use(TimelineItem)
+Vue.use(Switch)
 Vue.use(Timeline)
 Vue.use(Table)
 Vue.use(Progress)

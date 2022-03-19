@@ -670,9 +670,9 @@ export const VOICE_VIDEO_LIST = [
                     },
                     {
                         id: 'v2ygxciiua7',
-                        title: '37 | 如何使用 video.js 播放多媒体文件？',
+                        title: '37 | 如何使用 watch.js 播放多媒体文件？',
                         src:
-                            '从0打造音视频直播系统/html/__145003__37 _ 如何使用 video.js 播放多媒体文件？.html',
+                            '从0打造音视频直播系统/html/__145003__37 _ 如何使用 watch.js 播放多媒体文件？.html',
                         audio: ''
                     },
                     {

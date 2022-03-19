@@ -90,7 +90,7 @@ export function getSrcById(id, units) {
     }
 }
 
-function getVideoItem(id, units) {
+export function getVideoItem(id, units) {
     let videos = units
         .map(item => item.list)
         .reduce((prev, cur) => prev.concat(cur), [])
@@ -147,7 +147,21 @@ export function formatCourse(list, title) {
         }
     })
 }
-
+export function formatBBCourse({ pages,title }) {
+    return [
+        {
+            id: uid(),
+            unit: title,
+            list: pages.map(item=>{
+                return {
+                    ...item,
+                    name:item.part,
+                    id:item.cid,
+                }
+            })
+        }
+    ]
+}
 function formatWatchList(list) {
     if (!Array.isArray(list)) return
 

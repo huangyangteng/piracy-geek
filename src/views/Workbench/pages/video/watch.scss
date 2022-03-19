@@ -21,14 +21,17 @@
   h1 {
     font-size: 14px;
     cursor: pointer;
-    >i{
+
+    > i {
       margin-right: 10px;
     }
-    >span{
+
+    > span {
       font-weight: 400;
       opacity: 0.8;
     }
-    >b{
+
+    > b {
       display: inline-block;
       margin-left: 5px;
       margin-right: 5px;
@@ -49,6 +52,7 @@
     height: 720px;
     margin-top: 30px;
     margin-right: 20px;
+    position: relative;
 
     .video-player {
       height: 100%;
@@ -167,9 +171,8 @@
 }
 
 
-
 //-----覆盖videojs播放器的默认样式
-.vjs-big-play-button{
-    left: 92%!important;
-    top:84%!important;
+.vjs-big-play-button {
+  left: 92% !important;
+  top: 84% !important;
 }

@@ -34,7 +34,7 @@ export default [
             },
             {
                 path: '/workbench/video',
-                component: () => import('./pages/video/video-list.vue')
+                component: () => import('./pages/video/watch-list.vue')
             },
 
             {

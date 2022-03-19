@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { formatVideoTime } from '../../../../tools/video-tools'
+import { formatVideoTime } from '../../../../tools/watch-tools'
 
 export default {
     name: 'note-item',

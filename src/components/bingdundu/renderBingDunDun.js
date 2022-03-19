@@ -44,7 +44,7 @@ let scene, renderer, camera, controls, bingDun
 let position = { y: -0.5 }
 // let tween,tweenBack
 //处理动画
-let tween = new TWEEN.Tween(position).to({ y: 0 }, 5000)
+let tween = new TWEEN.Tween(position).to({ y: -0.3 }, 5000)
 tween.easing(TWEEN.Easing.Sinusoidal.InOut)
 let tweenBack = new TWEEN.Tween(position).to({ y: -0.5 }, 5000)
 tweenBack.easing(TWEEN.Easing.Sinusoidal.InOut)
