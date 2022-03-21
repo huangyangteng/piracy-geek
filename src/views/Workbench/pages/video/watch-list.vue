@@ -129,7 +129,9 @@ export default {
             }
         }
     },
-    created() {}
+    created() {
+        this.queryList()
+    }
 }
 </script>
 

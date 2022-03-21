@@ -171,7 +171,7 @@ export default {
     left: 0;
 
     .search-input {
-        width: 600px;
+        width: 610px;
         margin: 0px auto;
         line-height: 48px;
         height: 48px;

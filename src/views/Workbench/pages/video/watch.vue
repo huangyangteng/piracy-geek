@@ -23,6 +23,13 @@
                 </el-switch>
                 <el-switch v-model="playNextConfig" active-text="自动连播">
                 </el-switch>
+
+                <a
+                    style="margin-left: 20px;color:#fff"
+                    :href="$route.query.link"
+                    target="_blank"
+                    >去b站观看高清版本</a
+                >
             </div>
         </nav>
         <section class="watch-container" :style="watchContainerStyle">
@@ -130,6 +137,9 @@ export default {
         ...mapState('watch', {
             playNext: state => state.config.playNext
         }),
+        isBB() {
+            return this.$route.query.type === 'bb'
+        },
         curNotes() {
             try {
                 return this.notes
@@ -240,6 +250,9 @@ export default {
             WATCH_MU.MODIFY_NOTE,
             WATCH_MU.ADD_HISTORY
         ]),
+        toBB() {
+            window.open(this.$route.query.link, '_blank')
+        },
         async queryCourseById(id) {
             let res = await WATCH_API.query({ courseId: id })
             if (res.code == 2000) {
@@ -305,15 +318,14 @@ export default {
         expand() {
             this.showAside = !this.showAside
         },
-        _jumpToPlay(videoId) {
-            console.log('_jumpToPlay -> videoId', videoId)
-            if (!videoId) videoId = this.videoId
-            this.$router.push({
-                name: 'watch',
-                params: { id: this.courseId },
-                query: { videoId: videoId }
-            })
-        },
+        // _jumpToPlay({ id: videoId }) {
+        //     if (!videoId) videoId = this.videoId
+        //     this.$router.push({
+        //         name: 'watch',
+        //         params: { id: this.courseId },
+        //         query: { videoId: videoId }
+        //     })
+        // },
         selectVideo(videoItem) {
             //选中侧边栏时的操作
             const { id, src, page } = videoItem
@@ -464,26 +476,27 @@ export default {
             // 播放下一个
             if (!this.playNext) return
 
-            const nextVideo = getNextVideo(this.videoId, this.units)
+            const nextVideo = getNextVideo(this.videoId, this.units, this.isBB)
             if (nextVideo) {
                 this.videoId = nextVideo.id
                 setTimeout(() => {
-                    this._jumpToPlay(nextVideo.id)
+                    this.selectVideo(nextVideo)
                 }, 1000)
             }
         },
         playNextVideo() {
-            const nextVideo = getNextVideo(this.videoId, this.units)
+            const nextVideo = getNextVideo(this.videoId, this.units, this.isBB)
+            console.log('nextVideo', nextVideo)
             if (nextVideo) {
                 this.videoId = nextVideo.id
-                this._jumpToPlay(nextVideo.id)
+                this.selectVideo(nextVideo)
             }
         },
         playPrevVideo() {
             const prevVideo = getPrevVideo(this.videoId, this.units)
             if (prevVideo) {
                 this.videoId = prevVideo.id
-                this._jumpToPlay(prevVideo.id)
+                this.selectVideo(prevVideo)
             }
         },
         onPause() {

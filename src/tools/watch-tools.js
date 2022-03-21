@@ -50,7 +50,14 @@ export function getNameById(id, units) {
 }
 
 // 获取下一个播放的视频 length 5 (0,1,2,3,4)
-export function getNextVideo(id, units) {
+export function getNextVideo(id, units, isBB) {
+    if (isBB) {
+        let videos = units[0].list
+        let index = videos.findIndex(item => item.id == id)
+        if (index != -1 && index + 1 != videos.length) {
+            return videos[index + 1]
+        }
+    }
     let videos = units
         .map(item => item.list)
         .reduce((prev, cur) => prev.concat(cur), [])
@@ -147,21 +154,23 @@ export function formatCourse(list, title) {
         }
     })
 }
-export function formatBBCourse({ pages,title }) {
+
+export function formatBBCourse({ pages, title }) {
     return [
         {
             id: uid(),
             unit: title,
-            list: pages.map(item=>{
+            list: pages.map(item => {
                 return {
                     ...item,
-                    name:item.part,
-                    id:item.cid,
+                    name: item.part,
+                    id: item.cid
                 }
             })
         }
     ]
 }
+
 function formatWatchList(list) {
     if (!Array.isArray(list)) return
 

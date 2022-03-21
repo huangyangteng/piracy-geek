@@ -43,16 +43,16 @@ export default {
                         }
                     ]
                 },
-                {
-                    name: 'MY MUSIC',
-                    children: [
-                        { name: 'MUSIC LIST', route: '/workbench/music' },
-                        {
-                            name: 'RECENT MUSIC',
-                            route: '/workbench/recent-music'
-                        }
-                    ]
-                },
+                // {
+                //     name: 'MY MUSIC',
+                //     children: [
+                //         { name: 'MUSIC LIST', route: '/workbench/music' },
+                //         {
+                //             name: 'RECENT MUSIC',
+                //             route: '/workbench/recent-music'
+                //         }
+                //     ]
+                // },
                 {
                     name: 'MY TOOLS',
                     children: [
