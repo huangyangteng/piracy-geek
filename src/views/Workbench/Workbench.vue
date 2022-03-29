@@ -55,7 +55,7 @@ import BenchSidebar from './layout/bench-sidebar'
 import BenchHeader from './layout/bench-header'
 import { searchEverything } from '../../tools/search'
 import { SEARCH_TYPE } from '../../data/search'
-import BingDunDun from '../../components/bingdundu/BingDunDUn'
+import BingDunDun from '../../components/lazy-panda/LazyPanda'
 
 export default {
     name: 'Workbench',

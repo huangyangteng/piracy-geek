@@ -4,12 +4,12 @@
         <test-bdy v-if="false"></test-bdy>
         <section style="width: 800px;height: 600px;position: relative">
             <wave v-if="false"></wave>
-            <cube></cube>
+            <cube v-if="false"></cube>
         </section>
     </section>
 </template>
 <script>
-import BingDunDun from '../../components/bingdundu/BingDunDUn'
+import BingDunDun from '../../components/lazy-panda/LazyPanda'
 import TestBdy from './test-bdy'
 import Wave from '../../components/loading/wave'
 import Cube from '../../components/loading/cube'

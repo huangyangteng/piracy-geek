@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import { init } from './renderBingDunDun'
+import { init } from './renderModel'
 export default {
-    name: 'bing-dun-dun',
+    name: 'lazy-panda',
     data() {
         return {
             show: true
