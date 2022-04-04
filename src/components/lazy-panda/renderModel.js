@@ -50,7 +50,8 @@ const setRendererAndScene = () => {
     console.log(scene)
     renderer = new WebGLRenderer({
         alpha: true,
-        logarithmicDepthBuffer: true
+        logarithmicDepthBuffer: true,
+        antialias: true,
     })
     renderer.setSize(boxWidth, boxHeight)
     dom = document.getElementById('model-box')

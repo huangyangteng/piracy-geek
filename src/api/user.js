@@ -22,7 +22,16 @@ const register = data =>
         method: 'POST',
         data
     })
+
+const addFilterVideo = data =>
+    http.request({
+        url: '/user/update',
+        method: 'POST',
+        data
+    })
+
 export const USER_API = {
     login,
-    register
+    register,
+    addFilterVideo
 }

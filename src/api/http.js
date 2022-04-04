@@ -109,7 +109,6 @@ class InterceptorManager {
         //
 
         const item = SILENTS_URLS.find(url => this.request.url.includes(url))
-        console.log(item)
         if (item) {
             return this.resData
         }

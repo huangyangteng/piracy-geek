@@ -2,7 +2,8 @@ body {
   color: $font-color;
   background-color: $page-bg-color;
 }
-section,div,nav,aside{
+
+section, div, nav, aside {
   box-sizing: border-box;
 }
 
@@ -82,7 +83,7 @@ section,div,nav,aside{
 
 .el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
   background-color: $--color-primary !important;
-  color: $font-color;
+  color: #fff;
 }
 
 .el-tooltip__popper.is-dark {
@@ -96,6 +97,10 @@ section,div,nav,aside{
 
 
 .read-content {
+  .comment-item .info .bd {
+    color: #fff !important;
+  }
+
   img, video {
     width: 100%;
   }
@@ -172,7 +177,8 @@ section,div,nav,aside{
   ._50pDbNcP_0 {
     //min-width: 960px !important;
   }
-  .MedalIcon_ignoreMedalIcon_3-1Ts{
+
+  .MedalIcon_ignoreMedalIcon_3-1Ts {
     display: block;
   }
 

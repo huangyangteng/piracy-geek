@@ -23,6 +23,7 @@
     "pinyin": "^2.10.2",
     "resize-detector": "^0.3.0",
     "three": "^0.137.5",
+    "videojs-contrib-hls": "^5.15.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vue-video-player": "^5.0.2",

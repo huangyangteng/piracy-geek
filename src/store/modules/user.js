@@ -3,7 +3,8 @@ import { USER_MU } from '../mutation-types'
 const state = {
     userInfo: {
         id: '',
-        userName: ''
+        userName: '',
+        filter: ''
     },
     jwt: ''
 }
@@ -17,7 +18,16 @@ const getters = {
         }
     },
     userName: state => state.userInfo.userName,
-    userId: state => state.userInfo.id
+    userId: state => state.userInfo.id,
+    videoFilter: state => {
+        if (typeof state.userInfo.filter === 'string') {
+            return state.userInfo.filter.split(',')
+        } else if (Array.isArray(state.userInfo.filter)) {
+            return state.userInfo.filter
+        } else {
+            return []
+        }
+    }
 }
 
 const actions = {
@@ -35,6 +45,7 @@ const actions = {
 
 const mutations = {
     [USER_MU.SET_USER](state, userInfo) {
+        console.log('userInfo', userInfo)
         state.userInfo = {
             ...state.userInfo,
             ...userInfo

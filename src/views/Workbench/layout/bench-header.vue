@@ -183,10 +183,11 @@ export default {
                     })
                     if (res.code === 2000) {
                         this.$Message.success('登录成功')
-                        const { id, username } = res.data
+                        const { id, username, filter } = res.data
                         this[USER_MU.SET_USER]({
                             id,
-                            userName: username
+                            userName: username,
+                            filter: filter
                         })
                         this.resetForm()
                     } else {

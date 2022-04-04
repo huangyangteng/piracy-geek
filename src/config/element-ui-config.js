@@ -31,7 +31,8 @@ import {
     Timeline,
     Switch,
     Select,
-    Option
+    Option,
+
 } from 'element-ui'
 
 Vue.use(Select)

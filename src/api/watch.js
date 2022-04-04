@@ -38,11 +38,21 @@ const addBBVideo = data =>
         url: '/watch/add',
         data
     })
+const deleteVideo = ids =>
+    http.request({
+        method: 'POST',
+        url: '/watch/delete',
+        data: {
+            ids
+        }
+    })
+
 export const WATCH_API = {
     getList,
     run,
     query,
     getBBCourse,
     addBBVideo,
-    getBBVideos
+    getBBVideos,
+    deleteVideo
 }

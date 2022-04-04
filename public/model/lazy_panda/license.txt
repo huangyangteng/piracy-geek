@@ -1,6 +1,6 @@
 Model Information:
 * title:	Lazy panda
-* source:	https://sketchfab.com/3d-models/lazy-panda-87c2553e593c49c380412fac2d65cc1e
+* source:	≈
 * author:	manogna (https://sketchfab.com/manogna)
 
 Model License:

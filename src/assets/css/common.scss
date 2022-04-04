@@ -11,16 +11,16 @@
 }
 /* 滚动槽 */
 ::-webkit-scrollbar-track {
-    box-shadow: inset006pxrgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #999;
-    box-shadow: inset006pxrgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -81,4 +81,19 @@ em.highlight{
 
 .typo-ol, .typo ol {
     color: #eee;
+}
+
+// 扩大点击区域
+.click-big {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        bottom: -10px;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
+    }
 }
