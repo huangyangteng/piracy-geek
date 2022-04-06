@@ -31,7 +31,13 @@ const getBBCourse = data =>
         url: '/watch/bb',
         data: data
     })
-
+//获取acfun视频信息
+const getAcfunCourse = data =>
+    http.request({
+        method: 'POST',
+        url: '/watch/acfun',
+        data: data
+    })
 const addBBVideo = data =>
     http.request({
         method: 'POST',
@@ -52,6 +58,7 @@ export const WATCH_API = {
     run,
     query,
     getBBCourse,
+    getAcfunCourse,
     addBBVideo,
     getBBVideos,
     deleteVideo

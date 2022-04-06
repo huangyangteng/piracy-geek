@@ -18,48 +18,13 @@
 </template>
 
 <script>
+import { MENU_LIST } from './menu-list'
+
 export default {
     name: 'bench-sidebar',
     data() {
         return {
-            menus: [
-                {
-                    name: 'MY COLUMN',
-                    children: [
-                        { name: 'COLUMN LIST', route: '/workbench/column' },
-                        {
-                            name: 'RECENT COLUMN',
-                            route: '/workbench/recent-column'
-                        }
-                    ]
-                },
-                {
-                    name: 'MY VIDEO',
-                    children: [
-                        { name: 'VIDEO LIST', route: '/workbench/video' },
-                        {
-                            name: 'RECENT VIDEO',
-                            route: '/workbench/recent-video'
-                        }
-                    ]
-                },
-                // {
-                //     name: 'MY MUSIC',
-                //     children: [
-                //         { name: 'MUSIC LIST', route: '/workbench/music' },
-                //         {
-                //             name: 'RECENT MUSIC',
-                //             route: '/workbench/recent-music'
-                //         }
-                //     ]
-                // },
-                {
-                    name: 'MY TOOLS',
-                    children: [
-                        { name: 'TOOLS LIST', route: '/workbench/tools' }
-                    ]
-                }
-            ]
+            menus: MENU_LIST
         }
     },
     computed: {},
@@ -82,18 +47,22 @@ export default {
         height: 40px;
     }
 }
+
 .sidebar-item {
     margin-bottom: 30px;
+
     > h5 {
         font-size: 12px;
         color: $color-help !important;
         margin-bottom: 12px;
     }
+
     > p {
         font-size: 14px;
         line-height: 2;
         padding-left: 30px;
         cursor: pointer;
+
         &.active {
             color: $--color-primary;
             font-weight: 500;

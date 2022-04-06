@@ -1,6 +1,6 @@
 <template>
     <section>
-        <video-player :options="options"></video-player>
+        <video-player @error="onError" :options="options"></video-player>
     </section>
 </template>
 
@@ -29,7 +29,7 @@ export default {
                         withCredentials: false,
                         type: 'application/x-mpegURL', //这里的type需要指定为 'application/x-mpegURL'
                         src:
-                            'https://tx-safety-video.acfun.cn/mediacloud/acfun/acfun_video/47252fc26243b079-e992c6c3928c6be2dcb2426c2743ceca-hls_720p_2.m3u8?pkey=ABDuFNTOUnsfYOEZC286rORZhpfh5uaNeFhzffUnwTFoS8-3NBSQEvWcqdKGtIRMgiywklkZvPdU-2avzKUT-I738UJX6urdwxy_ZHp617win7G6ga30Lfvfp2AyAVoUMjhVkiCnKeObrMEPVn4x749wFaigz-mPaWPGAf5uVvR0kbkVIw6x-HZTlgyY6tj-eE_rVnxHvB1XJ01_JhXMVWh70zlJ89EL2wsdPfhrgeLCWQ&safety_id=AAKir561j0mZgTqDfijAYjR6'
+                            'https://tx-safety-video.acfun.cn/mediacloud/acfun/acfun_video/21e65ea9f60c7843-2f9fe3601f70d0fa06ef2ea056ea3a74-hls_540p_2.m3u8?pkey=ABDYtI82y-1DM88AwskmRQPYI0XU5otepXxKirOO0v9_6yJQVpDklKloXVZbzm7FBg4Bnsj_elL-qfR0t-I2O4p-2ASZNHznOpT8Tc-7kkjLGorWvfW-f0n739l_bzNoSXvAeUymtU5iLlIagYuL0s_M1fnn7mAgtg_gwq2p4Fk68MuOyDB2Y7WrRkfvd-bFgJ4RSMutJI7Hb6mx4Sltf3HMJo0h5D6jzwtLfIfwHuX-LA&safety_id=AAJLGUuYT4vU9J_6eC08shwW'
                     }
                 ],
                 hls: true
@@ -37,7 +37,11 @@ export default {
         }
     },
     computed: {},
-    methods: {},
+    methods: {
+        onError(e) {
+            console.log(e, 'error')
+        }
+    },
     created() {}
 }
 </script>

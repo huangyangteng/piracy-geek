@@ -3,7 +3,7 @@
         <bench-header @focus="onFocus"></bench-header>
         <section
             class="bench-wrapper"
-            :style="{ filter: showSearch ? 'blur(5px)' : 'none' }"
+            :style="{ filter: showBlur ? 'blur(5px)' : 'none' }"
         >
             <bench-sidebar></bench-sidebar>
             <section class="bench-content">
@@ -45,6 +45,8 @@
         <bing-dun-dun
             class="animate__animated animate__fadeInDown bingdundun"
         ></bing-dun-dun>
+        <!--        menu-overlay-->
+        <menu-overlay></menu-overlay>
     </section>
 </template>
 
@@ -56,10 +58,13 @@ import BenchHeader from './layout/bench-header'
 import { searchEverything } from '../../tools/search'
 import { SEARCH_TYPE } from '../../data/search'
 import BingDunDun from '../../components/lazy-panda/LazyPanda'
+import MenuOverlay from './layout/menu-overlay'
+import { eventBus } from '../../tools'
 
 export default {
     name: 'Workbench',
     components: {
+        MenuOverlay,
         BingDunDun,
         'bench-sidebar': BenchSidebar,
         BenchHeader
@@ -70,10 +75,19 @@ export default {
             showSearch: false,
             suggestList: [], //建议列表
             activeIndex: -1, //搜索当前选中item索引
-            findList: [] //查找结果列表
+            findList: [], //查找结果列表,
+            showMenu: false
         }
     },
-    computed: {},
+    computed: {
+        showBlur() {
+            if (this.showSearch || this.showMenu) {
+                return true
+            } else {
+                return false
+            }
+        }
+    },
     methods: {
         onFocus() {
             this.showSearch = true
@@ -148,6 +162,9 @@ export default {
     },
     mounted() {
         document.title = '工作台'
+        eventBus.$on('toggle-open', val => {
+            this.showMenu = val
+        })
     }
 }
 </script>
@@ -171,11 +188,11 @@ export default {
     left: 0;
 
     .search-input {
-        width: 610px;
+        width: 600px;
         margin: 0px auto;
         line-height: 48px;
         height: 48px;
-        padding-left: 10px;
+        //padding-left: 10px;
     }
 
     .search-suggest-list {
@@ -212,7 +229,8 @@ export default {
     }
     .search-wrapper {
         .search-input {
-            width: 350px;
+            transform: translateX(10px);
+            width: 303px;
         }
 
         .search-suggest-list {

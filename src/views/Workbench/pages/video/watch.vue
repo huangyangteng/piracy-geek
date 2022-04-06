@@ -28,7 +28,7 @@
                     style="margin-left: 20px;color:#fff"
                     :href="$route.query.link"
                     target="_blank"
-                    >去b站观看高清版本</a
+                    >去源网站观看高清版本</a
                 >
             </div>
         </nav>
@@ -43,6 +43,7 @@
                     @play="onPlay"
                     @pause="onPause"
                     @ended="onEnded"
+                    @error="onError"
                 ></video-player>
             </section>
             <aside v-show="showAside" class="outline-list">
@@ -85,9 +86,12 @@ import {
     download,
     formatBBCourse
 } from '../../../../tools/watch-tools'
-
+import videojs from 'video.js'
+//需要引入videojs并绑定到window上
+window.videojs = videojs
 require('video.js/dist/video-js.css')
 require('vue-video-player/src/custom-theme.css')
+require('videojs-contrib-hls/dist/videojs-contrib-hls.js')
 import 'videojs-hotkeys'
 import OutlineList from '../../components/video/outline-list'
 import NoteList, { OPERATE } from '../../components/video/note-list'
@@ -113,6 +117,7 @@ export default {
                 playbackRates: [0.7, 1.0, 1.25, 1.5, 2.0],
                 sources: [
                     {
+                        withCredentials: false,
                         type: 'video/mp4',
                         src: ''
                     }
@@ -129,7 +134,8 @@ export default {
             showOutline: true, //显示大纲视图
             historyTimer: null,
             nextTimer: 0, //播放下一个的倒计时
-            pageLoading: true
+            pageLoading: true,
+            spareSrc: []
         }
     },
     computed: {
@@ -139,6 +145,9 @@ export default {
         }),
         isBB() {
             return this.$route.query.type === 'bb'
+        },
+        isAcfun() {
+            return this.$route.query.type === 'acfun'
         },
         curNotes() {
             try {
@@ -205,30 +214,43 @@ export default {
         videoSize() {
             this.playerOptions.height = this.videoSize.height
         },
+        //逻辑从这里开始调用(一进入页面就会触发)：监听课程id的改变，获取数据
         '$route.params.id': {
             //课程id，根据课程id获取数据
             immediate: true,
             handler(id) {
                 if (id) {
-                    if (this.$route.query.type === 'bb') {
-                        this.courseId = id
+                    this.courseId = id
+                    if (this.isBB) {
                         this.queryBBCourse(this.$route.query.link)
+                    } else if (this.isAcfun) {
+                        console.log('isAcfun')
+                        this.queryAcfunCourse(this.$route.query.link)
                     } else {
-                        this.courseId = id
                         this.queryCourseById(id)
                     }
                 }
             }
         },
+        //
         '$route.query.videoId': {
             immediate: false,
             handler(videoId) {
                 //视频id,切换侧边栏时触发
                 this.pageLoading = true
                 let src
-                if (this.$route.query.type === 'bb') {
+                if (this.isBB) {
                     console.log('bb video ', videoId)
                     WATCH_API.getBBCourse({
+                        link: this.$route.query.link,
+                        onlySrc: 1
+                    }).then(res => {
+                        src = res.data.src
+                        this.playVideo(src, true)
+                    })
+                } else if (this.isAcfun) {
+                    console.log('acfun video ', videoId)
+                    WATCH_API.getAcfunCourse({
                         link: this.$route.query.link,
                         onlySrc: 1
                     }).then(res => {
@@ -250,6 +272,9 @@ export default {
             WATCH_MU.MODIFY_NOTE,
             WATCH_MU.ADD_HISTORY
         ]),
+        onError(e) {
+            console.log(e, 'error')
+        },
         toBB() {
             window.open(this.$route.query.link, '_blank')
         },
@@ -292,6 +317,28 @@ export default {
                 : this.videoList[0].id
             this.playVideo(src)
         },
+        async queryAcfunCourse(link) {
+            const res = await WATCH_API.getAcfunCourse({
+                link
+            })
+            console.log(res)
+            if (res.code != 2000) {
+                return
+            }
+            const { title, src, spareSrc } = res.data
+            this.spareSrc = spareSrc
+            this.courseTitle = title
+            this.units = formatBBCourse(res.data)
+            this.videoList = this.units[0].list
+
+            this.videoId = this.$route.query.videoId
+                ? this.$route.query.videoId
+                : this.videoList[0].id
+            this.playVideo(src)
+            // console.log('units',this.units)
+            // console.log('videoList',this.videoList)
+            // console.log('videoId',this.videoId)
+        },
         handleNote({ operate, data }) {
             console.log('handleNote -> data', data)
             if (operate == OPERATE.ADD) {
@@ -318,21 +365,14 @@ export default {
         expand() {
             this.showAside = !this.showAside
         },
-        // _jumpToPlay({ id: videoId }) {
-        //     if (!videoId) videoId = this.videoId
-        //     this.$router.push({
-        //         name: 'watch',
-        //         params: { id: this.courseId },
-        //         query: { videoId: videoId }
-        //     })
-        // },
         selectVideo(videoItem) {
+            console.log(videoItem)
             //选中侧边栏时的操作
             const { id, src, page } = videoItem
             this.videoId = id
 
             //b站的视频播放 http://localhost:8080/#/workbench/watch/BV1Mg411g7C8?type=bb&link=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Mg411g7C8
-            if (!src) {
+            if (this.isBB) {
                 let link = this.$route.query.link
                 if (link.includes('?') && !link.includes('p=')) {
                     link = link + `&p=${page}`
@@ -350,30 +390,47 @@ export default {
                         category: this.$route.query.category
                     }
                 })
-                return
-            }
-            // 如果src后缀是视频，则播放，否则下载
-            if (isVideo(getExt(src))) {
+            } else if (this.isAcfun) {
+                console.log('this.isAcfun', this.courseId)
                 this.$router.push({
-                    name: 'watch',
+                    name: this.$route.name,
                     params: { id: this.courseId },
-                    query: { videoId: this.videoId }
+                    query: {
+                        videoId: this.videoId,
+                        link: videoItem.link,
+                        type: 'acfun',
+                        category: this.$route.query.category
+                    }
                 })
             } else {
-                let tmp = src.split('.')
-                tmp.pop()
-                const name = tmp.pop()
-                const link = window.location.origin + '/' + src
-                download(link, name)
-                this.$Message.success('资源下载成功!')
+                //本地视频处理： 如果src后缀是视频，则播放，否则下载
+                if (isVideo(getExt(src))) {
+                    this.$router.push({
+                        name: 'watch',
+                        params: { id: this.courseId },
+                        query: { videoId: this.videoId }
+                    })
+                } else {
+                    let tmp = src.split('.')
+                    tmp.pop()
+                    const name = tmp.pop()
+                    const link = window.location.origin + '/' + src
+                    download(link, name)
+                    this.$Message.success('资源下载成功!')
+                }
             }
         },
         playVideo(src = null, autoplay = false) {
             if (!src) {
                 src = this.curVideo.src
             }
+            //本地视频是相对路径，所以要添加origin才能播放
             if (!src.includes('http')) {
                 src = window.location.origin + '/' + src
+            }
+            //播放m3u8格式的视频，需要指定type
+            if (getExt(src).includes('m3u8')) {
+                this.playerOptions.sources[0].type = 'application/x-mpegURL'
             }
 
             this.playerOptions.sources[0].src = src
@@ -396,7 +453,7 @@ export default {
             }
 
             player.hotkeys({
-                volumeStep: 0.1,
+                enableVolumeScroll: false,
                 seekStep: 5,
                 enableModifiersForNumbers: false,
                 captureDocumentHotkeys: true,
@@ -413,8 +470,11 @@ export default {
             })
         },
         logHistory() {
+            clearInterval(this.historyTimer)
             this.historyTimer = setInterval(() => {
-                if (this.player && this.player.currentTime) {
+                let video = this.player.el_.querySelector('video')
+                //如果视频正在播放
+                if (!video.paused && video.readyState > 3) {
                     console.log(' log history')
                     this[WATCH_MU.ADD_HISTORY]({
                         videoId: this.videoId,
@@ -485,7 +545,8 @@ export default {
             }
         },
         playNextVideo() {
-            const nextVideo = getNextVideo(this.videoId, this.units, this.isBB)
+            const isLocal = !this.isBB && !this.isAcfun
+            const nextVideo = getNextVideo(this.videoId, this.units, isLocal)
             console.log('nextVideo', nextVideo)
             if (nextVideo) {
                 this.videoId = nextVideo.id

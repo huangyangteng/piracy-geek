@@ -225,7 +225,7 @@ export default {
                     query: {
                         category: this.activeCategory,
                         link: item.link,
-                        type: 'bb'
+                        type: item.from === 'bb' ? 'bb' : 'acfun'
                     }
                 })
             } else {

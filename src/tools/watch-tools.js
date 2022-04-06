@@ -50,8 +50,8 @@ export function getNameById(id, units) {
 }
 
 // 获取下一个播放的视频 length 5 (0,1,2,3,4)
-export function getNextVideo(id, units, isBB) {
-    if (isBB) {
+export function getNextVideo(id, units, isLocal) {
+    if (!isLocal) {
         let videos = units[0].list
         let index = videos.findIndex(item => item.id == id)
         if (index != -1 && index + 1 != videos.length) {

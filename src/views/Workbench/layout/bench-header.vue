@@ -1,7 +1,7 @@
 <template>
     <section class="bench-header">
-        <div class="left" style="padding-right:10px">
-            <i class="el-icon-guide"></i>
+        <div class="left">
+            <menu-icon></menu-icon>
         </div>
         <div class="center">
             <el-input
@@ -15,12 +15,12 @@
             <div class="login">
                 <!--              已登录-->
                 <div class="user-info" v-if="isLogin">
-                    <el-dropdown @command="handleUser">
+                    <el-dropdown @command="handleUser" trigger="click">
                         <span class="el-dropdown-link">
-                            <i class="el-icon-user-solid"></i>
-                            <span style="margin-left: 2px;">{{
-                                userName
-                            }}</span>
+                            <i
+                                style="color:#fff"
+                                class="el-icon-user-solid"
+                            ></i>
                         </span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item
@@ -40,6 +40,7 @@
                     placement="bottom"
                     width="200"
                     v-model="visible"
+                    trigger="click"
                 >
                     <el-form
                         :inline="true"
@@ -104,9 +105,11 @@
 import { USER_API } from '../../../api/user'
 import { mapGetters, mapMutations } from 'vuex'
 import { USER_MU } from '../../../store/mutation-types'
+import MenuIcon from './menu-icon'
 
 export default {
     name: 'bench-header',
+    components: { MenuIcon },
     data() {
         return {
             searchKey: '',
@@ -214,6 +217,11 @@ export default {
     .left,
     .right {
         flex: 1;
+        position: relative;
+    }
+
+    .left {
+        min-width: 50px;
     }
 
     .right {
@@ -223,7 +231,7 @@ export default {
     .login {
         padding-right: 5%;
         font-size: 12px;
-        min-width: 80px;
+        min-width: 30px;
     }
 
     .login-reference {
