@@ -1,5 +1,10 @@
 <template>
-    <section class="gk-audio-wrapper" v-if="audioSrc">
+    <section
+        @click="showPlayer"
+        class="gk-audio-wrapper"
+        :class="{ hide: hide }"
+        v-if="audioSrc"
+    >
         <div class="audio-controls">
             <div class="play-back" @click="changeCurrentTime('reduce')">
                 <i class="el-icon-refresh-left"></i>
@@ -44,6 +49,11 @@
                     </el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
+            <i
+                @click.stop="hidePlayer"
+                style="position: absolute;right:5px"
+                class="el-icon-close click-big"
+            ></i>
         </div>
         <el-slider
             class="gk-play-slider"
@@ -85,7 +95,8 @@ export default {
             curTime: 0,
             status: 'pause',
             curRate: 1.0,
-            percent: 0
+            percent: 0,
+            hide: false
         }
     },
     computed: {
@@ -115,6 +126,14 @@ export default {
         }
     },
     methods: {
+        showPlayer() {
+            if (this.hide) {
+                this.hide = false
+            }
+        },
+        hidePlayer() {
+            this.hide = !this.hide
+        },
         calcPercent() {
             this.percent = this.curTime / this.duration
         },
@@ -177,15 +196,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.gk-audio-wrapper.hide {
+    right: -200px;
+}
+
 .gk-audio-wrapper {
+    transition: 0.6s;
     position: fixed;
     right: 10px;
-    top: 100px;
+    top: 70px;
     display: inline-block;
     margin-left: 20px;
     text-align: center;
     height: 60px;
-    width: 160px;
+    width: 200px;
     box-sizing: border-box;
     background: $component-bg-color-2;
     border: 1px solid $border-color;
@@ -280,7 +304,7 @@ export default {
 .play-select {
     cursor: pointer;
     position: absolute;
-    right: 5px;
+    right: 45px;
     font-size: 12px;
 }
 

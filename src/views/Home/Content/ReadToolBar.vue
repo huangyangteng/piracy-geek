@@ -17,6 +17,11 @@
         ></span>
         <!-- 标题 -->
         <span class="jk-title" @click="toHome">{{ curColumnTitle }}</span>
+        <i
+            class="mobile-menu el-icon-s-operation"
+            style="position: absolute;right:5px;font-size: 1em"
+            @click="toggleMenu"
+        ></i>
 
         <a
             style="margin-left: 20px;color:#fff"
@@ -87,7 +92,7 @@ import { getElementTop, copyToBoard } from '../../../tools'
 
 export default {
     components: {
-        addNote,
+        addNote
     },
     data() {
         return {
@@ -105,6 +110,9 @@ export default {
         ...mapMutations('column', ['toggleNavIsShow']),
         ...mapMutations('component', ['updateColumnListDraw']),
         ...mapActions('column', ['fullScreen']),
+        toggleMenu() {
+            this.updateColumnListDraw({ show: true })
+        },
         toHome() {
             this.$router.push({ name: 'workbenchColumn' })
         },
@@ -282,8 +290,15 @@ export default {
     position: relative;
 }
 
+.mobile-menu {
+    visibility: hidden;
+}
+
 //小于750的尺寸
 @media (max-width: 750px) {
+    .mobile-menu {
+        visibility: visible;
+    }
     .toolbar-aside,
     .fold-icon {
         display: none !important;
@@ -297,6 +312,9 @@ export default {
             font-size: 24px;
             margin-text-outline: -1px;
         }
+    }
+    .jk-title {
+        font-size: 1em;
     }
 }
 </style>

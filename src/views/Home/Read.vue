@@ -173,15 +173,18 @@ export default {
 
 //小于750的尺寸
 @media (max-width: 750px) {
-    .read-wrapper {
-        display: -webkit-box;
-        overflow: auto;
-    }
-    .read-content {
-        flex: initial;
-    }
+    //.read-wrapper {
+    //    display: -webkit-box;
+    //    overflow: auto;
+    //}
+    //.read-content {
+    //    flex: initial;
+    //}
     .read-aside {
-        // display: none;
+        display: none;
+    }
+    .jk-title {
+        font-size: 1em;
     }
 }
 </style>

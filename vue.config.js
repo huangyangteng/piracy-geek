@@ -1,6 +1,6 @@
 const path = require('path')
 const DEV_HOST = 'http://localhost:22222'
-const PRODUCT_HOST = 'http://www.leexiao.site/'
+const PRODUCT_HOST = 'https://www.leexiao.site/'
 module.exports = {
     devServer: {
         //只在开发时有效，打包后失效
@@ -8,7 +8,7 @@ module.exports = {
         proxy: {
             //测试环境
             '/gk-api': {
-                target: DEV_HOST, //开发环境后端接口地址
+                target: PRODUCT_HOST, //开发环境后端接口地址
                 changeOrigin: true,
                 autoRewrite: true,
                 cookieDomainRewrite: true,
@@ -30,7 +30,7 @@ module.exports = {
                 target: PRODUCT_HOST
             },
             '/api': {
-                target: 'http://www.leexiao.site/'
+                target: 'https://www.leexiao.site/'
             },
             '/learnvideo': {
                 target: 'http://localhost'

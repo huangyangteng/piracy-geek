@@ -45,6 +45,7 @@ export default {
             this.showLoading()
             src = src.replace('./', '')
             let reqUrl = window.location.origin + '/api/' + src
+            console.log('reqUrl', reqUrl)
             if (typeof cancel == 'function') {
                 cancel()
             }
@@ -250,6 +251,7 @@ export default {
 @media (max-width: 750px) {
     .article-wrapper {
         padding: 20px;
+        overflow-x: hidden;
     }
 }
 
