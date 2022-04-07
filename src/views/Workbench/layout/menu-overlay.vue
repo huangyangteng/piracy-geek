@@ -83,10 +83,10 @@ export default {
 
     li {
         color: #fff;
-        font-size: 32px;
+        font-size: 24px;
         cursor: pointer;
         font-weight: 500;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 }
 </style>

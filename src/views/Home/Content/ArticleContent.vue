@@ -250,7 +250,7 @@ export default {
 //小于750的尺寸
 @media (max-width: 750px) {
     .article-wrapper {
-        padding: 20px;
+        padding: 10px;
         overflow-x: hidden;
     }
 }
