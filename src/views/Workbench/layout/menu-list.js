@@ -21,6 +21,7 @@ export const MENU_LIST = [
     },
     {
         name: 'MY TOOLS',
-        children: [{ name: 'TOOLS LIST', route: '/workbench/tools' }]
+        children: [{ name: 'TOOLS LIST', route: '/workbench/tools' }],
+        user: ['root', 'hyangteng']
     }
 ]

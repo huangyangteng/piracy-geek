@@ -18,8 +18,8 @@
                     v-for="sub in item.subList"
                     :index="sub.id"
                     :key="sub.id"
-                    >{{ sub.title }}</el-menu-item
-                >
+                    >{{ sub.title }}
+                </el-menu-item>
             </el-submenu>
         </el-menu>
     </section>
@@ -27,6 +27,7 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex'
+
 export default {
     name: 'ReadContent',
     data() {
@@ -44,6 +45,7 @@ export default {
         selectArticle(article) {
             let { column } = this.$route.params
             this.$router.push({ name: 'read', params: { column, article } })
+            this.$emit('on-selected')
         }
     },
     created() {}

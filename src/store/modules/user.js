@@ -1,4 +1,5 @@
 import { USER_MU } from '../mutation-types'
+import { MENU_LIST } from '../../views/Workbench/layout/menu-list'
 
 const state = {
     userInfo: {
@@ -6,7 +7,8 @@ const state = {
         userName: '',
         filter: ''
     },
-    jwt: ''
+    jwt: '',
+    allMenu: MENU_LIST
 }
 
 const getters = {
@@ -27,6 +29,15 @@ const getters = {
         } else {
             return []
         }
+    },
+    menus(state) {
+        return state.allMenu.filter(item => {
+            if (item.user) {
+                return item.user.includes(state.userInfo.userName)
+            } else {
+                return true
+            }
+        })
     }
 }
 

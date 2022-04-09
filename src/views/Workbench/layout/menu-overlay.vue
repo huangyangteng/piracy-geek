@@ -17,20 +17,28 @@
 <script>
 import { eventBus } from '../../../tools'
 import { MENU_LIST } from './menu-list'
+import { mapGetters } from 'vuex'
 
 export default {
     name: 'menu-overlay',
     data() {
-        const menus = MENU_LIST.map(item => item.children).reduce(
-            (prev, cur) => prev.concat(cur),
-            []
-        )
+        // const menus = MENU_LIST.map(item => item.children).reduce(
+        //     (prev, cur) => prev.concat(cur),
+        //     []
+        // )
         return {
-            show: false,
-            menuList: menus
+            show: false
+            // menuList: menus
         }
     },
-    computed: {},
+    computed: {
+        ...mapGetters('user', ['menus']),
+        menuList() {
+            return this.menus
+                .map(item => item.children)
+                .reduce((prev, cur) => prev.concat(cur), [])
+        }
+    },
     methods: {
         toPage(link) {
             if (this.$route.path == link) return

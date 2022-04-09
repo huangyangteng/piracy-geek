@@ -19,15 +19,19 @@
 
 <script>
 import { MENU_LIST } from './menu-list'
+import {mapGetters} from "vuex";
 
 export default {
     name: 'bench-sidebar',
     data() {
         return {
-            menus: MENU_LIST
+            // menus: MENU_LIST
         }
     },
-    computed: {},
+    computed: {
+      ...mapGetters('user',['menus']),
+
+    },
     methods: {
         toPage(link) {
             if (this.$route.path == link) return

@@ -91,10 +91,7 @@
                     </el-form>
                     <span slot="reference" class="login-reference">
                         <i class="el-icon-user-solid"></i>
-                        登录
-                        <span class="line">|</span>
-                        注册</span
-                    >
+                    </span>
                 </el-popover>
             </div>
         </div>

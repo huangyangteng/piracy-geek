@@ -125,6 +125,11 @@ export default {
             return this.curTime
         }
     },
+    watch: {
+        audioSrc() {
+            this.audioPause()
+        }
+    },
     methods: {
         showPlayer() {
             if (this.hide) {

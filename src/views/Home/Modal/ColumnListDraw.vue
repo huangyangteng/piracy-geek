@@ -8,7 +8,7 @@
         >
             <section class="geek-drawer-content">
                 <i @click="closeDrawer" class="el-icon-close click-big"></i>
-                <ReadContent></ReadContent>
+                <ReadContent @on-selected="closeDrawer"></ReadContent>
                 <!-- <section v-for="(value, key) in columnList" :key="key" v-if="false">
             <h3 style="margin:20px 0 10px 0;color:#333">
                 {{ getPathName(key) }}
