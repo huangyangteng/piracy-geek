@@ -249,3 +249,20 @@ export function download(link, name) {
     eleLink.click()
     document.body.removeChild(eleLink)
 }
+
+export function getAcfunPlaySrc(data) {
+    console.log(data)
+    const prefix = 'tx-safety-video'
+    if (data.src.includes(prefix)) {
+        return data.src
+    } else {
+        const { url, backupUrl } = data.spareSrc[0]
+        if (url.includes(prefix)) {
+            return url
+        } else if (backupUrl[0].includes(prefix)) {
+            return backupUrl[0]
+        } else {
+            throw new Error('找不到播放的视频url')
+        }
+    }
+}

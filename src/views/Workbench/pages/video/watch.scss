@@ -40,6 +40,10 @@
   }
 }
 
+.watch-bar.mobile {
+  display: none;
+}
+
 //
 .watch-container {
   display: flex;
@@ -90,7 +94,58 @@
   }
 }
 
+
+.watch-mobile-info {
+  display: none;
+}
+
 // 兼容1680及以下的屏幕
+//小于750的尺寸 手机屏幕
+@media (max-width: 750px) {
+  .watch-bar.pc {
+    display: none;
+  }
+  .outline-list {
+    display: none;
+  }
+  .watch-container {
+    overflow: hidden;
+  }
+  .watch-container > .play-container {
+    width: 100%;
+    height: 56.25vw;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .mobile-outline {
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+
+    .el-submenu .el-menu-item {
+      padding-left: 10px !important;
+    }
+
+    .el-submenu__title {
+      padding: 5px !important;
+    }
+  }
+  .vjs-custom-skin > .video-js .vjs-big-play-button {
+    font-size: 2em !important;
+    margin-left: -50px !important;
+  }
+  .watch-mobile-info {
+    display: block;
+    padding-top: 20px;
+
+    .title {
+      font-size: 1em;
+      padding-left: 0.5em;
+    }
+  }
+
+}
 
 // 大于1920的屏幕
 @media(min-width: 1920px) {
@@ -123,6 +178,7 @@
   }
 
 }
+
 
 //通用样式 笔记item
 .note-item {

@@ -1,6 +1,6 @@
 <template>
     <section class="watch-wrapper">
-        <nav class="watch-bar">
+        <nav class="watch-bar pc">
             <h1>
                 <i
                     @click="toHome"
@@ -32,10 +32,25 @@
                 >
             </div>
         </nav>
+        <nav class="watch-bar mobile">
+            <span
+                @click="toHome"
+                class="el-icon-arrow-left back-home-icon click-big"
+                style="margin-right: 10px"
+            ></span>
+            <b
+                style="white-space: nowrap;max-width: 40vw;overflow: hidden;text-overflow: ellipsis"
+            >
+                {{ videoTitle }}
+            </b>
+            <!--          <el-switch v-model="playNextConfig" active-text="自动连播">-->
+            <!--          </el-switch>-->
+        </nav>
         <section class="watch-container" :style="watchContainerStyle">
             <section class="play-container" :style="videoStyle">
                 <wave v-show="pageLoading"></wave>
                 <video-player
+                    id="video-player"
                     ref="videoPlayer"
                     class="video-player vjs-custom-skin"
                     :options="playerOptions"
@@ -63,7 +78,16 @@
                 </section>
             </aside>
         </section>
-
+        <section class="watch-mobile-info">
+            <!--          <h2 class="title"> {{ courseTitle }}</h2>-->
+            <outline-list
+                class="mobile-outline"
+                :active="videoId"
+                v-if="showOutline"
+                :units="units"
+                @on-change="selectVideo"
+            ></outline-list>
+        </section>
         <div style="display: none">
             <button id="next-btn" @click="playNextVideo">下一个</button>
         </div>
@@ -84,7 +108,8 @@ import {
     getExt,
     isVideo,
     download,
-    formatBBCourse
+    formatBBCourse,
+    getAcfunPlaySrc
 } from '../../../../tools/watch-tools'
 import videojs from 'video.js'
 //需要引入videojs并绑定到window上
@@ -195,7 +220,7 @@ export default {
         watchContainerStyle() {
             if (this.showAside) {
                 return {
-                    padding: '0 40px'
+                    // padding: '0 40px'
                 }
             } else {
                 return {}
@@ -224,7 +249,6 @@ export default {
                     if (this.isBB) {
                         this.queryBBCourse(this.$route.query.link)
                     } else if (this.isAcfun) {
-                        console.log('isAcfun')
                         this.queryAcfunCourse(this.$route.query.link)
                     } else {
                         this.queryCourseById(id)
@@ -240,7 +264,6 @@ export default {
                 this.pageLoading = true
                 let src
                 if (this.isBB) {
-                    console.log('bb video ', videoId)
                     WATCH_API.getBBCourse({
                         link: this.$route.query.link,
                         onlySrc: 1
@@ -249,12 +272,13 @@ export default {
                         this.playVideo(src, true)
                     })
                 } else if (this.isAcfun) {
-                    console.log('acfun video ', videoId)
                     WATCH_API.getAcfunCourse({
                         link: this.$route.query.link,
                         onlySrc: 1
                     }).then(res => {
-                        src = res.data.src
+                        src = getAcfunPlaySrc(res.data)
+
+                        // src = res.data.src
                         this.playVideo(src, true)
                     })
                 } else {
@@ -321,7 +345,6 @@ export default {
             const res = await WATCH_API.getAcfunCourse({
                 link
             })
-            console.log(res)
             if (res.code != 2000) {
                 return
             }
@@ -334,13 +357,9 @@ export default {
             this.videoId = this.$route.query.videoId
                 ? this.$route.query.videoId
                 : this.videoList[0].id
-            this.playVideo(src)
-            // console.log('units',this.units)
-            // console.log('videoList',this.videoList)
-            // console.log('videoId',this.videoId)
+            this.playVideo(getAcfunPlaySrc(res.data))
         },
         handleNote({ operate, data }) {
-            console.log('handleNote -> data', data)
             if (operate == OPERATE.ADD) {
                 this[WATCH_MU.ADD_NOTE]({
                     videoId: this.videoId,
@@ -366,7 +385,6 @@ export default {
             this.showAside = !this.showAside
         },
         selectVideo(videoItem) {
-            console.log(videoItem)
             //选中侧边栏时的操作
             const { id, src, page } = videoItem
             this.videoId = id
@@ -379,7 +397,6 @@ export default {
                 } else {
                     link = link.split('?')[0] + `?p=${page}`
                 }
-                console.log('link', link)
                 this.$router.push({
                     name: 'watch',
                     params: { id: this.courseId },
@@ -391,7 +408,6 @@ export default {
                     }
                 })
             } else if (this.isAcfun) {
-                console.log('this.isAcfun', this.courseId)
                 this.$router.push({
                     name: this.$route.name,
                     params: { id: this.courseId },
@@ -445,6 +461,14 @@ export default {
             }, 1000)
         },
         playerIsReady(player) {
+            console.log('play is  ready')
+            //设置ios不全屏
+            try {
+                this.player.el_.firstChild.playsInline = true
+            } catch (e) {
+                console.log(e)
+            }
+
             this.insertElement()
             // 跳转到上次播放的位置
             const item = this.history.find(item => item.videoId == this.videoId)
@@ -475,7 +499,6 @@ export default {
                 let video = this.player.el_.querySelector('video')
                 //如果视频正在播放
                 if (!video.paused && video.readyState > 3) {
-                    console.log(' log history')
                     this[WATCH_MU.ADD_HISTORY]({
                         videoId: this.videoId,
                         currentTime: this.player.currentTime(),
@@ -547,7 +570,6 @@ export default {
         playNextVideo() {
             const isLocal = !this.isBB && !this.isAcfun
             const nextVideo = getNextVideo(this.videoId, this.units, isLocal)
-            console.log('nextVideo', nextVideo)
             if (nextVideo) {
                 this.videoId = nextVideo.id
                 this.selectVideo(nextVideo)
@@ -568,9 +590,10 @@ export default {
             this.logHistory()
         },
         insertElement() {
+            const isMobile = document.body.offsetWidth < 750
+            if (isMobile) return
             const span = document.createElement('span')
             span.className = 'el-icon-right play-next-icon'
-            console.log(span)
             span.onclick = () => {
                 this.playNextVideo()
             }
@@ -586,7 +609,7 @@ export default {
     created() {
         clearInterval(this.historyTimer)
     },
-    mounted() {},
+
     destroyed() {
         clearInterval(this.historyTimer)
     }
