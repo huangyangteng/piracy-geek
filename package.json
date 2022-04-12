@@ -20,6 +20,7 @@
     "dayjs": "^1.10.4",
     "element-ui": "^2.13.0",
     "hotkeys-js": "^3.8.7",
+    "nprogress": "^0.2.0",
     "pinyin": "^2.10.2",
     "resize-detector": "^0.3.0",
     "three": "^0.137.5",

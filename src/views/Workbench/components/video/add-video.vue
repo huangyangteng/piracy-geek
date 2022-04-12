@@ -78,6 +78,10 @@ export default {
     methods: {
         async addVideo() {
             this.loading = true
+            let link = this.link.split('?')[0]
+            if (link.endsWith('/')) {
+                link = link.slice(0, link.length - 1)
+            }
             const res = await WATCH_API.addBBVideo({
                 link: this.link.split('?')[0],
                 type: this.type,

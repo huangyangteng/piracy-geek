@@ -559,13 +559,14 @@ export default {
             // 播放下一个
             if (!this.playNext) return
 
-            const nextVideo = getNextVideo(this.videoId, this.units, this.isBB)
-            if (nextVideo) {
-                this.videoId = nextVideo.id
-                setTimeout(() => {
-                    this.selectVideo(nextVideo)
-                }, 1000)
-            }
+            this.playNextVideo()
+            // const nextVideo = getNextVideo(this.videoId, this.units, this.isBB)
+            // if (nextVideo) {
+            //     this.videoId = nextVideo.id
+            //     setTimeout(() => {
+            //         this.selectVideo(nextVideo)
+            //     }, 1000)
+            // }
         },
         playNextVideo() {
             const isLocal = !this.isBB && !this.isAcfun
