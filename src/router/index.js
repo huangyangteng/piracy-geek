@@ -6,6 +6,7 @@ import TestConfig from '../views/Test/index'
 import ColumnList from '../views/ColumnList/index'
 import Tools from '../views/Tools/index'
 import workbench from '../views/Workbench/index'
+import thinking from '../views/thinking/index'
 
 Vue.use(VueRouter)
 import NProgress from 'nprogress'
@@ -16,6 +17,7 @@ const routes = [
     ...ReadConfig,
     ...ColumnList,
     ...Tools,
+    ...thinking,
     TipConfig,
     TestConfig
 ]

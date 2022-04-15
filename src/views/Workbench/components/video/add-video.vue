@@ -78,6 +78,10 @@ export default {
     methods: {
         async addVideo() {
             this.loading = true
+            //提取https链接(去除中文和特殊符号)
+            this.link = this.link.match(
+                /https?:\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/
+            )[0]
             let link = this.link.split('?')[0]
             if (link.endsWith('/')) {
                 link = link.slice(0, link.length - 1)

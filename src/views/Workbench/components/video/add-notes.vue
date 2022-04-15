@@ -1,15 +1,16 @@
 <template>
     <div class="add-note-wrapper">
-        <Input
+        <el-input
             @keydown.enter.native="keyDown"
             ref="input"
-            autosize
+            :autosize="{ minRows: 3 }"
             type="textarea"
             v-model="text"
-        /><br />
-        <Button size="small" type="primary" @click="emitAddNote"
-            >添加笔记
-        </Button>
+        />
+        <br />
+        <el-button size="mini" plain type="primary" @click="emitAddNote"
+            >添加
+        </el-button>
     </div>
 </template>
 
@@ -39,7 +40,7 @@ export default {
                 }, 1000)
             }
         },
-        focusTest() {
+        focusText() {
             this.$nextTick(() => {
                 this.$refs.input.focus({
                     cursor: 'start'
@@ -50,10 +51,10 @@ export default {
     mounted() {
         hotkeys('ctrl+alt+m', e => {
             e.preventDefault()
-            this.focusTest()
+            this.focusText()
         })
 
-        this.focusTest()
+        this.focusText()
     },
     beforeDestroy() {
         hotkeys.unbind('ctrl+alt+m')
@@ -66,17 +67,16 @@ export default {
     text-align: right;
     background: $component-bg-color;
     border-radius: 6px;
-    margin: 10px;
     padding: 5px;
     margin-bottom: 15px;
+    position: relative;
 
     > button {
-        // transform: translate(-3px, -8px);
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
     }
-}
-</style>
-<style lang="scss">
-.add-note-wrapper {
+
     textarea {
         background: $component-bg-color;
         color: $font-color;

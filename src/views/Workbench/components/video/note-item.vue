@@ -1,26 +1,27 @@
 <template>
     <div class="note-item poptip-reset">
         <template v-if="isEdit">
-            <Input
+            <el-input
                 @keydown.enter.native="keyDown"
                 ref="input"
-                autosize
+                :autosize="{ minRows: 4 }"
                 type="textarea"
                 :value="note.value"
                 @on-change="onChange"
+                style="font-size: 16px"
             />
-            <div style="text-align:right">
-                <Button
+            <div class="note-operation">
+                <el-button
                     style="margin-right:8px"
                     type="primary"
-                    ghost
-                    size="small"
+                    plain
+                    size="mini"
                     @click="isEdit = false"
                     >取消
-                </Button>
-                <Button size="small" type="primary" @click="modifyNote"
+                </el-button>
+                <el-button size="mini" type="primary" @click="modifyNote"
                     >保存
-                </Button>
+                </el-button>
             </div>
         </template>
         <template v-else>
@@ -28,14 +29,23 @@
                 <span @click="setCurTime">
                     {{ formatedTime }}
                 </span>
-                <Poptip trigger="hover" content="content" placement="top">
-                    <Icon style="font-size:16px" type="ios-more" />
-                    <div slot="content" class="operate-warpper">
-                        <li @click="setCurTime">跳转</li>
+                <el-popover
+                    width="80"
+                    trigger="click"
+                    content="content"
+                    placement="bottom"
+                >
+                    <i
+                        slot="reference"
+                        style="color:#fff"
+                        class="el-icon-more"
+                    ></i>
+                    <div class="operate-warpper">
+                        <li v-if="!showDate" @click="setCurTime">跳转</li>
                         <li @click="editText">编辑</li>
                         <li @click="deleteNote">删除</li>
                     </div>
-                </Poptip>
+                </el-popover>
             </header>
             <pre
                 class="note-content"
@@ -53,8 +63,13 @@ export default {
     name: 'note-item',
     props: {
         note: {
+            //{data:'',currentTime:'',date:''}
             type: Object,
             required: true
+        },
+        showDate: {
+            type: Boolean,
+            default: true
         }
     },
     components: {},
@@ -67,7 +82,11 @@ export default {
     },
     computed: {
         formatedTime() {
-            return formatVideoTime(this.note.currentTime)
+            if (this.showDate) {
+                return this.note.date
+            } else {
+                return formatVideoTime(this.note.currentTime)
+            }
         }
     },
     methods: {
@@ -88,12 +107,12 @@ export default {
             })
         },
         deleteNote() {
-            this.$emit('delete', { date: this.note.date })
+            this.$emit('delete', { date: this.note.id })
         },
         modifyNote() {
             if (this.newText) {
                 this.$emit('modify', {
-                    date: this.note.date,
+                    date: this.note.id,
                     value: this.newText
                 })
             }
@@ -108,6 +127,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.note-item {
+    padding: 15px;
+    background: $component-bg-color;
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 10px;
+    //margin: 10px;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .note-operation {
+        position: absolute;
+        right: 15px;
+        bottom: 5px;
+    }
+
+    textarea {
+        background: $component-bg-color;
+        color: $font-color;
+        border: 0;
+        outline: 0;
+        resize: none;
+        width: 100%;
+
+        &:focus {
+            border: 0;
+            box-shadow: none;
+        }
+    }
+
+    pre {
+        background: transparent;
+        border: 0;
+    }
+}
+
 .note-header {
     font-size: 12px;
     margin-bottom: 4px;

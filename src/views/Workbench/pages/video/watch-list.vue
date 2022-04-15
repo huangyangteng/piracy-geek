@@ -13,7 +13,6 @@
                 <b style="margin-left:20px;margin-right:10px;font-weight:400"
                     >|
                 </b>
-                <add-video @upload-success="uploadSuccess"></add-video>
 
                 <span
                     v-if="!showManage"
@@ -34,14 +33,24 @@
                         >删除</span
                     >
                 </template>
+                <add-video @upload-success="uploadSuccess"></add-video>
             </template>
         </section>
-        <section class="manage"></section>
+        <section class="filter-text">
+            <el-input
+                prefix-icon="el-icon-search"
+                size="mini"
+                style="width:240px"
+                v-model="filterText"
+                @input="filterVideo"
+                clearable
+            />
+        </section>
         <section class="course-list" v-loading="loading">
             <div
                 class="course-item"
                 @click="jumpToCourse(item)"
-                v-for="item in courses"
+                v-for="item in exhibitCourse"
                 :key="item.id"
             >
                 <section>
@@ -77,6 +86,7 @@ import AddVideo from '../../components/video/add-video'
 import { mapGetters, mapMutations } from 'vuex'
 import { USER_API } from '../../../../api/user'
 import { USER_MU } from '../../../../store/mutation-types'
+import pinyin from 'pinyin'
 
 export default {
     name: 'watch-list',
@@ -90,7 +100,9 @@ export default {
             test: true,
             showManage: false,
             selectedVideoIds: [],
-            loading: false
+            loading: false,
+            filterText: '',
+            remainCourses: []
         }
     },
     computed: {
@@ -108,6 +120,40 @@ export default {
                 item => item.type === this.activeCategory
             )
             return bb.concat(local)
+        },
+        exhibitCourse() {
+            if (this.filterText) {
+                let valuesResult = this.courses.filter(item => {
+                    let title = item.title ? item.title : item.name
+                    title = title.toLowerCase()
+                    return title.includes(this.filterText)
+                })
+                if (valuesResult.length > 0) {
+                    return valuesResult
+                } else {
+                    const getReg = queryString => {
+                        let str = '(.*?)'
+                        let queryStringArr = queryString.split('')
+                        let regStr = str + queryStringArr.join(str) + str
+                        return RegExp(regStr, 'i')
+                    }
+                    const reg = getReg(this.filterText)
+                    return this.courses.filter(item => {
+                        let title = item.title ? item.title : item.name
+                        //根据搜索词生成正则
+                        let title_pinyin = pinyin(title, {
+                            segment: true,
+                            group: true,
+                            style: pinyin.STYLE_NORMAL
+                        })
+                            .flat()
+                            .join('')
+                        return reg.test(title_pinyin)
+                    })
+                }
+            } else {
+                return this.courses
+            }
         }
     },
     watch: {
@@ -123,6 +169,9 @@ export default {
     },
     methods: {
         ...mapMutations('user', [USER_MU.SET_USER]),
+        filterVideo() {
+            console.log(this.filterText)
+        },
         uploadSuccess({ type }) {
             //上傳成功後重新獲取數據
             console.log(type)
@@ -246,13 +295,21 @@ export default {
     }
 }
 </script>
-<style>
+<style lang="scss">
 .el-loading-spinner .circular {
     display: block;
 }
 
 .el-loading-spinner {
     height: auto;
+}
+
+.filter-text {
+    margin-top: 12px;
+
+    input {
+        border: 1px solid $color-help;
+    }
 }
 </style>
 <style lang="scss" scoped>

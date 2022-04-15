@@ -52,7 +52,6 @@
 
 <script>
 import './bench.scss'
-import 'animate.css'
 import BenchSidebar from './layout/bench-sidebar'
 import BenchHeader from './layout/bench-header'
 import { searchEverything } from '../../tools/search'

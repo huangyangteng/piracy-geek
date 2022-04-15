@@ -184,50 +184,45 @@
 
 
 //通用样式 笔记item
-.note-item {
-  padding: 15px;
-  background: $component-bg-color;
-  border-radius: 6px;
-  margin: 10px;
+//.note-item {
+//  padding: 15px;
+//  background: $component-bg-color;
+//  border-radius: 6px;
+//  margin: 10px;
+//
+//  textarea {
+//    background: $component-bg-color;
+//    color: $font-color;
+//    border: 0;
+//    outline: 0;
+//    resize: none;
+//    width: 100%;
+//
+//    &:focus {
+//      border: 0;
+//      box-shadow: none;
+//    }
+//  }
+//
+//  pre{
+//    background: transparent;
+//    border:0;
+//  }
+//}
 
-  textarea {
-    background: $component-bg-color;
-    color: $font-color;
-    border: 0;
-    outline: 0;
-    resize: none;
-    width: 100%;
-
-    &:focus {
-      border: 0;
-      box-shadow: none;
-    }
-  }
-
-  // .ivu-poptip-inner {
-  //     background: $component-bg-color-2;
-  // }
-  // .ivu-poptip-popper{
-  //     min-width: 60px;
-  // }
-  // .ivu-poptip-popper[x-placement^="top"] .ivu-poptip-arrow{
-  //     border-top-color:$component-bg-color-2;
-  // }
-}
-
-.poptip-reset {
-  .ivu-poptip-inner {
-    background: $component-bg-color-2;
-  }
-
-  .ivu-poptip-popper {
-    min-width: 60px;
-  }
-
-  .ivu-poptip-popper[x-placement^="top"] .ivu-poptip-arrow {
-    border-top-color: $component-bg-color-2;
-  }
-}
+//.poptip-reset {
+//  .ivu-poptip-inner {
+//    background: $component-bg-color-2;
+//  }
+//
+//  .ivu-poptip-popper {
+//    min-width: 60px;
+//  }
+//
+//  .ivu-poptip-popper[x-placement^="top"] .ivu-poptip-arrow {
+//    border-top-color: $component-bg-color-2;
+//  }
+//}
 
 
 //-----覆盖videojs播放器的默认样式
