@@ -6,5 +6,6 @@ export const videoCategory = [
     { name: 'graduate', label: '考研' },
     { name: 'letter', label: '文学' },
     { name: 'english', label: '英语' },
+    { name: 'positive', label: '鸡汤' },
     { name: 'other', label: '其他' }
 ]

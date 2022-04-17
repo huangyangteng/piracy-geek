@@ -19,7 +19,7 @@ const routes = [
     ...Tools,
     ...thinking,
     TipConfig,
-    TestConfig
+    ...TestConfig
 ]
 
 const router = new VueRouter({

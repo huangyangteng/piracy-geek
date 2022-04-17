@@ -139,7 +139,7 @@ export default {
                 //播放器配置
                 autoplay: false,
                 height: '720',
-                playbackRates: [0.7, 1.0, 1.25, 1.5, 2.0],
+                playbackRates: [0.7, 1.0, 1.25, 1.5, 1.75, 2.0, 2.2, 2.5, 3],
                 sources: [
                     {
                         withCredentials: false,

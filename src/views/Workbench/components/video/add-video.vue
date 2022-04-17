@@ -73,6 +73,14 @@ export default {
             } else if (src.includes('acfun')) {
                 this.from = 'acfun'
             }
+        },
+        '$route.query.category': {
+            immediate: true,
+            handler(category) {
+                if (category) {
+                    this.type = category
+                }
+            }
         }
     },
     methods: {

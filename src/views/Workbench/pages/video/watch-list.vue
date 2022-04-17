@@ -42,11 +42,11 @@
                 size="mini"
                 style="width:240px"
                 v-model="filterText"
-                @input="filterVideo"
                 clearable
             />
         </section>
         <section class="course-list" v-loading="loading">
+            <section v-if="exhibitCourse.length === 0">暂无数据</section>
             <div
                 class="course-item"
                 @click="jumpToCourse(item)"
@@ -169,9 +169,7 @@ export default {
     },
     methods: {
         ...mapMutations('user', [USER_MU.SET_USER]),
-        filterVideo() {
-            console.log(this.filterText)
-        },
+
         uploadSuccess({ type }) {
             //上傳成功後重新獲取數據
             console.log(type)

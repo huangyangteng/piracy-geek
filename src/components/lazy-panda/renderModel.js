@@ -135,12 +135,12 @@ const render = () => {
     cameraPosition.z = Number.parseInt(camera.position.z)
 }
 
-let position = { y: 0 }
+let position = { y: -0.2 }
 //6. 处理动画
 const setAnimation = () => {
-    tween = new TWEEN.Tween(position).to({ y: -0.2 }, 5000)
+    tween = new TWEEN.Tween(position).to({ y: -0.5 }, 5000)
     tween.easing(TWEEN.Easing.Sinusoidal.InOut)
-    tweenBack = new TWEEN.Tween(position).to({ y: 0 }, 5000)
+    tweenBack = new TWEEN.Tween(position).to({ y: -0.2 }, 5000)
     tweenBack.easing(TWEEN.Easing.Sinusoidal.InOut)
     tween.chain(tweenBack)
     tweenBack.chain(tween)

@@ -1,7 +1,13 @@
 <template>
     <section>
         <!-- <Input v-model="searchKey" @change="onSearch" /> -->
-
+        <el-input
+            prefix-icon="el-icon-search"
+            size="mini"
+            style="width:240px"
+            v-model="filterText"
+            clearable
+        />
         <el-menu
             @select="onSelect"
             :theme="theme"
@@ -9,7 +15,11 @@
             class="watch-menu"
             :default-active="activeName"
         >
-            <el-submenu :index="unit.id" v-for="unit in units" :key="unit.id">
+            <el-submenu
+                :index="unit.id"
+                v-for="unit in exhibitUnits"
+                :key="unit.id"
+            >
                 <template slot="title">
                     <!-- <Icon type="ios-paper" /> -->
                     {{ cleanName(unit.unit) }}
@@ -27,6 +37,8 @@
 
 <script>
 import { getVideoItem } from '../../../../tools/watch-tools'
+import pinyin from 'pinyin'
+import { deepCopy } from '../../../../tools'
 
 export default {
     name: 'outline-list',
@@ -43,9 +55,8 @@ export default {
     data() {
         return {
             activeName: '',
-            searchKey: '',
-            searchResult: [],
-            theme: 'dark'
+            theme: 'dark',
+            filterText: ''
         }
     },
     watch: {
@@ -54,7 +65,34 @@ export default {
         }
     },
     computed: {
-        // ...mapState(['theme'])
+        exhibitUnits() {
+            if (!this.filterText) {
+                return this.units
+            } else {
+                const getReg = queryString => {
+                    let str = '(.*?)'
+                    let queryStringArr = queryString.split('')
+                    let regStr = str + queryStringArr.join(str) + str
+                    return RegExp(regStr, 'i')
+                }
+                const reg = getReg(this.filterText)
+                let bakList = deepCopy(this.units)
+                return bakList.map(unit => {
+                    unit.list = unit.list.filter(item => {
+                        let title = this.cleanName(item.name).toLowerCase()
+                        let title_pinyin = pinyin(title, {
+                            segment: true,
+                            group: true,
+                            style: pinyin.STYLE_NORMAL
+                        })
+                            .flat()
+                            .join('')
+                        return reg.test(title_pinyin)
+                    })
+                    return unit
+                })
+            }
+        }
     },
     methods: {
         onSearch() {
