@@ -51,7 +51,7 @@ const setRendererAndScene = () => {
     renderer = new WebGLRenderer({
         alpha: true,
         logarithmicDepthBuffer: true,
-        antialias: true,
+        antialias: true
     })
     renderer.setSize(boxWidth, boxHeight)
     dom = document.getElementById('model-box')
@@ -100,6 +100,7 @@ const addMesh = async () => {
     console.log('gltf')
     //3d模型加载完成之后onLoad方法
     myModel = scene.add(gltf.scene)
+    myModel.position.y = -0.2
     //开始动画
     tween.start()
 }

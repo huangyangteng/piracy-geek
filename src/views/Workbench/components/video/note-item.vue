@@ -7,7 +7,8 @@
                 :autosize="{ minRows: 4 }"
                 type="textarea"
                 :value="note.value"
-                @on-change="onChange"
+                @input="onChange"
+                v-model="note.value"
                 style="font-size: 16px"
             />
             <div class="note-operation">
@@ -38,7 +39,7 @@
                     <i
                         slot="reference"
                         style="color:#fff"
-                        class="el-icon-more"
+                        class="el-icon-more click-big"
                     ></i>
                     <div class="operate-warpper">
                         <li v-if="!showDate" @click="setCurTime">跳转</li>
@@ -83,15 +84,15 @@ export default {
     computed: {
         formatedTime() {
             if (this.showDate) {
-                return this.note.date
+                return this.note.updateDate
             } else {
                 return formatVideoTime(this.note.currentTime)
             }
         }
     },
     methods: {
-        onChange(e) {
-            this.newText = e.target.value
+        onChange() {
+            this.newText = this.note.value
         },
         keyDown(e) {
             if (e.ctrlKey || e.metaKey) {
@@ -107,12 +108,12 @@ export default {
             })
         },
         deleteNote() {
-            this.$emit('delete', { date: this.note.id })
+            this.$emit('delete', { id: this.note.id })
         },
         modifyNote() {
             if (this.newText) {
                 this.$emit('modify', {
-                    date: this.note.id,
+                    id: this.note.id,
                     value: this.newText
                 })
             }

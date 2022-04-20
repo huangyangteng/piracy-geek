@@ -28,7 +28,7 @@
                     style="margin-left: 20px;color:#fff"
                     :href="$route.query.link"
                     target="_blank"
-                    >去源网站观看高清版本</a
+                    >源网站</a
                 >
             </div>
         </nav>
@@ -43,6 +43,12 @@
             >
                 {{ videoTitle }}
             </b>
+            <a
+                style="margin-left: 20px;color:#fff"
+                :href="$route.query.link"
+                target="_blank"
+                >源网站</a
+            >
             <!--          <el-switch v-model="playNextConfig" active-text="自动连播">-->
             <!--          </el-switch>-->
         </nav>
@@ -60,6 +66,7 @@
                     @ended="onEnded"
                     @error="onError"
                 ></video-player>
+                <video-history></video-history>
             </section>
             <aside v-show="showAside" class="outline-list">
                 <section>
@@ -124,10 +131,16 @@ import { mapState, mapMutations, mapGetters } from 'vuex'
 import { WATCH_API } from '../../../../api/watch'
 import { WATCH_MU } from '../../../../store/mutation-types'
 import Wave from '../../../../components/loading/wave'
+import { HISTORY_API } from '../../../../api/history'
+import { SEARCH_TYPE } from '../../../../data/search'
+import VideoHistory from '../../components/video/video-history'
+import { Notification } from 'element-ui'
+import { eventBus } from '../../../../tools'
 
 export default {
     name: 'watch',
     components: {
+        VideoHistory,
         Wave,
         videoPlayer,
         OutlineList,
@@ -160,11 +173,13 @@ export default {
             historyTimer: null,
             nextTimer: 0, //播放下一个的倒计时
             pageLoading: true,
-            spareSrc: []
+            spareSrc: [],
+            videoHistoryList: []
         }
     },
     computed: {
         ...mapState('watch', ['notes', 'history']),
+        ...mapGetters('user', ['userId']),
         ...mapState('watch', {
             playNext: state => state.config.playNext
         }),
@@ -245,14 +260,7 @@ export default {
             immediate: true,
             handler(id) {
                 if (id) {
-                    this.courseId = id
-                    if (this.isBB) {
-                        this.queryBBCourse(this.$route.query.link)
-                    } else if (this.isAcfun) {
-                        this.queryAcfunCourse(this.$route.query.link)
-                    } else {
-                        this.queryCourseById(id)
-                    }
+                    this.handleCourseQuery(id)
                 }
             }
         },
@@ -264,9 +272,9 @@ export default {
                 this.pageLoading = true
                 let src
                 if (this.isBB) {
-                    WATCH_API.getBBCourse({
-                        link: this.$route.query.link,
-                        onlySrc: 1
+                    WATCH_API.parseBBVideo({
+                        bid: this.$route.params.id,
+                        cid: this.$route.query.videoId
                     }).then(res => {
                         src = res.data.src
                         this.playVideo(src, true)
@@ -296,6 +304,18 @@ export default {
             WATCH_MU.MODIFY_NOTE,
             WATCH_MU.ADD_HISTORY
         ]),
+        async handleCourseQuery(id) {
+            this.courseId = id
+            if (this.isBB) {
+                await this.queryBBCourse(this.$route.query.link)
+            } else if (this.isAcfun) {
+                await this.queryAcfunCourse(this.$route.query.link)
+            } else {
+                await this.queryCourseById(id)
+            }
+            //  显示历史记录
+            this.showHistory()
+        },
         onError(e) {
             console.log(e, 'error')
         },
@@ -461,7 +481,6 @@ export default {
             }, 1000)
         },
         playerIsReady(player) {
-            console.log('play is  ready')
             //设置ios不全屏
             try {
                 this.player.el_.firstChild.playsInline = true
@@ -471,9 +490,19 @@ export default {
 
             this.insertElement()
             // 跳转到上次播放的位置
-            const item = this.history.find(item => item.videoId == this.videoId)
+            const item = this.videoHistoryList.find(
+                item => item.itemId == this.videoId
+            )
             if (item) {
-                this.player.currentTime(item.currentTime)
+                try {
+                    let currentTime = JSON.parse(item.info).currentTime
+                    this.player.currentTime()
+                    eventBus.$emit('show-history', {
+                        currentTime
+                    })
+                } catch (e) {
+                    console.log(e)
+                }
             }
 
             player.hotkeys({
@@ -495,33 +524,53 @@ export default {
         },
         logHistory() {
             clearInterval(this.historyTimer)
-            this.historyTimer = setInterval(() => {
+
+            this.historyTimer = setInterval(async () => {
                 let video = this.player.el_.querySelector('video')
                 //如果视频正在播放
                 if (!video.paused && video.readyState > 3) {
-                    this[WATCH_MU.ADD_HISTORY]({
-                        videoId: this.videoId,
-                        currentTime: this.player.currentTime(),
-                        courseId: this.courseId
+                    //记录一下page
+                    await HISTORY_API.save({
+                        userId: this.userId,
+                        itemId: this.videoId,
+                        groupId: this.courseId,
+                        type: SEARCH_TYPE.VIDEO,
+                        info: JSON.stringify({
+                            currentTime: this.player.currentTime(),
+                            courseTitle: this.courseTitle,
+                            videoName: this.curVideo.name
+                        })
                     })
+                    // this[WATCH_MU.ADD_HISTORY]({
+                    //     videoId: this.videoId,
+                    //     currentTime: this.player.currentTime(),
+                    //     courseId: this.courseId
+                    // })
                 } else {
                     clearInterval(this.historyTimer)
                 }
             }, 10 * 1000)
         },
-        showHistory() {
-            const item = getLastPlay(this.courseId, this.history)
-            if (!item) return
-            const { date, videoId } = item
-            const name = getNameById(videoId, this.units)
-            if (!name) return
-            // 上次播放
-            //
-            this.$Notice.info({
-                title: '温馨提示',
-                duration: 8,
-                render: h => {
-                    return h(
+        async showHistory() {
+            const res = await HISTORY_API.query({
+                userId: this.userId,
+                groupId: this.courseId
+            })
+            this.videoHistoryList = res.data
+            const recent = res.data[0]
+            if (recent.itemId == this.videoId) {
+                //  上次播放的就是这个，跳转到对应的时长
+                console.log('上次播放的就是这个!')
+            } else {
+                const cur = this.units[0].list.find(
+                    item => String(item.id) === String(recent.itemId)
+                )
+                console.log('else', cur)
+                const h = this.$createElement
+                Notification({
+                    title: '温馨提示',
+                    duration: 4000,
+                    message: h(
                         'div',
                         {
                             class: 'history-notice'
@@ -534,26 +583,18 @@ export default {
                                     {
                                         on: {
                                             click: () => {
-                                                this.$router.push({
-                                                    name: 'watch',
-                                                    params: {
-                                                        id: this.courseId
-                                                    },
-                                                    query: {
-                                                        videoId: videoId
-                                                    }
-                                                })
+                                                this.selectVideo(cur)
                                             }
                                         }
                                     },
-                                    name
+                                    JSON.parse(recent.info).videoName
                                 )
                             ]),
-                            h('p', ['播放时间：' + date])
+                            h('p', ['播放时间：' + recent.updateTime])
                         ]
                     )
-                }
-            })
+                })
+            }
         },
         onEnded() {
             // 播放下一个
@@ -610,6 +651,7 @@ export default {
     created() {
         clearInterval(this.historyTimer)
     },
+    mounted() {},
 
     destroyed() {
         clearInterval(this.historyTimer)
@@ -630,8 +672,14 @@ export default {
 }
 
 .history-notice {
+    a {
+        color: $--color-primary;
+        font-size: 16px;
+    }
+
     p {
-        line-height: 1.5;
+        color: #fff;
+        line-height: 2;
         font-size: 12px;
     }
 }

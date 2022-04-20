@@ -1,5 +1,6 @@
 <template>
     <section>
+        <login-modal v-if="true"></login-modal>
         <bing-dun-dun v-if="false"></bing-dun-dun>
         <test-bdy v-if="false"></test-bdy>
         <section
@@ -9,7 +10,7 @@
             <wave v-if="false"></wave>
             <cube v-if="false"></cube>
         </section>
-      <TestVideoPlayer></TestVideoPlayer>
+      <TestVideoPlayer v-if="true"></TestVideoPlayer>
     </section>
 </template>
 <script>
@@ -18,8 +19,9 @@ import TestBdy from './test-bdy'
 import Wave from '../../components/loading/wave'
 import Cube from '../../components/loading/cube'
 import TestVideoPlayer from './test-video-player'
+import LoginModal from "../Workbench/components/common/login-modal";
 export default {
-    components: { Cube, Wave, TestBdy, BingDunDun,TestVideoPlayer },
+    components: {LoginModal, Cube, Wave, TestBdy, BingDunDun,TestVideoPlayer },
     data() {
         return {}
     },

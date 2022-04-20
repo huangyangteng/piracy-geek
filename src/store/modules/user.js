@@ -31,7 +31,7 @@ const getters = {
         }
     },
     menus(state) {
-        return state.allMenu.filter(item => {
+        return MENU_LIST.filter(item => {
             if (item.user) {
                 return item.user.includes(state.userInfo.userName)
             } else {

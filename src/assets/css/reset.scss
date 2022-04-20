@@ -405,6 +405,12 @@ header {
   background-color: $component-bg-color;
 
 }
+//Notice
+.el-notification{
+  background-color: $component-bg-color!important;
+  box-shadow: 0 15px 25px rgb(0 0 0 / 60%)!important;
+  border-width: 0!important;
+}
 
 @media (max-width: 750px) {
   input, textarea {

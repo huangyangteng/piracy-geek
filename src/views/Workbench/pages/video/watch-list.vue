@@ -366,6 +366,7 @@ export default {
         height: 200px;
         // background: $component-bg-color;
         border-radius: 10px;
+        overflow: hidden;
 
         video,
         img {

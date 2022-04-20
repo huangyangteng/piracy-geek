@@ -1,24 +1,34 @@
 <template>
     <div class="container">
         <div class="sky">
-            <slot> </slot>
-            <div class="stars"></div>
-            <div class="stars1"></div>
-            <div class="stars2"></div>
-            <div class="shooting-stars"></div>
+            <slot></slot>
+            <template v-if="isMoving">
+                <div class="stars"></div>
+                <div class="stars1"></div>
+                <div class="stars2"></div>
+                <div class="shooting-stars"></div>
+            </template>
         </div>
     </div>
 </template>
 
 <script>
+import { eventBus } from '../../tools'
+
 export default {
     name: 'star-bg',
     data() {
-        return {}
+        return {
+            isMoving: true
+        }
     },
     computed: {},
     methods: {},
-    created() {}
+    mounted() {
+        eventBus.$on('star-moving', moving => {
+            this.isMoving = moving
+        })
+    }
 }
 </script>
 
@@ -33,7 +43,7 @@ $starThreeScrollDuration: 175s;
 $numStarOneStars: 1700;
 $numStarTwoStars: 700;
 $numStarThreeStars: 200;
-$numShootingStars: 10;
+$numShootingStars: 200;
 $width: 100%;
 
 .container {
@@ -115,7 +125,7 @@ $width: 100%;
 }
 
 .shooting-stars {
-    @include shooting-star-template($numShootingStars, 5px, 10s);
+    @include shooting-star-template($numShootingStars, 5px, 30s);
 }
 
 @keyframes animStar {

@@ -5,8 +5,9 @@
                 <h1>
                     Write down your thoughts
                     <i
-                        class="el-icon-refresh click-big animate__fadeInLeft animate__animated delay-4s"
+                        class="el-icon-ice-cream-round click-big animate__fadeInLeft animate__animated delay-4s"
                         style="color:#fff"
+                        @click="toggleMoving"
                     ></i>
                 </h1>
                 <el-input
@@ -15,14 +16,17 @@
                     style="width: 220px"
                     prefix-icon="el-icon-search"
                     size="mini"
+                    clearable
                 ></el-input>
             </nav>
-            <add-notes></add-notes>
+            <add-notes @add="add"></add-notes>
             <section class="note-list">
                 <note-item
-                    v-for="item in notes"
+                    v-for="item in exhibitNotes"
                     :note="item"
                     :key="item.id"
+                    @delete="deleteItem"
+                    @modify="modify"
                 ></note-item>
             </section>
         </section>
@@ -33,6 +37,9 @@
 import AddNotes from '../Workbench/components/video/add-notes'
 import NoteItem from '../Workbench/components/video/note-item'
 import StarBg from './star-bg'
+import { mapGetters } from 'vuex'
+import { NOTE_API } from '../../api/note'
+import { eventBus } from '../../tools'
 
 export default {
     name: 'thinking',
@@ -40,47 +47,8 @@ export default {
     data() {
         return {
             searchKey: '',
+            isMoving: true,
             notes: [
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
-                {
-                    currentTime: 20,
-                    date: '2020-11-22 03:04:05',
-                    value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
-                },
                 {
                     currentTime: 20,
                     date: '2020-11-22 03:04:05',
@@ -89,9 +57,51 @@ export default {
             ]
         }
     },
-    computed: {},
-    methods: {},
-    created() {}
+    computed: {
+        ...mapGetters('user', ['userId']),
+        exhibitNotes() {
+            if (this.searchKey) {
+                return this.notes.filter(item =>
+                    item.value.toLowerCase().includes(this.searchKey)
+                )
+            } else {
+                return this.notes
+            }
+        }
+    },
+    methods: {
+        toggleMoving() {
+            this.isMoving = !this.isMoving
+            eventBus.$emit('star-moving', this.isMoving)
+        },
+        async query() {
+            const res = await NOTE_API.query(this.userId)
+            this.notes = res.data
+            console.log(res)
+        },
+        async add(value) {
+            const res = await NOTE_API.add({
+                value,
+                userId: this.userId
+            })
+            console.log(res)
+            this.query()
+        },
+        async deleteItem({ id }) {
+            await NOTE_API.del({ id })
+            this.query()
+        },
+        async modify(data) {
+            await NOTE_API.update({
+                ...data,
+                userId: this.userId
+            })
+            this.query()
+        }
+    },
+    created() {
+        this.query()
+    }
 }
 </script>
 <style lang="scss">
