@@ -1,6 +1,6 @@
 <template>
     <section>
-       music list
+        music list
     </section>
 </template>
 
@@ -9,9 +9,7 @@ export default {
     name: 'music-list',
     components: {},
     data() {
-        return {
-            
-        }
+        return {}
     },
     computed: {},
     methods: {},

@@ -19,7 +19,7 @@
 
 <script>
 import { MENU_LIST } from './menu-list'
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
     name: 'bench-sidebar',
@@ -29,8 +29,7 @@ export default {
         }
     },
     computed: {
-      ...mapGetters('user',['menus']),
-
+        ...mapGetters('user', ['menus'])
     },
     methods: {
         toPage(link) {

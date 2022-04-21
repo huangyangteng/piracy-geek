@@ -11,7 +11,7 @@ module.exports = {
                 target: PRODUCT_HOST, //开发环境后端接口地址
                 changeOrigin: true,
                 autoRewrite: true,
-                cookieDomainRewrite: true,
+                cookieDomainRewrite: true
                 // pathRewrite: {
                 //     '^/gk-api': ''
                 // }

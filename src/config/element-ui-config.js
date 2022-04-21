@@ -31,8 +31,7 @@ import {
     Timeline,
     Switch,
     Select,
-    Option,
-
+    Option
 } from 'element-ui'
 
 Vue.use(Select)
@@ -67,4 +66,4 @@ Vue.use(Drawer)
 Vue.use(Card)
 Vue.use(Loading.directive)
 
-Vue.prototype.$Message = Message;
+Vue.prototype.$Message = Message

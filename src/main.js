@@ -6,6 +6,7 @@ import './config/element-ui-config'
 import './assets/css/common.scss'
 import './assets/css/article.scss'
 import 'animate.css'
+import './registerServiceWorker'
 Vue.config.productionTip = false
 const hls = require('videojs-contrib-hls')
 Vue.use(hls)

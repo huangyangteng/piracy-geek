@@ -28,7 +28,7 @@
 import addNotes from './add-notes'
 import NoteItem from './note-item'
 import dayjs from 'dayjs'
-import { deepCopy } from "../../../../tools";
+import { deepCopy } from '../../../../tools'
 
 export const OPERATE = {
     ADD: 'add',

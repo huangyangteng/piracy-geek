@@ -31,11 +31,12 @@ const getBBCourse = data =>
         url: '/watch/bb',
         data: data
     })
-const parseBBVideo=data=> http.request({
-    method: 'POST',
-    url: '/watch/bb-parse',
-    data: data
-})
+const parseBBVideo = data =>
+    http.request({
+        method: 'POST',
+        url: '/watch/bb-parse',
+        data: data
+    })
 //获取acfun视频信息
 const getAcfunCourse = data =>
     http.request({
