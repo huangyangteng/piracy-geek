@@ -1,7 +1,7 @@
 export default [
     {
         path: '/',
-        // redirect: '/column-list'
+        // redirect: '/workbench/video'
         component: () => import('./Home.vue')
     },
     {

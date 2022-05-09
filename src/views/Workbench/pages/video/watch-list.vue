@@ -255,12 +255,14 @@ export default {
         async queryList() {
             this.loading = true
             const bbRes = await WATCH_API.getBBVideos()
-            const res = await WATCH_API.getList()
+            this.bbList = bbRes.data
             this.loading = false
-            if (res.code == 2000) {
-                this.list = res.data
-                this.bbList = bbRes.data
-            }
+            // const res = await WATCH_API.getList()
+            // this.loading = false
+            // if (res.code == 2000) {
+            //     this.list = res.data
+            //     this.bbList = bbRes.data
+            // }
         },
         jumpToCourse(item) {
             if (item.bid) {

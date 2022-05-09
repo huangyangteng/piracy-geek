@@ -9,6 +9,16 @@
             <section class="bench-content">
                 <router-view></router-view>
             </section>
+            <footer
+                style="position: absolute;bottom:1px;text-align: center;width:100%"
+            >
+                <a
+                    style="color:#fafafa;font-size:12px;opacity: 0.5"
+                    href="https://beian.miit.gov.cn/"
+                    target="_blank"
+                    >蜀ICP备2021027437号-1</a
+                >
+            </footer>
         </section>
         <!--        搜索面板-->
         <div class="search-wrapper" v-show="showSearch" @click.self="reset">

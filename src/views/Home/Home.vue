@@ -9,7 +9,7 @@
                 <header
                     class="animate__animated animate__fadeIn .animate__delay-1s"
                 >
-                    WEBSTATION — My Writing Space
+                    WEBSTATION — My Writing Space!
                 </header>
                 <footer style="position: fixed;bottom:0">
                     <a
@@ -22,12 +22,13 @@
             </article>
         </transition>
         <transition enter-active-class="animate__animated animate__fadeIn">
-            <section class="hyt-blog " v-if="!loading">
+            <section class="hyt-blog" v-if="!loading">
                 <nav></nav>
-                <header>
-                    {{ title }}
+                <header id="bannerText">
+                    <BannerText v-if="false"></BannerText>
+                  {{ title }}
                 </header>
-                <section>
+                <section class="blog-content">
                     <a
                         v-for="item in prodList"
                         :key="item.href"
@@ -41,9 +42,8 @@
                     </a>
                 </section>
                 <footer style="opacity: 0.5">
-                    {{ title }}<br />
                     <a
-                        style="color:#fafafa"
+                        style="color:#fafafa;font-size: 12px"
                         href="https://beian.miit.gov.cn/"
                         target="_blank"
                         >蜀ICP备2021027437号-1</a
@@ -54,8 +54,10 @@
     </section>
 </template>
 <script>
+import BannerText from "../../components/BannerText";
 export default {
-    data() {
+  components: {BannerText},
+  data() {
         return {
             title: 'WEBSTATION',
             loading: false,
@@ -63,19 +65,19 @@ export default {
             prodList: [
                 {
                     title_en: 'LEARNING RESOURCES',
-                    title: '前端学习资源（极客时间）',
+                    title: '学习资源汇总',
                     img: require('../../assets/imgs/clip-education-1.png'),
                     href: '#/workbench'
                 },
                 {
                     title_en: 'MAC WORK ENVIRONMENT',
-                    title: '打造MAC高效开发环境',
+                    title: 'MAC工作环境',
                     img: require('../../assets/imgs/gummy-macbook.png'),
                     href: 'mac/'
                 },
                 {
                     title_en: 'KNOWLEDGE ARCHITECTURE',
-                    title: '构建前端知识架构',
+                    title: '前端知识架构',
                     img: require('../../assets/imgs/cyborg-3.png'),
                     href:
                         'https://wooden-leech-c45.notion.site/Frontend-Knowledge-System-d86dd74ec2cd477cb4422403f846e678'
@@ -156,7 +158,7 @@ export default {
 
     > footer {
         text-align: center;
-        margin-top: 120px;
+        margin-top: 60px;
         font-size: 2vw;
     }
 }
@@ -188,6 +190,40 @@ export default {
 
     > div {
         color: $font-color;
+        font-size: 2vw;
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 750px) {
+    .blog-loading {
+        > header {
+            font-size: 16px;
+        }
+
+        > .progress {
+            height: 2px;
+        }
+    }
+    .hyt-blog {
+        padding: 20px 5px 0;
+
+        > section {
+            margin-top: 40px;
+            flex-direction: column;
+        }
+    }
+    .blog-prod-item {
+        margin-right: 5px;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        div {
+            font-size: 24px;
+        }
     }
 }
 </style>

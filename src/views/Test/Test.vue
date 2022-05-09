@@ -1,6 +1,7 @@
 <template>
     <section>
-        <login-modal v-if="true"></login-modal>
+        <note-item v-if="false" :note="note"></note-item>
+        <login-modal v-if="false"></login-modal>
         <bing-dun-dun v-if="false"></bing-dun-dun>
         <test-bdy v-if="false"></test-bdy>
         <section
@@ -10,7 +11,8 @@
             <wave v-if="false"></wave>
             <cube v-if="false"></cube>
         </section>
-        <TestVideoPlayer v-if="true"></TestVideoPlayer>
+        <TestVideoPlayer v-if="false"></TestVideoPlayer>
+      <BannerText></BannerText>
     </section>
 </template>
 <script>
@@ -20,8 +22,13 @@ import Wave from '../../components/loading/wave'
 import Cube from '../../components/loading/cube'
 import TestVideoPlayer from './test-video-player'
 import LoginModal from '../Workbench/components/common/login-modal'
+import NoteItem from '../Workbench/components/video/note-item'
+import BannerText from "../../components/BannerText";
+
 export default {
     components: {
+      BannerText,
+        NoteItem,
         LoginModal,
         Cube,
         Wave,
@@ -30,7 +37,12 @@ export default {
         TestVideoPlayer
     },
     data() {
-        return {}
+        return {
+            note: {
+                value: `<a href="https://www.bilibili.com/video/BV1164y1y7gx" target="_blank">测试链接</a>`,
+                date: '2022-10-10 12:00:00'
+            }
+        }
     },
     computed: {},
     mounted() {}

@@ -13,5 +13,10 @@ export default [
         name: 'star-bg',
         path: '/star-bg',
         component: () => import('./star-bg')
+    },
+    {
+        name: 'pwa-icon',
+        path: '/pwa-icon',
+        component: () => import('./pwa-icon')
     }
 ]
