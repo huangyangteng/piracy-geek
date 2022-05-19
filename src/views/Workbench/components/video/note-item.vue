@@ -48,17 +48,22 @@
                     </div>
                 </el-popover>
             </header>
-            <pre
+            <div
                 class="note-content"
                 @dblclick="editText"
-                v-html="note.value"
-            ></pre>
+                v-html="showContent"
+            ></div>
         </template>
     </div>
 </template>
 
 <script>
 import { formatVideoTime } from '../../../../tools/watch-tools'
+
+function genTag(str) {
+    let reg = /#\s*(.*)(\s)/g
+    return str.replace(reg, '<span class="tag">#$1</span>$2')
+}
 
 export default {
     name: 'note-item',
@@ -88,6 +93,9 @@ export default {
             } else {
                 return formatVideoTime(this.note.currentTime)
             }
+        },
+        showContent() {
+            return genTag(this.note.value)
         }
     },
     methods: {
@@ -126,7 +134,22 @@ export default {
     created() {}
 }
 </script>
+<style lang="scss">
+.tag {
+    border-radius: 3px;
+    display: inline-block;
+    color: $--color-primary;
+    background: rgba($--color-primary, 0.1);
+    padding: 4px;
+    font-size: 12px;
+}
 
+.note-item {
+    a {
+        color: $--color-primary;
+    }
+}
+</style>
 <style lang="scss" scoped>
 .note-item {
     padding: 15px;
@@ -197,5 +220,6 @@ export default {
 .note-content {
     color: $font-color;
     white-space: break-spaces;
+    padding: 10px 20px;
 }
 </style>

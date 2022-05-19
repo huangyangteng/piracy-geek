@@ -1,5 +1,6 @@
 <template>
-    <star-bg class="thinking-wrapper  animate__animated animate__fadeIn">
+    <!--    <star-bg class="thinking-wrapper  animate__animated animate__fadeIn">-->
+    <section class="thinking-wrapper">
         <section class="thinking-content">
             <nav class="thinking-nav">
                 <h1>
@@ -20,7 +21,10 @@
                 ></el-input>
             </nav>
             <add-notes @add="add"></add-notes>
-            <section class="note-list">
+            <section
+                class="note-list"
+                :style="{ filter: showMask ? 'blur(3px)' : 'blur(0)' }"
+            >
                 <note-item
                     v-for="item in exhibitNotes"
                     :note="item"
@@ -30,7 +34,8 @@
                 ></note-item>
             </section>
         </section>
-    </star-bg>
+    </section>
+    <!--    </star-bg>-->
 </template>
 
 <script>
@@ -43,7 +48,7 @@ import { eventBus } from '../../tools'
 
 export default {
     name: 'thinking',
-    components: { StarBg, NoteItem, AddNotes },
+    components: { NoteItem, AddNotes },
     data() {
         return {
             searchKey: '',
@@ -54,7 +59,8 @@ export default {
                     date: '2020-11-22 03:04:05',
                     value: `帘外雨潺潺，春意阑珊，罗衾不耐五更寒。梦里不知身是客，一晌贪欢。独自莫凭栏，无限江山，别时容易见时难。流水落花春去也，天上人间。`
                 }
-            ]
+            ],
+            showMask: false
         }
     },
     computed: {
@@ -71,8 +77,9 @@ export default {
     },
     methods: {
         toggleMoving() {
-            this.isMoving = !this.isMoving
-            eventBus.$emit('star-moving', this.isMoving)
+            // this.isMoving = !this.isMoving
+            // eventBus.$emit('star-moving', this.isMoving)
+            this.showMask = !this.showMask
         },
         async query() {
             const res = await NOTE_API.query(this.userId)
@@ -114,6 +121,12 @@ export default {
 <style lang="scss" scoped>
 .thinking-wrapper {
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    //background-image: url('http://static.simpledesktops.com/uploads/desktops/2017/06/02/bg-wallpaper.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 @keyframes textFade {
@@ -170,5 +183,11 @@ export default {
     margin-top: 30px;
     height: calc(100vh - 100px);
     overflow-y: auto;
+    transition: 0.3s;
+    //filter: blur(5px);
+}
+
+.note-list:hover {
+    filter: blur(0px) !important;
 }
 </style>
