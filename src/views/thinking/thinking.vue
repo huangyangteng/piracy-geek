@@ -2,6 +2,7 @@
     <!--    <star-bg class="thinking-wrapper  animate__animated animate__fadeIn">-->
     <section class="thinking-wrapper">
         <section class="thinking-content">
+          <thinking-tools></thinking-tools>
             <nav class="thinking-nav">
                 <h1>
                     Write down your thoughts
@@ -34,6 +35,7 @@
                 ></note-item>
             </section>
         </section>
+
     </section>
     <!--    </star-bg>-->
 </template>
@@ -45,10 +47,11 @@ import StarBg from './star-bg'
 import { mapGetters } from 'vuex'
 import { NOTE_API } from '../../api/note'
 import { eventBus } from '../../tools'
+import ThinkingTools from "./thinking-tools";
 
 export default {
     name: 'thinking',
-    components: { NoteItem, AddNotes },
+    components: {ThinkingTools, NoteItem, AddNotes },
     data() {
         return {
             searchKey: '',
@@ -147,6 +150,7 @@ export default {
     padding-bottom: 0px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .thinking-nav {

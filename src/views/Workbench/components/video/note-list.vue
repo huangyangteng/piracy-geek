@@ -13,8 +13,8 @@
             >
         </div>
         <note-item
-            v-for="(item, index) in sortedNotes"
-            :key="index"
+            v-for="(item) in sortedNotes"
+            :key="item.id"
             :note="item"
             @delete="deleteText"
             @modify="modifyText"

@@ -70,7 +70,11 @@
             </section>
             <aside v-show="showAside" class="outline-list">
                 <section>
-                    <i @click="showOutline = !showOutline" class="ios-apps" />
+                    <i
+                        style="margin-left: 8px"
+                        @click="showOutline = !showOutline"
+                        class="el-icon-s-operation"
+                    />
                     <outline-list
                         :active="videoId"
                         v-if="showOutline"
@@ -78,7 +82,7 @@
                         @on-change="selectVideo"
                     ></outline-list>
                     <note-list
-                        :notes="curNotes"
+                        :notes="notes"
                         @change="handleNote"
                         v-else
                     ></note-list>
@@ -136,6 +140,7 @@ import { SEARCH_TYPE } from '../../../../data/search'
 import VideoHistory from '../../components/video/video-history'
 import { Notification } from 'element-ui'
 import { eventBus } from '../../../../tools'
+import { NOTE_API } from '../../../../api/note'
 
 export default {
     name: 'watch',
@@ -174,11 +179,14 @@ export default {
             nextTimer: 0, //播放下一个的倒计时
             pageLoading: true,
             spareSrc: [],
-            videoHistoryList: []
+            videoHistoryList: [],
+
+            //  笔记 notes
+            notes: []
         }
     },
     computed: {
-        ...mapState('watch', ['notes', 'history']),
+        ...mapState('watch', ['history']),
         ...mapGetters('user', ['userId']),
         ...mapState('watch', {
             playNext: state => state.config.playNext
@@ -304,6 +312,16 @@ export default {
             WATCH_MU.MODIFY_NOTE,
             WATCH_MU.ADD_HISTORY
         ]),
+        async fetchNotes() {
+            console.log(this.userId, this.videoId)
+            const res = await NOTE_API.query(this.userId, this.videoId)
+            this.notes = res.data.map(item => {
+                let info = JSON.parse(item.info)
+
+                return Object.assign({}, item, info)
+            })
+            console.log(res)
+        },
         async handleCourseQuery(id) {
             this.courseId = id
             if (this.isBB) {
@@ -379,24 +397,31 @@ export default {
                 : this.videoList[0].id
             this.playVideo(getAcfunPlaySrc(res.data))
         },
-        handleNote({ operate, data }) {
+        async handleNote({ operate, data }) {
+            console.log(operate, data)
+
             if (operate == OPERATE.ADD) {
-                this[WATCH_MU.ADD_NOTE]({
-                    videoId: this.videoId,
-                    currentTime: this.player.currentTime(),
-                    value: data.value
+                await NOTE_API.add({
+                    value: data.value,
+                    userId: this.userId,
+                    connectId: this.videoId,
+                    info: JSON.stringify({
+                        currentTime: this.player.currentTime()
+                    })
                 })
+                this.fetchNotes()
             } else if (operate == OPERATE.DELETEE) {
-                this[WATCH_MU.REMOVE_NOTE]({
-                    videoId: this.videoId,
-                    date: data.date
+                await NOTE_API.del({
+                    id: data.id
                 })
+                this.fetchNotes()
             } else if (operate == OPERATE.MODIFY) {
-                this[WATCH_MU.MODIFY_NOTE]({
-                    videoId: this.videoId,
-                    date: data.date,
-                    value: data.value
+                await NOTE_API.update({
+                    ...data,
+                    userId: this.userId,
+                    connectId: this.videoId
                 })
+                this.fetchNotes()
             } else if (operate == OPERATE.SET_TIME) {
                 this.player.currentTime(data.currentTime)
             }
@@ -651,7 +676,11 @@ export default {
     created() {
         clearInterval(this.historyTimer)
     },
-    mounted() {},
+    mounted() {
+        setTimeout(() => {
+            this.fetchNotes()
+        }, 2000)
+    },
 
     destroyed() {
         clearInterval(this.historyTimer)

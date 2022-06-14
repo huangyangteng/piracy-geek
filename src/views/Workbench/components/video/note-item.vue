@@ -7,7 +7,7 @@
                 :autosize="{ minRows: 4 }"
                 type="textarea"
                 :value="note.value"
-                @input="onChange"
+                @input="onChange($event)"
                 v-model="note.value"
                 style="font-size: 16px"
             />
@@ -72,10 +72,6 @@ export default {
             //{data:'',currentTime:'',date:''}
             type: Object,
             required: true
-        },
-        showDate: {
-            type: Boolean,
-            default: true
         }
     },
     components: {},
@@ -96,11 +92,15 @@ export default {
         },
         showContent() {
             return genTag(this.note.value)
+        },
+        showDate() {
+            return typeof this.note.currentTime === 'undefined'
         }
     },
     methods: {
         onChange() {
             this.newText = this.note.value
+            this.$forceUpdate()
         },
         keyDown(e) {
             if (e.ctrlKey || e.metaKey) {

@@ -7,11 +7,17 @@ const add = data =>
         data
     })
 
-const query = id =>
-    http.request({
-        url: '/note/' + id,
+const query = (userId, itemId) => {
+    let url = '/note/' + userId
+    if (itemId) {
+        url = '/note/' + userId + '?connectId=' + itemId
+    }
+    return http.request({
+        url,
         method: 'GET'
     })
+}
+
 const update = data =>
     http.request({
         url: '/note',

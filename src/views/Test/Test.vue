@@ -12,7 +12,11 @@
             <cube v-if="false"></cube>
         </section>
         <TestVideoPlayer v-if="false"></TestVideoPlayer>
-      <BannerText></BannerText>
+        <BannerText v-if="false"></BannerText>
+        <test-ios-drag v-if="false"></test-ios-drag>
+        <test-vuedraggable v-if="false"></test-vuedraggable>
+        <test-card-dragger v-if="false"></test-card-dragger>
+        <test-bg></test-bg>
     </section>
 </template>
 <script>
@@ -23,11 +27,19 @@ import Cube from '../../components/loading/cube'
 import TestVideoPlayer from './test-video-player'
 import LoginModal from '../Workbench/components/common/login-modal'
 import NoteItem from '../Workbench/components/video/note-item'
-import BannerText from "../../components/BannerText";
+import BannerText from '../../components/BannerText'
+import TestIosDrag from './test-ios-drag'
+import TestVuedraggable from './test-vuedraggable'
+import TestCardDragger from './TestCardDragger'
+import TestBg from "./test-bg";
 
 export default {
     components: {
-      BannerText,
+      TestBg,
+        TestCardDragger,
+        TestVuedraggable,
+        TestIosDrag,
+        BannerText,
         NoteItem,
         LoginModal,
         Cube,
