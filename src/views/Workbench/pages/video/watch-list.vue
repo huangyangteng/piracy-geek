@@ -36,6 +36,18 @@
                 <add-video @upload-success="uploadSuccess"></add-video>
             </template>
         </section>
+        <section class="second-category" v-if="secondCategory.length">
+            <span :class="{ active: !activeSecondCategory }">
+                全部
+            </span>
+            <span
+                v-for="item in secondCategory"
+                :class="{ active: item.name == activeSecondCategory }"
+                :key="item.name"
+                @click="selectSecondCategory(item)"
+                >{{ item.label }}</span
+            >
+        </section>
         <section class="filter-text">
             <el-input
                 prefix-icon="el-icon-search"
@@ -78,7 +90,10 @@
 
 <script>
 import { Checkbox } from 'element-ui'
-import { videoCategory } from '../../../../data/video/video-list'
+import {
+    secondCategory,
+    videoCategory
+} from '../../../../data/video/video-list'
 import { formatSrc } from '../../../../tools/watch-tools'
 import { isVideo, getExt } from '../../../../tools/index'
 import { WATCH_API } from '../../../../api/watch'
@@ -94,7 +109,9 @@ export default {
     data() {
         return {
             activeCategory: videoCategory[0].name,
+            activeSecondCategory: '',
             categories: videoCategory,
+            allSecondCategory: secondCategory,
             list: [],
             bbList: [],
             test: true,
@@ -154,6 +171,11 @@ export default {
             } else {
                 return this.courses
             }
+        },
+        secondCategory() {
+            return this.allSecondCategory.filter(
+                item => item.parent === this.activeCategory
+            )
         }
     },
     watch: {
@@ -239,6 +261,7 @@ export default {
                 })
             }
         },
+        selectSecondCategory() {},
         onMouseEnter(e) {
             const dom = e.target
             dom.volume = 0
@@ -331,6 +354,22 @@ export default {
         display: inline-block;
         color: $--color-primary;
         font-weight: 800;
+    }
+}
+
+.second-category {
+    font-size: 14px;
+    padding-left: 66px;
+    padding-top: 10px;
+
+    > span {
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    span.active {
+        display: inline-block;
+        color: $--color-primary;
     }
 }
 

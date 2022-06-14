@@ -13,7 +13,7 @@ export const videoCategory = [
     { name: 'other', label: '其他' }
 ]
 export const secondCategory = [
-    { name: 'methodology', label: '方法', parent: 'graduate' },
+    { name: 'methodology', label: '学习方法&经验', parent: 'graduate' },
     { name: '408', label: '408', parent: 'graduate' },
     { name: 'math', label: '数学', parent: 'graduate' },
     { name: 'politics', label: '政治', parent: 'graduate' },

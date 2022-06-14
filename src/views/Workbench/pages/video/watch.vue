@@ -521,7 +521,7 @@ export default {
             if (item) {
                 try {
                     let currentTime = JSON.parse(item.info).currentTime
-                    this.player.currentTime()
+                    this.player.currentTime(currentTime)
                     eventBus.$emit('show-history', {
                         currentTime
                     })
@@ -563,7 +563,7 @@ export default {
                         info: JSON.stringify({
                             currentTime: this.player.currentTime(),
                             courseTitle: this.courseTitle,
-                            videoName: this.curVideo.name
+                            videoName: this.curVideo.name,
                         })
                     })
                     // this[WATCH_MU.ADD_HISTORY]({
