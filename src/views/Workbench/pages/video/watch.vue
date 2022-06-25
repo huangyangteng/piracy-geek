@@ -1,57 +1,9 @@
 <template>
     <section class="watch-wrapper">
-        <nav class="watch-bar pc">
-            <h1>
-                <i
-                    @click="toHome"
-                    class="el-icon-arrow-left back-home-icon"
-                ></i>
-                <span>{{ courseTitle }}</span>
-                <b>
-                    /
-                </b>
-                {{ videoTitle }}
-            </h1>
-            <div class="watch-config">
-                <el-switch
-                    v-model="showAside"
-                    :active-value="false"
-                    :inactive-value="true"
-                    active-text="剧场模式"
-                    style="margin-right: 20px"
-                >
-                </el-switch>
-                <el-switch v-model="playNextConfig" active-text="自动连播">
-                </el-switch>
-
-                <a
-                    style="margin-left: 20px;color:#fff"
-                    :href="$route.query.link"
-                    target="_blank"
-                    >源网站</a
-                >
-            </div>
-        </nav>
-        <nav class="watch-bar mobile">
-            <span
-                @click="toHome"
-                class="el-icon-arrow-left back-home-icon click-big"
-                style="margin-right: 10px"
-            ></span>
-            <b
-                style="white-space: nowrap;max-width: 40vw;overflow: hidden;text-overflow: ellipsis"
-            >
-                {{ videoTitle }}
-            </b>
-            <a
-                style="margin-left: 20px;color:#fff"
-                :href="$route.query.link"
-                target="_blank"
-                >源网站</a
-            >
-            <!--          <el-switch v-model="playNextConfig" active-text="自动连播">-->
-            <!--          </el-switch>-->
-        </nav>
+        <watch-nav
+            :video-title="videoTitle"
+            :course-title="courseTitle"
+        ></watch-nav>
         <section class="watch-container" :style="watchContainerStyle">
             <section class="play-container" :style="videoStyle">
                 <wave v-show="pageLoading"></wave>
@@ -77,14 +29,14 @@
                     />
                     <outline-list
                         :active="videoId"
-                        v-if="showOutline"
+                        v-show="showOutline"
                         :units="units"
                         @on-change="selectVideo"
                     ></outline-list>
                     <note-list
                         :notes="notes"
                         @change="handleNote"
-                        v-else
+                        v-show="!showOutline"
                     ></note-list>
                 </section>
             </aside>
@@ -130,21 +82,20 @@ require('vue-video-player/src/custom-theme.css')
 require('videojs-contrib-hls/dist/videojs-contrib-hls.js')
 import 'videojs-hotkeys'
 import OutlineList from '../../components/video/outline-list'
-import NoteList, { OPERATE } from '../../components/video/note-list'
+import NoteList from '../../components/video/note-list'
 import { mapState, mapMutations, mapGetters } from 'vuex'
 import { WATCH_API } from '../../../../api/watch'
-import { WATCH_MU } from '../../../../store/mutation-types'
 import Wave from '../../../../components/loading/wave'
-import { HISTORY_API } from '../../../../api/history'
-import { SEARCH_TYPE } from '../../../../data/search'
 import VideoHistory from '../../components/video/video-history'
-import { Notification } from 'element-ui'
-import { eventBus } from '../../../../tools'
-import { NOTE_API } from '../../../../api/note'
+import WatchNav from './watch-nav'
+import { WatchHistory } from './watch-history'
+import { WatchNote } from './watch-note'
 
 export default {
     name: 'watch',
+    mixins: [WatchHistory, WatchNote],
     components: {
+        WatchNav,
         VideoHistory,
         Wave,
         videoPlayer,
@@ -175,14 +126,9 @@ export default {
 
             showAside: true, //侧边栏是否显示
             showOutline: true, //显示大纲视图
-            historyTimer: null,
             nextTimer: 0, //播放下一个的倒计时
             pageLoading: true,
-            spareSrc: [],
-            videoHistoryList: [],
-
-            //  笔记 notes
-            notes: []
+            spareSrc: []
         }
     },
     computed: {
@@ -196,15 +142,6 @@ export default {
         },
         isAcfun() {
             return this.$route.query.type === 'acfun'
-        },
-        curNotes() {
-            try {
-                return this.notes
-                    .find(item => item.videoId == this.videoId)
-                    .list.reverse()
-            } catch (error) {
-                return []
-            }
         },
         curVideo() {
             return this.videoList.find(item => item.id == this.videoId)
@@ -247,14 +184,6 @@ export default {
                 }
             } else {
                 return {}
-            }
-        },
-        playNextConfig: {
-            get() {
-                return this.playNext
-            },
-            set(val) {
-                this.$store.commit('watch/SET_CONFIG', { playNext: val })
             }
         }
     },
@@ -305,23 +234,6 @@ export default {
         }
     },
     methods: {
-        // ...mapMutations([GLOBAL_MU.TOGGLE_THEME]),
-        ...mapMutations('watch', [
-            WATCH_MU.ADD_NOTE,
-            WATCH_MU.REMOVE_NOTE,
-            WATCH_MU.MODIFY_NOTE,
-            WATCH_MU.ADD_HISTORY
-        ]),
-        async fetchNotes() {
-            console.log(this.userId, this.videoId)
-            const res = await NOTE_API.query(this.userId, this.videoId)
-            this.notes = res.data.map(item => {
-                let info = JSON.parse(item.info)
-
-                return Object.assign({}, item, info)
-            })
-            console.log(res)
-        },
         async handleCourseQuery(id) {
             this.courseId = id
             if (this.isBB) {
@@ -396,35 +308,6 @@ export default {
                 ? this.$route.query.videoId
                 : this.videoList[0].id
             this.playVideo(getAcfunPlaySrc(res.data))
-        },
-        async handleNote({ operate, data }) {
-            console.log(operate, data)
-
-            if (operate == OPERATE.ADD) {
-                await NOTE_API.add({
-                    value: data.value,
-                    userId: this.userId,
-                    connectId: this.videoId,
-                    info: JSON.stringify({
-                        currentTime: this.player.currentTime()
-                    })
-                })
-                this.fetchNotes()
-            } else if (operate == OPERATE.DELETEE) {
-                await NOTE_API.del({
-                    id: data.id
-                })
-                this.fetchNotes()
-            } else if (operate == OPERATE.MODIFY) {
-                await NOTE_API.update({
-                    ...data,
-                    userId: this.userId,
-                    connectId: this.videoId
-                })
-                this.fetchNotes()
-            } else if (operate == OPERATE.SET_TIME) {
-                this.player.currentTime(data.currentTime)
-            }
         },
         expand() {
             this.showAside = !this.showAside
@@ -504,6 +387,8 @@ export default {
             setTimeout(() => {
                 this.pageLoading = false
             }, 1000)
+
+            this.fetchNotes()
         },
         playerIsReady(player) {
             //设置ios不全屏
@@ -514,22 +399,10 @@ export default {
             }
 
             this.insertElement()
-            // 跳转到上次播放的位置
-            const item = this.videoHistoryList.find(
-                item => item.itemId == this.videoId
-            )
-            if (item) {
-                try {
-                    let currentTime = JSON.parse(item.info).currentTime
-                    this.player.currentTime(currentTime)
-                    eventBus.$emit('show-history', {
-                        currentTime
-                    })
-                } catch (e) {
-                    console.log(e)
-                }
-            }
 
+            this.jumpToHistoryTime()
+
+            //设置快捷键
             player.hotkeys({
                 enableVolumeScroll: false,
                 seekStep: 5,
@@ -547,92 +420,10 @@ export default {
                 }
             })
         },
-        logHistory() {
-            clearInterval(this.historyTimer)
-
-            this.historyTimer = setInterval(async () => {
-                let video = this.player.el_.querySelector('video')
-                //如果视频正在播放
-                if (!video.paused && video.readyState > 3) {
-                    //记录一下page
-                    await HISTORY_API.save({
-                        userId: this.userId,
-                        itemId: this.videoId,
-                        groupId: this.courseId,
-                        type: SEARCH_TYPE.VIDEO,
-                        info: JSON.stringify({
-                            currentTime: this.player.currentTime(),
-                            courseTitle: this.courseTitle,
-                            videoName: this.curVideo.name,
-                        })
-                    })
-                    // this[WATCH_MU.ADD_HISTORY]({
-                    //     videoId: this.videoId,
-                    //     currentTime: this.player.currentTime(),
-                    //     courseId: this.courseId
-                    // })
-                } else {
-                    clearInterval(this.historyTimer)
-                }
-            }, 10 * 1000)
-        },
-        async showHistory() {
-            const res = await HISTORY_API.query({
-                userId: this.userId,
-                groupId: this.courseId
-            })
-            this.videoHistoryList = res.data
-            const recent = res.data[0]
-            if (recent.itemId == this.videoId) {
-                //  上次播放的就是这个，跳转到对应的时长
-                console.log('上次播放的就是这个!')
-            } else {
-                const cur = this.units[0].list.find(
-                    item => String(item.id) === String(recent.itemId)
-                )
-                console.log('else', cur)
-                const h = this.$createElement
-                Notification({
-                    title: '温馨提示',
-                    duration: 4000,
-                    message: h(
-                        'div',
-                        {
-                            class: 'history-notice'
-                        },
-                        [
-                            h('p', [
-                                '上次播放：',
-                                h(
-                                    'a',
-                                    {
-                                        on: {
-                                            click: () => {
-                                                this.selectVideo(cur)
-                                            }
-                                        }
-                                    },
-                                    JSON.parse(recent.info).videoName
-                                )
-                            ]),
-                            h('p', ['播放时间：' + recent.updateTime])
-                        ]
-                    )
-                })
-            }
-        },
         onEnded() {
             // 播放下一个
             if (!this.playNext) return
-
             this.playNextVideo()
-            // const nextVideo = getNextVideo(this.videoId, this.units, this.isBB)
-            // if (nextVideo) {
-            //     this.videoId = nextVideo.id
-            //     setTimeout(() => {
-            //         this.selectVideo(nextVideo)
-            //     }, 1000)
-            // }
         },
         playNextVideo() {
             const isLocal = !this.isBB && !this.isAcfun
@@ -672,18 +463,6 @@ export default {
                         .nextSibling
                 )
         }
-    },
-    created() {
-        clearInterval(this.historyTimer)
-    },
-    mounted() {
-        setTimeout(() => {
-            this.fetchNotes()
-        }, 2000)
-    },
-
-    destroyed() {
-        clearInterval(this.historyTimer)
     }
 }
 </script>

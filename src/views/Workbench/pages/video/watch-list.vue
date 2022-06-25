@@ -13,6 +13,7 @@
                 <b style="margin-left:20px;margin-right:10px;font-weight:400"
                     >|
                 </b>
+                <add-video @upload-success="uploadSuccess"></add-video>
 
                 <span
                     v-if="!showManage"
@@ -33,11 +34,13 @@
                         >删除</span
                     >
                 </template>
-                <add-video @upload-success="uploadSuccess"></add-video>
             </template>
         </section>
         <section class="second-category" v-if="secondCategory.length">
-            <span :class="{ active: !activeSecondCategory }">
+            <span
+                @click="activeSecondCategory = ''"
+                :class="{ active: !activeSecondCategory }"
+            >
                 全部
             </span>
             <span
@@ -139,8 +142,17 @@ export default {
             return bb.concat(local)
         },
         exhibitCourse() {
+            //页面上显示的视频列表
+            let courses = this.courses
+            //根据二级分类过滤
+            if (this.activeSecondCategory) {
+                courses = courses.filter(item => {
+                    return item.type2 === this.activeSecondCategory
+                })
+            }
+            //根据关键词过滤
             if (this.filterText) {
-                let valuesResult = this.courses.filter(item => {
+                let valuesResult = courses.filter(item => {
                     let title = item.title ? item.title : item.name
                     title = title.toLowerCase()
                     return title.includes(this.filterText)
@@ -155,7 +167,7 @@ export default {
                         return RegExp(regStr, 'i')
                     }
                     const reg = getReg(this.filterText)
-                    return this.courses.filter(item => {
+                    return courses.filter(item => {
                         let title = item.title ? item.title : item.name
                         //根据搜索词生成正则
                         let title_pinyin = pinyin(title, {
@@ -169,7 +181,7 @@ export default {
                     })
                 }
             } else {
-                return this.courses
+                return courses
             }
         },
         secondCategory() {
@@ -261,7 +273,9 @@ export default {
                 })
             }
         },
-        selectSecondCategory() {},
+        selectSecondCategory(item) {
+            this.activeSecondCategory = item.name
+        },
         onMouseEnter(e) {
             const dom = e.target
             dom.volume = 0

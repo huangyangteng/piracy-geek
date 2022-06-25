@@ -4,8 +4,9 @@
             <p>链接：</p>
             <el-input v-model="link"></el-input>
             <p>标签：</p>
+            <!--          一级分类-->
             <el-select
-                style="margin-right: 20px"
+                style="margin-right: 10px;width:120px"
                 v-model="type"
                 placeholder="请选择"
             >
@@ -17,12 +18,23 @@
                 >
                 </el-option>
             </el-select>
-            <p>来源：</p>
+            <!--          二级分类-->
             <el-select
-                style="margin-right: 20px"
-                v-model="from"
+                v-if="secondCategory.length"
+                style="width:120px"
+                v-model="type2"
                 placeholder="请选择"
             >
+                <el-option
+                    v-for="item in secondCategory"
+                    :key="item.name"
+                    :label="item.label"
+                    :value="item.name"
+                >
+                </el-option>
+            </el-select>
+            <p>来源：</p>
+            <el-select style="width: 100px" v-model="from" placeholder="请选择">
                 <el-option
                     v-for="item in fromCategory"
                     :key="item.name"
@@ -47,7 +59,10 @@
 </template>
 
 <script>
-import { videoCategory } from '../../../../data/video/video-list'
+import {
+    secondCategory,
+    videoCategory
+} from '../../../../data/video/video-list'
 import { WATCH_API } from '../../../../api/watch'
 
 export default {
@@ -56,6 +71,7 @@ export default {
         return {
             link: '',
             type: 'letter',
+            type2: '',
             from: 'bb',
             videoCategory: videoCategory,
             loading: false,
@@ -64,6 +80,11 @@ export default {
                 { name: 'bb', label: 'blibli' },
                 { name: 'acfun', label: 'acfun' }
             ]
+        }
+    },
+    computed: {
+        secondCategory() {
+            return secondCategory.filter(item => item.parent === this.type)
         }
     },
     watch: {
@@ -79,6 +100,14 @@ export default {
             handler(category) {
                 if (category) {
                     this.type = category
+                }
+            }
+        },
+        secondCategory: {
+            immediate: true,
+            handler() {
+                if (this.secondCategory.length > 0) {
+                    this.type2 = this.secondCategory[0].name
                 }
             }
         }
@@ -97,7 +126,8 @@ export default {
             const res = await WATCH_API.addBBVideo({
                 link: this.link.split('?')[0],
                 type: this.type,
-                from: this.from
+                from: this.from,
+                type2:this.type2
             })
             this.loading = false
             if (res.code === 2000) {
