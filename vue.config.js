@@ -6,17 +6,7 @@ module.exports = {
         //只在开发时有效，打包后失效
         open: true, //自动打开浏览器
         proxy: {
-            //测试环境
-            '/gk-api': {
-                target: PRODUCT_HOST, //开发环境后端接口地址
-                changeOrigin: true,
-                autoRewrite: true,
-                cookieDomainRewrite: true
-                // pathRewrite: {
-                //     '^/gk-api': ''
-                // }
-            },
-            //开发环境
+
             // '/gk-api': {
             //     target: PRODUCT_HOST, //开发环境后端接口地址
             //     changeOrigin: true,
@@ -26,6 +16,16 @@ module.exports = {
             //     //     '^/gk-api': ''
             //     // }
             // },
+            //开发环境
+            '/gk-api': {
+                target: DEV_HOST, //开发环境后端接口地址
+                changeOrigin: true,
+                autoRewrite: true,
+                cookieDomainRewrite: true,
+                pathRewrite: {
+                    '^/gk-api': ''
+                }
+            },
             '/gk-files': {
                 target: PRODUCT_HOST
             },

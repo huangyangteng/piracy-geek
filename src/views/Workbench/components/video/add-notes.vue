@@ -84,6 +84,7 @@ export default {
         outline: 0;
         resize: none;
         width: 100%;
+        caret-color: #333;
 
         &:focus {
             border: 0;

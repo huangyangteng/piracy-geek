@@ -18,5 +18,10 @@ export default [
         name: 'pwa-icon',
         path: '/pwa-icon',
         component: () => import('./pwa-icon')
+    },
+    {
+        name: 'translate',
+        path: '/translate',
+        component: () => import('./translate')
     }
 ]

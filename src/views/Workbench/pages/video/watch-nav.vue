@@ -93,12 +93,18 @@ export default {
     },
     methods: {
         toHome() {
-            this.$router.push({
-                path: '/workbench/video',
-                query: {
-                    category: this.$route.query.category
-                }
-            })
+            if (this.$route.query.category) {
+                this.$router.push({
+                    path: '/workbench/video',
+                    query: {
+                        category: this.$route.query.category
+                    }
+                })
+            } else {
+                this.$router.push({
+                    path: '/workbench/recent-video'
+                })
+            }
         }
     },
     created() {}

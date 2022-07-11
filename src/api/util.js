@@ -17,8 +17,16 @@ const upload = data =>
         data,
         method: 'POST'
     })
+const translate = word =>
+    http.request({
+        url: '/util/translate',
+        params:{
+            word
+        }
+    })
 export const UTIL_API = {
     taobaoExpert,
     getFiles,
-    upload
+    upload,
+    translate
 }
