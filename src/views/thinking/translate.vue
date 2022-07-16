@@ -7,7 +7,7 @@
         />
         <section class="translate-content">
             <div v-if="info" ref="info">
-                <h4>单词：{{ this.word }}</h4>
+                <h4 @dblclick="copyQuestion">单词：{{ this.word }}</h4>
 
                 <h4>使用频率：{{ level }}</h4>
                 <h4>
@@ -24,11 +24,11 @@
                         {{ item.sense }}： {{ item.percent }}%
                     </p>
                 </h4>
-                <h4>
+                <h4 v-if="this.info.usages.length">
                     用法:
                     <div
                         v-for="item in this.info.usages"
-                        :key="item"
+                        :key="item.content"
                         :class="item.type"
                     >
                         {{ item.content }}
@@ -42,12 +42,28 @@
                 </h4>
             </div>
         </section>
+
+        <!-- ----用于supermemo -->
+        <div
+            class="translate-content"
+            ref="question"
+            style="position:absolute;left:0;margin-left: -100%;"
+        >
+            <h4>单词：{{ this.word }}</h4>
+            <h4>使用频率：{{ level }}</h4>
+            <h4>
+                例句:
+                <p v-for="item in this.info.examples" :key="item">
+                    {{ formatSentence(item) }}.
+                </p>
+            </h4>
+        </div>
     </section>
 </template>
 
 <script>
 import { UTIL_API } from '../../api/util'
-import { copyText } from '../../tools'
+import { copyText, removeChinese } from '../../tools'
 
 const LevelMap = {
     5: '海词5星基本词汇，属常用1000词。',
@@ -86,6 +102,15 @@ export default {
         }
     },
     methods: {
+        copyQuestion() {
+            let content = this.$refs.question.innerText
+            copyText(content)
+            this.$Message.success('已复制到剪贴板!')
+        },
+        formatSentence(str) {
+            if (str.length < 10) return str
+            return str.split('.')[0]
+        },
         async submit() {
             const res = await UTIL_API.translate(this.word)
             this.info = res.data
@@ -142,9 +167,12 @@ export default {
     .indent20 {
         text-indent: 20px;
     }
+    .title {
+        text-indent: 20px;
+    }
     .usage {
         font-weight: 400;
-        text-indent: 20px;
+        text-indent: 40px;
         margin-bottom: 10px;
     }
 }

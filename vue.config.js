@@ -7,25 +7,25 @@ module.exports = {
         open: true, //自动打开浏览器
         proxy: {
 
-            // '/gk-api': {
-            //     target: PRODUCT_HOST, //开发环境后端接口地址
-            //     changeOrigin: true,
-            //     autoRewrite: true,
-            //     cookieDomainRewrite: true
-            //     // pathRewrite: {
-            //     //     '^/gk-api': ''
-            //     // }
-            // },
-            //开发环境
             '/gk-api': {
-                target: DEV_HOST, //开发环境后端接口地址
+                target: PRODUCT_HOST, //开发环境后端接口地址
                 changeOrigin: true,
                 autoRewrite: true,
-                cookieDomainRewrite: true,
-                pathRewrite: {
-                    '^/gk-api': ''
-                }
+                cookieDomainRewrite: true
+                // pathRewrite: {
+                //     '^/gk-api': ''
+                // }
             },
+            //开发环境
+            // '/gk-api': {
+            //     target: DEV_HOST, //开发环境后端接口地址
+            //     changeOrigin: true,
+            //     autoRewrite: true,
+            //     cookieDomainRewrite: true,
+            //     pathRewrite: {
+            //         '^/gk-api': ''
+            //     }
+            // },
             '/gk-files': {
                 target: PRODUCT_HOST
             },

@@ -82,11 +82,11 @@ import VideoHistory from '../../components/video/video-history'
 import WatchNav from './watch-nav'
 import { WatchHistory } from './watch-history'
 import { WatchNote } from './watch-note'
-import {FetchCourse} from "./fetch-course";
+import { FetchCourse } from './fetch-course'
 
 export default {
     name: 'watch',
-    mixins: [WatchHistory, WatchNote,FetchCourse],
+    mixins: [WatchHistory, WatchNote, FetchCourse],
     components: {
         WatchNav,
         VideoHistory,

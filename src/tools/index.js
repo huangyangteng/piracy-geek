@@ -260,3 +260,8 @@ export function copyText(text) {
         document.body.removeChild(textarea)
     }
 }
+
+export const removeChinese = str => {
+    const reg = /[\u4e00-\u9fa5]/g
+    return str.replace(reg, '')
+}

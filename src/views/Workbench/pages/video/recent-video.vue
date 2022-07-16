@@ -48,7 +48,6 @@ export default {
             }
         },
         toVideo(item) {
-            console.log(item)
             let type = item.groupId.includes('ac') ? 'acfun' : 'bb'
             let prefix =
                 type === 'acfun'
@@ -62,7 +61,7 @@ export default {
                 query: {
                     videoId: item.itemId,
                     type,
-                    link: prefix + item.groupId,
+                    link: type==='acfun'?item.link:prefix + item.groupId,
                     currentTime: item.currentTime
                 }
             })

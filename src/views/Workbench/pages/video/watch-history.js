@@ -30,7 +30,8 @@ export const WatchHistory = {
                         info: JSON.stringify({
                             currentTime: this.player.currentTime(),
                             courseTitle: this.courseTitle,
-                            videoName: this.curVideo.name
+                            videoName: this.curVideo.name,
+                            link:this.$route.query.link
                         })
                     })
                 } else {
