@@ -13,6 +13,27 @@ export const WatchHistory = {
     },
     computed: {},
     methods: {
+        logHistoryImmediate() {
+            let video = this.player.el_.querySelector('video')
+            //如果视频正在播放
+            if (video.readyState > 3) {
+                //记录一下page
+                HISTORY_API.save({
+                    userId: this.userId,
+                    itemId: this.videoId,
+                    groupId: this.courseId,
+                    type: SEARCH_TYPE.VIDEO,
+                    info: JSON.stringify({
+                        currentTime: this.player.currentTime(),
+                        courseTitle: this.courseTitle,
+                        videoName: this.curVideo.name,
+                        link: this.$route.query.link
+                    })
+                })
+            } else {
+                clearInterval(this.historyTimer)
+            }
+        },
         //记录历史记录
         logHistory() {
             clearInterval(this.historyTimer)
@@ -31,7 +52,7 @@ export const WatchHistory = {
                             currentTime: this.player.currentTime(),
                             courseTitle: this.courseTitle,
                             videoName: this.curVideo.name,
-                            link:this.$route.query.link
+                            link: this.$route.query.link
                         })
                     })
                 } else {

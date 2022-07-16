@@ -35,6 +35,9 @@
                     target="_blank"
                     >源网站</a
                 >
+                <a style="margin-left: 20px;color:#fff" @click="newPage"
+                    >新开页面</a
+                >
             </div>
         </nav>
         <nav class="watch-bar mobile">
@@ -105,6 +108,15 @@ export default {
                     path: '/workbench/recent-video'
                 })
             }
+        },
+        newPage() {
+            let page = this.$router.resolve({
+                path: '/workbench/video',
+                query: {
+                    category: this.$route.query.category
+                }
+            })
+            window.open(page.href, '_blank')
         }
     },
     created() {}

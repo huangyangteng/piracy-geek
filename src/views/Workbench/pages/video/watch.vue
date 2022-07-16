@@ -251,6 +251,7 @@ export default {
             }
         },
         onPause() {
+            this.logHistoryImmediate()
             clearInterval(this.historyTimer)
         },
         onPlay() {
