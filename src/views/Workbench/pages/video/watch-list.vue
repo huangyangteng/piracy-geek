@@ -351,9 +351,16 @@ export default {
 </style>
 <style lang="scss" scoped>
 .video-list {
-    max-width: 1280px;
+    //max-width: 1280px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 60px;
+}
+
+//小于750的尺寸
+@media (max-width: 750px) {
+    .video-list {
+        padding: 40px 20px;
+    }
 }
 
 .category {

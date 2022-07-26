@@ -130,6 +130,8 @@ export default {
     },
     mounted() {
         //    当页面宽度小于1850时，把侧边栏隐藏掉
+        //将所有a标签的跳转设置为新开页面
+
     },
     beforeRouteUpdate(to, from, next) {
         this.saveReadPosition()

@@ -71,7 +71,17 @@ export default {
                 this.setTitle()
                 this.loadHightLight(id)
                 this.bindEvent()
+                this.setLinkTarget()
             })
+        },
+        setLinkTarget() {
+            Array.from(this.$refs.articalWrapper.querySelectorAll('a')).forEach(
+                item => {
+                    if (!item.href.startsWith('#')) {//以#开头的是锚点，用于在当前页面跳转
+                        item.setAttribute('target', '_blank')
+                    }
+                }
+            )
         },
         loadHightLight(id) {
             let lastHightLight = this.$store.getters[

@@ -23,5 +23,10 @@ export default [
         name: 'translate',
         path: '/translate',
         component: () => import('./translate')
+    },
+    {
+        name: 'search',
+        path: '/search',
+        component: () => import('./gradute-search')
     }
 ]

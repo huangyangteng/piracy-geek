@@ -6,7 +6,7 @@
             v-model="word"
         />
         <section class="translate-content">
-            <div v-if="info" ref="info">
+            <div v-if="info" ref="info" class="info">
                 <h4 @dblclick="copyQuestion">单词：{{ this.word }}</h4>
 
                 <h4>使用频率：{{ level }}</h4>
@@ -40,6 +40,9 @@
                         {{ item }}
                     </p>
                 </h4>
+            </div>
+            <div class="image-list">
+                <img v-for="(item,index) in imageList" :src="item" :key="item+index" />
             </div>
         </section>
 
@@ -77,7 +80,8 @@ export default {
     data() {
         return {
             word: 'bid',
-            info: null
+            info: null,
+            imageList: ['https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg']
         }
     },
     computed: {
@@ -143,17 +147,24 @@ export default {
 </style>
 <style lang="scss" scoped>
 .translate-wrapper {
-    width: 1200px;
+    width: 1440px;
     margin: 0 auto;
     padding: 40px;
+    height: 100vh;
 }
 
 .translate-content {
-    background: $component-bg-color;
     margin-top: 40px;
-    padding: 20px;
     min-height: 400px;
-    border-radius: 6px;
+
+    display: flex;
+    height: 100%;
+
+    .info {
+        padding: 20px;
+        border-radius: 6px;
+        overflow-y: auto;
+    }
 
     h4 {
         line-height: 2;
@@ -167,13 +178,34 @@ export default {
     .indent20 {
         text-indent: 20px;
     }
+
     .title {
         text-indent: 20px;
     }
+
     .usage {
         font-weight: 400;
         text-indent: 40px;
         margin-bottom: 10px;
+    }
+}
+
+.info {
+    background: $component-bg-color;
+}
+
+.image-list {
+    margin-left: 20px;
+    min-height: 400px;
+    border-radius: 6px;
+    background: $component-bg-color;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+
+    img {
+        width: 100%;
     }
 }
 </style>

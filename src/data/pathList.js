@@ -65,8 +65,8 @@ export default [
             'https://static001.geekbang.org/resource/image/50/b6/50cac4f8a8e9b600636c0890967113b6.jpg?x-oss-process=image/resize,m_fill,h_72,w_72'
     },
     {
-        name: 'pm',
-        label: '产品/设计',
+        name: 'graduate',
+        label: 'graduate',
         nums: 4,
         img:
             'https://static001.geekbang.org/resource/image/1c/fc/1c7e5b1f8486a7c3346f466286f226fc.jpg?x-oss-process=image/resize,m_fill,h_72,w_72'

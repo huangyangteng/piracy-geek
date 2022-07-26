@@ -876,3 +876,18 @@ video::-webkit-media-controls-enclosure {
 ._1Bj6HN3x_0{
     user-select: auto!important;
 }
+//---------------------csdn
+#content_views{
+    overflow: hidden;
+    img{
+        width: auto;
+        background: #fff;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+.katex--inline{
+    svg{
+        max-width: 100%;
+    }
+}

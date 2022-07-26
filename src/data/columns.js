@@ -4,16 +4,16 @@ import { INTEREST_LIST } from './column-module/interest'
 import { WEB_LIST } from './column-module/web'
 import { CS_LIST } from './column-module/cs'
 import { BACKEND_LIST } from './column-module/backend'
-import { PM_LIST } from './column-module/pm'
+// import { PM_LIST } from './column-module/pm'
 import { SKILL_LIST } from './column-module/skill'
 import { VOICE_VIDEO_LIST } from './column-module/av'
 import { TOOLS_LIST } from './column-module/tools'
 import { GROWTH_LIST } from './column-module/growth'
-
+import {GRADUATE_LIST} from "./column-module/graduate";
 const COLUMNS = WEB_LIST.concat(CS_LIST)
     .concat(SKILL_LIST)
     .concat(BACKEND_LIST)
-    .concat(PM_LIST)
+    .concat(GRADUATE_LIST)
     .concat(VOICE_VIDEO_LIST)
     .concat(TREND_LIST)
     .concat(INTEREST_LIST)

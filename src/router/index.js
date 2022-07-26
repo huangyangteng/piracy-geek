@@ -32,7 +32,6 @@ router.beforeEach((to, from, next) => {
     //to 去哪里
     NProgress.start()
     // LoadingBar.start()
-
     next()
 })
 router.afterEach(() => {
