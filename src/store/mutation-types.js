@@ -13,6 +13,6 @@ const WATCH_MU = {
     REMOVE_NOTE: 'removeNote',
     MODIFY_NOTE: 'modifyNote',
     ADD_HISTORY: 'addHistory',
-    SET_CONFIG: 'SET_CONFIG'
+    SET_CONFIG: 'setConfig'
 }
 export { LAST_READ, USER_MU, WATCH_MU }

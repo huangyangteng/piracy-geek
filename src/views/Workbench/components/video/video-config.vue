@@ -34,8 +34,7 @@ export default {
     methods: {
         ...mapMutations('watch', [WATCH_MU.SET_CONFIG]),
         setPlayNext(val) {
-            this[WATCH_MU.SET_CONFIG]({ playNext: val })
-            console.log('setPlayNext -> val', val)
+            this.$store.commit('watch/setConfig', { playNext: val })
         }
     },
     created() {}

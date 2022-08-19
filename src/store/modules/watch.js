@@ -86,7 +86,7 @@ const mutations = {
             })
         }
     },
-    [WATCH_MU.SET_CONFIG](state, config) {
+    setConfig(state, config) {
         state.config = Object.assign({}, state.config, config)
     }
 }

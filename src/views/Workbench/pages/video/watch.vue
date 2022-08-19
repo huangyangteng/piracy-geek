@@ -12,12 +12,14 @@
                     ref="videoPlayer"
                     class="video-player vjs-custom-skin"
                     :options="playerOptions"
+                    :events="events"
                     @ready="playerIsReady"
                     @play="onPlay"
                     @pause="onPause"
                     @ended="onEnded"
                     @error="onError"
                     @ratechange="onRateChange"
+                    @volumechange="volumeChange"
                 ></video-player>
                 <video-history></video-history>
             </section>
@@ -116,14 +118,17 @@ export default {
             showOutline: true, //显示大纲视图
             nextTimer: 0, //播放下一个的倒计时
             pageLoading: true,
-            spareSrc: []
+            spareSrc: [],
+            events: ['ratechange', 'volumechange']
         }
     },
     computed: {
         ...mapState('watch', ['history']),
         ...mapGetters('user', ['userId']),
         ...mapState('watch', {
-            playNext: state => state.config.playNext
+            playNext: state => state.config.playNext,
+            playbackRate: state => state.config.playbackRate,
+            volume: state => state.config.volume
         }),
         player() {
             return this.$refs.videoPlayer.player
@@ -165,10 +170,15 @@ export default {
         }
     },
     methods: {
-        onRateChange(rate) {
-            debugger
-            console.log('播放速率变化', rate)
-            console.log(this.player.playbackRate())
+        onRateChange() {
+            this.$store.commit('watch/setConfig', {
+                playbackRate: this.player.playbackRate()
+            })
+        },
+        volumeChange() {
+            this.$store.commit('watch/setConfig', {
+                volume: this.player.volume()
+            })
         },
         onError(e) {
             console.log(e, 'error')
@@ -219,6 +229,8 @@ export default {
 
             this.jumpToHistoryTime()
 
+            this.applyConfig()
+
             //设置快捷键
             player.hotkeys({
                 enableVolumeScroll: false,
@@ -228,6 +240,14 @@ export default {
                 documentHotkeysFocusElementFilter: e =>
                     e.tagName.toLowerCase() === 'body'
             })
+        },
+        applyConfig() {
+            if (this.playbackRate) {
+                this.player.playbackRate(this.playbackRate)
+            }
+            if(this.volume){
+              this.player.volume(this.volume)
+            }
         },
         toHome() {
             this.$router.push({

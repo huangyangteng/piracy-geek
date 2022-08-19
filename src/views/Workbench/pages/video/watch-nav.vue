@@ -92,7 +92,7 @@ export default {
                 return this.playNext
             },
             set(val) {
-                this.$store.commit('watch/SET_CONFIG', { playNext: val })
+                this.$store.commit('watch/setConfig', { playNext: val })
             }
         }
     },

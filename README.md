@@ -1,9 +1,4 @@
-# pirated geektime
-
-
-刚进入页面时，获取所有专栏列表
-
-根据路由，获取当前专栏，更新id
-
-
-侧边栏点击时，更新路由
+# ga
+## 视频播放组件
+播放组件：https://github.com/surmon-china/videojs-player/tree/vue-video-player#api
+支持的事件：https://github.com/surmon-china/videojs-player#component-events
