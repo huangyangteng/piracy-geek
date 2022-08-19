@@ -41,7 +41,7 @@
                     </p>
                 </h4>
             </div>
-            <div class="image-list">
+            <div class="image-list" v-if="false">
                 <img v-for="(item,index) in imageList" :src="item" :key="item+index" />
             </div>
         </section>

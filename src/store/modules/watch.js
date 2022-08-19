@@ -5,7 +5,8 @@ const state = {
     notes: [],
     history: [], //记录每个videoId的history,1分钟记录一次,离开当前路由时记录一次，关闭页面之前记录一次  [{videoId:xxx,currentTime:'',date:'',courseId:''}]
     config: {
-        playNext: false //自动播放下一个
+        playNext: false, //自动播放下一个
+        playRate: 1 //播放速度
     }
 }
 

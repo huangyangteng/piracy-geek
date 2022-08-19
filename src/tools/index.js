@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import axios from 'axios'
+import dayjs from 'dayjs'
 // 用于监听、触发事件
 export const eventBus = new Vue()
 
@@ -264,4 +265,8 @@ export function copyText(text) {
 export const removeChinese = str => {
     const reg = /[\u4e00-\u9fa5]/g
     return str.replace(reg, '')
+}
+
+export function getNow() {
+    return dayjs().format('YYYY-MM-DD HH:mm:ss')
 }

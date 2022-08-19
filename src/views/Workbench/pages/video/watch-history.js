@@ -68,6 +68,7 @@ export const WatchHistory = {
             })
             this.videoHistoryList = res.data
             const recent = res.data[0]
+            if (!recent) return
             if (recent.itemId == this.videoId) {
                 //  上次播放的就是这个，跳转到对应的时长
                 console.log('上次播放的就是这个!')

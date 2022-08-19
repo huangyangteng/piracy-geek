@@ -131,7 +131,13 @@ export const FetchCourse = {
             this.videoId = this.$route.query.videoId
                 ? this.$route.query.videoId
                 : this.videoList[0].id
-            this.playVideo(src)
+
+            WATCH_API.parseBBVideo({
+                bid: this.$route.params.id,
+                cid: this.videoId
+            }).then(res => {
+                this.playVideo(res.data.src, true)
+            })
         },
         async queryAcfunCourse(link) {
             const res = await WATCH_API.getAcfunCourse({

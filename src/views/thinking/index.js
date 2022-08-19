@@ -1,5 +1,15 @@
 export default [
     {
+        name: 'diff-date',
+        path: '/diff-date',
+        component: () => import('./diff-date')
+    },
+    {
+        name: 'listen-to-music',
+        path: '/listen-to-music',
+        component: () => import('./listen-to-music/listen-to-music')
+    },
+    {
         name: 'weekend-see',
         path: '/weekend-see',
         component: () => import('./weekend-watch')

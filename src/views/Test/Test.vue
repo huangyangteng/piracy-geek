@@ -11,7 +11,7 @@
             <wave v-if="false"></wave>
             <cube v-if="false"></cube>
         </section>
-        <TestVideoPlayer v-if="false"></TestVideoPlayer>
+        <TestVideoPlayer v-if="true"></TestVideoPlayer>
         <BannerText v-if="false"></BannerText>
         <test-ios-drag v-if="false"></test-ios-drag>
         <test-vuedraggable v-if="false"></test-vuedraggable>

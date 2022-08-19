@@ -38,6 +38,7 @@
                 <a style="margin-left: 20px;color:#fff" @click="newPage"
                     >新开页面</a
                 >
+                <a v-if="false" style="margin-left: 20px;color:#fff" @click="share">分享</a>
             </div>
         </nav>
         <nav class="watch-bar mobile">
@@ -65,6 +66,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { copyText } from '../../../../tools'
 
 export default {
     name: 'watch-nav',
@@ -95,6 +97,31 @@ export default {
         }
     },
     methods: {
+        share() {
+            const getParams = url => {
+                let str = url.split('?')[1]
+                return Object.fromEntries(new URLSearchParams(str))
+            }
+            const genParams = obj => {
+                return Object.keys(obj)
+                    .map(function(k) {
+                        return (
+                            encodeURIComponent(k) +
+                            '=' +
+                            encodeURIComponent(obj[k])
+                        )
+                    })
+                    .join('&')
+            }
+            let req = getParams(window.location.href)
+            req.currentTime = document
+                .getElementById('video-player')
+                .querySelector('video').currentTime
+
+            let params = genParams(req)
+            copyText(window.location.href.split('?')[0] + '?' + params)
+            this.$Message.success('链接已复制到剪贴板')
+        },
         toHome() {
             if (this.$route.query.category) {
                 this.$router.push({

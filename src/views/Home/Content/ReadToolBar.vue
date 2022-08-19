@@ -30,6 +30,12 @@
             :href="curColumn.resource"
             >课程配套资源下载</a
         >
+        <a
+            style="margin-left: 20px;color:#fff"
+            target="_blank"
+            href="/#/workbench/column"
+            >新开页面</a
+        >
         <!-- 音频播放 -->
 
         <!-- 选择颜色 -->

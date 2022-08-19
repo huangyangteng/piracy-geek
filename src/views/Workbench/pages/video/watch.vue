@@ -17,6 +17,7 @@
                     @pause="onPause"
                     @ended="onEnded"
                     @error="onError"
+                    @ratechange="onRateChange"
                 ></video-player>
                 <video-history></video-history>
             </section>
@@ -83,6 +84,7 @@ import WatchNav from './watch-nav'
 import { WatchHistory } from './watch-history'
 import { WatchNote } from './watch-note'
 import { FetchCourse } from './fetch-course'
+import { getNow } from '../../../../tools'
 
 export default {
     name: 'watch',
@@ -163,6 +165,11 @@ export default {
         }
     },
     methods: {
+        onRateChange(rate) {
+            debugger
+            console.log('播放速率变化', rate)
+            console.log(this.player.playbackRate())
+        },
         onError(e) {
             console.log(e, 'error')
         },
@@ -253,6 +260,12 @@ export default {
         onPause() {
             this.logHistoryImmediate()
             clearInterval(this.historyTimer)
+            // this.handleNote({
+            //     operate: 'add',
+            //     data: {
+            //         value: getNow()
+            //     }
+            // })
         },
         onPlay() {
             // 视频播放时，记录历史记录

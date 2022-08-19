@@ -77,9 +77,14 @@ export default {
         setLinkTarget() {
             Array.from(this.$refs.articalWrapper.querySelectorAll('a')).forEach(
                 item => {
-                    if (!item.href.startsWith('#')) {//以#开头的是锚点，用于在当前页面跳转
+                    let href = item.getAttribute('href')
+                    if (href && !href.includes('#')) {
                         item.setAttribute('target', '_blank')
                     }
+                    console.log(item)
+                    // if (!item.href.startsWith('#')) {//以#开头的是锚点，用于在当前页面跳转
+                    //     item.setAttribute('target', '_blank')
+                    // }
                 }
             )
         },
