@@ -44,6 +44,13 @@ export default {
     name: 'outline-list',
     props: {
         units: {
+            /**
+             * unitItem
+             * id:'',list:videoList[],unit:'unit的名字'
+             *
+             * videoList[]
+             * {id:'video id',name:'video name'}
+             */
             type: Array,
             default: () => []
         },
@@ -80,14 +87,14 @@ export default {
                 return bakList.map(unit => {
                     unit.list = unit.list.filter(item => {
                         let title = this.cleanName(item.name).toLowerCase()
-                        let title_pinyin = pinyin(title, {
-                            segment: true,
-                            group: true,
-                            style: pinyin.STYLE_NORMAL
-                        })
-                            .flat()
-                            .join('')
-                        return reg.test(title_pinyin)
+                        // let title_pinyin = pinyin(title, {
+                        //     segment: true,
+                        //     group: true,
+                        //     style: pinyin.STYLE_NORMAL
+                        // })
+                        //     .flat()
+                        //     .join('')
+                        return title.includes(this.filterText)
                     })
                     return unit
                 })

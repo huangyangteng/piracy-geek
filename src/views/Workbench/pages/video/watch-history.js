@@ -127,6 +127,9 @@ export const WatchHistory = {
             if (item) {
                 try {
                     let currentTime = JSON.parse(item.info).currentTime
+                    //减去5s
+                    currentTime = currentTime - 5
+                    if (currentTime < 0) currentTime = 0
                     this.player.currentTime(currentTime)
                     eventBus.$emit('show-history', {
                         currentTime

@@ -18,6 +18,12 @@ export const FetchCourse = {
             units: [], //一个课程下面有多少单元 [{},{}]
 
             videoId: null, //当前播放视频id
+            /**videoItem
+             * cid
+             * name
+             * page
+             * part
+             */
             videoList: [] //一个course下面所有的video
         }
     },
@@ -58,6 +64,7 @@ export const FetchCourse = {
                 let src
                 if (this.isBB) {
                     WATCH_API.parseBBVideo({
+                        collection:this.$route.query.collection,
                         bid: this.$route.params.id,
                         cid: this.$route.query.videoId
                     }).then(res => {
@@ -124,7 +131,7 @@ export const FetchCourse = {
             if (res.code != 2000) {
                 return
             }
-            const { title, src } = res.data
+            const { title, src,isCollection=false } = res.data
             this.courseTitle = title
             this.units = formatBBCourse(res.data)
             this.videoList = this.units[0].list
@@ -133,8 +140,9 @@ export const FetchCourse = {
                 : this.videoList[0].id
 
             WATCH_API.parseBBVideo({
+                collection:isCollection?1:0,
                 bid: this.$route.params.id,
-                cid: this.videoId
+                cid: this.videoId,
             }).then(res => {
                 this.playVideo(res.data.src, true)
             })
@@ -160,11 +168,35 @@ export const FetchCourse = {
         //切换视频
         selectVideo(videoItem) {
             //选中侧边栏时的操作
-            const { id, src, page } = videoItem
+            const { id, src, page,isCollection } = videoItem
             this.videoId = id
 
             //b站的视频播放 http://localhost:8080/#/workbench/watch/BV1Mg411g7C8?type=bb&link=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Mg411g7C8
             if (this.isBB) {
+                //---------------------处理合集的逻辑
+                if(isCollection){
+                    this.videoId = id
+                    this.$router.push({
+                        name: 'watch',
+                        params: { id: this.courseId },
+                        query: {
+                            videoId: this.videoId,
+                            link,
+                            type: 'bb',
+                            category: this.$route.query.category,
+                            collection:1
+                        }
+                    })
+                    // WATCH_API.parseBBVideo({
+                    //     collection:1,
+                    //     bid: id,
+                    //     cid: id,
+                    // }).then(res => {
+                    //     this.playVideo(res.data.src, true)
+                    // })
+                    return
+                }
+                //处理单个的逻辑
                 let link = this.$route.query.link
                 if (link.includes('?') && !link.includes('p=')) {
                     link = link + `&p=${page}`

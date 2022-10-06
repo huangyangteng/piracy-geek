@@ -52,9 +52,9 @@
             <div class="search-list" v-show="suggestList.length"></div>
         </div>
         <!--        bingdundun展示-->
-        <bing-dun-dun
-            class="animate__animated animate__fadeInDown bingdundun"
-        ></bing-dun-dun>
+        <!--        <bing-dun-dun-->
+        <!--            class="animate__animated animate__fadeInDown bingdundun"-->
+        <!--        ></bing-dun-dun>-->
         <!--        menu-overlay-->
         <menu-overlay></menu-overlay>
     </section>
@@ -66,7 +66,7 @@ import BenchSidebar from './layout/bench-sidebar'
 import BenchHeader from './layout/bench-header'
 import { searchEverything } from '../../tools/search'
 import { SEARCH_TYPE } from '../../data/search'
-import BingDunDun from '../../components/lazy-panda/LazyPanda'
+// import BingDunDun from '../../components/lazy-panda/LazyPanda'
 import MenuOverlay from './layout/menu-overlay'
 import { eventBus } from '../../tools'
 
@@ -74,7 +74,7 @@ export default {
     name: 'Workbench',
     components: {
         MenuOverlay,
-        BingDunDun,
+        // BingDunDun,
         'bench-sidebar': BenchSidebar,
         BenchHeader
     },

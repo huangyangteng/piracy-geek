@@ -1,5 +1,6 @@
 <template>
     <section class="video-list">
+        <!--        一级分类-->
         <section class="category">
             <b style="margin-right:12px;font-weight:400">分类：</b>
             <span
@@ -13,7 +14,11 @@
                 <b style="margin-left:20px;margin-right:10px;font-weight:400"
                     >|
                 </b>
-                <add-video @upload-success="uploadSuccess"></add-video>
+                <add-video
+                    :active-category="activeCategory"
+                    :active-second-category="activeSecondCategory"
+                    @upload-success="uploadSuccess"
+                ></add-video>
 
                 <span
                     v-if="!showManage"
@@ -36,9 +41,10 @@
                 </template>
             </template>
         </section>
+        <!--      二级分类-->
         <section class="second-category" v-if="secondCategory.length">
             <span
-                @click="activeSecondCategory = ''"
+                @click="selectSecondCategory({ name: 'all' })"
                 :class="{ active: !activeSecondCategory }"
             >
                 全部
@@ -199,6 +205,19 @@ export default {
                     this.queryList()
                 }
             }
+        },
+        '$route.query.secondCategory': {
+            immediate: true,
+            handler(category) {
+                if (category) {
+                    if (category === 'all') {
+                        this.activeSecondCategory = ''
+                    } else {
+                        this.activeSecondCategory = category
+                    }
+                    // this.queryList()
+                }
+            }
         }
     },
     methods: {
@@ -274,7 +293,13 @@ export default {
             }
         },
         selectSecondCategory(item) {
-            this.activeSecondCategory = item.name
+            this.$router.push({
+                name: this.$route.name,
+                query: {
+                    category: this.$route.query.category,
+                    secondCategory: item.name
+                }
+            })
         },
         onMouseEnter(e) {
             const dom = e.target

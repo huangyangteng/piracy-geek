@@ -154,21 +154,38 @@ export function formatCourse(list, title) {
         }
     })
 }
+//处理从b站解析出来的课程信息
+export function formatBBCourse({ pages, title,isCollection }) {
+    if(!isCollection){
+        return [
+            {
+                id: uid(),
+                unit: title,
+                list: pages.map(item => {
+                    return {
+                        ...item,
+                        name: item.part,
+                        id: item.cid
+                    }
+                })
+            }
+        ]
+    }else{
+        return [
+            {
+                id: uid(),
+                unit: title,
+                list: pages.map(item => {
+                    return {
+                        name: item.title,
+                        id: item.bvid,
+                        isCollection:true
+                    }
+                })
+            }
+        ]
+    }
 
-export function formatBBCourse({ pages, title }) {
-    return [
-        {
-            id: uid(),
-            unit: title,
-            list: pages.map(item => {
-                return {
-                    ...item,
-                    name: item.part,
-                    id: item.cid
-                }
-            })
-        }
-    ]
 }
 
 function formatWatchList(list) {

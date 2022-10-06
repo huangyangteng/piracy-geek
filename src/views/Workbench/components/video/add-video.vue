@@ -67,6 +67,10 @@ import { WATCH_API } from '../../../../api/watch'
 
 export default {
     name: 'add-video',
+    props: {
+        activeCategory: String,
+        activeSecondCategory: String
+    },
     data() {
         return {
             link: '',
@@ -95,20 +99,32 @@ export default {
                 this.from = 'acfun'
             }
         },
-        '$route.query.category': {
-            immediate: true,
-            handler(category) {
-                if (category) {
-                    this.type = category
-                }
-            }
-        },
-        secondCategory: {
+        // '$route.query.category': {
+        //     immediate: true,
+        //     handler(category) {
+        //         if (category) {
+        //             this.type = category
+        //         }
+        //     }
+        // },
+        // secondCategory: {
+        //     immediate: true,
+        //     handler() {
+        //         if (this.secondCategory.length > 0) {
+        //             this.type2 = this.secondCategory[0].name
+        //         }
+        //     }
+        // },
+        activeCategory: {
             immediate: true,
             handler() {
-                if (this.secondCategory.length > 0) {
-                    this.type2 = this.secondCategory[0].name
-                }
+                this.type = this.activeCategory
+            }
+        },
+        activeSecondCategory: {
+            immediate: true,
+            handler() {
+                this.type2 = this.activeSecondCategory
             }
         }
     },
@@ -123,17 +139,26 @@ export default {
             if (link.endsWith('/')) {
                 link = link.slice(0, link.length - 1)
             }
-            const res = await WATCH_API.addBBVideo({
-                link: this.link.split('?')[0],
-                type: this.type,
-                from: this.from,
-                type2:this.type2
-            })
-            this.loading = false
-            if (res.code === 2000) {
-                this.$Message.success('添加成功')
-                this.$emit('upload-success', { type: this.type })
-                this.link = ''
+            try {
+                let link = this.link
+                if (!link.includes('sid=')) {
+                    link = this.link.split('?')[0]
+                }
+                const res = await WATCH_API.addBBVideo({
+                    link,
+                    type: this.type,
+                    from: this.from,
+                    type2: this.type2
+                })
+                this.loading = false
+                if (res.code === 2000) {
+                    this.$Message.success('添加成功')
+                    this.$emit('upload-success', { type: this.type })
+                    this.link = ''
+                }
+            } catch (e) {
+                this.$Message.error('添加失败')
+                this.loading = false
             }
         }
     },

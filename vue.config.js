@@ -12,9 +12,6 @@ module.exports = {
                 changeOrigin: true,
                 autoRewrite: true,
                 cookieDomainRewrite: true
-                // pathRewrite: {
-                //     '^/gk-api': ''
-                // }
             },
             //开发环境
             // '/gk-api': {
