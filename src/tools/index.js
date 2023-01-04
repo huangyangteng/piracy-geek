@@ -270,3 +270,20 @@ export const removeChinese = str => {
 export function getNow() {
     return dayjs().format('YYYY-MM-DD HH:mm:ss')
 }
+/**
+ * 获取url参数
+ * @param key 参数的key,如果不提供，返回所有参数
+ * @param str
+ *
+ */
+export function getParamsByUrl(key, str) {
+    if (!str) {
+        str = location.href.split('?')[1]
+    }
+    const params = Object.fromEntries(new URLSearchParams(str))
+    if (!key) {
+        return params
+    } else {
+        return params[key]
+    }
+}

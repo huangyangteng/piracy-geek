@@ -31,9 +31,11 @@ import {
     Timeline,
     Switch,
     Select,
-    Option
+    Option,
+    Checkbox
 } from 'element-ui'
 
+Vue.use(Checkbox)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(TimelineItem)

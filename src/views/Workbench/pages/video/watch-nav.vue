@@ -38,7 +38,12 @@
                 <a style="margin-left: 20px;color:#fff" @click="newPage"
                     >新开页面</a
                 >
-                <a v-if="false" style="margin-left: 20px;color:#fff" @click="share">分享</a>
+                <a
+                    v-if="true"
+                    style="margin-left: 20px;color:#fff"
+                    @click="share"
+                    >分享</a
+                >
             </div>
         </nav>
         <nav class="watch-bar mobile">

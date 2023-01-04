@@ -58,6 +58,12 @@ const deleteVideo = ids =>
             ids
         }
     })
+const updateVideo = data =>
+    http.request({
+        method: 'PUT',
+        url: '/watch/update',
+        data
+    })
 
 export const WATCH_API = {
     getList,
@@ -68,5 +74,6 @@ export const WATCH_API = {
     addBBVideo,
     getBBVideos,
     deleteVideo,
-    parseBBVideo
+    parseBBVideo,
+    updateVideo
 }

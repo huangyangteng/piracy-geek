@@ -30,6 +30,12 @@
                     <span class="operate-item" @click="exitManage"
                         >退出管理</span
                     >
+                    <update-video
+                        @success="uploadSuccess"
+                        :ids="selectedVideoIds"
+                        :active-category="activeCategory"
+                        :active-second-category="activeSecondCategory"
+                    ></update-video>
                     <span
                         :style="{
                             opacity: this.selectedVideoIds.length ? 1 : 0.5
@@ -68,31 +74,14 @@
         </section>
         <section class="course-list" v-loading="loading">
             <section v-if="exhibitCourse.length === 0">暂无数据</section>
-            <div
-                class="course-item"
-                @click="jumpToCourse(item)"
+            <watch-item
                 v-for="item in exhibitCourse"
+                :show-manage="showManage"
                 :key="item.id"
-            >
-                <section>
-                    <img v-if="item.poster" :src="item.poster" />
-                    <video
-                        v-else
-                        @mouseenter="onMouseEnter"
-                        @mouseleave="onMouseLeave"
-                        loop
-                        :src="getVideoSrc(item)"
-                    ></video>
-                    <div
-                        v-if="showManage"
-                        @click.stop="clickCheckbox(item.id)"
-                        class="checkbox click-big"
-                    >
-                        <el-checkbox :value="canShow(item.id)"></el-checkbox>
-                    </div>
-                </section>
-                <footer>{{ item.title ? item.title : item.name }}</footer>
-            </div>
+                :info="item"
+                :can-show="canShow(item.id)"
+                @clickCheckbox="clickCheckbox"
+            ></watch-item>
         </section>
     </section>
 </template>
@@ -111,10 +100,12 @@ import { mapGetters, mapMutations } from 'vuex'
 import { USER_API } from '../../../../api/user'
 import { USER_MU } from '../../../../store/mutation-types'
 import pinyin from 'pinyin'
+import WatchItem from './watch-item'
+import UpdateVideo from '../../components/video/update-video'
 
 export default {
     name: 'watch-list',
-    components: { AddVideo, [Checkbox.name]: Checkbox },
+    components: { UpdateVideo, WatchItem, AddVideo, [Checkbox.name]: Checkbox },
     data() {
         return {
             activeCategory: videoCategory[0].name,
@@ -225,8 +216,8 @@ export default {
 
         uploadSuccess({ type }) {
             //上傳成功後重新獲取數據
-            console.log(type)
             this.selectCategory({ name: type })
+            this.selectedVideoIds = []
         },
         async deleteVideos() {
             if (this.selectedVideoIds.length === 0) {
@@ -243,7 +234,6 @@ export default {
                     filter: localIds.join(','),
                     id: this.userId
                 })
-                console.log('localRes', localRes)
                 if (localRes.code === 2000) {
                     this[USER_MU.SET_USER]({
                         filter: localRes.data.filter
@@ -283,6 +273,7 @@ export default {
             }
         },
         selectCategory(item) {
+            this.activeSecondCategory = ''
             if (this.$route.query.category === item.name) {
                 this.queryList()
             } else {
@@ -301,19 +292,7 @@ export default {
                 }
             })
         },
-        onMouseEnter(e) {
-            const dom = e.target
-            dom.volume = 0
-            dom.playbackRate = 2
-            e.target.play()
-        },
-        onMouseLeave(e) {
-            e.target.pause()
-        },
-        getVideoSrc(item) {
-            const video = item.list.find(item => isVideo(getExt(item)))
-            return formatSrc(video)
-        },
+
         async queryList() {
             this.loading = true
             const bbRes = await WATCH_API.getBBVideos()
@@ -325,31 +304,6 @@ export default {
             //     this.list = res.data
             //     this.bbList = bbRes.data
             // }
-        },
-        jumpToCourse(item) {
-            if (item.bid) {
-                this.$router.push({
-                    name: 'watch',
-                    params: {
-                        id: item.bid
-                    },
-                    query: {
-                        category: this.activeCategory,
-                        link: item.link,
-                        type: item.from === 'bb' ? 'bb' : 'acfun'
-                    }
-                })
-            } else {
-                this.$router.push({
-                    name: 'watch',
-                    params: {
-                        id: item.id
-                    },
-                    query: {
-                        category: this.activeCategory
-                    }
-                })
-            }
         }
     },
     created() {
@@ -432,41 +386,5 @@ export default {
     display: flex;
     flex-wrap: wrap;
     min-height: 320px;
-}
-
-.course-item {
-    height: 300px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    width: 360px;
-    position: relative;
-
-    .checkbox {
-        position: absolute;
-        padding: 5px;
-        left: 0;
-        top: 0;
-    }
-
-    > section {
-        height: 200px;
-        // background: $component-bg-color;
-        border-radius: 10px;
-        overflow: hidden;
-
-        video,
-        img {
-            width: 100%;
-            height: 100%;
-            // object-fit: cover;
-        }
-    }
-
-    > footer {
-        margin-top: 10px;
-        font-size: 18px;
-        font-weight: 800;
-    }
 }
 </style>

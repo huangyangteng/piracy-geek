@@ -9,6 +9,7 @@ import {
     getVideoList,
     isVideo
 } from '../../../../tools/watch-tools'
+import { getParamsByUrl } from '../../../../tools'
 
 export const FetchCourse = {
     data() {
@@ -64,9 +65,10 @@ export const FetchCourse = {
                 let src
                 if (this.isBB) {
                     WATCH_API.parseBBVideo({
-                        collection:this.$route.query.collection,
+                        collection: this.$route.query.collection,
                         bid: this.$route.params.id,
-                        cid: this.$route.query.videoId
+                        cid: this.$route.query.videoId,
+                        p: this.$route.query.p
                     }).then(res => {
                         src = res.data.src
                         this.playVideo(src, true)
@@ -131,18 +133,18 @@ export const FetchCourse = {
             if (res.code != 2000) {
                 return
             }
-            const { title, src,isCollection=false } = res.data
+            const { title, src, isCollection = false } = res.data
             this.courseTitle = title
             this.units = formatBBCourse(res.data)
             this.videoList = this.units[0].list
             this.videoId = this.$route.query.videoId
                 ? this.$route.query.videoId
                 : this.videoList[0].id
-
             WATCH_API.parseBBVideo({
-                collection:isCollection?1:0,
+                collection: isCollection ? 1 : 0,
                 bid: this.$route.params.id,
                 cid: this.videoId,
+                p: getParamsByUrl('p', location.href)
             }).then(res => {
                 this.playVideo(res.data.src, true)
             })
@@ -168,13 +170,13 @@ export const FetchCourse = {
         //切换视频
         selectVideo(videoItem) {
             //选中侧边栏时的操作
-            const { id, src, page,isCollection } = videoItem
+            const { id, src, page, isCollection } = videoItem
             this.videoId = id
 
             //b站的视频播放 http://localhost:8080/#/workbench/watch/BV1Mg411g7C8?type=bb&link=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Mg411g7C8
             if (this.isBB) {
                 //---------------------处理合集的逻辑
-                if(isCollection){
+                if (isCollection) {
                     this.videoId = id
                     this.$router.push({
                         name: 'watch',
@@ -184,16 +186,9 @@ export const FetchCourse = {
                             link,
                             type: 'bb',
                             category: this.$route.query.category,
-                            collection:1
+                            collection: 1
                         }
                     })
-                    // WATCH_API.parseBBVideo({
-                    //     collection:1,
-                    //     bid: id,
-                    //     cid: id,
-                    // }).then(res => {
-                    //     this.playVideo(res.data.src, true)
-                    // })
                     return
                 }
                 //处理单个的逻辑
@@ -210,7 +205,8 @@ export const FetchCourse = {
                         videoId: this.videoId,
                         link,
                         type: 'bb',
-                        category: this.$route.query.category
+                        category: this.$route.query.category,
+                        p: page
                     }
                 })
             } else if (this.isAcfun) {
