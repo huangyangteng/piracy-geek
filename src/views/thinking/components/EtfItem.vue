@@ -7,7 +7,7 @@
         <span>{{ item.buy2 }}</span>
         <span>{{ item.sell1 }}</span>
         <span>{{ item.sell2 }}</span>
-        <span>{{item.status}}</span>
+        <span>{{ item.status }}</span>
         <!--        链接-->
         <span v-if="isTitle">{{ item.link }}</span>
         <span v-else>
@@ -19,7 +19,7 @@
         <!--        操作-->
         <span v-if="isTitle">操作</span>
         <span v-else>
-            <el-button @click="update" size="small" type="text" >修改</el-button>
+            <el-button @click="update" size="small" type="text">修改</el-button>
             <el-button size="small" type="text">删除</el-button>
         </span>
     </section>
@@ -46,12 +46,10 @@ export default {
         }
     },
     methods: {
-      del(){
-
-      },
-      update(){
-        this.$emit('update',this.item)
-      }
+        del() {},
+        update() {
+            this.$emit('update', this.item)
+        }
     },
     created() {}
 }

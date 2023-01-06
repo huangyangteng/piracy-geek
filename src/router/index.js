@@ -38,4 +38,5 @@ router.afterEach(() => {
     // LoadingBar.finish()
     NProgress.done()
 })
+
 export default router

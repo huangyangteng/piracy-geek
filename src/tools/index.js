@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import dayjs from 'dayjs'
+import router from '../router/index'
 // 用于监听、触发事件
 export const eventBus = new Vue()
 
@@ -270,6 +271,7 @@ export const removeChinese = str => {
 export function getNow() {
     return dayjs().format('YYYY-MM-DD HH:mm:ss')
 }
+
 /**
  * 获取url参数
  * @param key 参数的key,如果不提供，返回所有参数
@@ -286,4 +288,14 @@ export function getParamsByUrl(key, str) {
     } else {
         return params[key]
     }
+}
+
+/**
+ * routerConfig是router的配置对象{path:'',query:{},params:{}}
+ * @param routerConfig
+ */
+
+export function newPage(routerConfig) {
+    let routeUrl = router.resolve(routerConfig)
+    window.open(routeUrl.href, '_blank')
 }

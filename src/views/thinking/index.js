@@ -1,5 +1,11 @@
 export default [
     {
+        name: 'guide',
+        path: '/guide',
+        hide: true,
+        component: () => import('./guide.vue')
+    },
+    {
         name: 'text',
         path: '/text',
         component: () => import('./text-split')
@@ -11,16 +17,19 @@ export default [
     },
     {
         name: 'diff-date',
+        hide: true,
         path: '/diff-date',
         component: () => import('./diff-date')
     },
     {
         name: 'listen-to-music',
+        hide: true,
         path: '/listen-to-music',
         component: () => import('./listen-to-music/listen-to-music')
     },
     {
         name: 'weekend-see',
+        hide: true,
         path: '/weekend-see',
         component: () => import('./weekend-watch')
     },
@@ -31,21 +40,25 @@ export default [
     },
     {
         name: 'star-bg',
+        hide: true,
         path: '/star-bg',
         component: () => import('./star-bg')
     },
     {
         name: 'pwa-icon',
+        hide: true,
         path: '/pwa-icon',
         component: () => import('./pwa-icon')
     },
     {
         name: 'translate',
         path: '/translate',
+        hide: true,
         component: () => import('./translate')
     },
     {
         name: 'search',
+        hide: true,
         path: '/search',
         component: () => import('./gradute-search')
     }
