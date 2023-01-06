@@ -92,6 +92,6 @@ export default {
 }
 
 //.box:nth-child(1){
-//  background: #1abc9c;
+//  background: #44a0ff;
 //}
 </style>

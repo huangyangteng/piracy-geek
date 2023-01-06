@@ -1,5 +1,15 @@
 export default [
     {
+        name: 'text',
+        path: '/text',
+        component: () => import('./text-split')
+    },
+    {
+        name: 'eft',
+        path: '/etf',
+        component: () => import('./etf.vue')
+    },
+    {
         name: 'diff-date',
         path: '/diff-date',
         component: () => import('./diff-date')
