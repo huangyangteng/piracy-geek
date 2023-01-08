@@ -1,5 +1,10 @@
 export default [
     {
+        path:'/piano',
+        name: 'piano-text',
+        component: () => import('./piano-text.vue')
+    },
+    {
         name: 'guide',
         path: '/guide',
         hide: true,
