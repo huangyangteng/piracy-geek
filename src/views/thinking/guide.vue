@@ -18,19 +18,28 @@ export default {
     name: 'guide',
     data() {
         return {
-            pages: pages
+            pages: pages,
+            list: [
+                { path: '/yc', name: 'yc', outside: true },
+                { path: '/workbench/column', name: 'column' },
+                { path: '/workbench/video', name: 'video' }
+            ]
         }
     },
     computed: {
         links() {
-            return this.pages.filter(item => !item.hide)
+            return this.pages.filter(item => !item.hide).concat(this.list)
         }
     },
     methods: {
-        jump({ path }) {
-            newPage({
-                path: path
-            })
+        jump({ path, outside }) {
+            if (outside) {
+                window.open(window.location.origin + path, '_blank')
+            } else {
+                newPage({
+                    path: path
+                })
+            }
         }
     },
     created() {}

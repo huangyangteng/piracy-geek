@@ -31,11 +31,11 @@ import BannerText from '../../components/BannerText'
 import TestIosDrag from './test-ios-drag'
 import TestVuedraggable from './test-vuedraggable'
 import TestCardDragger from './TestCardDragger'
-import TestBg from "./test-bg";
+import TestBg from './test-bg'
 
 export default {
     components: {
-      TestBg,
+        TestBg,
         TestCardDragger,
         TestVuedraggable,
         TestIosDrag,

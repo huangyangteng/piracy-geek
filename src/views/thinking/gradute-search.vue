@@ -6,12 +6,11 @@
             v-model="word"
         />
         <el-button>数据结构</el-button>
-      <el-button>数学</el-button>
+        <el-button>数学</el-button>
     </section>
 </template>
 
 <script>
-
 export default {
     name: 'translate',
     data() {
@@ -33,7 +32,10 @@ export default {
     },
     methods: {
         submit() {
-          window.open('https://space.bilibili.com/279193889/search/video?keyword='+this.word)
+            window.open(
+                'https://space.bilibili.com/279193889/search/video?keyword=' +
+                    this.word
+            )
         },
         onMouseEnter(e) {
             if (e.target.tagName === 'DIV') {
@@ -60,5 +62,4 @@ export default {
     margin: 0 auto;
     padding: 40px;
 }
-
 </style>

@@ -9,12 +9,12 @@
             {{ showCur }}
         </h1>
 
-<!--        <video-->
-<!--            ref="video"-->
-<!--            @timeupdate="onTimeUpdate"-->
-<!--            controls-->
-<!--            src="../../../assets/video/young.mp4"-->
-<!--        ></video>-->
+        <!--        <video-->
+        <!--            ref="video"-->
+        <!--            @timeupdate="onTimeUpdate"-->
+        <!--            controls-->
+        <!--            src="../../../assets/video/young.mp4"-->
+        <!--        ></video>-->
     </section>
 </template>
 

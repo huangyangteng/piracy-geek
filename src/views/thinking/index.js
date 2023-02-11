@@ -1,6 +1,6 @@
 export default [
     {
-        path:'/piano',
+        path: '/piano',
         name: 'piano-text',
         component: () => import('./piano-text.vue')
     },
@@ -66,5 +66,10 @@ export default [
         hide: true,
         path: '/search',
         component: () => import('./gradute-search')
+    },
+    {
+        name: 'doremi',
+        path: '/doremi',
+        component: () => import('./doremi/doremi')
     }
 ]

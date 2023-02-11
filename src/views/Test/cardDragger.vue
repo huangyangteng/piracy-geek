@@ -176,7 +176,7 @@ export default {
             function cardDetect(moveItemTop, moveItemLeft) {
                 //计算当前移动卡片，可以覆盖的号码位置
                 //计算当前移动卡片位于卡片的哪一行哪一列
-              console.log(moveItemLeft / that.cardOutsideWidth)
+                console.log(moveItemLeft / that.cardOutsideWidth)
                 //超过50%
                 let newWidthNum =
                     Math.round(moveItemLeft / that.cardOutsideWidth) + 1

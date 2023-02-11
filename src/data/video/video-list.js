@@ -18,9 +18,9 @@ export const secondCategory = [
     { name: 'math', label: '数学', parent: 'graduate' },
     { name: 'politics', label: '政治', parent: 'graduate' },
     { name: 'english', label: '英语', parent: 'graduate' },
-    {name:'music',label:'音乐',parent:'letter'},
-    {name:'literature',label:'文学',parent:'letter'},
-    {name:'philosophy',label:'哲学',parent:'letter'},
-    {name:'ming',label:'命理学',parent:'letter'},
-    {name:'medicine',label:'医学',parent:'letter'},
+    { name: 'music', label: '音乐', parent: 'letter' },
+    { name: 'literature', label: '文学', parent: 'letter' },
+    { name: 'philosophy', label: '哲学', parent: 'letter' },
+    { name: 'ming', label: '命理学', parent: 'letter' },
+    { name: 'medicine', label: '医学', parent: 'letter' }
 ]

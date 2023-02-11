@@ -9,7 +9,7 @@ import { SKILL_LIST } from './column-module/skill'
 import { VOICE_VIDEO_LIST } from './column-module/av'
 import { TOOLS_LIST } from './column-module/tools'
 import { GROWTH_LIST } from './column-module/growth'
-import {GRADUATE_LIST} from "./column-module/graduate";
+import { GRADUATE_LIST } from './column-module/graduate'
 const COLUMNS = WEB_LIST.concat(CS_LIST)
     .concat(SKILL_LIST)
     .concat(BACKEND_LIST)

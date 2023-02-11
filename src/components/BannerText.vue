@@ -208,7 +208,7 @@ void main() {
             }
 
             loadTexture() {
-              console.log('load texture')
+                console.log('load texture')
                 const text = 'WEBSTATION'
                 const ctx = document.createElement('canvas').getContext('2d')
                 ctx.canvas.width = 1200

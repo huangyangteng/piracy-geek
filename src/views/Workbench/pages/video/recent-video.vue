@@ -62,7 +62,10 @@ export default {
                 query: {
                     videoId: item.itemId,
                     type,
-                    link: type==='acfun' && item.link?item.link:prefix + item.groupId,
+                    link:
+                        type === 'acfun' && item.link
+                            ? item.link
+                            : prefix + item.groupId,
                     currentTime: item.currentTime
                 }
             })

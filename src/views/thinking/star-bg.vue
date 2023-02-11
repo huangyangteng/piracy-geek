@@ -28,7 +28,8 @@ export default {
         eventBus.$on('star-moving', moving => {
             this.isMoving = moving
         })
-    }
+    },
+    beforeDestroy() {}
 }
 </script>
 

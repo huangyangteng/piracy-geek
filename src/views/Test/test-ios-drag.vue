@@ -41,7 +41,7 @@ export default {
         handleDragEnd(e) {
             this.curDragIndex = -1
             // e.target.style.visibility = 'visible'
-          // e.target.style.opacity = '1'
+            // e.target.style.opacity = '1'
         },
         handleDragEnter(e, index) {
             e.preventDefault()

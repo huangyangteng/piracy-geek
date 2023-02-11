@@ -155,8 +155,8 @@ export function formatCourse(list, title) {
     })
 }
 //处理从b站解析出来的课程信息
-export function formatBBCourse({ pages, title,isCollection }) {
-    if(!isCollection){
+export function formatBBCourse({ pages, title, isCollection }) {
+    if (!isCollection) {
         return [
             {
                 id: uid(),
@@ -170,7 +170,7 @@ export function formatBBCourse({ pages, title,isCollection }) {
                 })
             }
         ]
-    }else{
+    } else {
         return [
             {
                 id: uid(),
@@ -179,13 +179,12 @@ export function formatBBCourse({ pages, title,isCollection }) {
                     return {
                         name: item.title,
                         id: item.bvid,
-                        isCollection:true
+                        isCollection: true
                     }
                 })
             }
         ]
     }
-
 }
 
 function formatWatchList(list) {

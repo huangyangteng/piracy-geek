@@ -245,8 +245,8 @@ export default {
             if (this.playbackRate) {
                 this.player.playbackRate(this.playbackRate)
             }
-            if(this.volume){
-              this.player.volume(this.volume)
+            if (this.volume) {
+                this.player.volume(this.volume)
             }
         },
         toHome() {

@@ -42,7 +42,11 @@
                 </h4>
             </div>
             <div class="image-list" v-if="false">
-                <img v-for="(item,index) in imageList" :src="item" :key="item+index" />
+                <img
+                    v-for="(item, index) in imageList"
+                    :src="item"
+                    :key="item + index"
+                />
             </div>
         </section>
 
@@ -81,7 +85,16 @@ export default {
         return {
             word: 'bid',
             info: null,
-            imageList: ['https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg','https://leexiao.site/file/2.jpg']
+            imageList: [
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg',
+                'https://leexiao.site/file/2.jpg'
+            ]
         }
     },
     computed: {

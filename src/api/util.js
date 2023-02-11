@@ -20,7 +20,7 @@ const upload = data =>
 const translate = word =>
     http.request({
         url: '/util/translate',
-        params:{
+        params: {
             word
         }
     })

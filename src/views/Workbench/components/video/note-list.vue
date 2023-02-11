@@ -13,7 +13,7 @@
             >
         </div>
         <note-item
-            v-for="(item) in sortedNotes"
+            v-for="item in sortedNotes"
             :key="item.id"
             :note="item"
             @delete="deleteText"

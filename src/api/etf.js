@@ -7,9 +7,9 @@ const getList = () =>
     http.request({
         url: '/etf'
     })
-const getOne = (code) =>
+const getOne = code =>
     http.request({
-        url: '/etf/'+code,
+        url: '/etf/' + code
     })
 const add = data =>
     http.request({

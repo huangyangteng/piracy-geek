@@ -85,7 +85,7 @@ export default {
             return formatSrc(video)
         },
         clickCheckbox(id) {
-          this.$emit('clickCheckbox',id)
+            this.$emit('clickCheckbox', id)
         }
     },
     created() {}
@@ -100,8 +100,7 @@ export default {
     cursor: pointer;
     width: 360px;
     position: relative;
-    .setting{
-
+    .setting {
     }
     .checkbox {
         position: absolute;

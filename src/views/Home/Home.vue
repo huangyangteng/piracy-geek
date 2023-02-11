@@ -26,7 +26,7 @@
                 <nav></nav>
                 <header id="bannerText">
                     <BannerText v-if="false"></BannerText>
-                  {{ title }}
+                    {{ title }}
                 </header>
                 <section class="blog-content">
                     <a
@@ -54,10 +54,10 @@
     </section>
 </template>
 <script>
-import BannerText from "../../components/BannerText";
+import BannerText from '../../components/BannerText'
 export default {
-  components: {BannerText},
-  data() {
+    components: { BannerText },
+    data() {
         return {
             title: 'WEBSTATION',
             loading: false,

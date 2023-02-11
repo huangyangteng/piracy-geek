@@ -1,5 +1,7 @@
 <template>
-    <section class="count-down">倒计时：<b>{{ diffDay }}</b> 天</section>
+    <section class="count-down">
+        倒计时：<b>{{ diffDay }}</b> 天
+    </section>
 </template>
 
 <script>

@@ -299,3 +299,11 @@ export function newPage(routerConfig) {
     let routeUrl = router.resolve(routerConfig)
     window.open(routeUrl.href, '_blank')
 }
+
+/**
+ * 休眠
+ * @param ms 休眠的毫秒数
+ */
+export function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
