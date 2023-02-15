@@ -68,6 +68,14 @@ export default {
             return list.join(' ')
         }
     },
+    watch: {
+        count() {
+            console.log(this.count)
+            if (this.count >= this.total) {
+                this.init(this.size + 1)
+            }
+        }
+    },
     methods: {
         playNoteText() {
             if (!this.noteText) return
@@ -78,7 +86,7 @@ export default {
         },
         showAnswer() {
             this.show = true
-            if (this.size >= 3) {
+            if (this.size >= 2) {
                 this.piano.playMusic(this.curQuestion)
             } else {
                 this.pianoPlayer.playMusic(this.curQuestion)
@@ -119,6 +127,7 @@ export default {
         }
     },
     mounted() {
+        document.title = '唱名记忆'
         this.init()
         //sine|square|triangle|sawtooth
         this.music = new MusicBox({
@@ -132,7 +141,7 @@ export default {
         this.pianoPlayer = new PianoPlayer()
         this.pianoPlayer.load()
 
-        hotkeys('enter', e => {
+        hotkeys('enter,space', e => {
             e.preventDefault()
             if (this.show) {
                 this.next()

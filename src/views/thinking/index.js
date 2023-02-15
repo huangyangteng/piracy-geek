@@ -71,5 +71,10 @@ export default [
         name: 'doremi',
         path: '/doremi',
         component: () => import('./doremi/doremi')
+    },
+    {
+        name: '计算房租周期',
+        path: '/calc-rent',
+        component: () => import('./calc-rent')
     }
 ]
