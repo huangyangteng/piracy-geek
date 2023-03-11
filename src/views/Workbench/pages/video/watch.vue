@@ -23,6 +23,7 @@
                 ></video-player>
                 <video-history></video-history>
             </section>
+            <!--            侧边栏-->
             <aside v-show="showAside" class="outline-list">
                 <section>
                     <i
@@ -30,6 +31,35 @@
                         @click="showOutline = !showOutline"
                         class="el-icon-s-operation"
                     />
+                    <div class="video-op">
+                        <el-button
+                            @click="seek(-1)"
+                            type="primary"
+                            plain
+                            size="small"
+                            >快退</el-button
+                        >
+                        <el-input
+                            style="width: 40px;margin:0 8px"
+                            size="small"
+                            v-model="seekStep"
+                        ></el-input>
+                        <el-button
+                            @click="seek(1)"
+                            type="primary"
+                            plain
+                            size="small"
+                            >快进</el-button
+                        >
+                        <el-button
+                            @click="controlPlay"
+                            type="primary"
+                            plain
+                            size="small"
+                            >{{playText}}</el-button
+                        >
+                    </div>
+
                     <outline-list
                         :active="videoId"
                         v-show="showOutline"
@@ -119,7 +149,9 @@ export default {
             nextTimer: 0, //播放下一个的倒计时
             pageLoading: true,
             spareSrc: [],
-            events: ['ratechange', 'volumechange']
+            events: ['ratechange', 'volumechange'],
+            seekStep: 3,
+            playText:'播放'
         }
     },
     computed: {
@@ -170,6 +202,33 @@ export default {
         }
     },
     methods: {
+        controlPlay() {
+            if (this.player.paused()) {
+                this.playText = '暂停'
+
+                this.player.play()
+            } else {
+                this.playText = '播放'
+                this.player.pause()
+            }
+        },
+        seek(flag) {
+            console.log('🏀🏀🏀', this.player.currentTime())
+            let curTime = this.player.currentTime()
+
+            if (flag > 0) {
+                //快进
+                curTime = curTime + this.seekStep
+                this.player.currentTime(curTime)
+            } else {
+                curTime = curTime - this.seekStep
+                if (curTime < 0) {
+                    curTime = 0
+                }
+                this.player.currentTime(curTime)
+            }
+            // this.player
+        },
         onRateChange() {
             this.$store.commit('watch/setConfig', {
                 playbackRate: this.player.playbackRate()
@@ -341,5 +400,9 @@ export default {
     font-size: 20px;
     margin-left: 5px;
     cursor: pointer;
+}
+
+.video-op {
+    padding: 10px;
 }
 </style>
