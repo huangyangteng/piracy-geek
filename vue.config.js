@@ -1,6 +1,6 @@
 const path = require('path')
 const DEV_HOST = 'http://localhost:22222'
-const PRODUCT_HOST = 'http://43.136.216.240'
+const PRODUCT_HOST = 'https://leexiao.site'
 module.exports = {
     devServer: {
         //只在开发时有效，打包后失效

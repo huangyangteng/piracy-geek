@@ -9,7 +9,7 @@ class PianoSound2 {
 
     async load() {
         const res = await axios.request({
-            url: 'http://43.136.216.240/file/piano.wav',
+            url: 'https://leexiao.site/file/piano.wav',
             responseType: 'arraybuffer'
         })
 

@@ -8,6 +8,8 @@
             <el-button type="text" @click="init(5)">5个音阶</el-button>
             <el-button type="text" @click="init(6)">6个音阶</el-button>
             <el-button type="text" @click="init(7)">7个音阶</el-button>
+            <span style="margin-left: 20px">自动进行：</span>
+            <el-switch v-model="auto"></el-switch>
             <section>{{ count + 1 }}/{{ total }}</section>
             <section class="question" @click="showAnswer">
                 {{ curQuestion }}
@@ -55,7 +57,9 @@ export default {
             piano: null,
             pianoPlayer: null,
             noteText: '',
-            size: 3
+            size: 3,
+            auto:false,
+            autoTimer:0
         }
     },
     computed: {
@@ -74,9 +78,27 @@ export default {
             if (this.count >= this.total) {
                 this.init(this.size + 1)
             }
+        },
+        auto(isAuto){
+            console.log('🍐🍐🍐🍐',isAuto)
+            if(isAuto){
+                this.autoNext()
+            }else{
+                clearInterval(this.autoTimer)
+            }
+
         }
     },
     methods: {
+        autoNext(){
+            this.autoTimer=setInterval(()=>{
+                if (this.show) {
+                    this.next()
+                } else {
+                    this.showAnswer()
+                }
+            },5000)
+        },
         playNoteText() {
             if (!this.noteText) return
             this.pianoPlayer.playMusic(this.noteText.split('').join(' '))

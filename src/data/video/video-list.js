@@ -1,4 +1,5 @@
 export const videoCategory = [
+    { name: 'health', label: '健康' },
     { name: 'frontend', label: '前端' },
     { name: 'backend', label: '后端' },
     { name: 'algorithm', label: '算法' },
