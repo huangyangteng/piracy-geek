@@ -17,10 +17,10 @@ export const UpdateRead = data =>
         method: 'POST',
         data
     })
-export const GetTitleFromLink=link=>
+export const GetTitleFromLink = link =>
     http.request({
         url: '/read/info',
-        params:{
+        params: {
             link
         }
     })

@@ -1,9 +1,9 @@
 import http from './http'
 
-export const GetArticle = (id) =>
+export const GetArticle = id =>
     http.request({
         url: '/article',
-        params:{
+        params: {
             id
         }
     })

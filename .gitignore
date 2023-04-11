@@ -22,3 +22,6 @@ yarn-error.log*
 *.sw?
 piracy-geek
 /src/assets/video/young.mp4
+
+#Electron-builder output
+/dist_electron

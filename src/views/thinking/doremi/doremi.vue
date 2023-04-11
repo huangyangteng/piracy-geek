@@ -79,25 +79,24 @@ export default {
                 this.init(this.size + 1)
             }
         },
-        auto(isAuto){
-            console.log('🍐🍐🍐🍐',isAuto)
-            if(isAuto){
+        auto(isAuto) {
+            console.log('🍐🍐🍐🍐', isAuto)
+            if (isAuto) {
                 this.autoNext()
-            }else{
+            } else {
                 clearInterval(this.autoTimer)
             }
-
         }
     },
     methods: {
-        autoNext(){
-            this.autoTimer=setInterval(()=>{
+        autoNext() {
+            this.autoTimer = setInterval(() => {
                 if (this.show) {
                     this.next()
                 } else {
                     this.showAnswer()
                 }
-            },5000)
+            }, 5000)
         },
         playNoteText() {
             if (!this.noteText) return

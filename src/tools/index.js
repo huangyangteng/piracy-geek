@@ -307,3 +307,7 @@ export function newPage(routerConfig) {
 export function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
+
+export function isElectron() {
+    return navigator.userAgent.toLowerCase().indexOf(' electron/') > -1
+}

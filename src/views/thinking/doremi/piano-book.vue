@@ -12,7 +12,10 @@
             <el-tabs v-model="curTab">
                 <!--                翻译-->
                 <el-tab-pane label="translate" name="mix">
-                    <piano-translate :en-content="enContent" :content="mixContent"></piano-translate>
+                    <piano-translate
+                        :en-content="enContent"
+                        :content="mixContent"
+                    ></piano-translate>
                 </el-tab-pane>
                 <!--                英文内容-->
                 <el-tab-pane label="english" name="en">
@@ -30,9 +33,9 @@
 
 <script>
 import { AddCatalog, GetCatalogList, UpdateCatalog } from '../../../api/catalog'
-import { Tree,Tabs,TabPane } from 'element-ui'
+import { Tree, Tabs, TabPane } from 'element-ui'
 import { AddArticle, GetArticle, UpdateArticle } from '../../../api/article'
-import PianoTranslate from "./piano-translate";
+import PianoTranslate from './piano-translate'
 
 function buildTree(list, id = -1) {
     return list
@@ -51,8 +54,8 @@ export default {
     components: {
         PianoTranslate,
         [Tree.name]: Tree,
-        [Tabs.name]:Tabs,
-        [TabPane.name]:TabPane
+        [Tabs.name]: Tabs,
+        [TabPane.name]: TabPane
     },
     data() {
         return {
@@ -62,7 +65,7 @@ export default {
             enContent: '',
             mixContent: [],
             articleId: 0,
-            curTab:'mix'
+            curTab: 'mix'
         }
     },
     computed: {},

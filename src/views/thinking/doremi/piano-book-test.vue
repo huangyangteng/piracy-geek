@@ -1,6 +1,6 @@
 <template>
     <section class="piano-book">
-        <el-tree :data="catalogList"  @node-click="handleNodeClick" />
+        <el-tree :data="catalogList" @node-click="handleNodeClick" />
         <!--        <div v-for="(menu, index) in menuList" :key="index" style="display: flex;">-->
         <!--            <h4>{{ menu.title }}</h4>-->
         <!--            &lt;!&ndash;            <el-input style="width: 80px;margin-left: 20px;margin-right: 20px" v-model="menu.sort"></el-input>&ndash;&gt;-->
@@ -8,11 +8,15 @@
         <!--            <el-button @click="save(menu,index)">保存</el-button>-->
         <!--        </div>-->
         <section style="position: absolute;right: 0;top:0">
-            <div v-for="(menu, index) in catalogList" :key="index" style="display: flex;">
+            <div
+                v-for="(menu, index) in catalogList"
+                :key="index"
+                style="display: flex;"
+            >
                 <h4>{{ menu.name }}</h4>
                 <!--            <el-input style="width: 80px;margin-left: 20px;margin-right: 20px" v-model="menu.sort"></el-input>-->
                 <el-input style="width: 80px" v-model="menu.upper"></el-input>
-                <el-button @click="save(menu,index)">保存</el-button>
+                <el-button @click="save(menu, index)">保存</el-button>
             </div>
         </section>
 
@@ -32,24 +36,24 @@
 </template>
 
 <script>
-import {AddCatalog, GetCatalogList} from "../../../api/catalog";
-import {Tree} from 'element-ui'
+import { AddCatalog, GetCatalogList } from '../../../api/catalog'
+import { Tree } from 'element-ui'
 function buildTree(list, id = -1) {
     return list
         .filter(item => item.upper === id)
         .map(item => {
-            const children = buildTree(list, item.id);
+            const children = buildTree(list, item.id)
             if (children.length > 0) {
-                return {...item, children};
+                return { ...item, children }
             }
-            return item;
-        });
+            return item
+        })
 }
 
 export default {
     name: 'piano-book',
-    components:{
-        [Tree.name]:Tree
+    components: {
+        [Tree.name]: Tree
     },
     data() {
         return {
@@ -59,9 +63,9 @@ export default {
             editText: '',
             editIndex: -1,
             menuList: [
-                {title: 'I Introduction', sort: 0, upper: -1},
-                {title: 'I.1 Objective', sort: 1, upper: -1},
-                {title: 'I.2 What is Piano Technique?', sort: 2, upper: -1},
+                { title: 'I Introduction', sort: 0, upper: -1 },
+                { title: 'I.1 Objective', sort: 1, upper: -1 },
+                { title: 'I.2 What is Piano Technique?', sort: 2, upper: -1 },
                 {
                     title: 'I.3 Technique, Music, and Mental Play',
                     sort: 3,
@@ -78,8 +82,8 @@ export default {
                     sort: 5,
                     upper: -1
                 },
-                {title: 'II.1 The Practice Routine', sort: 6, upper: -1},
-                {title: 'II.2 Finger Positions', sort: 7, upper: -1},
+                { title: 'II.1 The Practice Routine', sort: 6, upper: -1 },
+                { title: 'II.2 Finger Positions', sort: 7, upper: -1 },
                 {
                     title: 'II.3 Bench Height and Distance from Piano',
                     sort: 8,
@@ -107,14 +111,14 @@ export default {
                     sort: 12,
                     upper: -1
                 },
-                {title: 'II.8 Continuity Rule', sort: 13, upper: -1},
-                {title: 'II.9 Chord Attack', sort: 14, upper: -1},
+                { title: 'II.8 Continuity Rule', sort: 13, upper: -1 },
+                { title: 'II.9 Chord Attack', sort: 14, upper: -1 },
                 {
                     title: 'II.10 Gravity Drop, Chord Practice, and Relaxation',
                     sort: 15,
                     upper: -1
                 },
-                {title: 'II.11 Parallel Sets', sort: 16, upper: -1},
+                { title: 'II.11 Parallel Sets', sort: 16, upper: -1 },
                 {
                     title: 'II.12 Learning, Memorizing, Mental Play',
                     sort: 17,
@@ -125,7 +129,7 @@ export default {
                     sort: 18,
                     upper: -1
                 },
-                {title: 'II.14 How to Relax', sort: 19, upper: -1},
+                { title: 'II.14 How to Relax', sort: 19, upper: -1 },
                 {
                     title: 'II.15 Post Practice Improvement (PPI)',
                     sort: 20,
@@ -137,8 +141,8 @@ export default {
                     sort: 21,
                     upper: -1
                 },
-                {title: 'II.17 Importance of Slow Play', sort: 22, upper: -1},
-                {title: 'II.18 Fingering', sort: 23, upper: -1},
+                { title: 'II.17 Importance of Slow Play', sort: 22, upper: -1 },
+                { title: 'II.18 Fingering', sort: 23, upper: -1 },
                 {
                     title: 'II.19 Accurate Tempo and the Metronome',
                     sort: 24,
@@ -160,7 +164,7 @@ export default {
                     sort: 27,
                     upper: -1
                 },
-                {title: 'II.23 Damper Pedal', sort: 28, upper: -1},
+                { title: 'II.23 Damper Pedal', sort: 28, upper: -1 },
                 {
                     title:
                         'II.24 Soft Pedal, Hammer Voicing and Physics of the Piano Sound',
@@ -188,7 +192,7 @@ export default {
                     sort: 33,
                     upper: -1
                 },
-                {title: 'II.26 Summary', sort: 34, upper: -1},
+                { title: 'II.26 Summary', sort: 34, upper: -1 },
                 {
                     title: 'III Selected Topics in Piano Practice',
                     sort: 35,
@@ -199,7 +203,7 @@ export default {
                     sort: 36,
                     upper: -1
                 },
-                {title: 'III.1.1 What is Good Tone?', sort: 37, upper: -1},
+                { title: 'III.1.1 What is Good Tone?', sort: 37, upper: -1 },
                 {
                     title:
                         'III.1.1.1 The Basic Keystroke, Pianissimo, Fortissimo',
@@ -217,14 +221,14 @@ export default {
                     sort: 40,
                     upper: -1
                 },
-                {title: 'III.1.3 Legato, Staccato', sort: 41, upper: -1},
+                { title: 'III.1.3 Legato, Staccato', sort: 41, upper: -1 },
                 {
                     title: "III.2 Cycling (Chopin's Fantaisie Impromptu)",
                     sort: 42,
                     upper: -1
                 },
-                {title: 'III.3 Trills & Tremolos', sort: 43, upper: -1},
-                {title: 'III.3.1 Trills', sort: 44, upper: -1},
+                { title: 'III.3 Trills & Tremolos', sort: 43, upper: -1 },
+                { title: 'III.3.1 Trills', sort: 44, upper: -1 },
                 {
                     title:
                         "III.3.2 Tremolos (Beethoven's Pathetique, 1st Mvmnt)",
@@ -247,7 +251,7 @@ export default {
                     sort: 48,
                     upper: -1
                 },
-                {title: 'III.4.3 Body Motions', sort: 49, upper: -1},
+                { title: 'III.4.3 Body Motions', sort: 49, upper: -1 },
                 {
                     title:
                         'III.5 Playing Fast: Scales, Arpeggios and Chromatic Scales',
@@ -264,7 +268,7 @@ export default {
                     sort: 52,
                     upper: -1
                 },
-                {title: 'III.5.3 Practicing TO, Speed', sort: 53, upper: -1},
+                { title: 'III.5.3 Practicing TO, Speed', sort: 53, upper: -1 },
                 {
                     title:
                         'III.5.4 Scales: Origin, Nomenclature, and Fingerings',
@@ -289,9 +293,9 @@ export default {
                     sort: 57,
                     upper: -1
                 },
-                {title: 'III.5.8 Fast Chromatic Scales', sort: 58, upper: -1},
-                {title: 'III.6 Memorizing', sort: 59, upper: -1},
-                {title: 'III.6.1 Why Memorize?', sort: 60, upper: -1},
+                { title: 'III.5.8 Fast Chromatic Scales', sort: 58, upper: -1 },
+                { title: 'III.6 Memorizing', sort: 59, upper: -1 },
+                { title: 'III.6.1 Why Memorize?', sort: 60, upper: -1 },
                 {
                     title: 'III.6.2 Who can, What to, and When to, Memorize',
                     sort: 61,
@@ -302,7 +306,7 @@ export default {
                     sort: 62,
                     upper: -1
                 },
-                {title: 'III.6.4 Hand Memory', sort: 63, upper: -1},
+                { title: 'III.6.4 Hand Memory', sort: 63, upper: -1 },
                 {
                     title: 'III.6.5 Starting the Memorizing Process',
                     sort: 64,
@@ -313,16 +317,16 @@ export default {
                     sort: 65,
                     upper: -1
                 },
-                {title: 'III.6.7 Practicing Cold', sort: 66, upper: -1},
-                {title: 'III.6.8 Slow Play', sort: 67, upper: -1},
-                {title: 'III.6.9 Mental Timing', sort: 68, upper: -1},
+                { title: 'III.6.7 Practicing Cold', sort: 66, upper: -1 },
+                { title: 'III.6.8 Slow Play', sort: 67, upper: -1 },
+                { title: 'III.6.9 Mental Timing', sort: 68, upper: -1 },
                 {
                     title:
                         'III.6.10 Establishing Permanent Memory -- Mental Play',
                     sort: 69,
                     upper: -1
                 },
-                {title: 'III.6.10.1 Music Memory', sort: 70, upper: -1},
+                { title: 'III.6.10.1 Music Memory', sort: 70, upper: -1 },
                 {
                     title: 'III.6.10.2 Photographic Memory',
                     sort: 71,
@@ -333,8 +337,8 @@ export default {
                     sort: 72,
                     upper: -1
                 },
-                {title: 'III.6.10.4 Theoretical Memory', sort: 73, upper: -1},
-                {title: 'III.6.11 Maintenance', sort: 74, upper: -1},
+                { title: 'III.6.10.4 Theoretical Memory', sort: 73, upper: -1 },
+                { title: 'III.6.11 Maintenance', sort: 74, upper: -1 },
                 {
                     title:
                         "III.6.12 Sight Readers versus Memorizers: Learning Bach's Inventions",
@@ -346,8 +350,8 @@ export default {
                     sort: 76,
                     upper: -1
                 },
-                {title: 'III.6.12.2 Quiet Hands', sort: 77, upper: -1},
-                {title: 'III.6.12.3 Sinfonia #15', sort: 78, upper: -1},
+                { title: 'III.6.12.2 Quiet Hands', sort: 77, upper: -1 },
+                { title: 'III.6.12.3 Sinfonia #15', sort: 78, upper: -1 },
                 {
                     title:
                         'III.6.13 Human Memory Function; Music = Memory Algorithm',
@@ -359,8 +363,8 @@ export default {
                     sort: 80,
                     upper: -1
                 },
-                {title: 'III.6.15 Summary', sort: 81, upper: -1},
-                {title: 'III.7 Exercises', sort: 82, upper: -1},
+                { title: 'III.6.15 Summary', sort: 81, upper: -1 },
+                { title: 'III.7 Exercises', sort: 82, upper: -1 },
                 {
                     title:
                         'III.7.1 Introduction: Intrinsic, Limbering, and Conditioning Exercises',
@@ -396,7 +400,7 @@ export default {
                     sort: 88,
                     upper: -1
                 },
-                {title: 'III.7.6 Practicing Jumps', sort: 89, upper: -1},
+                { title: 'III.7.6 Practicing Jumps', sort: 89, upper: -1 },
                 {
                     title: 'III.7.7 Stretching and Other Exercises',
                     sort: 90,
@@ -407,14 +411,14 @@ export default {
                     sort: 91,
                     upper: -1
                 },
-                {title: 'III.7.9 Practicing for Speed', sort: 92, upper: -1},
+                { title: 'III.7.9 Practicing for Speed', sort: 92, upper: -1 },
                 {
                     title: 'III.7.9.1 Speed Stroke, Relaxation',
                     sort: 93,
                     upper: -1
                 },
-                {title: 'III.7.9.2 Other Speed Methods', sort: 94, upper: -1},
-                {title: 'III 7.9.3 Speed Walls', sort: 95, upper: -1},
+                { title: 'III.7.9.2 Other Speed Methods', sort: 94, upper: -1 },
+                { title: 'III 7.9.3 Speed Walls', sort: 95, upper: -1 },
                 {
                     title: "III.8 Outlining (Beethoven's Sonata #1, Op.2, #1)",
                     sort: 96,
@@ -431,7 +435,7 @@ export default {
                     sort: 98,
                     upper: -1
                 },
-                {title: 'III.11 Sight Reading', sort: 99, upper: -1},
+                { title: 'III.11 Sight Reading', sort: 99, upper: -1 },
                 {
                     title:
                         'III.12 Learning Relative Pitch and Perfect Pitch (Sight Singing)',
@@ -469,26 +473,26 @@ export default {
                     sort: 106,
                     upper: -1
                 },
-                {title: 'III.14.5 Casual Performances', sort: 107, upper: -1},
+                { title: 'III.14.5 Casual Performances', sort: 107, upper: -1 },
                 {
                     title: 'III.14.6 Performance Preparation Routines',
                     sort: 108,
                     upper: -1
                 },
-                {title: 'III.14.7 During the Recital', sort: 109, upper: -1},
+                { title: 'III.14.7 During the Recital', sort: 109, upper: -1 },
                 {
                     title: 'III.14.8 That Unfamiliar Piano',
                     sort: 110,
                     upper: -1
                 },
-                {title: 'III.14.9 After the Recital', sort: 111, upper: -1},
+                { title: 'III.14.9 After the Recital', sort: 111, upper: -1 },
                 {
                     title: 'III.15 Origin and Control of Nervousness',
                     sort: 112,
                     upper: -1
                 },
-                {title: 'III.16 Teaching', sort: 113, upper: -1},
-                {title: 'III.16.1 Types of Teachers', sort: 114, upper: -1},
+                { title: 'III.16 Teaching', sort: 113, upper: -1 },
+                { title: 'III.16.1 Types of Teachers', sort: 114, upper: -1 },
                 {
                     title: 'III.16.2 Teaching Youngsters, Parental Involvement',
                     sort: 115,
@@ -522,15 +526,15 @@ export default {
                     sort: 120,
                     upper: -1
                 },
-                {title: 'III.17.2 Electronic Pianos', sort: 121, upper: -1},
-                {title: 'III.17.3 Uprights', sort: 122, upper: -1},
-                {title: 'III.17.4 Grands', sort: 123, upper: -1},
+                { title: 'III.17.2 Electronic Pianos', sort: 121, upper: -1 },
+                { title: 'III.17.3 Uprights', sort: 122, upper: -1 },
+                { title: 'III.17.4 Grands', sort: 123, upper: -1 },
                 {
                     title: 'III.17.5 Purchasing an Acoustic Piano',
                     sort: 124,
                     upper: -1
                 },
-                {title: 'III.17.6 Piano Care', sort: 125, upper: -1},
+                { title: 'III.17.6 Piano Care', sort: 125, upper: -1 },
                 {
                     title:
                         'III.18 How to Start Learning Piano: Youngest Children to Old Adults',
@@ -558,7 +562,7 @@ export default {
                     sort: 130,
                     upper: -1
                 },
-                {title: 'III.19.1 Learning the Rules', sort: 131, upper: -1},
+                { title: 'III.19.1 Learning the Rules', sort: 131, upper: -1 },
                 {
                     title:
                         'III.19.2 Routine for Learning a New Piece (Bach Inv. #4)',
@@ -582,19 +586,19 @@ export default {
                     sort: 135,
                     upper: -1
                 },
-                {title: 'III.22 Summary of Method', sort: 136, upper: -1},
+                { title: 'III.22 Summary of Method', sort: 136, upper: -1 },
                 {
                     title: 'IV Music, Mathematics, and Research',
                     sort: 137,
                     upper: -1
                 },
-                {title: 'IV.1 Can We All be Mozarts?', sort: 138, upper: -1},
+                { title: 'IV.1 Can We All be Mozarts?', sort: 138, upper: -1 },
                 {
                     title: 'IV.2 Scientific Approach to Piano Practice',
                     sort: 139,
                     upper: -1
                 },
-                {title: 'IV.2.1 The Scientific Method', sort: 140, upper: -1},
+                { title: 'IV.2.1 The Scientific Method', sort: 140, upper: -1 },
                 {
                     title: 'IV.2.2 Principles of Learning',
                     sort: 141,
@@ -616,7 +620,7 @@ export default {
                     sort: 144,
                     upper: -1
                 },
-                {title: 'IV.6 Future Research Topics', sort: 145, upper: -1},
+                { title: 'IV.6 Future Research Topics', sort: 145, upper: -1 },
                 {
                     title: 'IV.6.1 Momentum Theory of Piano Playing',
                     sort: 146,
@@ -632,30 +636,31 @@ export default {
                     sort: 148,
                     upper: -1
                 },
-                {title: 'IV.6.4 The Future of Piano', sort: 149, upper: -1},
+                { title: 'IV.6.4 The Future of Piano', sort: 149, upper: -1 },
                 {
                     title: 'IV.6.5 The Future of Education',
                     sort: 150,
                     upper: -1
                 }
             ],
-            catalogList: [],
+            catalogList: []
         }
     },
     computed: {},
     methods: {
-        handleNodeClick(arg){
+        handleNodeClick(arg) {
             console.log(arg)
-
         },
         async fetchMenu() {
             const res = await GetCatalogList()
             console.log(res.data)
-            this.catalogList = buildTree(res.data.map(item=>({
-                ...item,
-                label:item.name
-            })))
-            console.log(this.catalogList);
+            this.catalogList = buildTree(
+                res.data.map(item => ({
+                    ...item,
+                    label: item.name
+                }))
+            )
+            console.log(this.catalogList)
         },
         save(item, index) {
             console.log(item)
@@ -665,7 +670,6 @@ export default {
                 bookid: 1,
                 upper: item.upper
             })
-
         },
         splitP() {
             this.list = this.p.split(' ').map(item => ({

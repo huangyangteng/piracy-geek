@@ -34,14 +34,13 @@
                         :key="item.href"
                         :href="item.href"
                         class="blog-prod-item"
-                        target="_blank"
                     >
                         <h2>{{ item.title_en }}</h2>
                         <img :src="item.img" alt="" />
                         <div>{{ item.title }}</div>
                     </a>
                 </section>
-                <footer style="opacity: 0.5">
+                <footer style="opacity: 0.5" v-if="!isElectron">
                     <a
                         style="color:#fafafa;font-size: 12px"
                         href="https://beian.miit.gov.cn/"
@@ -55,10 +54,13 @@
 </template>
 <script>
 import BannerText from '../../components/BannerText'
+import { isElectron } from '../../tools'
+
 export default {
     components: { BannerText },
     data() {
         return {
+            isElectron: false,
             title: 'WEBSTATION',
             loading: false,
             percent: 0,
@@ -100,6 +102,7 @@ export default {
     },
     mounted() {
         this.loading = true
+        this.isElectron = isElectron()
     }
 }
 </script>

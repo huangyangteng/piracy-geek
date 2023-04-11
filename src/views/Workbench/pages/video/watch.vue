@@ -151,7 +151,7 @@ export default {
             spareSrc: [],
             events: ['ratechange', 'volumechange'],
             seekStep: 3,
-            playText:'播放'
+            playText: '播放'
         }
     },
     computed: {

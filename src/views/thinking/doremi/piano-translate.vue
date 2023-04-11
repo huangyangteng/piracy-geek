@@ -3,16 +3,14 @@
         <div class="book-paragraph" v-for="(p, i) in list" :key="i">
             <div
                 v-for="(item, index) in p.list"
-                @dblclick="editItem($event,index)"
+                @dblclick="editItem($event, index)"
                 :key="item.c + '' + index"
             >
                 <span>{{ item.c }}</span>
                 <span class="ch" v-if="item.ch">{{ item.ch }}</span>
             </div>
         </div>
-        <div class="word-op" :style="wordOpStyle">
-
-        </div>
+        <div class="word-op" :style="wordOpStyle"></div>
     </section>
 </template>
 
@@ -30,18 +28,18 @@ export default {
     data() {
         return {
             list: [],
-            wordOp:{
-                left:0,
-                top:0
+            wordOp: {
+                left: 0,
+                top: 0
             }
         }
     },
     computed: {
-        wordOpStyle(){
-            const {left,top}=this.wordOp
+        wordOpStyle() {
+            const { left, top } = this.wordOp
             return {
-                left:left+'px',
-                top:top+'px'
+                left: left + 'px',
+                top: top + 'px'
             }
         }
     },
@@ -72,19 +70,17 @@ export default {
                     }
                 })
         },
-        editItem(e,index){
-            console.log(e,index)
-            const {x,y}=e.target.getBoundingClientRect()
-            this.wordOp={
-                left:x,
-                top:y+40
+        editItem(e, index) {
+            console.log(e, index)
+            const { x, y } = e.target.getBoundingClientRect()
+            this.wordOp = {
+                left: x,
+                top: y + 40
             }
-
         }
     },
     mounted() {
         //    点击空白关闭
-
     }
 }
 </script>
@@ -95,7 +91,7 @@ export default {
     flex-wrap: wrap;
     width: 880px;
     font-size: 28px;
-    margin:40px auto;
+    margin: 40px auto;
 
     div {
         margin-right: 10px;
@@ -113,7 +109,7 @@ export default {
         }
     }
 }
-.word-op{
+.word-op {
     position: fixed;
     width: 200px;
     height: 200px;

@@ -78,13 +78,13 @@ export default [
         component: () => import('./calc-rent')
     },
     {
-        name:'阅读推送',
-        path:'/read-push',
-        component:()=>import('./read-push/read-push')
+        name: '阅读推送',
+        path: '/read-push',
+        component: () => import('./read-push/read-push')
     },
     {
-        name:'pianoBook',
-        path:'/piano-book',
-        component:()=>import('./doremi/piano-book')
+        name: 'pianoBook',
+        path: '/piano-book',
+        component: () => import('./doremi/piano-book')
     }
 ]
