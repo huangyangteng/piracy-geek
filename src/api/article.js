@@ -17,6 +17,6 @@ export const AddArticle = data =>
 export const UpdateArticle = data =>
     http.request({
         url: '/article',
-        method: 'POST',
+        method: 'PUT',
         data
     })
